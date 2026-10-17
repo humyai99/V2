@@ -1,89 +1,89 @@
-# AI Infrastructure Engineer Curriculum
+# หลักสูตร AI Infrastructure Engineer
 
-> **A comprehensive, hands-on curriculum for aspiring AI Infrastructure Engineers**
+> **หลักสูตรเชิงปฏิบัติที่ครอบคลุมสำหรับผู้ที่ต้องการเป็น AI Infrastructure Engineer**
 
-## Table of Contents
+## สารบัญ
 
-- [Curriculum Overview](#curriculum-overview)
-- [Learning Philosophy](#learning-philosophy)
-- [Curriculum Structure](#curriculum-structure)
-- [Prerequisites](#prerequisites)
-- [Learning Outcomes](#learning-outcomes)
-- [Modules](#modules)
-  - [Module 01: Foundations](#module-01-foundations)
-  - [Module 02: Cloud Computing Fundamentals](#module-02-cloud-computing-fundamentals)
-  - [Module 03: Containerization & Docker](#module-03-containerization--docker)
-  - [Module 04: Kubernetes Fundamentals](#module-04-kubernetes-fundamentals)
-  - [Module 05: Data Pipeline Engineering](#module-05-data-pipeline-engineering)
-  - [Module 06: MLOps Fundamentals](#module-06-mlops-fundamentals)
-  - [Module 07: GPU Computing & ML Acceleration](#module-07-gpu-computing--ml-acceleration)
-  - [Module 08: Monitoring & Observability](#module-08-monitoring--observability)
-  - [Module 09: Infrastructure as Code](#module-09-infrastructure-as-code)
-  - [Module 10: LLM Infrastructure](#module-10-llm-infrastructure)
-- [Projects](#projects)
-  - [Project 01: Basic Model Serving System](#project-101-basic-model-serving-system)
-  - [Project 02: MLOps Pipeline](#project-102-mlops-pipeline)
-  - [Project 103: Production LLM Deployment](#project-103-production-llm-deployment)
-- [Assessment Strategy](#assessment-strategy)
-- [Time Commitment](#time-commitment)
-- [Study Plans](#study-plans)
-- [Career Progression](#career-progression)
-- [Learning Resources](#learning-resources)
-- [Getting Help](#getting-help)
-
----
-
-## Curriculum Overview
-
-This curriculum is designed to take you from foundational knowledge to production-ready AI infrastructure engineering skills. Through 10 comprehensive modules and 3 hands-on projects, you'll gain the expertise needed to build, deploy, and maintain AI/ML systems at scale.
-
-### Repository Statistics
-
-- **Total Files**: 207
-- **Total Lines of Code**: ~95,000+
-- **Learning Hours**: 500+ hours
-- **Modules**: 10 complete modules
-- **Projects**: 3 progressive projects
-- **Status**: 🚧 In active development — see [progress notes](#progress-notes) below for the current per-module exercise/lab completion
-
-### What Makes This Curriculum Unique
-
-1. **Progressive Learning**: Each module builds upon previous knowledge
-2. **Hands-On Projects**: Real-world scenarios with production-ready code
-3. **Industry-Relevant**: Based on actual job requirements from top tech companies
-4. **Complete Solution**: From basics to LLM deployment
-5. **Production-Ready**: Focus on best practices, testing, and monitoring
-6. **Career-Focused**: Aligned with AI Infrastructure Engineer roles
+- [ภาพรวมหลักสูตร](#curriculum-overview)
+- [ปรัชญาการเรียนรู้](#learning-philosophy)
+- [โครงสร้างหลักสูตร](#curriculum-structure)
+- [ความรู้พื้นฐานที่ต้องมี](#prerequisites)
+- [ผลลัพธ์การเรียนรู้](#learning-outcomes)
+- [โมดูล](#modules)
+  - [โมดูล 01: พื้นฐาน](#module-01-foundations)
+  - [โมดูล 02: พื้นฐาน Cloud Computing](#module-02-cloud-computing-fundamentals)
+  - [โมดูล 03: Containerization และ Docker](#module-03-containerization--docker)
+  - [โมดูล 04: พื้นฐาน Kubernetes](#module-04-kubernetes-fundamentals)
+  - [โมดูล 05: วิศวกรรม Data Pipeline](#module-05-data-pipeline-engineering)
+  - [โมดูล 06: พื้นฐาน MLOps](#module-06-mlops-fundamentals)
+  - [โมดูล 07: GPU Computing และการเร่งความเร็ว ML](#module-07-gpu-computing--ml-acceleration)
+  - [โมดูล 08: Monitoring และ Observability](#module-08-monitoring--observability)
+  - [โมดูล 09: Infrastructure as Code](#module-09-infrastructure-as-code)
+  - [โมดูล 10: LLM Infrastructure](#module-10-llm-infrastructure)
+- [โปรเจกต์](#projects)
+  - [โปรเจกต์ 01: ระบบ Model Serving พื้นฐาน](#project-101-basic-model-serving-system)
+  - [โปรเจกต์ 02: MLOps Pipeline](#project-102-mlops-pipeline)
+  - [โปรเจกต์ 103: การ Deploy LLM ระดับ Production](#project-103-production-llm-deployment)
+- [กลยุทธ์การประเมินผล](#assessment-strategy)
+- [เวลาที่ต้องใช้](#time-commitment)
+- [แผนการเรียน](#study-plans)
+- [เส้นทางอาชีพ](#career-progression)
+- [แหล่งเรียนรู้](#learning-resources)
+- [การขอความช่วยเหลือ](#getting-help)
 
 ---
 
-## Learning Philosophy
+## ภาพรวมหลักสูตร
 
-### Our Approach
+หลักสูตรนี้ออกแบบมาเพื่อพาคุณจากความรู้พื้นฐานไปสู่ทักษะวิศวกรรม AI infrastructure ที่พร้อมใช้งานจริงในระดับ production ผ่าน 10 โมดูลที่ครอบคลุมและ 3 โปรเจกต์เชิงปฏิบัติ คุณจะได้รับความเชี่ยวชาญที่จำเป็นในการสร้าง deploy และดูแลระบบ AI/ML ในระดับ scale
 
-**Learn by Doing**: Every concept is reinforced with practical exercises and real code.
+### สถิติของ Repository
 
-**Production Mindset**: We don't just teach how to build things—we teach how to build them right. Every project includes monitoring, testing, security, and scalability considerations.
+- **จำนวนไฟล์ทั้งหมด**: 207
+- **จำนวนบรรทัดโค้ดทั้งหมด**: ~95,000+
+- **ชั่วโมงการเรียนรู้**: 500+ ชั่วโมง
+- **โมดูล**: 10 โมดูลที่สมบูรณ์
+- **โปรเจกต์**: 3 โปรเจกต์แบบต่อเนื่อง
+- **สถานะ**: 🚧 อยู่ระหว่างการพัฒนา — ดู [บันทึกความคืบหน้า](#progress-notes) ด้านล่างสำหรับสถานะความสมบูรณ์ของแบบฝึกหัด/lab ในแต่ละโมดูล
 
-**Progressive Complexity**: Start with fundamentals and gradually increase complexity. By the end, you'll be deploying production-grade LLM systems.
+### จุดเด่นของหลักสูตรนี้
 
-**Real-World Scenarios**: All projects are based on actual industry use cases and requirements.
-
-### Teaching Methodology
-
-1. **Conceptual Foundation**: Understand the "why" before the "how"
-2. **Guided Implementation**: Step-by-step exercises with clear objectives
-3. **Independent Practice**: Code stubs with TODO comments guide your work
-4. **Project Integration**: Apply concepts in complete, end-to-end projects
-5. **Continuous Assessment**: Quizzes, exercises, and practical exams
+1. **การเรียนรู้แบบต่อเนื่อง**: แต่ละโมดูลต่อยอดจากความรู้ก่อนหน้า
+2. **โปรเจกต์เชิงปฏิบัติ**: สถานการณ์จริงพร้อมโค้ดระดับ production
+3. **ตรงกับความต้องการของอุตสาหกรรม**: อ้างอิงจากคุณสมบัติงานจริงของบริษัทเทคโนโลยีชั้นนำ
+4. **ครบวงจร**: ตั้งแต่พื้นฐานไปจนถึงการ deploy LLM
+5. **พร้อมใช้งานจริง**: เน้น best practices, การทดสอบ และ monitoring
+6. **มุ่งเน้นอาชีพ**: สอดคล้องกับตำแหน่ง AI Infrastructure Engineer
 
 ---
 
-## Curriculum Structure
+## ปรัชญาการเรียนรู้
 
-### Module Organization
+### แนวทางของเรา
 
-Each of the 10 modules follows a consistent structure:
+**เรียนรู้จากการลงมือทำ**: ทุกแนวคิดได้รับการเสริมด้วยแบบฝึกหัดเชิงปฏิบัติและโค้ดจริง
+
+**แนวคิดแบบ Production**: เราไม่ได้สอนแค่วิธีสร้าง แต่สอนวิธีสร้างให้ถูกต้อง ทุกโปรเจกต์ครอบคลุมเรื่อง monitoring, การทดสอบ, security และ scalability
+
+**ความซับซ้อนที่เพิ่มขึ้นทีละขั้น**: เริ่มจากพื้นฐานแล้วค่อย ๆ เพิ่มความซับซ้อน เมื่อจบหลักสูตร คุณจะสามารถ deploy ระบบ LLM ระดับ production ได้
+
+**สถานการณ์จริง**: ทุกโปรเจกต์อ้างอิงจาก use case และความต้องการจริงในอุตสาหกรรม
+
+### วิธีการสอน
+
+1. **พื้นฐานเชิงแนวคิด**: เข้าใจ "ทำไม" ก่อน "อย่างไร"
+2. **การลงมือทำแบบมีผู้แนะนำ**: แบบฝึกหัดทีละขั้นตอนพร้อมวัตถุประสงค์ที่ชัดเจน
+3. **การฝึกฝนด้วยตนเอง**: โค้ดโครง (stub) พร้อมคอมเมนต์ TODO ช่วยนำทางการทำงาน
+4. **การบูรณาการผ่านโปรเจกต์**: นำแนวคิดไปใช้ในโปรเจกต์แบบ end-to-end ที่สมบูรณ์
+5. **การประเมินอย่างต่อเนื่อง**: แบบทดสอบ แบบฝึกหัด และการสอบภาคปฏิบัติ
+
+---
+
+## โครงสร้างหลักสูตร
+
+### การจัดโครงสร้างโมดูล
+
+ทั้ง 10 โมดูลมีโครงสร้างที่สอดคล้องกัน:
 
 ```
 modules/XX-module-name/
@@ -100,9 +100,9 @@ modules/XX-module-name/
 └── resources.md          # Additional learning materials
 ```
 
-### Project Organization
+### การจัดโครงสร้างโปรเจกต์
 
-Each project includes:
+แต่ละโปรเจกต์ประกอบด้วย:
 
 ```
 projects/project-XX-name/
@@ -119,493 +119,493 @@ projects/project-XX-name/
 
 ---
 
-## Prerequisites
+## ความรู้พื้นฐานที่ต้องมี
 
-### Required Knowledge
+### ความรู้ที่จำเป็น
 
-Before starting this curriculum, you should have:
+ก่อนเริ่มหลักสูตรนี้ คุณควรมี:
 
-#### Programming Skills
-- **Python**: Intermediate level (3+ years experience)
-  - Object-oriented programming
-  - File I/O and data structures
-  - Error handling and logging
-  - Virtual environments and package management
-  - Async programming basics
+#### ทักษะการเขียนโปรแกรม
+- **Python**: ระดับกลาง (ประสบการณ์ 3 ปีขึ้นไป)
+  - การเขียนโปรแกรมเชิงวัตถุ (OOP)
+  - File I/O และโครงสร้างข้อมูล
+  - การจัดการ error และ logging
+  - Virtual environment และการจัดการ package
+  - พื้นฐาน async programming
 
-#### System Administration
-- **Linux**: Basic command-line proficiency
-  - File system navigation
-  - Process management
-  - Text editors (vim/nano)
-  - Permissions and ownership
-  - Basic networking commands
+#### การดูแลระบบ
+- **Linux**: ใช้งาน command line ขั้นพื้นฐานได้
+  - การนำทางในระบบไฟล์
+  - การจัดการ process
+  - Text editor (vim/nano)
+  - Permission และ ownership
+  - คำสั่งเครือข่ายพื้นฐาน
 
 #### Version Control
-- **Git**: Basic operations
+- **Git**: การใช้งานพื้นฐาน
   - Clone, commit, push, pull
-  - Branching and merging
-  - Resolving conflicts
+  - Branching และ merging
+  - การแก้ไข conflict
 
-#### Networking
-- **Fundamentals**: Understanding of
-  - TCP/IP basics
-  - HTTP/HTTPS protocols
+#### เครือข่าย
+- **พื้นฐาน**: มีความเข้าใจเรื่อง
+  - พื้นฐาน TCP/IP
+  - โปรโตคอล HTTP/HTTPS
   - DNS resolution
-  - Ports and firewalls
+  - Port และ firewall
 
-### Recommended Knowledge
+### ความรู้ที่แนะนำ
 
-The following will help but are not required:
+สิ่งต่อไปนี้จะเป็นประโยชน์แต่ไม่บังคับ:
 
-- Basic understanding of machine learning concepts
-- Exposure to cloud platforms (AWS, GCP, or Azure)
-- Experience with databases (SQL or NoSQL)
-- Basic understanding of APIs and REST
-- Familiarity with YAML and JSON formats
+- ความเข้าใจพื้นฐานเกี่ยวกับแนวคิด machine learning
+- เคยใช้งาน cloud platform (AWS, GCP หรือ Azure)
+- ประสบการณ์กับฐานข้อมูล (SQL หรือ NoSQL)
+- ความเข้าใจพื้นฐานเกี่ยวกับ API และ REST
+- คุ้นเคยกับรูปแบบ YAML และ JSON
 
-### Technical Requirements
+### ความต้องการด้านเทคนิค
 
-#### Hardware
-- **CPU**: 4+ cores recommended
-- **RAM**: 16GB minimum, 32GB recommended
-- **Storage**: 100GB free space for Docker images and datasets
-- **GPU**: Optional but helpful for Module 07 (cloud alternatives provided)
+#### ฮาร์ดแวร์
+- **CPU**: แนะนำ 4 core ขึ้นไป
+- **RAM**: ขั้นต่ำ 16GB แนะนำ 32GB
+- **Storage**: พื้นที่ว่าง 100GB สำหรับ Docker image และ dataset
+- **GPU**: ไม่บังคับแต่มีประโยชน์สำหรับโมดูล 07 (มีทางเลือกบน cloud ให้)
 
-#### Software
-- **Operating System**: Linux (Ubuntu 22.04 recommended) or macOS
-  - Windows users: WSL2 required
-- **Python**: 3.11 or higher
-- **Git**: Latest version
-- **Text Editor/IDE**: VS Code, PyCharm, or similar
-- **Internet**: Stable broadband connection for cloud resources
+#### ซอฟต์แวร์
+- **ระบบปฏิบัติการ**: Linux (แนะนำ Ubuntu 22.04) หรือ macOS
+  - ผู้ใช้ Windows: ต้องใช้ WSL2
+- **Python**: 3.11 ขึ้นไป
+- **Git**: เวอร์ชันล่าสุด
+- **Text Editor/IDE**: VS Code, PyCharm หรือเทียบเท่า
+- **อินเทอร์เน็ต**: การเชื่อมต่อ broadband ที่เสถียรสำหรับใช้ทรัพยากร cloud
 
-#### Cloud Accounts (Free Tier Sufficient)
-- AWS account (free tier)
-- Google Cloud account ($300 free credit)
-- Docker Hub account (free)
-- GitHub account (free)
+#### บัญชี Cloud (Free Tier เพียงพอ)
+- บัญชี AWS (free tier)
+- บัญชี Google Cloud (เครดิตฟรี $300)
+- บัญชี Docker Hub (ฟรี)
+- บัญชี GitHub (ฟรี)
 
 ---
 
-## Learning Outcomes
+## ผลลัพธ์การเรียนรู้
 
-Upon completing this curriculum, you will be able to:
+เมื่อจบหลักสูตรนี้ คุณจะสามารถ:
 
-### Core Competencies
+### ความสามารถหลัก
 
-#### Infrastructure & Systems
-- ✅ Design and deploy containerized applications using Docker
-- ✅ Orchestrate complex workloads with Kubernetes
-- ✅ Implement Infrastructure as Code using Terraform
-- ✅ Build resilient, scalable cloud architectures
-- ✅ Manage GPU resources for ML workloads
+#### Infrastructure และระบบ
+- ✅ ออกแบบและ deploy แอปพลิเคชันแบบ container ด้วย Docker
+- ✅ Orchestrate workload ที่ซับซ้อนด้วย Kubernetes
+- ✅ ทำ Infrastructure as Code ด้วย Terraform
+- ✅ สร้างสถาปัตยกรรม cloud ที่ทนทานและ scale ได้
+- ✅ จัดการทรัพยากร GPU สำหรับ ML workload
 
 #### Machine Learning Operations
-- ✅ Deploy ML models to production environments
-- ✅ Implement CI/CD pipelines for ML systems
-- ✅ Build and maintain data processing pipelines
-- ✅ Monitor model performance and system health
-- ✅ Implement model versioning and experiment tracking
+- ✅ Deploy ML model สู่สภาพแวดล้อม production
+- ✅ สร้าง CI/CD pipeline สำหรับระบบ ML
+- ✅ สร้างและดูแล data processing pipeline
+- ✅ Monitor ประสิทธิภาพของโมเดลและสุขภาพของระบบ
+- ✅ ทำ model versioning และ experiment tracking
 
 #### Large Language Models
-- ✅ Deploy and serve LLMs in production
-- ✅ Implement vector databases for RAG systems
-- ✅ Optimize LLM inference for cost and performance
-- ✅ Build multi-model AI systems
-- ✅ Implement LLM observability and monitoring
+- ✅ Deploy และ serve LLM ใน production
+- ✅ ใช้ vector database สำหรับระบบ RAG
+- ✅ Optimize LLM inference ด้านต้นทุนและประสิทธิภาพ
+- ✅ สร้างระบบ AI แบบหลายโมเดล
+- ✅ ทำ LLM observability และ monitoring
 
 #### Production Engineering
-- ✅ Implement comprehensive monitoring and alerting
-- ✅ Design for high availability and fault tolerance
-- ✅ Optimize costs in cloud environments
-- ✅ Implement security best practices
-- ✅ Write production-ready code with tests
+- ✅ ทำ monitoring และ alerting อย่างครอบคลุม
+- ✅ ออกแบบเพื่อ high availability และ fault tolerance
+- ✅ Optimize ต้นทุนในสภาพแวดล้อม cloud
+- ✅ ใช้ security best practices
+- ✅ เขียนโค้ดระดับ production พร้อม test
 
-### Career Readiness
+### ความพร้อมด้านอาชีพ
 
-After completing this curriculum, you'll be qualified for:
+หลังจบหลักสูตรนี้ คุณจะมีคุณสมบัติสำหรับ:
 
-- **AI Infrastructure Engineer** positions
-- **ML Platform Engineer** roles
-- **MLOps Engineer** positions
-- **DevOps Engineer** roles with ML focus
+- ตำแหน่ง **AI Infrastructure Engineer**
+- ตำแหน่ง **ML Platform Engineer**
+- ตำแหน่ง **MLOps Engineer**
+- ตำแหน่ง **DevOps Engineer** ที่เน้น ML
 
-**Expected Salary Range**: $120,000 - $180,000 (US, entry to mid-level)
+**ช่วงเงินเดือนที่คาดหวัง**: $120,000 - $180,000 (สหรัฐฯ ระดับเริ่มต้นถึงระดับกลาง)
 
 ---
 
-## Modules
+## โมดูล
 
-### Module 01: Foundations
-**Status**: ✅ Complete | **Duration**: 40 hours | **Files**: 15
+### โมดูล 01: พื้นฐาน
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 40 ชั่วโมง | **ไฟล์**: 15
 
-#### Overview
-Establish the foundational knowledge required for AI infrastructure engineering. This module covers Python best practices, Linux systems administration, networking fundamentals, and development environment setup.
+#### ภาพรวม
+วางรากฐานความรู้ที่จำเป็นสำหรับวิศวกรรม AI infrastructure โมดูลนี้ครอบคลุม Python best practices, การดูแลระบบ Linux, พื้นฐานเครือข่าย และการตั้งค่าสภาพแวดล้อมการพัฒนา
 
-#### Learning Objectives
-By the end of this module, you will:
-- Master Python development best practices for infrastructure code
-- Navigate and administer Linux systems with confidence
-- Understand networking fundamentals for distributed systems
-- Set up professional development environments
-- Use version control effectively in team settings
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- เชี่ยวชาญ best practices การพัฒนา Python สำหรับโค้ด infrastructure
+- นำทางและดูแลระบบ Linux ได้อย่างมั่นใจ
+- เข้าใจพื้นฐานเครือข่ายสำหรับ distributed system
+- ตั้งค่าสภาพแวดล้อมการพัฒนาแบบมืออาชีพ
+- ใช้ version control อย่างมีประสิทธิภาพในการทำงานเป็นทีม
 
-#### Topics Covered
-- **Python for Infrastructure**
-  - Virtual environments and dependency management
-  - Logging and error handling patterns
-  - Configuration management
-  - Testing infrastructure code
-  - Async programming for I/O operations
+#### หัวข้อที่ครอบคลุม
+- **Python สำหรับ Infrastructure**
+  - Virtual environment และการจัดการ dependency
+  - รูปแบบการทำ logging และการจัดการ error
+  - การจัดการ configuration
+  - การทดสอบโค้ด infrastructure
+  - Async programming สำหรับงาน I/O
 
-- **Linux System Administration**
-  - File system hierarchy and management
-  - Process and service management (systemd)
-  - User and permission management
-  - System monitoring and logs
-  - Shell scripting for automation
+- **การดูแลระบบ Linux**
+  - ลำดับชั้นและการจัดการระบบไฟล์
+  - การจัดการ process และ service (systemd)
+  - การจัดการผู้ใช้และ permission
+  - การ monitor ระบบและ log
+  - Shell scripting สำหรับงานอัตโนมัติ
 
-- **Networking Fundamentals**
-  - TCP/IP stack and protocols
-  - DNS and service discovery
-  - Load balancing concepts
-  - Network security basics
-  - Debugging network issues
+- **พื้นฐานเครือข่าย**
+  - TCP/IP stack และโปรโตคอล
+  - DNS และ service discovery
+  - แนวคิด load balancing
+  - พื้นฐาน network security
+  - การ debug ปัญหาเครือข่าย
 
-- **Development Environment**
-  - IDE setup and productivity tools
-  - Git workflows and best practices
-  - SSH keys and secure access
-  - Development vs. production environments
+- **สภาพแวดล้อมการพัฒนา**
+  - การตั้งค่า IDE และเครื่องมือเพิ่มประสิทธิภาพ
+  - Git workflow และ best practices
+  - SSH key และการเข้าถึงอย่างปลอดภัย
+  - สภาพแวดล้อม development กับ production
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - Python 3.11+
 - Linux (Ubuntu 22.04)
-- Git & GitHub
+- Git และ GitHub
 - VSCode/PyCharm
 - Bash scripting
 
-#### Materials Included
-- Comprehensive lecture notes (3,500+ lines)
-- 10 hands-on exercises with solutions
-- 5 practical labs
-- 2 assessments (quiz + practical exam)
-- Extensive resource list
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (3,500+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 10 ชุดพร้อมเฉลย
+- Lab เชิงปฏิบัติ 5 ชุด
+- การประเมิน 2 รายการ (แบบทดสอบ + สอบภาคปฏิบัติ)
+- รายการแหล่งเรียนรู้เพิ่มเติมจำนวนมาก
 
-#### Assessment
-- **Quiz**: 30 questions covering all topics
-- **Practical Exam**: Build a Python CLI tool for system monitoring
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 30 ข้อ ครอบคลุมทุกหัวข้อ
+- **สอบภาคปฏิบัติ**: สร้างเครื่องมือ Python CLI สำหรับ monitor ระบบ
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 12 hours
-- Exercises: 15 hours
-- Labs: 8 hours
-- Assessment: 5 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 12 ชั่วโมง
+- แบบฝึกหัด: 15 ชั่วโมง
+- Lab: 8 ชั่วโมง
+- การประเมิน: 5 ชั่วโมง
 
 ---
 
-### Module 02: Cloud Computing Fundamentals
-**Status**: ✅ Complete | **Duration**: 45 hours | **Files**: 11
+### โมดูล 02: พื้นฐาน Cloud Computing
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 45 ชั่วโมง | **ไฟล์**: 11
 
-#### Overview
-Master cloud computing fundamentals with hands-on experience across AWS, Google Cloud, and Azure. Learn to architect cloud solutions, manage resources, and optimize costs.
+#### ภาพรวม
+เชี่ยวชาญพื้นฐาน cloud computing ผ่านประสบการณ์ลงมือทำจริงบน AWS, Google Cloud และ Azure เรียนรู้การออกแบบ cloud solution การจัดการทรัพยากร และการ optimize ต้นทุน
 
-#### Learning Objectives
-By the end of this module, you will:
-- Understand cloud service models (IaaS, PaaS, SaaS)
-- Deploy and manage resources across major cloud providers
-- Design cloud architectures for scalability and reliability
-- Implement cloud security best practices
-- Optimize cloud costs and resource utilization
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- เข้าใจ cloud service model (IaaS, PaaS, SaaS)
+- Deploy และจัดการทรัพยากรบน cloud provider หลัก ๆ
+- ออกแบบสถาปัตยกรรม cloud ที่ scale ได้และเชื่อถือได้
+- ใช้ cloud security best practices
+- Optimize ต้นทุน cloud และการใช้ทรัพยากร
 
-#### Topics Covered
-- **Cloud Service Models**
+#### หัวข้อที่ครอบคลุม
+- **Cloud Service Model**
   - Infrastructure as a Service (IaaS)
   - Platform as a Service (PaaS)
-  - Serverless and Function as a Service
-  - Managed services for ML/AI
+  - Serverless และ Function as a Service
+  - Managed service สำหรับ ML/AI
 
-- **AWS Fundamentals**
-  - EC2 instances and auto-scaling
-  - S3 storage and data management
-  - VPC networking and security groups
-  - IAM roles and policies
-  - SageMaker for ML workloads
+- **พื้นฐาน AWS**
+  - EC2 instance และ auto-scaling
+  - S3 storage และการจัดการข้อมูล
+  - VPC networking และ security group
+  - IAM role และ policy
+  - SageMaker สำหรับ ML workload
 
 - **Google Cloud Platform**
-  - Compute Engine and instance management
-  - Cloud Storage and data lakes
+  - Compute Engine และการจัดการ instance
+  - Cloud Storage และ data lake
   - Cloud AI Platform
-  - Networking and security
-  - Cost management tools
+  - เครือข่ายและ security
+  - เครื่องมือจัดการต้นทุน
 
-- **Azure Fundamentals**
-  - Virtual Machines and scale sets
-  - Blob storage and data services
-  - Azure ML platform
-  - Resource groups and management
+- **พื้นฐาน Azure**
+  - Virtual Machine และ scale set
+  - Blob storage และ data service
+  - แพลตฟอร์ม Azure ML
+  - Resource group และการจัดการ
 
-- **Multi-Cloud Strategy**
-  - When to use each provider
-  - Multi-cloud architectures
-  - Cloud portability considerations
-  - Cost comparison and optimization
+- **กลยุทธ์ Multi-Cloud**
+  - เมื่อใดควรใช้ provider แต่ละราย
+  - สถาปัตยกรรมแบบ multi-cloud
+  - ข้อพิจารณาด้าน cloud portability
+  - การเปรียบเทียบและ optimize ต้นทุน
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - AWS (EC2, S3, VPC, IAM, SageMaker)
 - Google Cloud (Compute Engine, Cloud Storage, AI Platform)
 - Azure (VMs, Blob Storage, Azure ML)
-- Cloud CLI tools (aws-cli, gcloud, az)
-- Terraform (introduction)
+- เครื่องมือ Cloud CLI (aws-cli, gcloud, az)
+- Terraform (เบื้องต้น)
 
-#### Materials Included
-- Comprehensive lecture notes (4,200+ lines)
-- 8 hands-on exercises with solutions
-- 4 cloud labs (AWS, GCP, Azure, Multi-cloud)
-- 2 assessments
-- Cost optimization guides
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (4,200+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 8 ชุดพร้อมเฉลย
+- Cloud lab 4 ชุด (AWS, GCP, Azure, Multi-cloud)
+- การประเมิน 2 รายการ
+- คู่มือการ optimize ต้นทุน
 
-#### Assessment
-- **Quiz**: 35 questions on cloud concepts
-- **Practical Exam**: Deploy a multi-tier application on AWS
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 35 ข้อเกี่ยวกับแนวคิด cloud
+- **สอบภาคปฏิบัติ**: Deploy แอปพลิเคชันแบบ multi-tier บน AWS
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 15 hours
-- Exercises: 18 hours
-- Labs: 8 hours
-- Assessment: 4 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 15 ชั่วโมง
+- แบบฝึกหัด: 18 ชั่วโมง
+- Lab: 8 ชั่วโมง
+- การประเมิน: 4 ชั่วโมง
 
 ---
 
-### Module 03: Containerization & Docker
-**Status**: ✅ Complete | **Duration**: 50 hours | **Files**: 14
+### โมดูล 03: Containerization และ Docker
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 50 ชั่วโมง | **ไฟล์**: 14
 
-#### Overview
-Deep dive into containerization technology with Docker. Learn to build, optimize, and manage containers for AI/ML workloads.
+#### ภาพรวม
+เจาะลึกเทคโนโลยี containerization ด้วย Docker เรียนรู้การสร้าง optimize และจัดการ container สำหรับ AI/ML workload
 
-#### Learning Objectives
-By the end of this module, you will:
-- Build efficient Docker images for ML applications
-- Optimize container images for size and performance
-- Implement multi-stage builds for production
-- Manage container networking and storage
-- Use Docker Compose for multi-container applications
-- Implement container security best practices
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- สร้าง Docker image ที่มีประสิทธิภาพสำหรับแอปพลิเคชัน ML
+- Optimize container image ด้านขนาดและประสิทธิภาพ
+- ใช้ multi-stage build สำหรับ production
+- จัดการเครือข่ายและ storage ของ container
+- ใช้ Docker Compose สำหรับแอปพลิเคชันหลาย container
+- ใช้ container security best practices
 
-#### Topics Covered
-- **Docker Fundamentals**
-  - Container architecture and isolation
-  - Images, layers, and caching
+#### หัวข้อที่ครอบคลุม
+- **พื้นฐาน Docker**
+  - สถาปัตยกรรม container และการแยกส่วน (isolation)
+  - Image, layer และ caching
   - Dockerfile best practices
-  - Building and tagging images
-  - Container lifecycle management
+  - การ build และ tag image
+  - การจัดการ lifecycle ของ container
 
-- **Advanced Docker**
-  - Multi-stage builds for ML applications
-  - BuildKit and build optimization
-  - Volume management and persistence
-  - Network configuration and service discovery
-  - Resource limits and constraints
+- **Docker ขั้นสูง**
+  - Multi-stage build สำหรับแอปพลิเคชัน ML
+  - BuildKit และการ optimize build
+  - การจัดการ volume และ persistence
+  - การตั้งค่าเครือข่ายและ service discovery
+  - Resource limit และข้อจำกัด
 
-- **Docker for ML/AI**
-  - GPU-enabled containers
-  - ML framework base images
-  - Model packaging and versioning
-  - Data volume management
-  - Dependency management
+- **Docker สำหรับ ML/AI**
+  - Container ที่รองรับ GPU
+  - Base image ของ ML framework
+  - การ package และ versioning โมเดล
+  - การจัดการ data volume
+  - การจัดการ dependency
 
 - **Docker Compose**
   - Service orchestration
-  - Environment configuration
-  - Development environments
-  - Integration testing with containers
+  - การตั้งค่า environment
+  - สภาพแวดล้อมการพัฒนา
+  - Integration testing ด้วย container
 
 - **Container Security**
-  - Image scanning and vulnerability detection
-  - Non-root containers
-  - Secrets management
+  - Image scanning และการตรวจหาช่องโหว่
+  - Container แบบ non-root
+  - การจัดการ secret
   - Network isolation
   - Security best practices
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - Docker Engine 24+
 - Docker Compose
 - Docker BuildKit
-- Container registries (Docker Hub, ECR, GCR)
-- Security scanning tools (Trivy, Snyk)
+- Container registry (Docker Hub, ECR, GCR)
+- เครื่องมือ security scanning (Trivy, Snyk)
 
-#### Materials Included
-- Comprehensive lecture notes (4,800+ lines)
-- 12 hands-on exercises with solutions
-- 6 practical labs
-- 2 assessments
-- Production Dockerfile templates
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (4,800+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 12 ชุดพร้อมเฉลย
+- Lab เชิงปฏิบัติ 6 ชุด
+- การประเมิน 2 รายการ
+- Template ของ Dockerfile ระดับ production
 
-#### Assessment
-- **Quiz**: 40 questions on containerization
-- **Practical Exam**: Containerize a complete ML application
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 40 ข้อเกี่ยวกับ containerization
+- **สอบภาคปฏิบัติ**: ทำ containerize แอปพลิเคชัน ML ที่สมบูรณ์
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 16 hours
-- Exercises: 20 hours
-- Labs: 10 hours
-- Assessment: 4 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 16 ชั่วโมง
+- แบบฝึกหัด: 20 ชั่วโมง
+- Lab: 10 ชั่วโมง
+- การประเมิน: 4 ชั่วโมง
 
 ---
 
-### Module 04: Kubernetes Fundamentals
-**Status**: ✅ Complete | **Duration**: 60 hours | **Files**: 13
+### โมดูล 04: พื้นฐาน Kubernetes
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 60 ชั่วโมง | **ไฟล์**: 13
 
-#### Overview
-Master Kubernetes for orchestrating containerized ML workloads. Learn to deploy, scale, and manage production Kubernetes clusters.
+#### ภาพรวม
+เชี่ยวชาญ Kubernetes สำหรับการ orchestrate ML workload แบบ container เรียนรู้การ deploy, scale และจัดการ Kubernetes cluster ระดับ production
 
-#### Learning Objectives
-By the end of this module, you will:
-- Understand Kubernetes architecture and components
-- Deploy and manage applications on Kubernetes
-- Implement auto-scaling and self-healing
-- Configure networking and service discovery
-- Manage storage and stateful applications
-- Implement security with RBAC and network policies
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- เข้าใจสถาปัตยกรรมและองค์ประกอบของ Kubernetes
+- Deploy และจัดการแอปพลิเคชันบน Kubernetes
+- ทำ auto-scaling และ self-healing
+- ตั้งค่าเครือข่ายและ service discovery
+- จัดการ storage และแอปพลิเคชันแบบ stateful
+- ทำ security ด้วย RBAC และ network policy
 
-#### Topics Covered
-- **Kubernetes Architecture**
-  - Control plane components
-  - Node architecture
-  - Pod design and lifecycle
-  - Controllers and operators
-  - Cluster networking
+#### หัวข้อที่ครอบคลุม
+- **สถาปัตยกรรม Kubernetes**
+  - องค์ประกอบของ control plane
+  - สถาปัตยกรรมของ node
+  - การออกแบบและ lifecycle ของ Pod
+  - Controller และ operator
+  - เครือข่ายของ cluster
 
-- **Core Workloads**
-  - Deployments and ReplicaSets
-  - StatefulSets for stateful apps
-  - DaemonSets and Jobs
-  - CronJobs for batch processing
-  - Init containers and sidecars
+- **Core Workload**
+  - Deployment และ ReplicaSet
+  - StatefulSet สำหรับแอปแบบ stateful
+  - DaemonSet และ Job
+  - CronJob สำหรับ batch processing
+  - Init container และ sidecar
 
-- **Networking**
-  - Services (ClusterIP, NodePort, LoadBalancer)
-  - Ingress controllers and routing
-  - Network policies and security
-  - DNS and service discovery
-  - CNI plugins
+- **เครือข่าย**
+  - Service (ClusterIP, NodePort, LoadBalancer)
+  - Ingress controller และ routing
+  - Network policy และ security
+  - DNS และ service discovery
+  - CNI plugin
 
 - **Storage**
-  - Volumes and persistent volumes
-  - Storage classes and dynamic provisioning
-  - StatefulSet storage
-  - Data persistence patterns
+  - Volume และ persistent volume
+  - Storage class และ dynamic provisioning
+  - Storage ของ StatefulSet
+  - รูปแบบการเก็บข้อมูลถาวร (data persistence)
 
-- **Configuration & Secrets**
-  - ConfigMaps for configuration
-  - Secrets management
-  - Environment variables
-  - External secret management
+- **Configuration และ Secret**
+  - ConfigMap สำหรับ configuration
+  - การจัดการ secret
+  - Environment variable
+  - การจัดการ secret ภายนอก
 
-- **Scaling & Resources**
+- **Scaling และทรัพยากร**
   - Horizontal Pod Autoscaling
   - Vertical Pod Autoscaling
   - Cluster Autoscaling
-  - Resource requests and limits
+  - Resource request และ limit
   - Quality of Service (QoS)
 
 - **Security**
-  - RBAC and service accounts
-  - Pod security standards
-  - Network policies
+  - RBAC และ service account
+  - Pod security standard
+  - Network policy
   - Image security
-  - Secrets encryption
+  - การเข้ารหัส secret
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - Kubernetes 1.28+
 - kubectl CLI
 - Helm 3
-- Minikube/Kind (local development)
-- EKS/GKE/AKS (cloud Kubernetes)
+- Minikube/Kind (สำหรับพัฒนาบนเครื่อง)
+- EKS/GKE/AKS (Kubernetes บน cloud)
 
-#### Materials Included
-- Comprehensive lecture notes (5,500+ lines)
-- 15 hands-on exercises with solutions
-- 8 practical labs
-- 2 assessments
-- Production-ready manifests
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (5,500+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 15 ชุดพร้อมเฉลย
+- Lab เชิงปฏิบัติ 8 ชุด
+- การประเมิน 2 รายการ
+- Manifest ระดับ production
 
-#### Assessment
-- **Quiz**: 50 questions on Kubernetes
-- **Practical Exam**: Deploy a scalable ML application on Kubernetes
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 50 ข้อเกี่ยวกับ Kubernetes
+- **สอบภาคปฏิบัติ**: Deploy แอปพลิเคชัน ML ที่ scale ได้บน Kubernetes
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 20 hours
-- Exercises: 25 hours
-- Labs: 12 hours
-- Assessment: 3 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 20 ชั่วโมง
+- แบบฝึกหัด: 25 ชั่วโมง
+- Lab: 12 ชั่วโมง
+- การประเมิน: 3 ชั่วโมง
 
 ---
 
-### Module 05: Data Pipeline Engineering
-**Status**: ✅ Complete | **Duration**: 50 hours | **Files**: 12
+### โมดูล 05: วิศวกรรม Data Pipeline
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 50 ชั่วโมง | **ไฟล์**: 12
 
-#### Overview
-Build robust data pipelines for ML workloads. Learn to ingest, process, and store data at scale using modern data engineering tools.
+#### ภาพรวม
+สร้าง data pipeline ที่แข็งแกร่งสำหรับ ML workload เรียนรู้การ ingest ประมวลผล และจัดเก็บข้อมูลในระดับ scale ด้วยเครื่องมือ data engineering สมัยใหม่
 
-#### Learning Objectives
-By the end of this module, you will:
-- Design and implement data pipelines for ML
-- Work with batch and streaming data
-- Use Apache Spark for distributed processing
-- Implement data quality and validation
-- Build ETL/ELT workflows
-- Manage data versioning and lineage
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- ออกแบบและสร้าง data pipeline สำหรับ ML
+- ทำงานกับข้อมูลแบบ batch และ streaming
+- ใช้ Apache Spark สำหรับการประมวลผลแบบกระจาย
+- ทำ data quality และ validation
+- สร้าง ETL/ELT workflow
+- จัดการ data versioning และ lineage
 
-#### Topics Covered
-- **Data Pipeline Fundamentals**
-  - Pipeline architecture patterns
-  - Batch vs. streaming processing
-  - Data quality and validation
-  - Error handling and retry logic
-  - Monitoring and alerting
+#### หัวข้อที่ครอบคลุม
+- **พื้นฐาน Data Pipeline**
+  - รูปแบบสถาปัตยกรรมของ pipeline
+  - การประมวลผลแบบ batch กับ streaming
+  - Data quality และ validation
+  - การจัดการ error และ retry logic
+  - Monitoring และ alerting
 
 - **Apache Airflow**
-  - DAG design and best practices
-  - Operators and sensors
-  - Task dependencies and scheduling
-  - Dynamic DAG generation
-  - Monitoring and troubleshooting
+  - การออกแบบ DAG และ best practices
+  - Operator และ sensor
+  - Task dependency และ scheduling
+  - การสร้าง DAG แบบ dynamic
+  - Monitoring และ troubleshooting
 
 - **Apache Spark**
-  - RDD, DataFrame, and Dataset APIs
-  - Transformations and actions
-  - Spark SQL for data processing
-  - PySpark for Python integration
-  - Performance optimization
+  - RDD, DataFrame และ Dataset API
+  - Transformation และ action
+  - Spark SQL สำหรับประมวลผลข้อมูล
+  - PySpark สำหรับเชื่อมต่อกับ Python
+  - การ optimize ประสิทธิภาพ
 
 - **Data Storage**
-  - Data lakes and warehouses
-  - Parquet, Avro, and ORC formats
-  - Partitioning strategies
+  - Data lake และ data warehouse
+  - รูปแบบ Parquet, Avro และ ORC
+  - กลยุทธ์การทำ partitioning
   - Data versioning (DVC)
-  - Feature stores
+  - Feature store
 
 - **Stream Processing**
-  - Apache Kafka fundamentals
-  - Real-time data ingestion
-  - Stream processing patterns
-  - Window operations
+  - พื้นฐาน Apache Kafka
+  - การ ingest ข้อมูลแบบ real-time
+  - รูปแบบ stream processing
+  - Window operation
   - Exactly-once semantics
 
 - **Data Quality**
   - Schema validation
   - Data profiling
   - Anomaly detection
-  - Data lineage tracking
-  - Great Expectations framework
+  - การติดตาม data lineage
+  - Framework Great Expectations
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - Apache Airflow 2.7+
 - Apache Spark 3.4+
 - Apache Kafka
@@ -613,85 +613,85 @@ By the end of this module, you will:
 - DVC (Data Version Control)
 - Great Expectations
 
-#### Materials Included
-- Comprehensive lecture notes (4,600+ lines)
-- 12 hands-on exercises with solutions
-- 6 practical labs
-- 2 assessments
-- Pipeline templates and DAGs
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (4,600+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 12 ชุดพร้อมเฉลย
+- Lab เชิงปฏิบัติ 6 ชุด
+- การประเมิน 2 รายการ
+- Template ของ pipeline และ DAG
 
-#### Assessment
-- **Quiz**: 40 questions on data pipelines
-- **Practical Exam**: Build an end-to-end ML data pipeline
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 40 ข้อเกี่ยวกับ data pipeline
+- **สอบภาคปฏิบัติ**: สร้าง ML data pipeline แบบ end-to-end
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 18 hours
-- Exercises: 20 hours
-- Labs: 10 hours
-- Assessment: 2 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 18 ชั่วโมง
+- แบบฝึกหัด: 20 ชั่วโมง
+- Lab: 10 ชั่วโมง
+- การประเมิน: 2 ชั่วโมง
 
 ---
 
-### Module 06: MLOps Fundamentals
-**Status**: ✅ Complete | **Duration**: 55 hours | **Files**: 12
+### โมดูล 06: พื้นฐาน MLOps
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 55 ชั่วโมง | **ไฟล์**: 12
 
-#### Overview
-Learn MLOps practices to bridge the gap between ML development and production deployment. Implement continuous integration, deployment, and monitoring for ML systems.
+#### ภาพรวม
+เรียนรู้แนวปฏิบัติ MLOps เพื่อเชื่อมช่องว่างระหว่างการพัฒนา ML และการ deploy สู่ production ทำ continuous integration, deployment และ monitoring สำหรับระบบ ML
 
-#### Learning Objectives
-By the end of this module, you will:
-- Implement CI/CD pipelines for ML models
-- Manage model versioning and experiment tracking
-- Deploy models to production environments
-- Monitor model performance and data drift
-- Implement A/B testing for models
-- Build retraining pipelines
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- สร้าง CI/CD pipeline สำหรับ ML model
+- จัดการ model versioning และ experiment tracking
+- Deploy โมเดลสู่สภาพแวดล้อม production
+- Monitor ประสิทธิภาพโมเดลและ data drift
+- ทำ A/B testing สำหรับโมเดล
+- สร้าง retraining pipeline
 
-#### Topics Covered
-- **MLOps Principles**
-  - ML lifecycle management
-  - Development vs. production
-  - Technical debt in ML systems
-  - Team collaboration patterns
+#### หัวข้อที่ครอบคลุม
+- **หลักการ MLOps**
+  - การจัดการ ML lifecycle
+  - Development กับ production
+  - Technical debt ในระบบ ML
+  - รูปแบบการทำงานร่วมกันในทีม
   - MLOps maturity model
 
 - **Experiment Tracking**
-  - MLflow experiments and runs
-  - Parameter and metric logging
-  - Artifact management
+  - Experiment และ run ใน MLflow
+  - การ log parameter และ metric
+  - การจัดการ artifact
   - Model registry
-  - Experiment comparison
+  - การเปรียบเทียบ experiment
 
 - **Model Serving**
-  - Model serving architectures
-  - REST APIs with FastAPI
-  - Batch vs. real-time inference
-  - Model versioning in production
-  - Canary deployments
+  - สถาปัตยกรรม model serving
+  - REST API ด้วย FastAPI
+  - Inference แบบ batch กับ real-time
+  - Model versioning ใน production
+  - Canary deployment
 
-- **CI/CD for ML**
-  - Automated testing for ML
-  - Model validation pipelines
+- **CI/CD สำหรับ ML**
+  - Automated testing สำหรับ ML
+  - Model validation pipeline
   - Continuous training
-  - GitHub Actions for ML
+  - GitHub Actions สำหรับ ML
   - Deployment automation
 
 - **Model Monitoring**
-  - Performance metrics tracking
-  - Data drift detection
-  - Model degradation alerts
+  - การติดตาม performance metric
+  - การตรวจจับ data drift
+  - การแจ้งเตือนเมื่อโมเดลเสื่อมประสิทธิภาพ
   - Feature monitoring
-  - Logging and debugging
+  - Logging และ debugging
 
 - **Feature Engineering**
-  - Feature stores (Feast)
-  - Feature transformation pipelines
+  - Feature store (Feast)
+  - Feature transformation pipeline
   - Feature versioning
-  - Online vs. offline features
+  - Feature แบบ online กับ offline
   - Feature monitoring
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - MLflow
 - FastAPI
 - Feast (feature store)
@@ -699,85 +699,85 @@ By the end of this module, you will:
 - Prometheus
 - Grafana
 
-#### Materials Included
-- Comprehensive lecture notes (5,000+ lines)
-- 14 hands-on exercises with solutions
-- 7 practical labs
-- 2 assessments
-- MLOps templates and workflows
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (5,000+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 14 ชุดพร้อมเฉลย
+- Lab เชิงปฏิบัติ 7 ชุด
+- การประเมิน 2 รายการ
+- Template และ workflow ของ MLOps
 
-#### Assessment
-- **Quiz**: 45 questions on MLOps
-- **Practical Exam**: Build a complete MLOps pipeline
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 45 ข้อเกี่ยวกับ MLOps
+- **สอบภาคปฏิบัติ**: สร้าง MLOps pipeline ที่สมบูรณ์
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 18 hours
-- Exercises: 22 hours
-- Labs: 12 hours
-- Assessment: 3 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 18 ชั่วโมง
+- แบบฝึกหัด: 22 ชั่วโมง
+- Lab: 12 ชั่วโมง
+- การประเมิน: 3 ชั่วโมง
 
 ---
 
-### Module 07: GPU Computing & ML Acceleration
-**Status**: ✅ Complete | **Duration**: 50 hours | **Files**: 12
+### โมดูล 07: GPU Computing และการเร่งความเร็ว ML
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 50 ชั่วโมง | **ไฟล์**: 12
 
-#### Overview
-Master GPU computing for ML workloads. Learn to optimize training and inference, manage GPU resources, and implement cost-effective acceleration strategies.
+#### ภาพรวม
+เชี่ยวชาญ GPU computing สำหรับ ML workload เรียนรู้การ optimize training และ inference การจัดการทรัพยากร GPU และกลยุทธ์การเร่งความเร็วที่คุ้มค่า
 
-#### Learning Objectives
-By the end of this module, you will:
-- Understand GPU architecture for ML workloads
-- Configure CUDA and ML frameworks for GPU
-- Optimize training and inference performance
-- Manage multi-GPU systems
-- Implement cost optimization for GPU workloads
-- Use cloud GPU services effectively
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- เข้าใจสถาปัตยกรรม GPU สำหรับ ML workload
+- ตั้งค่า CUDA และ ML framework ให้ใช้ GPU
+- Optimize ประสิทธิภาพ training และ inference
+- จัดการระบบ multi-GPU
+- Optimize ต้นทุนสำหรับ GPU workload
+- ใช้บริการ GPU บน cloud อย่างมีประสิทธิภาพ
 
-#### Topics Covered
-- **GPU Fundamentals**
-  - GPU architecture (CUDA cores, Tensor cores)
-  - CPU vs. GPU computing
-  - Memory hierarchy and bandwidth
-  - CUDA programming basics
-  - GPU selection for ML workloads
+#### หัวข้อที่ครอบคลุม
+- **พื้นฐาน GPU**
+  - สถาปัตยกรรม GPU (CUDA core, Tensor core)
+  - การประมวลผลด้วย CPU กับ GPU
+  - ลำดับชั้นหน่วยความจำและ bandwidth
+  - พื้นฐานการเขียนโปรแกรม CUDA
+  - การเลือก GPU สำหรับ ML workload
 
-- **ML Framework GPU Support**
-  - PyTorch GPU operations
-  - TensorFlow GPU configuration
+- **การรองรับ GPU ของ ML Framework**
+  - การทำงานบน GPU ของ PyTorch
+  - การตั้งค่า GPU ของ TensorFlow
   - Mixed precision training
   - Gradient accumulation
   - Multi-GPU training
 
-- **Training Optimization**
-  - Distributed training strategies
+- **การ Optimize Training**
+  - กลยุทธ์ distributed training
   - Data parallelism
   - Model parallelism
   - Pipeline parallelism
   - Gradient checkpointing
 
-- **Inference Optimization**
+- **การ Optimize Inference**
   - Model quantization
-  - TensorRT optimization
-  - ONNX model export
-  - Batching strategies
-  - Dynamic batching with Triton
+  - การ optimize ด้วย TensorRT
+  - การ export โมเดลเป็น ONNX
+  - กลยุทธ์การทำ batching
+  - Dynamic batching ด้วย Triton
 
-- **GPU Resource Management**
-  - Docker GPU support
-  - Kubernetes GPU scheduling
-  - GPU sharing and time-slicing
-  - Resource quotas and limits
-  - Monitoring GPU utilization
+- **การจัดการทรัพยากร GPU**
+  - การรองรับ GPU ใน Docker
+  - GPU scheduling ใน Kubernetes
+  - GPU sharing และ time-slicing
+  - Resource quota และ limit
+  - การ monitor การใช้งาน GPU
 
-- **Cloud GPU Services**
-  - AWS EC2 GPU instances
-  - GCP GPU offerings
-  - Azure GPU VMs
-  - Cost optimization strategies
-  - Spot instances for training
+- **บริการ GPU บน Cloud**
+  - AWS EC2 GPU instance
+  - บริการ GPU ของ GCP
+  - Azure GPU VM
+  - กลยุทธ์การ optimize ต้นทุน
+  - Spot instance สำหรับ training
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - NVIDIA CUDA 12+
 - PyTorch 2.0+
 - TensorFlow 2.14+
@@ -785,92 +785,92 @@ By the end of this module, you will:
 - TensorRT
 - Docker GPU runtime
 
-#### Materials Included
-- Comprehensive lecture notes (4,400+ lines)
-- 11 hands-on exercises with solutions
-- 6 practical labs
-- 2 assessments
-- GPU optimization guides
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (4,400+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 11 ชุดพร้อมเฉลย
+- Lab เชิงปฏิบัติ 6 ชุด
+- การประเมิน 2 รายการ
+- คู่มือการ optimize GPU
 
-#### Assessment
-- **Quiz**: 40 questions on GPU computing
-- **Practical Exam**: Optimize a model for GPU inference
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 40 ข้อเกี่ยวกับ GPU computing
+- **สอบภาคปฏิบัติ**: Optimize โมเดลสำหรับ GPU inference
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 16 hours
-- Exercises: 20 hours
-- Labs: 12 hours
-- Assessment: 2 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 16 ชั่วโมง
+- แบบฝึกหัด: 20 ชั่วโมง
+- Lab: 12 ชั่วโมง
+- การประเมิน: 2 ชั่วโมง
 
 ---
 
-### Module 08: Monitoring & Observability
-**Status**: ✅ Complete | **Duration**: 45 hours | **Files**: 11
+### โมดูล 08: Monitoring และ Observability
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 45 ชั่วโมง | **ไฟล์**: 11
 
-#### Overview
-Implement comprehensive monitoring and observability for ML infrastructure. Learn to collect metrics, create dashboards, set up alerts, and troubleshoot production issues.
+#### ภาพรวม
+ทำ monitoring และ observability อย่างครอบคลุมสำหรับ ML infrastructure เรียนรู้การเก็บ metric สร้าง dashboard ตั้งค่า alert และ troubleshoot ปัญหาใน production
 
-#### Learning Objectives
-By the end of this module, you will:
-- Design monitoring strategies for ML systems
-- Collect and store metrics with Prometheus
-- Create informative dashboards with Grafana
-- Implement alerting and on-call processes
-- Use distributed tracing for debugging
-- Analyze logs for troubleshooting
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- ออกแบบกลยุทธ์ monitoring สำหรับระบบ ML
+- เก็บและจัดเก็บ metric ด้วย Prometheus
+- สร้าง dashboard ที่ให้ข้อมูลชัดเจนด้วย Grafana
+- ทำ alerting และกระบวนการ on-call
+- ใช้ distributed tracing ในการ debug
+- วิเคราะห์ log เพื่อ troubleshoot
 
-#### Topics Covered
-- **Observability Fundamentals**
-  - Metrics, logs, and traces
-  - The three pillars of observability
-  - SLIs, SLOs, and SLAs
-  - Monitoring vs. observability
-  - Alert fatigue and best practices
+#### หัวข้อที่ครอบคลุม
+- **พื้นฐาน Observability**
+  - Metric, log และ trace
+  - สามเสาหลักของ observability
+  - SLI, SLO และ SLA
+  - Monitoring กับ observability
+  - Alert fatigue และ best practices
 
 - **Prometheus**
-  - Metrics collection and storage
-  - PromQL query language
+  - การเก็บและจัดเก็บ metric
+  - ภาษา query PromQL
   - Service discovery
-  - Exporters and instrumentation
-  - Recording rules and aggregation
+  - Exporter และ instrumentation
+  - Recording rule และ aggregation
 
 - **Grafana**
-  - Dashboard design principles
-  - Visualization types
-  - Template variables
-  - Alerting rules
-  - Team collaboration
+  - หลักการออกแบบ dashboard
+  - ประเภทของ visualization
+  - Template variable
+  - Alerting rule
+  - การทำงานร่วมกันในทีม
 
 - **Application Instrumentation**
-  - Custom metrics with Python
-  - ML-specific metrics
+  - Custom metric ด้วย Python
+  - Metric เฉพาะสำหรับ ML
   - Request tracing
   - Performance profiling
-  - Resource utilization
+  - การใช้ทรัพยากร
 
 - **Distributed Tracing**
-  - Jaeger architecture
-  - OpenTelemetry instrumentation
-  - Trace sampling strategies
-  - Performance analysis
-  - Debugging distributed systems
+  - สถาปัตยกรรม Jaeger
+  - Instrumentation ด้วย OpenTelemetry
+  - กลยุทธ์ trace sampling
+  - การวิเคราะห์ประสิทธิภาพ
+  - การ debug distributed system
 
-- **Log Management**
+- **การจัดการ Log**
   - Centralized logging (ELK stack)
-  - Log aggregation patterns
+  - รูปแบบ log aggregation
   - Structured logging
-  - Log analysis and search
-  - Log retention policies
+  - การวิเคราะห์และค้นหา log
+  - นโยบาย log retention
 
 - **Alerting**
-  - Alert design and tuning
-  - Notification channels
-  - Escalation policies
+  - การออกแบบและปรับจูน alert
+  - ช่องทางการแจ้งเตือน
+  - Escalation policy
   - On-call best practices
   - Incident response
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - Prometheus
 - Grafana
 - Jaeger
@@ -878,245 +878,245 @@ By the end of this module, you will:
 - ELK Stack (Elasticsearch, Logstash, Kibana)
 - Alertmanager
 
-#### Materials Included
-- Comprehensive lecture notes (4,200+ lines)
-- 10 hands-on exercises with solutions
-- 5 practical labs
-- 2 assessments
-- Dashboard templates and alert rules
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (4,200+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 10 ชุดพร้อมเฉลย
+- Lab เชิงปฏิบัติ 5 ชุด
+- การประเมิน 2 รายการ
+- Template ของ dashboard และ alert rule
 
-#### Assessment
-- **Quiz**: 35 questions on monitoring
-- **Practical Exam**: Build a complete monitoring stack for an ML service
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 35 ข้อเกี่ยวกับ monitoring
+- **สอบภาคปฏิบัติ**: สร้าง monitoring stack ที่สมบูรณ์สำหรับ ML service
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 15 hours
-- Exercises: 18 hours
-- Labs: 10 hours
-- Assessment: 2 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 15 ชั่วโมง
+- แบบฝึกหัด: 18 ชั่วโมง
+- Lab: 10 ชั่วโมง
+- การประเมิน: 2 ชั่วโมง
 
 ---
 
-### Module 09: Infrastructure as Code
-**Status**: ✅ Complete | **Duration**: 50 hours | **Files**: 12
+### โมดูล 09: Infrastructure as Code
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 50 ชั่วโมง | **ไฟล์**: 12
 
-#### Overview
-Master Infrastructure as Code with Terraform and Pulumi. Learn to provision, manage, and version infrastructure across cloud providers.
+#### ภาพรวม
+เชี่ยวชาญ Infrastructure as Code ด้วย Terraform และ Pulumi เรียนรู้การ provision จัดการ และทำ versioning ของ infrastructure บน cloud provider ต่าง ๆ
 
-#### Learning Objectives
-By the end of this module, you will:
-- Write infrastructure as code with Terraform
-- Manage state and workspaces effectively
-- Design reusable infrastructure modules
-- Implement CI/CD for infrastructure
-- Use Pulumi for programmatic infrastructure
-- Apply IaC best practices and patterns
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- เขียน infrastructure as code ด้วย Terraform
+- จัดการ state และ workspace อย่างมีประสิทธิภาพ
+- ออกแบบ infrastructure module ที่นำกลับมาใช้ซ้ำได้
+- ทำ CI/CD สำหรับ infrastructure
+- ใช้ Pulumi สำหรับ infrastructure แบบเขียนโปรแกรม
+- ใช้ best practices และรูปแบบของ IaC
 
-#### Topics Covered
-- **IaC Fundamentals**
-  - Infrastructure as Code principles
-  - Declarative vs. imperative approaches
-  - State management
-  - Idempotency and convergence
-  - Version control for infrastructure
+#### หัวข้อที่ครอบคลุม
+- **พื้นฐาน IaC**
+  - หลักการ Infrastructure as Code
+  - แนวทางแบบ declarative กับ imperative
+  - การจัดการ state
+  - Idempotency และ convergence
+  - Version control สำหรับ infrastructure
 
-- **Terraform Basics**
-  - HCL syntax and structure
-  - Providers and resources
-  - Variables and outputs
-  - Data sources
-  - State management
+- **พื้นฐาน Terraform**
+  - Syntax และโครงสร้าง HCL
+  - Provider และ resource
+  - Variable และ output
+  - Data source
+  - การจัดการ state
 
-- **Advanced Terraform**
-  - Modules and composition
-  - Workspaces and environments
-  - Remote state backends
+- **Terraform ขั้นสูง**
+  - Module และ composition
+  - Workspace และ environment
+  - Remote state backend
   - Terraform Cloud/Enterprise
-  - Testing infrastructure code
+  - การทดสอบโค้ด infrastructure
 
-- **Multi-Cloud with Terraform**
-  - AWS resources (EC2, S3, VPC)
-  - GCP resources (Compute, Storage)
-  - Azure resources
-  - Multi-cloud patterns
+- **Multi-Cloud ด้วย Terraform**
+  - Resource ของ AWS (EC2, S3, VPC)
+  - Resource ของ GCP (Compute, Storage)
+  - Resource ของ Azure
+  - รูปแบบ multi-cloud
   - Provider versioning
 
 - **Pulumi**
-  - Infrastructure with Python
-  - Stack management
-  - Secrets and configuration
-  - Component resources
-  - Testing with Pulumi
+  - Infrastructure ด้วย Python
+  - การจัดการ stack
+  - Secret และ configuration
+  - Component resource
+  - การทดสอบด้วย Pulumi
 
-- **IaC for ML Infrastructure**
-  - Kubernetes cluster provisioning
-  - GPU instance management
-  - ML platform deployment
-  - Cost optimization
+- **IaC สำหรับ ML Infrastructure**
+  - การ provision Kubernetes cluster
+  - การจัดการ GPU instance
+  - การ deploy ML platform
+  - การ optimize ต้นทุน
   - Disaster recovery
 
-- **CI/CD for Infrastructure**
+- **CI/CD สำหรับ Infrastructure**
   - Automated testing
-  - Plan and apply workflows
-  - GitHub Actions for Terraform
+  - Workflow แบบ plan และ apply
+  - GitHub Actions สำหรับ Terraform
   - Policy as Code (Sentinel, OPA)
   - Drift detection
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - Terraform 1.6+
 - Pulumi 3.0+
-- AWS/GCP/Azure providers
+- Provider ของ AWS/GCP/Azure
 - GitHub Actions
 - Terraform Cloud
 - OpenTofu
 
-#### Materials Included
-- Comprehensive lecture notes (4,700+ lines)
-- 13 hands-on exercises with solutions
-- 7 practical labs
-- 2 assessments
-- Terraform modules and Pulumi components
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (4,700+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 13 ชุดพร้อมเฉลย
+- Lab เชิงปฏิบัติ 7 ชุด
+- การประเมิน 2 รายการ
+- Terraform module และ Pulumi component
 
-#### Assessment
-- **Quiz**: 40 questions on IaC
-- **Practical Exam**: Deploy a complete ML infrastructure with Terraform
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 40 ข้อเกี่ยวกับ IaC
+- **สอบภาคปฏิบัติ**: Deploy ML infrastructure ที่สมบูรณ์ด้วย Terraform
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 16 hours
-- Exercises: 20 hours
-- Labs: 12 hours
-- Assessment: 2 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 16 ชั่วโมง
+- แบบฝึกหัด: 20 ชั่วโมง
+- Lab: 12 ชั่วโมง
+- การประเมิน: 2 ชั่วโมง
 
 ---
 
-### Module 10: LLM Infrastructure
-**Status**: ✅ Complete | **Duration**: 55 hours | **Files**: 12
+### โมดูล 10: LLM Infrastructure
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 55 ชั่วโมง | **ไฟล์**: 12
 
-#### Overview
-Build production infrastructure for Large Language Models. Learn to deploy, serve, and optimize LLMs with vector databases, RAG systems, and cost-effective inference strategies.
+#### ภาพรวม
+สร้าง infrastructure ระดับ production สำหรับ Large Language Model เรียนรู้การ deploy, serve และ optimize LLM ร่วมกับ vector database ระบบ RAG และกลยุทธ์ inference ที่คุ้มค่า
 
-#### Learning Objectives
-By the end of this module, you will:
-- Deploy and serve LLMs in production
-- Implement RAG (Retrieval-Augmented Generation) systems
-- Manage vector databases for embeddings
-- Optimize LLM inference costs and performance
-- Build multi-model AI applications
-- Implement LLM observability and monitoring
+#### วัตถุประสงค์การเรียนรู้
+เมื่อจบโมดูลนี้ คุณจะ:
+- Deploy และ serve LLM ใน production
+- สร้างระบบ RAG (Retrieval-Augmented Generation)
+- จัดการ vector database สำหรับ embedding
+- Optimize ต้นทุนและประสิทธิภาพของ LLM inference
+- สร้างแอปพลิเคชัน AI แบบหลายโมเดล
+- ทำ LLM observability และ monitoring
 
-#### Topics Covered
-- **LLM Fundamentals**
-  - Transformer architecture review
-  - Model families (GPT, BERT, LLaMA)
-  - Pre-training vs. fine-tuning
-  - Prompt engineering basics
-  - LLM capabilities and limitations
+#### หัวข้อที่ครอบคลุม
+- **พื้นฐาน LLM**
+  - ทบทวนสถาปัตยกรรม Transformer
+  - ตระกูลโมเดล (GPT, BERT, LLaMA)
+  - Pre-training กับ fine-tuning
+  - พื้นฐาน prompt engineering
+  - ความสามารถและข้อจำกัดของ LLM
 
-- **LLM Deployment**
-  - Model hosting options
-  - vLLM for efficient inference
+- **การ Deploy LLM**
+  - ทางเลือกในการ host โมเดล
+  - vLLM สำหรับ inference ที่มีประสิทธิภาพ
   - Text Generation Inference (TGI)
   - Model quantization (GPTQ, AWQ)
   - Multi-GPU serving
 
-- **Vector Databases**
-  - Embedding fundamentals
-  - Weaviate architecture
-  - Index types (HNSW, IVF)
+- **Vector Database**
+  - พื้นฐาน embedding
+  - สถาปัตยกรรม Weaviate
+  - ประเภทของ index (HNSW, IVF)
   - Hybrid search
-  - Performance optimization
+  - การ optimize ประสิทธิภาพ
 
-- **RAG Systems**
-  - RAG architecture patterns
-  - Document chunking strategies
-  - Retrieval optimization
-  - Context window management
-  - Re-ranking and filtering
+- **ระบบ RAG**
+  - รูปแบบสถาปัตยกรรม RAG
+  - กลยุทธ์การทำ document chunking
+  - การ optimize retrieval
+  - การจัดการ context window
+  - Re-ranking และ filtering
 
-- **LangChain & Orchestration**
-  - LangChain components
+- **LangChain และ Orchestration**
+  - องค์ประกอบของ LangChain
   - Chain composition
-  - Memory management
-  - Agent frameworks
-  - Tool integration
+  - การจัดการ memory
+  - Agent framework
+  - การเชื่อมต่อ tool
 
-- **Production LLM Systems**
-  - API design for LLM services
-  - Streaming responses
-  - Rate limiting and quotas
-  - Caching strategies
-  - Cost tracking
+- **ระบบ LLM ระดับ Production**
+  - การออกแบบ API สำหรับ LLM service
+  - Streaming response
+  - Rate limiting และ quota
+  - กลยุทธ์ caching
+  - การติดตามต้นทุน
 
 - **LLM Observability**
-  - Prompt and response logging
-  - Latency and throughput metrics
-  - Cost per request tracking
+  - การ log prompt และ response
+  - Metric ด้าน latency และ throughput
+  - การติดตามต้นทุนต่อ request
   - Quality monitoring
-  - User feedback loops
+  - User feedback loop
 
-- **Fine-tuning Infrastructure**
-  - LoRA and QLoRA
-  - Fine-tuning pipelines
-  - Evaluation frameworks
+- **Infrastructure สำหรับ Fine-tuning**
+  - LoRA และ QLoRA
+  - Fine-tuning pipeline
+  - Evaluation framework
   - Model versioning
-  - Deployment strategies
+  - กลยุทธ์การ deploy
 
-#### Key Technologies
+#### เทคโนโลยีหลัก
 - vLLM
 - Weaviate
 - LangChain
 - Hugging Face Transformers
 - FastAPI
-- CUDA and TensorRT-LLM
+- CUDA และ TensorRT-LLM
 
-#### Materials Included
-- Comprehensive lecture notes (5,200+ lines)
-- 14 hands-on exercises with solutions
-- 8 practical labs
-- 2 assessments
-- Production LLM deployment templates
+#### เนื้อหาที่รวมอยู่
+- เอกสารประกอบการบรรยายที่ครอบคลุม (5,200+ บรรทัด)
+- แบบฝึกหัดเชิงปฏิบัติ 14 ชุดพร้อมเฉลย
+- Lab เชิงปฏิบัติ 8 ชุด
+- การประเมิน 2 รายการ
+- Template สำหรับ deploy LLM ระดับ production
 
-#### Assessment
-- **Quiz**: 45 questions on LLM infrastructure
-- **Practical Exam**: Deploy a production RAG system
-- **Passing Score**: 80%
+#### การประเมินผล
+- **แบบทดสอบ**: 45 ข้อเกี่ยวกับ LLM infrastructure
+- **สอบภาคปฏิบัติ**: Deploy ระบบ RAG ระดับ production
+- **คะแนนผ่าน**: 80%
 
-#### Time Commitment
-- Lectures: 18 hours
-- Exercises: 22 hours
-- Labs: 12 hours
-- Assessment: 3 hours
+#### เวลาที่ต้องใช้
+- การบรรยาย: 18 ชั่วโมง
+- แบบฝึกหัด: 22 ชั่วโมง
+- Lab: 12 ชั่วโมง
+- การประเมิน: 3 ชั่วโมง
 
 ---
 
-## Projects
+## โปรเจกต์
 
-### Project 01: Basic Model Serving System
-**Status**: ✅ Complete | **Duration**: 60 hours | **Files**: ~30
+### โปรเจกต์ 01: ระบบ Model Serving พื้นฐาน
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 60 ชั่วโมง | **ไฟล์**: ~30
 
-#### Overview
-Build a complete model serving system from scratch. This project integrates concepts from Modules 1-5 to create a production-ready ML service with monitoring, logging, and basic MLOps practices.
+#### ภาพรวม
+สร้างระบบ model serving ที่สมบูรณ์ตั้งแต่เริ่มต้น โปรเจกต์นี้บูรณาการแนวคิดจากโมดูล 1-5 เพื่อสร้าง ML service ระดับ production พร้อม monitoring, logging และแนวปฏิบัติ MLOps ขั้นพื้นฐาน
 
-#### Project Objectives
-- Deploy a machine learning model as a REST API
-- Implement monitoring and logging
-- Containerize the application
-- Deploy to Kubernetes
-- Implement basic CI/CD
+#### วัตถุประสงค์ของโปรเจกต์
+- Deploy machine learning model เป็น REST API
+- ทำ monitoring และ logging
+- Containerize แอปพลิเคชัน
+- Deploy ไปยัง Kubernetes
+- ทำ CI/CD ขั้นพื้นฐาน
 
-#### Learning Outcomes
-After completing this project, you will:
-- ✅ Build REST APIs for ML models using FastAPI
-- ✅ Containerize ML applications with Docker
-- ✅ Deploy applications to Kubernetes
-- ✅ Implement Prometheus monitoring
-- ✅ Create Grafana dashboards
-- ✅ Write comprehensive tests
-- ✅ Set up GitHub Actions CI/CD
+#### ผลลัพธ์การเรียนรู้
+หลังจบโปรเจกต์นี้ คุณจะ:
+- ✅ สร้าง REST API สำหรับ ML model ด้วย FastAPI
+- ✅ Containerize แอปพลิเคชัน ML ด้วย Docker
+- ✅ Deploy แอปพลิเคชันไปยัง Kubernetes
+- ✅ ทำ monitoring ด้วย Prometheus
+- ✅ สร้าง Grafana dashboard
+- ✅ เขียน test อย่างครอบคลุม
+- ✅ ตั้งค่า CI/CD ด้วย GitHub Actions
 
-#### Project Structure
+#### โครงสร้างโปรเจกต์
 ```
 project-101-model-serving/
 ├── src/                       # Application code
@@ -1143,67 +1143,67 @@ project-101-model-serving/
 └── docs/                      # Documentation
 ```
 
-#### Key Features
-- **Model API**: RESTful endpoints for inference
-- **Health Checks**: Liveness and readiness probes
-- **Monitoring**: Custom Prometheus metrics
-- **Dashboards**: Pre-built Grafana dashboards
-- **Auto-scaling**: HPA configuration
-- **Testing**: 90%+ code coverage
-- **Documentation**: API docs with Swagger
+#### ฟีเจอร์หลัก
+- **Model API**: RESTful endpoint สำหรับ inference
+- **Health Check**: Liveness และ readiness probe
+- **Monitoring**: Custom Prometheus metric
+- **Dashboard**: Grafana dashboard ที่สร้างไว้ล่วงหน้า
+- **Auto-scaling**: การตั้งค่า HPA
+- **Testing**: Code coverage 90%+
+- **เอกสาร**: API docs ด้วย Swagger
 
-#### Technologies Used
+#### เทคโนโลยีที่ใช้
 - Python 3.11, FastAPI
-- Scikit-learn (sample model)
-- Docker & Docker Compose
+- Scikit-learn (โมเดลตัวอย่าง)
+- Docker และ Docker Compose
 - Kubernetes
-- Prometheus & Grafana
+- Prometheus และ Grafana
 - GitHub Actions
 - pytest
 
-#### Assessment Criteria
-- Code quality and organization
-- Test coverage (minimum 80%)
-- Documentation completeness
-- Monitoring implementation
+#### เกณฑ์การประเมิน
+- คุณภาพและการจัดระเบียบโค้ด
+- Test coverage (ขั้นต่ำ 80%)
+- ความครบถ้วนของเอกสาร
+- การทำ monitoring
 - Kubernetes best practices
-- Security considerations
+- ข้อพิจารณาด้าน security
 
-#### Time Breakdown
-- Setup and planning: 8 hours
-- Core implementation: 25 hours
-- Testing: 12 hours
-- Kubernetes deployment: 10 hours
-- Documentation: 5 hours
+#### การแบ่งเวลา
+- การตั้งค่าและวางแผน: 8 ชั่วโมง
+- การพัฒนาส่วนหลัก: 25 ชั่วโมง
+- การทดสอบ: 12 ชั่วโมง
+- การ deploy บน Kubernetes: 10 ชั่วโมง
+- การทำเอกสาร: 5 ชั่วโมง
 
 ---
 
-### Project 02: MLOps Pipeline
-**Status**: ✅ Complete | **Duration**: 70 hours | **Files**: 30
+### โปรเจกต์ 02: MLOps Pipeline
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 70 ชั่วโมง | **ไฟล์**: 30
 
-#### Overview
-Build an end-to-end MLOps pipeline with experiment tracking, model registry, automated training, and deployment. This project integrates concepts from Modules 1-8.
+#### ภาพรวม
+สร้าง MLOps pipeline แบบ end-to-end พร้อม experiment tracking, model registry, automated training และ deployment โปรเจกต์นี้บูรณาการแนวคิดจากโมดูล 1-8
 
-#### Project Objectives
-- Implement complete ML lifecycle management
-- Build data processing pipelines with Airflow
-- Track experiments with MLflow
-- Automate model training and deployment
-- Monitor model performance in production
-- Implement continuous training
+#### วัตถุประสงค์ของโปรเจกต์
+- ทำการจัดการ ML lifecycle ที่สมบูรณ์
+- สร้าง data processing pipeline ด้วย Airflow
+- ติดตาม experiment ด้วย MLflow
+- ทำ training และ deployment โมเดลแบบอัตโนมัติ
+- Monitor ประสิทธิภาพโมเดลใน production
+- ทำ continuous training
 
-#### Learning Outcomes
-After completing this project, you will:
-- ✅ Design and implement MLOps workflows
-- ✅ Build data pipelines with Apache Airflow
-- ✅ Track experiments with MLflow
-- ✅ Implement model registry patterns
-- ✅ Deploy models with automated rollbacks
-- ✅ Monitor data and model drift
-- ✅ Implement A/B testing for models
-- ✅ Build retraining pipelines
+#### ผลลัพธ์การเรียนรู้
+หลังจบโปรเจกต์นี้ คุณจะ:
+- ✅ ออกแบบและสร้าง MLOps workflow
+- ✅ สร้าง data pipeline ด้วย Apache Airflow
+- ✅ ติดตาม experiment ด้วย MLflow
+- ✅ ใช้รูปแบบ model registry
+- ✅ Deploy โมเดลพร้อม automated rollback
+- ✅ Monitor data drift และ model drift
+- ✅ ทำ A/B testing สำหรับโมเดล
+- ✅ สร้าง retraining pipeline
 
-#### Project Structure
+#### โครงสร้างโปรเจกต์
 ```
 project-102-mlops-pipeline/
 ├── src/
@@ -1234,79 +1234,79 @@ project-102-mlops-pipeline/
 └── docs/
 ```
 
-#### Key Features
-- **Data Pipeline**: Automated ETL with Airflow
-- **Experiment Tracking**: MLflow experiments
-- **Model Registry**: Centralized model management
-- **Automated Training**: Scheduled training jobs
-- **Model Validation**: Automated quality gates
-- **A/B Testing**: Traffic splitting between models
-- **Drift Detection**: Data and model drift monitoring
-- **Retraining**: Triggered and scheduled retraining
+#### ฟีเจอร์หลัก
+- **Data Pipeline**: ETL อัตโนมัติด้วย Airflow
+- **Experiment Tracking**: Experiment ใน MLflow
+- **Model Registry**: การจัดการโมเดลแบบรวมศูนย์
+- **Automated Training**: Training job ตามกำหนดเวลา
+- **Model Validation**: Quality gate อัตโนมัติ
+- **A/B Testing**: การแบ่ง traffic ระหว่างโมเดล
+- **Drift Detection**: Monitoring data drift และ model drift
+- **Retraining**: Retraining แบบ trigger และตามกำหนดเวลา
 
-#### Technologies Used
+#### เทคโนโลยีที่ใช้
 - Apache Airflow 2.7+
 - MLflow
 - PostgreSQL (metadata store)
 - S3 (artifact store)
 - Kubernetes
-- Prometheus & Grafana
+- Prometheus และ Grafana
 - Great Expectations
 - Feast (feature store)
 
-#### Pipeline Workflows
-1. **Data Ingestion**: Daily batch processing
-2. **Feature Engineering**: Transform and store features
-3. **Model Training**: Automated with experiment tracking
-4. **Model Validation**: Quality and performance checks
-5. **Model Deployment**: Staged rollout with monitoring
-6. **Performance Monitoring**: Continuous evaluation
-7. **Retraining**: Triggered on drift detection
+#### Workflow ของ Pipeline
+1. **Data Ingestion**: Batch processing รายวัน
+2. **Feature Engineering**: แปลงและจัดเก็บ feature
+3. **Model Training**: อัตโนมัติพร้อม experiment tracking
+4. **Model Validation**: ตรวจสอบคุณภาพและประสิทธิภาพ
+5. **Model Deployment**: Staged rollout พร้อม monitoring
+6. **Performance Monitoring**: การประเมินอย่างต่อเนื่อง
+7. **Retraining**: Trigger เมื่อตรวจพบ drift
 
-#### Assessment Criteria
-- Pipeline reliability and error handling
-- Experiment tracking implementation
-- Model validation strategy
-- Monitoring comprehensiveness
-- Documentation quality
-- Code organization and testing
+#### เกณฑ์การประเมิน
+- ความน่าเชื่อถือของ pipeline และการจัดการ error
+- การทำ experiment tracking
+- กลยุทธ์ model validation
+- ความครอบคลุมของ monitoring
+- คุณภาพของเอกสาร
+- การจัดระเบียบโค้ดและการทดสอบ
 
-#### Time Breakdown
-- Architecture and design: 10 hours
-- Data pipeline: 15 hours
-- Training pipeline: 15 hours
-- Serving and deployment: 12 hours
-- Monitoring: 10 hours
-- Testing: 8 hours
+#### การแบ่งเวลา
+- สถาปัตยกรรมและการออกแบบ: 10 ชั่วโมง
+- Data pipeline: 15 ชั่วโมง
+- Training pipeline: 15 ชั่วโมง
+- Serving และ deployment: 12 ชั่วโมง
+- Monitoring: 10 ชั่วโมง
+- การทดสอบ: 8 ชั่วโมง
 
 ---
 
-### Project 103: Production LLM Deployment
-**Status**: ✅ Complete | **Duration**: 80 hours | **Files**: 47
+### โปรเจกต์ 103: การ Deploy LLM ระดับ Production
+**สถานะ**: ✅ เสร็จสมบูรณ์ | **ระยะเวลา**: 80 ชั่วโมง | **ไฟล์**: 47
 
-#### Overview
-Deploy a production-grade Large Language Model system with RAG capabilities, vector search, and comprehensive observability. This capstone project integrates all 10 modules.
+#### ภาพรวม
+Deploy ระบบ Large Language Model ระดับ production พร้อมความสามารถ RAG, vector search และ observability อย่างครอบคลุม โปรเจกต์ capstone นี้บูรณาการทั้ง 10 โมดูล
 
-#### Project Objectives
-- Deploy LLMs for production inference
-- Implement RAG with vector database
-- Build scalable LLM infrastructure
-- Optimize for cost and performance
-- Implement comprehensive monitoring
+#### วัตถุประสงค์ของโปรเจกต์
+- Deploy LLM สำหรับ inference ระดับ production
+- ทำ RAG ด้วย vector database
+- สร้าง LLM infrastructure ที่ scale ได้
+- Optimize ด้านต้นทุนและประสิทธิภาพ
+- ทำ monitoring อย่างครอบคลุม
 - Provision infrastructure as code
 
-#### Learning Outcomes
-After completing this project, you will:
-- ✅ Deploy LLMs using vLLM for efficient serving
-- ✅ Build RAG systems with Weaviate
-- ✅ Implement semantic search and retrieval
-- ✅ Optimize LLM inference performance
-- ✅ Build multi-model AI systems
-- ✅ Implement LLM-specific monitoring
-- ✅ Manage infrastructure with Terraform
-- ✅ Deploy on Kubernetes with GPU support
+#### ผลลัพธ์การเรียนรู้
+หลังจบโปรเจกต์นี้ คุณจะ:
+- ✅ Deploy LLM ด้วย vLLM เพื่อการ serve ที่มีประสิทธิภาพ
+- ✅ สร้างระบบ RAG ด้วย Weaviate
+- ✅ ทำ semantic search และ retrieval
+- ✅ Optimize ประสิทธิภาพ LLM inference
+- ✅ สร้างระบบ AI แบบหลายโมเดล
+- ✅ ทำ monitoring เฉพาะสำหรับ LLM
+- ✅ จัดการ infrastructure ด้วย Terraform
+- ✅ Deploy บน Kubernetes พร้อมรองรับ GPU
 
-#### Project Structure
+#### โครงสร้างโปรเจกต์
 ```
 project-103-llm-deployment/
 ├── src/
@@ -1358,64 +1358,64 @@ project-103-llm-deployment/
     └── troubleshooting/
 ```
 
-#### Key Features
+#### ฟีเจอร์หลัก
 
 **LLM Serving**
-- vLLM for efficient inference
-- Multi-GPU support
+- vLLM สำหรับ inference ที่มีประสิทธิภาพ
+- รองรับ multi-GPU
 - Dynamic batching
-- Streaming responses
+- Streaming response
 - Model quantization
 
-**RAG System**
+**ระบบ RAG**
 - Document ingestion pipeline
 - Semantic chunking
-- Vector embeddings (sentence-transformers)
+- Vector embedding (sentence-transformers)
 - Hybrid search (vector + keyword)
-- Context window optimization
+- การ optimize context window
 - Re-ranking
 
 **Vector Database**
-- Weaviate deployment
-- Schema design
-- Index optimization
-- Backup and recovery
+- การ deploy Weaviate
+- การออกแบบ schema
+- การ optimize index
+- Backup และ recovery
 - Multi-tenancy
 
 **Infrastructure**
-- Terraform for cloud resources
-- Kubernetes with GPU nodes
-- Auto-scaling based on load
-- Cost optimization
-- Multi-environment support
+- Terraform สำหรับทรัพยากร cloud
+- Kubernetes พร้อม GPU node
+- Auto-scaling ตาม load
+- การ optimize ต้นทุน
+- รองรับหลาย environment
 
-**Monitoring & Observability**
-- Request/response logging
-- Latency and throughput metrics
-- Cost per request tracking
-- GPU utilization monitoring
-- Quality metrics (relevance, coherence)
-- Alerting for anomalies
+**Monitoring และ Observability**
+- การ log request/response
+- Metric ด้าน latency และ throughput
+- การติดตามต้นทุนต่อ request
+- การ monitor การใช้งาน GPU
+- Quality metric (relevance, coherence)
+- การแจ้งเตือนเมื่อพบความผิดปกติ
 
-**API Design**
-- RESTful endpoints
-- Streaming SSE responses
-- Authentication and authorization
+**การออกแบบ API**
+- RESTful endpoint
+- Streaming response แบบ SSE
+- Authentication และ authorization
 - Rate limiting
 - API versioning
 
-#### Technologies Used
+#### เทคโนโลยีที่ใช้
 - **LLM**: vLLM, Hugging Face Transformers
 - **Vector DB**: Weaviate
 - **Orchestration**: LangChain
 - **Infrastructure**: Terraform, Kubernetes
 - **Monitoring**: Prometheus, Grafana, Jaeger
-- **Cloud**: AWS (EKS, EC2 GPU instances)
+- **Cloud**: AWS (EKS, EC2 GPU instance)
 - **Storage**: S3, EBS
 - **API**: FastAPI, Uvicorn
 - **Testing**: pytest, locust
 
-#### System Architecture
+#### สถาปัตยกรรมระบบ
 
 ```
 ┌─────────────┐
@@ -1453,464 +1453,464 @@ project-103-llm-deployment/
 └─────────────────────┘
 ```
 
-#### Deployment Scenarios
+#### สถานการณ์การ Deploy
 
 **Development**
-- Single GPU instance
-- Local Weaviate
-- Minimal replicas
+- GPU instance เดียว
+- Weaviate บนเครื่อง
+- Replica น้อยที่สุด
 - Debug logging
 
 **Staging**
-- 2 GPU instances
+- GPU instance 2 ตัว
 - Managed Weaviate
-- Auto-scaling enabled
+- เปิดใช้ auto-scaling
 - Performance testing
 
 **Production**
-- 4+ GPU instances
-- High-availability Weaviate
-- Aggressive auto-scaling
-- Comprehensive monitoring
-- Multi-region (optional)
+- GPU instance 4 ตัวขึ้นไป
+- Weaviate แบบ high-availability
+- Auto-scaling แบบเชิงรุก
+- Monitoring อย่างครอบคลุม
+- Multi-region (ไม่บังคับ)
 
-#### Performance Targets
-- **Latency**: p95 < 2s for RAG queries
-- **Throughput**: 100+ requests/second
-- **Availability**: 99.9% uptime
-- **Cost**: < $0.10 per 1K tokens
-- **GPU Utilization**: > 70%
+#### เป้าหมายด้านประสิทธิภาพ
+- **Latency**: p95 < 2 วินาทีสำหรับ RAG query
+- **Throughput**: 100+ request/วินาที
+- **Availability**: uptime 99.9%
+- **ต้นทุน**: < $0.10 ต่อ 1K token
+- **การใช้งาน GPU**: > 70%
 
-#### Assessment Criteria
-- System architecture and design
-- LLM inference optimization
-- RAG implementation quality
+#### เกณฑ์การประเมิน
+- สถาปัตยกรรมและการออกแบบระบบ
+- การ optimize LLM inference
+- คุณภาพการทำ RAG
 - Infrastructure as Code best practices
-- Monitoring and observability
-- Performance and cost optimization
-- Documentation completeness
-- Testing coverage and quality
-- Security implementation
+- Monitoring และ observability
+- การ optimize ประสิทธิภาพและต้นทุน
+- ความครบถ้วนของเอกสาร
+- ความครอบคลุมและคุณภาพของการทดสอบ
+- การทำ security
 
-#### Time Breakdown
-- Architecture and planning: 12 hours
-- LLM service implementation: 18 hours
-- RAG system implementation: 15 hours
-- Vector database setup: 8 hours
-- Infrastructure provisioning: 12 hours
-- Monitoring implementation: 8 hours
-- Testing and optimization: 5 hours
-- Documentation: 2 hours
+#### การแบ่งเวลา
+- สถาปัตยกรรมและการวางแผน: 12 ชั่วโมง
+- การพัฒนา LLM service: 18 ชั่วโมง
+- การพัฒนาระบบ RAG: 15 ชั่วโมง
+- การตั้งค่า vector database: 8 ชั่วโมง
+- การ provision infrastructure: 12 ชั่วโมง
+- การทำ monitoring: 8 ชั่วโมง
+- การทดสอบและ optimize: 5 ชั่วโมง
+- การทำเอกสาร: 2 ชั่วโมง
 
-#### Bonus Challenges
-- Implement fine-tuning pipeline
-- Add multi-model routing
-- Build prompt caching system
-- Implement cost tracking dashboard
-- Add automated evaluation pipeline
-- Deploy to multiple cloud providers
+#### โจทย์ท้าทายเพิ่มเติม
+- สร้าง fine-tuning pipeline
+- เพิ่ม multi-model routing
+- สร้างระบบ prompt caching
+- สร้าง dashboard ติดตามต้นทุน
+- เพิ่ม automated evaluation pipeline
+- Deploy ไปยัง cloud provider หลายราย
 
 ---
 
-## Assessment Strategy
+## กลยุทธ์การประเมินผล
 
-### Philosophy
-Assessment is designed to validate both theoretical knowledge and practical skills. Each module and project includes multiple assessment types to ensure comprehensive understanding.
+### ปรัชญา
+การประเมินผลออกแบบมาเพื่อยืนยันทั้งความรู้เชิงทฤษฎีและทักษะเชิงปฏิบัติ แต่ละโมดูลและโปรเจกต์มีการประเมินหลายรูปแบบเพื่อให้มั่นใจถึงความเข้าใจอย่างครอบคลุม
 
-### Assessment Types
+### ประเภทการประเมิน
 
-#### 1. Module Quizzes
-- **Format**: Multiple choice, multiple select, true/false
-- **Questions**: 30-50 per module
-- **Duration**: 45-60 minutes
-- **Passing Score**: 80%
-- **Retakes**: Unlimited with 24-hour cooldown
-- **Purpose**: Validate conceptual understanding
+#### 1. แบบทดสอบประจำโมดูล
+- **รูปแบบ**: ปรนัยเลือกตอบเดียว เลือกได้หลายข้อ และถูก/ผิด
+- **จำนวนข้อ**: 30-50 ข้อต่อโมดูล
+- **ระยะเวลา**: 45-60 นาที
+- **คะแนนผ่าน**: 80%
+- **การสอบซ่อม**: ไม่จำกัดครั้ง โดยเว้นระยะ 24 ชั่วโมง
+- **วัตถุประสงค์**: ยืนยันความเข้าใจเชิงแนวคิด
 
-#### 2. Practical Exams
-- **Format**: Hands-on coding challenges
-- **Duration**: 2-4 hours
-- **Passing Criteria**: All requirements met + code quality
-- **Submission**: GitHub repository
-- **Review**: Automated tests + manual review
-- **Purpose**: Validate practical skills
+#### 2. การสอบภาคปฏิบัติ
+- **รูปแบบ**: โจทย์เขียนโค้ดเชิงปฏิบัติ
+- **ระยะเวลา**: 2-4 ชั่วโมง
+- **เกณฑ์ผ่าน**: ตรงตามข้อกำหนดทั้งหมด + คุณภาพโค้ด
+- **การส่งงาน**: GitHub repository
+- **การตรวจ**: Automated test + การตรวจโดยผู้สอน
+- **วัตถุประสงค์**: ยืนยันทักษะเชิงปฏิบัติ
 
-#### 3. Project Assessments
-- **Format**: Complete project implementation
-- **Duration**: 60-80 hours over 2-4 weeks
-- **Evaluation Criteria**:
-  - Functionality (40%)
-  - Code quality (20%)
-  - Testing (15%)
-  - Documentation (15%)
+#### 3. การประเมินโปรเจกต์
+- **รูปแบบ**: พัฒนาโปรเจกต์ให้สมบูรณ์
+- **ระยะเวลา**: 60-80 ชั่วโมงภายใน 2-4 สัปดาห์
+- **เกณฑ์การประเมิน**:
+  - การทำงานของระบบ (40%)
+  - คุณภาพโค้ด (20%)
+  - การทดสอบ (15%)
+  - เอกสาร (15%)
   - Best practices (10%)
-- **Submission**: GitHub repository + demo video
-- **Purpose**: Validate end-to-end competency
+- **การส่งงาน**: GitHub repository + วิดีโอสาธิต
+- **วัตถุประสงค์**: ยืนยันความสามารถแบบ end-to-end
 
-#### 4. Code Reviews
-- **Format**: Peer and instructor reviews
-- **Focus**: Code quality, best practices, design patterns
-- **Frequency**: For all projects
-- **Purpose**: Professional development
+#### 4. Code Review
+- **รูปแบบ**: การรีวิวโดยเพื่อนร่วมเรียนและผู้สอน
+- **จุดเน้น**: คุณภาพโค้ด, best practices, design pattern
+- **ความถี่**: ทุกโปรเจกต์
+- **วัตถุประสงค์**: การพัฒนาทักษะระดับมืออาชีพ
 
-### Grading Rubric
+### เกณฑ์การให้คะแนน
 
-#### Code Quality (20%)
-- Clean, readable code
-- Consistent style (PEP 8)
-- Meaningful variable names
-- Proper documentation
-- No code smells
+#### คุณภาพโค้ด (20%)
+- โค้ดสะอาด อ่านง่าย
+- สไตล์สม่ำเสมอ (PEP 8)
+- ตั้งชื่อตัวแปรให้สื่อความหมาย
+- มีเอกสารประกอบที่เหมาะสม
+- ไม่มี code smell
 
-#### Functionality (40%)
-- All requirements met
-- Edge cases handled
-- Error handling
-- Performance acceptable
-- Security considerations
+#### การทำงานของระบบ (40%)
+- ตรงตามข้อกำหนดทั้งหมด
+- จัดการ edge case
+- การจัดการ error
+- ประสิทธิภาพอยู่ในระดับที่ยอมรับได้
+- ข้อพิจารณาด้าน security
 
-#### Testing (15%)
+#### การทดสอบ (15%)
 - Unit test coverage > 80%
-- Integration tests present
-- E2E tests for critical paths
-- Test quality and assertions
-- CI/CD integration
+- มี integration test
+- มี E2E test สำหรับเส้นทางสำคัญ
+- คุณภาพของ test และ assertion
+- การเชื่อมต่อกับ CI/CD
 
-#### Documentation (15%)
-- README completeness
-- API documentation
-- Architecture diagrams
-- Setup instructions
-- Troubleshooting guide
+#### เอกสาร (15%)
+- ความครบถ้วนของ README
+- เอกสาร API
+- แผนภาพสถาปัตยกรรม
+- คำแนะนำการตั้งค่า
+- คู่มือ troubleshooting
 
 #### Best Practices (10%)
-- Design patterns
-- Security practices
-- Performance optimization
-- Monitoring implementation
-- Production readiness
+- Design pattern
+- แนวปฏิบัติด้าน security
+- การ optimize ประสิทธิภาพ
+- การทำ monitoring
+- ความพร้อมสำหรับ production
 
-### Certification Path
+### เส้นทางการรับรอง
 
-#### Level 1: Module Completion Badges
-- Earn a badge for each completed module
-- Requirements: Pass quiz + practical exam
-- Recognition: LinkedIn shareable badges
+#### ระดับ 1: Badge เมื่อจบโมดูล
+- รับ badge สำหรับแต่ละโมดูลที่เรียนจบ
+- ข้อกำหนด: ผ่านแบบทดสอบ + สอบภาคปฏิบัติ
+- การรับรอง: Badge ที่แชร์บน LinkedIn ได้
 
-#### Level 2: Project Certificates
-- Certificate for each completed project
-- Requirements: Pass all assessment criteria
-- Recognition: Professional certificate
+#### ระดับ 2: ใบรับรองโปรเจกต์
+- ใบรับรองสำหรับแต่ละโปรเจกต์ที่ทำเสร็จ
+- ข้อกำหนด: ผ่านเกณฑ์การประเมินทั้งหมด
+- การรับรอง: ใบรับรองระดับมืออาชีพ
 
-#### Level 3: Curriculum Completion
-- **AI Infrastructure Engineer Certificate**
-- Requirements:
-  - Complete all 10 modules
-  - Complete all 3 projects
-  - Minimum 80% average across all assessments
-- Recognition: Verified certificate + portfolio
+#### ระดับ 3: จบหลักสูตร
+- **ใบรับรอง AI Infrastructure Engineer**
+- ข้อกำหนด:
+  - เรียนจบทั้ง 10 โมดูล
+  - ทำโปรเจกต์ครบทั้ง 3 โปรเจกต์
+  - คะแนนเฉลี่ยขั้นต่ำ 80% ในทุกการประเมิน
+- การรับรอง: ใบรับรองที่ตรวจสอบได้ + portfolio
 
-### Portfolio Development
-Throughout the curriculum, you'll build a portfolio including:
-- 10+ hands-on exercises
-- 3 complete production-ready projects
-- Public GitHub repositories
-- Technical blog posts (optional)
-- Demo videos
+### การสร้าง Portfolio
+ตลอดหลักสูตร คุณจะสร้าง portfolio ซึ่งประกอบด้วย:
+- แบบฝึกหัดเชิงปฏิบัติ 10+ ชุด
+- โปรเจกต์ระดับ production ที่สมบูรณ์ 3 โปรเจกต์
+- GitHub repository สาธารณะ
+- บทความ technical blog (ไม่บังคับ)
+- วิดีโอสาธิต
 
 ---
 
-## Time Commitment
+## เวลาที่ต้องใช้
 
-### Total Duration
-**Estimated Total**: 500+ hours (6-12 months part-time)
+### ระยะเวลารวม
+**ประมาณการรวม**: 500+ ชั่วโมง (6-12 เดือนแบบ part-time)
 
-### Breakdown by Module
-| Module | Lectures | Exercises | Labs | Assessment | Total |
+### แยกตามโมดูล
+| โมดูล | การบรรยาย | แบบฝึกหัด | Lab | การประเมิน | รวม |
 |--------|----------|-----------|------|------------|-------|
-| 01: Foundations | 12h | 15h | 8h | 5h | **40h** |
+| 01: พื้นฐาน | 12h | 15h | 8h | 5h | **40h** |
 | 02: Cloud Computing | 15h | 18h | 8h | 4h | **45h** |
 | 03: Containerization | 16h | 20h | 10h | 4h | **50h** |
 | 04: Kubernetes | 20h | 25h | 12h | 3h | **60h** |
-| 05: Data Pipelines | 18h | 20h | 10h | 2h | **50h** |
+| 05: Data Pipeline | 18h | 20h | 10h | 2h | **50h** |
 | 06: MLOps | 18h | 22h | 12h | 3h | **55h** |
 | 07: GPU Computing | 16h | 20h | 12h | 2h | **50h** |
 | 08: Monitoring | 15h | 18h | 10h | 2h | **45h** |
 | 09: Infrastructure as Code | 16h | 20h | 12h | 2h | **50h** |
 | 10: LLM Infrastructure | 18h | 22h | 12h | 3h | **55h** |
-| **Subtotal** | **164h** | **200h** | **106h** | **30h** | **500h** |
+| **รวมย่อย** | **164h** | **200h** | **106h** | **30h** | **500h** |
 
-### Breakdown by Project
-| Project | Planning | Implementation | Testing | Documentation | Total |
+### แยกตามโปรเจกต์
+| โปรเจกต์ | การวางแผน | การพัฒนา | การทดสอบ | เอกสาร | รวม |
 |---------|----------|----------------|---------|---------------|-------|
 | 01: Model Serving | 8h | 25h | 12h | 15h | **60h** |
 | 02: MLOps Pipeline | 10h | 42h | 8h | 10h | **70h** |
 | 03: LLM Deployment | 12h | 53h | 5h | 10h | **80h** |
-| **Subtotal** | **30h** | **120h** | **25h** | **35h** | **210h** |
+| **รวมย่อย** | **30h** | **120h** | **25h** | **35h** | **210h** |
 
-### Grand Total
-**Modules + Projects**: 500h + 210h = **710 hours**
-
----
-
-## Study Plans
-
-### Full-Time Track (3-4 months)
-**Commitment**: 40 hours/week
-
-#### Month 1
-- **Weeks 1-2**: Modules 01-02 (Foundations, Cloud)
-- **Weeks 3-4**: Modules 03-04 (Containers, Kubernetes)
-
-#### Month 2
-- **Weeks 5-6**: Modules 05-06 (Data, MLOps)
-- **Weeks 7-8**: Project 01 + Modules 07-08
-
-#### Month 3
-- **Weeks 9-10**: Modules 09-10 (IaC, LLM)
-- **Weeks 11-12**: Project 02
-
-#### Month 4
-- **Weeks 13-16**: Project 03 + Final review
-
-### Part-Time Track (6-9 months)
-**Commitment**: 20 hours/week
-
-#### Months 1-2
-- Module 01-04 (one module every 2 weeks)
-- Light exercises and labs
-
-#### Months 3-4
-- Modules 05-08
-- Start Project 01
-
-#### Months 5-6
-- Complete Project 01
-- Modules 09-10
-
-#### Months 7-8
-- Project 02
-
-#### Month 9
-- Project 03
-- Final review and certification
-
-### Self-Paced Track (12+ months)
-**Commitment**: 10 hours/week
-
-- **Flexible schedule**
-- Complete one module per month
-- One project every 3 months
-- Suitable for working professionals
-- Extended support and access
-
-### Weekend Warrior Track (9-12 months)
-**Commitment**: 15-20 hours/weekend
-
-- **Saturday-Sunday focused**
-- 2 modules per month
-- Projects during dedicated long weekends
-- Ideal for 9-5 professionals
-
-### Recommended Weekly Schedule (Part-Time)
-
-**Monday-Wednesday** (6 hours)
-- 2 hours/day: Video lectures and reading
-- Focus on conceptual understanding
-
-**Thursday-Friday** (6 hours)
-- 3 hours/day: Hands-on exercises
-- Practice coding and implementation
-
-**Saturday** (4 hours)
-- Labs and practical work
-- Longer focused sessions
-
-**Sunday** (4 hours)
-- Project work
-- Review and reinforcement
+### ยอดรวมทั้งหมด
+**โมดูล + โปรเจกต์**: 500h + 210h = **710 ชั่วโมง**
 
 ---
 
-## Career Progression
+## แผนการเรียน
+
+### แผนเต็มเวลา (3-4 เดือน)
+**เวลาที่ใช้**: 40 ชั่วโมง/สัปดาห์
+
+#### เดือนที่ 1
+- **สัปดาห์ที่ 1-2**: โมดูล 01-02 (พื้นฐาน, Cloud)
+- **สัปดาห์ที่ 3-4**: โมดูล 03-04 (Container, Kubernetes)
+
+#### เดือนที่ 2
+- **สัปดาห์ที่ 5-6**: โมดูล 05-06 (Data, MLOps)
+- **สัปดาห์ที่ 7-8**: โปรเจกต์ 01 + โมดูล 07-08
+
+#### เดือนที่ 3
+- **สัปดาห์ที่ 9-10**: โมดูล 09-10 (IaC, LLM)
+- **สัปดาห์ที่ 11-12**: โปรเจกต์ 02
+
+#### เดือนที่ 4
+- **สัปดาห์ที่ 13-16**: โปรเจกต์ 03 + ทบทวนครั้งสุดท้าย
+
+### แผน Part-Time (6-9 เดือน)
+**เวลาที่ใช้**: 20 ชั่วโมง/สัปดาห์
+
+#### เดือนที่ 1-2
+- โมดูล 01-04 (หนึ่งโมดูลทุก 2 สัปดาห์)
+- แบบฝึกหัดและ lab แบบเบา ๆ
+
+#### เดือนที่ 3-4
+- โมดูล 05-08
+- เริ่มโปรเจกต์ 01
+
+#### เดือนที่ 5-6
+- ทำโปรเจกต์ 01 ให้เสร็จ
+- โมดูล 09-10
+
+#### เดือนที่ 7-8
+- โปรเจกต์ 02
+
+#### เดือนที่ 9
+- โปรเจกต์ 03
+- ทบทวนครั้งสุดท้ายและรับใบรับรอง
+
+### แผนเรียนตามจังหวะของตนเอง (12+ เดือน)
+**เวลาที่ใช้**: 10 ชั่วโมง/สัปดาห์
+
+- **ตารางเวลายืดหยุ่น**
+- เรียนจบหนึ่งโมดูลต่อเดือน
+- หนึ่งโปรเจกต์ทุก 3 เดือน
+- เหมาะสำหรับคนทำงาน
+- การสนับสนุนและสิทธิ์เข้าถึงแบบขยายเวลา
+
+### แผนนักรบวันหยุด (9-12 เดือน)
+**เวลาที่ใช้**: 15-20 ชั่วโมง/สุดสัปดาห์
+
+- **เน้นวันเสาร์-อาทิตย์**
+- 2 โมดูลต่อเดือน
+- ทำโปรเจกต์ในช่วงวันหยุดยาว
+- เหมาะสำหรับคนทำงานเวลา 9-5
+
+### ตารางรายสัปดาห์ที่แนะนำ (Part-Time)
+
+**จันทร์-พุธ** (6 ชั่วโมง)
+- วันละ 2 ชั่วโมง: วิดีโอบรรยายและการอ่าน
+- เน้นความเข้าใจเชิงแนวคิด
+
+**พฤหัสบดี-ศุกร์** (6 ชั่วโมง)
+- วันละ 3 ชั่วโมง: แบบฝึกหัดเชิงปฏิบัติ
+- ฝึกเขียนโค้ดและลงมือพัฒนา
+
+**เสาร์** (4 ชั่วโมง)
+- Lab และงานเชิงปฏิบัติ
+- ช่วงเวลาที่ต้องใช้สมาธิยาวขึ้น
+
+**อาทิตย์** (4 ชั่วโมง)
+- ทำโปรเจกต์
+- ทบทวนและเสริมความเข้าใจ
+
+---
+
+## เส้นทางอาชีพ
 
 ### AI Infrastructure Engineer
 
-#### Role Overview
-Entry to mid-level position focused on building and maintaining infrastructure for AI/ML systems.
+#### ภาพรวมของตำแหน่ง
+ตำแหน่งระดับเริ่มต้นถึงระดับกลางที่เน้นการสร้างและดูแล infrastructure สำหรับระบบ AI/ML
 
-#### Responsibilities
-- Deploy and maintain ML models in production
-- Build CI/CD pipelines for ML systems
-- Manage containerized applications
-- Implement monitoring and alerting
-- Optimize infrastructure costs
-- Collaborate with data scientists and engineers
+#### หน้าที่ความรับผิดชอบ
+- Deploy และดูแล ML model ใน production
+- สร้าง CI/CD pipeline สำหรับระบบ ML
+- จัดการแอปพลิเคชันแบบ container
+- ทำ monitoring และ alerting
+- Optimize ต้นทุน infrastructure
+- ทำงานร่วมกับ data scientist และวิศวกร
 
-#### Required Skills (Covered in This Curriculum)
-- ✅ Python programming
-- ✅ Docker and Kubernetes
-- ✅ Cloud platforms (AWS/GCP/Azure)
-- ✅ MLOps practices
-- ✅ Monitoring and observability
+#### ทักษะที่จำเป็น (ครอบคลุมในหลักสูตรนี้)
+- ✅ การเขียนโปรแกรม Python
+- ✅ Docker และ Kubernetes
+- ✅ Cloud platform (AWS/GCP/Azure)
+- ✅ แนวปฏิบัติ MLOps
+- ✅ Monitoring และ observability
 - ✅ Infrastructure as Code
 
-#### Salary Ranges (US, 2025)
-- **Entry Level**: $100,000 - $140,000
-- **Mid Level**: $140,000 - $180,000
-- **Senior Level**: $180,000 - $250,000+
+#### ช่วงเงินเดือน (สหรัฐฯ, 2025)
+- **ระดับเริ่มต้น**: $100,000 - $140,000
+- **ระดับกลาง**: $140,000 - $180,000
+- **ระดับ Senior**: $180,000 - $250,000+
 
-#### Top Hiring Companies
+#### บริษัทชั้นนำที่เปิดรับสมัคร
 - Google, Meta, Amazon, Microsoft
 - OpenAI, Anthropic, Databricks
 - Uber, Airbnb, Netflix
 - Scale AI, Hugging Face
-- Financial services (Goldman Sachs, JPMorgan)
+- ธุรกิจบริการทางการเงิน (Goldman Sachs, JPMorgan)
 
-### Career Path After This Curriculum
+### เส้นทางอาชีพหลังจบหลักสูตรนี้
 
-#### Immediate Next Steps
-1. **Senior AI Infrastructure Engineer** (2-3 years experience)
-   - Lead infrastructure projects
-   - Mentor junior engineers
-   - Design system architectures
-   - Drive technical decisions
+#### ขั้นถัดไปในทันที
+1. **Senior AI Infrastructure Engineer** (ประสบการณ์ 2-3 ปี)
+   - นำโปรเจกต์ด้าน infrastructure
+   - เป็นพี่เลี้ยงให้วิศวกรรุ่นน้อง
+   - ออกแบบสถาปัตยกรรมระบบ
+   - ขับเคลื่อนการตัดสินใจทางเทคนิค
 
-2. **MLOps Engineer** (Alternative path)
-   - Focus on ML lifecycle
+2. **MLOps Engineer** (เส้นทางทางเลือก)
+   - เน้น ML lifecycle
    - Model deployment automation
    - Experiment tracking
-   - ML platform development
+   - การพัฒนา ML platform
 
-3. **Platform Engineer** (Alternative path)
-   - Internal ML platform development
-   - Developer tools and experience
+3. **Platform Engineer** (เส้นทางทางเลือก)
+   - การพัฒนา ML platform ภายในองค์กร
+   - เครื่องมือและประสบการณ์ของนักพัฒนา
    - Self-service infrastructure
 
-#### Long-Term Career Options (5+ years)
+#### ทางเลือกอาชีพระยะยาว (5+ ปี)
 
-**Technical Track**
+**สายเทคนิค**
 - **AI Infrastructure Architect**
-  - Design enterprise AI platforms
-  - Multi-cloud strategies
-  - Technical leadership
-  - Salary: $200,000 - $350,000+
+  - ออกแบบ AI platform ระดับองค์กร
+  - กลยุทธ์ multi-cloud
+  - ความเป็นผู้นำทางเทคนิค
+  - เงินเดือน: $200,000 - $350,000+
 
 - **Staff/Principal Engineer**
-  - Company-wide technical influence
-  - Architecture and standards
-  - Research and innovation
-  - Salary: $250,000 - $500,000+
+  - มีอิทธิพลทางเทคนิคทั่วทั้งบริษัท
+  - สถาปัตยกรรมและมาตรฐาน
+  - การวิจัยและนวัตกรรม
+  - เงินเดือน: $250,000 - $500,000+
 
-**Management Track**
+**สายบริหาร**
 - **Engineering Manager**
-  - Lead infrastructure teams
-  - Project management
-  - People development
-  - Salary: $180,000 - $300,000+
+  - นำทีม infrastructure
+  - การบริหารโปรเจกต์
+  - การพัฒนาบุคลากร
+  - เงินเดือน: $180,000 - $300,000+
 
 - **Director of ML Infrastructure**
-  - Strategic planning
-  - Organization-wide impact
-  - Budget and resource management
-  - Salary: $250,000 - $450,000+
+  - การวางแผนเชิงกลยุทธ์
+  - สร้างผลกระทบทั่วทั้งองค์กร
+  - การบริหารงบประมาณและทรัพยากร
+  - เงินเดือน: $250,000 - $450,000+
 
-### Industry Trends (2025)
+### แนวโน้มอุตสาหกรรม (2025)
 
-**High Demand Areas**
-- LLM infrastructure and optimization
-- Multi-cloud ML platforms
-- Cost optimization for AI workloads
-- Real-time ML inference
-- Edge AI deployment
+**ด้านที่มีความต้องการสูง**
+- LLM infrastructure และการ optimize
+- ML platform แบบ multi-cloud
+- การ optimize ต้นทุนสำหรับ AI workload
+- ML inference แบบ real-time
+- การ deploy Edge AI
 
-**Emerging Skills**
-- LLM fine-tuning and deployment
-- Vector database optimization
-- AI safety and governance
-- Green AI (energy efficiency)
-- Federated learning infrastructure
+**ทักษะที่กำลังมาแรง**
+- การ fine-tune และ deploy LLM
+- การ optimize vector database
+- AI safety และ governance
+- Green AI (ประสิทธิภาพด้านพลังงาน)
+- Infrastructure สำหรับ federated learning
 
 ---
 
-## Learning Resources
+## แหล่งเรียนรู้
 
-### Included in This Curriculum
+### สิ่งที่รวมอยู่ในหลักสูตรนี้
 
-#### Lecture Materials
-- 10 comprehensive modules
-- 45,000+ lines of lecture notes
-- Detailed explanations with examples
-- Architecture diagrams
-- Code samples
+#### เอกสารประกอบการบรรยาย
+- 10 โมดูลที่ครอบคลุม
+- เอกสารประกอบการบรรยาย 45,000+ บรรทัด
+- คำอธิบายโดยละเอียดพร้อมตัวอย่าง
+- แผนภาพสถาปัตยกรรม
+- ตัวอย่างโค้ด
 
-#### Hands-On Exercises
-- 120+ coding exercises
-- Step-by-step solutions
-- Progressive difficulty
-- Real-world scenarios
+#### แบบฝึกหัดเชิงปฏิบัติ
+- แบบฝึกหัดเขียนโค้ด 120+ ชุด
+- เฉลยทีละขั้นตอน
+- ความยากเพิ่มขึ้นตามลำดับ
+- สถานการณ์จริง
 
-#### Practical Labs
-- 60+ lab environments
-- Cloud sandbox access
-- Pre-configured setups
-- Troubleshooting guides
+#### Lab เชิงปฏิบัติ
+- สภาพแวดล้อม lab 60+ ชุด
+- สิทธิ์เข้าถึง cloud sandbox
+- การตั้งค่าที่เตรียมไว้ล่วงหน้า
+- คู่มือ troubleshooting
 
-#### Projects
-- 3 complete projects
-- Starter code and stubs
-- Architecture templates
-- Testing frameworks
+#### โปรเจกต์
+- โปรเจกต์ที่สมบูรณ์ 3 โปรเจกต์
+- Starter code และ stub
+- Template สถาปัตยกรรม
+- Testing framework
 
-#### Assessments
-- 400+ quiz questions
-- 13 practical exams
-- Project rubrics
-- Self-assessment tools
+#### การประเมินผล
+- คำถามแบบทดสอบ 400+ ข้อ
+- การสอบภาคปฏิบัติ 13 ครั้ง
+- เกณฑ์การให้คะแนนโปรเจกต์
+- เครื่องมือประเมินตนเอง
 
-### Recommended External Resources
+### แหล่งเรียนรู้ภายนอกที่แนะนำ
 
-#### Books
-- **"Designing Machine Learning Systems"** by Chip Huyen
-- **"Machine Learning Engineering"** by Andriy Burkov
-- **"Kubernetes in Action"** by Marko Luksa
-- **"Terraform: Up and Running"** by Yevgeniy Brikman
-- **"Site Reliability Engineering"** by Google
+#### หนังสือ
+- **"Designing Machine Learning Systems"** โดย Chip Huyen
+- **"Machine Learning Engineering"** โดย Andriy Burkov
+- **"Kubernetes in Action"** โดย Marko Luksa
+- **"Terraform: Up and Running"** โดย Yevgeniy Brikman
+- **"Site Reliability Engineering"** โดย Google
 
-#### Online Courses (Complementary)
+#### คอร์สออนไลน์ (เสริม)
 - **Fast.ai**: Practical Deep Learning
 - **DeepLearning.AI**: MLOps Specialization
-- **Linux Foundation**: Kubernetes courses
-- **A Cloud Guru**: Cloud platform courses
+- **Linux Foundation**: คอร์ส Kubernetes
+- **A Cloud Guru**: คอร์ส cloud platform
 
-#### Documentation
+#### เอกสารอ้างอิง
 - **Kubernetes Docs**: https://kubernetes.io/docs/
 - **Terraform Registry**: https://registry.terraform.io/
 - **MLflow Docs**: https://mlflow.org/docs/
 - **vLLM Docs**: https://docs.vllm.ai/
 - **Weaviate Docs**: https://weaviate.io/developers/weaviate
 
-#### Communities
+#### ชุมชน
 - **Kubernetes Slack**: k8s.io/community
 - **MLOps Community**: mlops.community
-- **r/MachineLearning**: Reddit community
+- **r/MachineLearning**: ชุมชนบน Reddit
 - **HuggingFace Forums**: discuss.huggingface.co
-- **Stack Overflow**: Tags: kubernetes, mlops, docker
+- **Stack Overflow**: Tag: kubernetes, mlops, docker
 
-#### Blogs and Newsletters
+#### บล็อกและจดหมายข่าว
 - **The Batch** (DeepLearning.AI)
-- **MLOps.community blog**
+- **บล็อก MLOps.community**
 - **Kubernetes Blog**
 - **Hugging Face Blog**
 - **AWS Machine Learning Blog**
 
-#### YouTube Channels
-- **TechWorld with Nana**: DevOps and Kubernetes
-- **Yannic Kilcher**: ML research and LLMs
-- **Weights & Biases**: MLOps tutorials
-- **Google Cloud Tech**: Cloud and AI
+#### ช่อง YouTube
+- **TechWorld with Nana**: DevOps และ Kubernetes
+- **Yannic Kilcher**: งานวิจัย ML และ LLM
+- **Weights & Biases**: บทสอน MLOps
+- **Google Cloud Tech**: Cloud และ AI
 
-#### Podcasts
+#### Podcast
 - **The TWIML AI Podcast**
 - **Kubernetes Podcast**
 - **Software Engineering Daily**
@@ -1918,168 +1918,168 @@ Entry to mid-level position focused on building and maintaining infrastructure f
 
 ---
 
-## Getting Help
+## การขอความช่วยเหลือ
 
-### Support Channels
+### ช่องทางการสนับสนุน
 
 #### GitHub Discussions
-- Ask questions
-- Share solutions
-- Connect with peers
-- Get instructor feedback
+- ถามคำถาม
+- แบ่งปันวิธีแก้ปัญหา
+- เชื่อมต่อกับเพื่อนร่วมเรียน
+- รับ feedback จากผู้สอน
 
 #### Office Hours
-- Weekly live sessions
-- Q&A with instructors
-- Code reviews
-- Career guidance
+- Live session รายสัปดาห์
+- ถาม-ตอบกับผู้สอน
+- Code review
+- คำแนะนำด้านอาชีพ
 
-#### Discord Community
-- Real-time chat
-- Study groups
-- Project collaboration
-- Networking
+#### ชุมชน Discord
+- แชตแบบ real-time
+- กลุ่มติว
+- ทำโปรเจกต์ร่วมกัน
+- สร้างเครือข่าย
 
-#### Email Support
-- Technical questions: support@ai-infra-curriculum.com
-- Administrative: admin@ai-infra-curriculum.com
-- Response time: 24-48 hours
+#### การสนับสนุนทางอีเมล
+- คำถามด้านเทคนิค: support@ai-infra-curriculum.com
+- งานธุรการ: admin@ai-infra-curriculum.com
+- ระยะเวลาตอบกลับ: 24-48 ชั่วโมง
 
-### Troubleshooting Resources
+### แหล่งข้อมูลสำหรับ Troubleshooting
 
-#### Common Issues
-Each module includes:
-- Troubleshooting guides
-- FAQ sections
-- Known issues and solutions
-- Debugging strategies
+#### ปัญหาที่พบบ่อย
+แต่ละโมดูลประกอบด้วย:
+- คู่มือ troubleshooting
+- ส่วนคำถามที่พบบ่อย (FAQ)
+- ปัญหาที่ทราบแล้วและวิธีแก้
+- กลยุทธ์การ debug
 
-#### Code Examples
-- Working reference implementations
-- Common patterns and anti-patterns
+#### ตัวอย่างโค้ด
+- Reference implementation ที่ใช้งานได้จริง
+- Pattern และ anti-pattern ที่พบบ่อย
 - Best practices
-- Performance optimization tips
+- เคล็ดลับการ optimize ประสิทธิภาพ
 
-### Study Group Guidelines
+### แนวทางสำหรับกลุ่มติว
 
-#### Finding Study Partners
-- Discord #study-groups channel
-- Time zone based matching
-- Skill level consideration
-- Project collaboration
+#### การหาเพื่อนติว
+- ช่อง Discord #study-groups
+- จับคู่ตาม time zone
+- พิจารณาตามระดับทักษะ
+- ทำโปรเจกต์ร่วมกัน
 
-#### Study Group Best Practices
-- Regular meeting schedule
-- Rotate facilitator role
-- Share resources
-- Code review sessions
-- Mock interviews
-
----
-
-## Next Steps
-
-### Getting Started
-
-1. **Review Prerequisites**: Ensure you have the required knowledge
-2. **Set Up Environment**: Follow Module 01 setup guide
-3. **Choose Study Plan**: Select a pace that fits your schedule
-4. **Join Community**: Connect on Discord and GitHub
-5. **Start Module 01**: Begin your learning journey
-
-### Certification Path
-
-1. Complete all 10 modules
-2. Pass all module assessments
-3. Complete all 3 projects
-4. Submit portfolio for review
-5. Receive AI Infrastructure Engineer Certificate
-
-### Career Preparation
-
-- Build public GitHub portfolio
-- Write technical blog posts
-- Contribute to open source
-- Network in the community
-- Prepare for technical interviews
+#### Best Practices ของกลุ่มติว
+- กำหนดตารางนัดพบสม่ำเสมอ
+- สลับบทบาทผู้ดำเนินการ
+- แบ่งปันแหล่งข้อมูล
+- จัด session code review
+- ฝึกสัมภาษณ์จำลอง
 
 ---
 
-## Contact & Support
+## ขั้นตอนถัดไป
 
-**Email**: support@ai-infra-curriculum.com
-**Website**: https://github.com/ai-infra-curriculum
-**Discord**: [Join our community](#)
-**Office Hours**: Wednesdays 6-7 PM EST
+### เริ่มต้นใช้งาน
 
----
+1. **ทบทวนความรู้พื้นฐานที่ต้องมี**: ตรวจสอบว่าคุณมีความรู้ที่จำเป็น
+2. **ตั้งค่าสภาพแวดล้อม**: ทำตามคู่มือการตั้งค่าในโมดูล 01
+3. **เลือกแผนการเรียน**: เลือกจังหวะที่เหมาะกับตารางเวลาของคุณ
+4. **เข้าร่วมชุมชน**: เชื่อมต่อผ่าน Discord และ GitHub
+5. **เริ่มโมดูล 01**: เริ่มต้นเส้นทางการเรียนรู้ของคุณ
 
-## Acknowledgments
+### เส้นทางการรับรอง
 
-This curriculum was developed based on:
-- Analysis of 500+ job postings from top tech companies
-- Interviews with 50+ AI infrastructure engineers
-- Industry best practices and standards
-- Feedback from pilot program participants
-- Latest trends in AI/ML infrastructure (2024-2025)
+1. เรียนจบทั้ง 10 โมดูล
+2. ผ่านการประเมินของทุกโมดูล
+3. ทำโปรเจกต์ครบทั้ง 3 โปรเจกต์
+4. ส่ง portfolio เพื่อรับการตรวจ
+5. รับใบรับรอง AI Infrastructure Engineer
 
----
+### การเตรียมตัวด้านอาชีพ
 
-## Version History
-
-**Version 1.0** (2025-01-15)
-- Initial curriculum release
-- 10 complete modules
-- 3 comprehensive projects
-- 500+ hours of content
+- สร้าง portfolio สาธารณะบน GitHub
+- เขียนบทความ technical blog
+- มีส่วนร่วมกับ open source
+- สร้างเครือข่ายในชุมชน
+- เตรียมตัวสำหรับการสัมภาษณ์ทางเทคนิค
 
 ---
 
-**Ready to start your AI Infrastructure Engineering journey?**
-**Begin with [Module 01: Foundations](lessons/mod-101-foundations/README.md)**
+## การติดต่อและการสนับสนุน
+
+**อีเมล**: support@ai-infra-curriculum.com
+**เว็บไซต์**: https://github.com/ai-infra-curriculum
+**Discord**: [เข้าร่วมชุมชนของเรา](#)
+**Office Hours**: ทุกวันพุธ 18:00-19:00 น. EST
 
 ---
 
-## Progress Notes
+## กิตติกรรมประกาศ
 
-The earlier "✅ 100% Complete" claim was inaccurate. As of 2026-05-22 the curriculum is in active development with the following honest accounting against the "Materials Included" promises:
+หลักสูตรนี้พัฒนาขึ้นโดยอ้างอิงจาก:
+- การวิเคราะห์ประกาศรับสมัครงาน 500+ ตำแหน่งจากบริษัทเทคโนโลยีชั้นนำ
+- การสัมภาษณ์ AI infrastructure engineer 50+ คน
+- Best practices และมาตรฐานของอุตสาหกรรม
+- Feedback จากผู้เข้าร่วมโครงการนำร่อง
+- แนวโน้มล่าสุดของ AI/ML infrastructure (2024-2025)
 
-### Per-module exercise / lab status (post 2026-05-22 lab + exercise drops)
+---
 
-| Module | Exercises promised | Present | Labs promised | Labs present |
+## ประวัติเวอร์ชัน
+
+**เวอร์ชัน 1.0** (2025-01-15)
+- เปิดตัวหลักสูตรครั้งแรก
+- 10 โมดูลที่สมบูรณ์
+- 3 โปรเจกต์ที่ครอบคลุม
+- เนื้อหา 500+ ชั่วโมง
+
+---
+
+**พร้อมเริ่มต้นเส้นทางสู่ AI Infrastructure Engineering แล้วหรือยัง?**
+**เริ่มต้นที่ [โมดูล 01: พื้นฐาน](lessons/mod-101-foundations/README.md)**
+
+---
+
+## บันทึกความคืบหน้า
+
+ข้อความ "✅ เสร็จสมบูรณ์ 100%" ที่เคยระบุไว้ก่อนหน้านี้ไม่ถูกต้อง ณ วันที่ 2026-05-22 หลักสูตรอยู่ระหว่างการพัฒนา โดยมีสถานะที่แท้จริงเทียบกับสิ่งที่ระบุไว้ใน "เนื้อหาที่รวมอยู่" ดังนี้:
+
+### สถานะแบบฝึกหัด / lab รายโมดูล (หลังการเพิ่ม lab + แบบฝึกหัดเมื่อ 2026-05-22)
+
+| โมดูล | แบบฝึกหัดที่ระบุไว้ | มีอยู่จริง | Lab ที่ระบุไว้ | Lab ที่มีอยู่จริง |
 |---|---|---|---|---|
-| 101 Foundations | 10 | **10 ✅** | 5 | **5 ✅** |
+| 101 พื้นฐาน | 10 | **10 ✅** | 5 | **5 ✅** |
 | 102 Cloud | 8 | **8 ✅** | 4 | **4 ✅** |
 | 103 Containerization | 12 | **12 ✅** | 6 | **6 ✅** |
 | 104 Kubernetes | 15 | **15 ✅** | 8 | **8 ✅** |
-| 105 Data Pipelines | 12 | **12 ✅** | 6 | **6 ✅** |
+| 105 Data Pipeline | 12 | **12 ✅** | 6 | **6 ✅** |
 | 106 MLOps | 14 | **14 ✅** | 7 | **7 ✅** |
 | 107 GPU | 11 | 3 | 6 | **6 ✅** |
 | 108 Monitoring | 10 | **10 ✅** | 5 | **5 ✅** |
 | 109 IaC | 13 | **13 ✅** | 7 | **7 ✅** |
 | 110 LLM | 14 | **14 ✅** | 8 | **8 ✅** |
 
-**Status update:** All 62 promised labs were authored on 2026-05-22 as substantive hands-on walkthroughs (objective, prerequisites, numbered steps, validation checklist, cleanup, troubleshooting). They live in `lessons/mod-XXX-*/labs/`.
+**อัปเดตสถานะ:** Lab ทั้ง 62 ชุดที่ระบุไว้ได้รับการเขียนขึ้นเมื่อ 2026-05-22 ในรูปแบบ walkthrough เชิงปฏิบัติที่มีเนื้อหาจริงจัง (วัตถุประสงค์, ความรู้พื้นฐานที่ต้องมี, ขั้นตอนแบบมีลำดับเลข, checklist สำหรับตรวจสอบ, การ cleanup, troubleshooting) โดยอยู่ใน `lessons/mod-XXX-*/labs/`
 
-The exercise gap remains (32 of 119 present). It is being addressed in a separate content drop because each exercise targets the same 25–50 KB depth as the existing ones — substantial authoring work that warrants its own focused effort.
+ช่องว่างด้านแบบฝึกหัดยังคงอยู่ (มีอยู่ 32 จาก 119) และกำลังได้รับการแก้ไขในการเพิ่มเนื้อหาแยกต่างหาก เนื่องจากแบบฝึกหัดแต่ละชุดมีเป้าหมายความลึกระดับ 25–50 KB เช่นเดียวกับชุดที่มีอยู่ ซึ่งเป็นงานเขียนจำนวนมากที่ควรได้รับความทุ่มเทแยกเฉพาะ
 
-### Projects status
+### สถานะโปรเจกต์
 
-All three projects (101, 102, 103) are complete and runnable. They are the most polished part of the curriculum.
+ทั้งสามโปรเจกต์ (101, 102, 103) เสร็จสมบูรณ์และรันได้จริง เป็นส่วนที่ขัดเกลามาดีที่สุดของหลักสูตร
 
-### What you can do today
+### สิ่งที่คุณทำได้ในวันนี้
 
-Even with the exercise/lab gap, the curriculum is usable end-to-end as a self-study path:
+แม้จะยังมีช่องว่างด้านแบบฝึกหัด/lab หลักสูตรนี้ก็สามารถใช้เรียนด้วยตนเองได้ตั้งแต่ต้นจนจบ:
 
-- Read each module's lectures (always complete).
-- Work the exercises that are present (they're substantial — 25–50 KB each).
-- Take the per-module quiz.
-- Build all three projects.
+- อ่านเนื้อหาบรรยายของแต่ละโมดูล (สมบูรณ์เสมอ)
+- ทำแบบฝึกหัดที่มีอยู่ (มีเนื้อหาเข้มข้น — ชุดละ 25–50 KB)
+- ทำแบบทดสอบประจำโมดูล
+- สร้างทั้งสามโปรเจกต์
 
-The remaining exercises and labs are nice-to-have for completeness, not blocking for the core learning outcomes.
+แบบฝึกหัดและ lab ที่เหลือเป็นส่วนเสริมเพื่อความครบถ้วน ไม่ได้เป็นอุปสรรคต่อผลลัพธ์การเรียนรู้หลัก
 
 ---
 
-*Last Updated: 2026-05-22*
-*Curriculum Version: 1.1.0*
-*Status: 🚧 In active development*
+*อัปเดตล่าสุด: 2026-05-22*
+*เวอร์ชันหลักสูตร: 1.1.0*
+*สถานะ: 🚧 อยู่ระหว่างการพัฒนา*
