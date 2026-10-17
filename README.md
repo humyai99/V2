@@ -1,11 +1,11 @@
-# AI Infrastructure Engineer - Learning Path
+# AI Infrastructure Engineer - เส้นทางการเรียนรู้
 
 <!-- aicg:site-banner -->
-> 🎓 Part of the free, open-source **AI Career Curriculum** ecosystem — [Infrastructure](https://github.com/ai-infra-curriculum) · [ML Engineering](https://github.com/ml-engineering-curriculum) · [AI Engineering](https://github.com/ai-engineering-curriculum) · [Governance](https://github.com/ai-governance-curriculum). Live cohorts &amp; team programs: **[ai-infra-curriculum.github.io](https://ai-infra-curriculum.github.io/)**.
+> 🎓 ส่วนหนึ่งของระบบนิเวศ **AI Career Curriculum** แบบฟรีและ open-source — [Infrastructure](https://github.com/ai-infra-curriculum) · [ML Engineering](https://github.com/ml-engineering-curriculum) · [AI Engineering](https://github.com/ai-engineering-curriculum) · [Governance](https://github.com/ai-governance-curriculum) คลาสเรียนสดและโปรแกรมสำหรับทีม: **[ai-infra-curriculum.github.io](https://ai-infra-curriculum.github.io/)**
 <!-- /aicg:site-banner -->
 
 <!-- aicg:sponsor -->
-> 💜 **[Sponsor this curriculum](https://github.com/sponsors/AI-Infra-Curriculum)** — sponsorships keep the whole open-source AI Career Curriculum free and moving.
+> 💜 **[สนับสนุนหลักสูตรนี้](https://github.com/sponsors/AI-Infra-Curriculum)** — การสนับสนุนช่วยให้ AI Career Curriculum แบบ open-source ทั้งหมดยังคงฟรีและพัฒนาต่อไปได้
 <!-- /aicg:sponsor -->
 
 <div align="center">
@@ -15,142 +15,142 @@
 ![Projects](https://img.shields.io/badge/projects-3/3_complete-brightgreen.svg)
 ![Duration](https://img.shields.io/badge/duration-500+_hours-red.svg)
 
-*Master AI Infrastructure Engineering through hands-on projects and practical learning*
+*เชี่ยวชาญ AI Infrastructure Engineering ผ่านโปรเจกต์ภาคปฏิบัติและการเรียนรู้เชิงปฏิบัติ*
 
-[Prerequisites](./PREREQUISITES.md) • [Getting Started](#-getting-started) • [Curriculum](#-curriculum-overview) • [Projects](#-projects) • [Resources](#-resources)
+[ความรู้พื้นฐาน](./PREREQUISITES.md) • [เริ่มต้นใช้งาน](#-getting-started) • [หลักสูตร](#-curriculum-overview) • [โปรเจกต์](#-projects) • [แหล่งข้อมูล](#-resources)
 
 </div>
 
 ---
 
-## 🎯 Overview
+## 🎯 ภาพรวม
 
-This repository contains a **complete, production-ready learning path** for becoming an **AI Infrastructure Engineer**. Through comprehensive modules, real-world projects, and production-grade code stubs with educational TODO comments, you'll develop the skills needed to build, deploy, and maintain ML infrastructure at scale.
+Repository นี้ประกอบด้วย **เส้นทางการเรียนรู้ที่สมบูรณ์และพร้อมใช้งานระดับ production** สำหรับการเป็น **AI Infrastructure Engineer** ผ่านโมดูลที่ครอบคลุม โปรเจกต์จากโลกจริง และ code stub ระดับ production พร้อม comment TODO เชิงการสอน คุณจะพัฒนาทักษะที่จำเป็นในการสร้าง deploy และดูแล ML infrastructure ในระดับ scale
 
-**Repository Status:** ✅ **100% COMPLETE** - All modules and projects ready for learning!
+**สถานะของ Repository:** ✅ **เสร็จสมบูรณ์ 100%** - ทุกโมดูลและโปรเจกต์พร้อมให้เรียนแล้ว!
 
-### What You'll Master
+### สิ่งที่คุณจะเชี่ยวชาญ
 
-- ✅ **Build ML Infrastructure** from scratch (Docker, Kubernetes, cloud platforms)
-- ✅ **Deploy Production ML Systems** with auto-scaling and comprehensive monitoring
-- ✅ **Implement End-to-End MLOps** pipelines (Airflow, MLflow, DVC)
-- ✅ **Deploy Cutting-Edge LLM Infrastructure** (vLLM, RAG, vector databases)
-- ✅ **Scale Training** with distributed systems and GPU clusters
-- ✅ **Monitor and Troubleshoot** complex ML systems in production
-- ✅ **Optimize Costs** across cloud providers (60-80% savings possible)
+- ✅ **สร้าง ML Infrastructure** ตั้งแต่ศูนย์ (Docker, Kubernetes, cloud platform)
+- ✅ **Deploy ระบบ ML ระดับ Production** พร้อม auto-scaling และ monitoring ที่ครอบคลุม
+- ✅ **พัฒนา MLOps pipeline แบบ End-to-End** (Airflow, MLflow, DVC)
+- ✅ **Deploy LLM Infrastructure ล้ำสมัย** (vLLM, RAG, vector database)
+- ✅ **Scale การเทรน** ด้วยระบบแบบกระจายและ GPU cluster
+- ✅ **Monitor และแก้ไขปัญหา** ระบบ ML ที่ซับซ้อนใน production
+- ✅ **Optimize ค่าใช้จ่าย** ข้าม cloud provider (ประหยัดได้ 60-80%)
 
-### Why This Learning Path?
+### ทำไมต้องเส้นทางการเรียนรู้นี้?
 
-- 🎓 **Industry-Aligned**: Based on actual job requirements from FAANG and top tech companies
-- 💻 **Hands-On**: Code stubs with TODO comments guide you through real implementations
-- 🏗️ **Production-Ready**: Learn patterns used at Netflix, Uber, Airbnb, OpenAI
-- 📊 **Career-Focused**: Directly maps to $120k-$180k AI Infrastructure Engineer roles
-- 🚀 **Progressive**: 10 modules building from basics to advanced LLM infrastructure
-- 🔥 **Modern Stack**: 2024-2025 technologies (vLLM, RAG, GPU optimization)
-
----
-
-## ✨ What's New
-
-**2026-05-27 — Layout standardisation:**
-- 🧹 **Removed 10 empty root-level `mod-XXX-*/` placeholder directories.** They were vestiges from a pre-refactor layout; all canonical module content has lived under `lessons/mod-XXX-*/` for some time. The repo now matches the layout expected by the curriculum-runner audit (`lessons/` for learning content, `modules/` in the paired solutions repo).
-- 🧹 **Removed orphan `lessons/mod-101-foundations/exercises/solutions/`** (a duplicate single-file index). Reference solutions live in the paired [`ai-infra-engineer-solutions`](https://github.com/ai-infra-curriculum/ai-infra-engineer-solutions) repo; inline pointers throughout the lessons now link there directly.
-
-**May 2026 Update:**
-- 🧪 **All 62 promised labs authored** across all 10 modules (foundations → LLM infrastructure). Each lab is a substantive, runnable walkthrough with objectives, prerequisites, numbered steps, validation checklist, cleanup, and troubleshooting.
-- 📒 **Two new reading lists:** `advanced-engineer-path.md` and `staff-engineer-path.md` (9–18 months and 2–5 years respectively).
-- 🧹 **Structural cleanup:** mod-101 lecture duplicates resolved, quiz placement consolidated, empty Makefile/pyproject populated with real content, CURRICULUM.md self-claim corrected to reflect actual completion state.
-- 🔍 **Honesty pass on CURRICULUM.md:** the prior "100% Complete" claim has been replaced with a per-module exercise/lab accounting. Lectures and projects are excellent; exercises are 32 of 119 promised and being filled in over subsequent content drops.
-
-**Earlier:**
-- 📝 **Comprehensive Quizzes** for modules 102-110 (265+ questions)
-  - Module 102: Cloud Computing (mid-module + final, 50 questions)
-  - Module 103: Containerization (25 questions)
-  - Module 104: Kubernetes (30 questions)
-  - Module 105: Data Pipelines (25 questions)
-  - Module 106: MLOps (30 questions)
-  - Module 107: GPU Computing (25 questions)
-  - Module 108: Monitoring (25 questions)
-  - Module 109: IaC (25 questions)
-  - Module 110: LLM Infrastructure (30 questions)
-- 📋 **Technology Versions Guide** - Complete specifications for 100+ tools
-- 🗺️ **Curriculum Cross-Reference** - Mapping to Junior track
-- 📈 **Career Progression Guide** - Engineer to Principal roadmap
+- 🎓 **สอดคล้องกับอุตสาหกรรม**: อ้างอิงจากข้อกำหนดงานจริงของ FAANG และบริษัทเทคชั้นนำ
+- 💻 **ลงมือปฏิบัติจริง**: Code stub พร้อม comment TODO นำทางคุณผ่านการพัฒนาจริง
+- 🏗️ **พร้อมสำหรับ Production**: เรียนรู้ pattern ที่ใช้ใน Netflix, Uber, Airbnb, OpenAI
+- 📊 **มุ่งเน้นอาชีพ**: ตรงกับตำแหน่ง AI Infrastructure Engineer ที่มีรายได้ $120k-$180k
+- 🚀 **ค่อยเป็นค่อยไป**: 10 โมดูลไล่ระดับจากพื้นฐานจนถึง LLM infrastructure ขั้นสูง
+- 🔥 **Stack ทันสมัย**: เทคโนโลยีปี 2024-2025 (vLLM, RAG, GPU optimization)
 
 ---
 
-## 📊 What's Included
+## ✨ มีอะไรใหม่
 
-### 10 Complete Learning Modules (130 Files)
+**2026-05-27 — ปรับโครงสร้างให้เป็นมาตรฐาน:**
+- 🧹 **ลบไดเรกทอรี placeholder `mod-XXX-*/` ที่ว่างเปล่า 10 รายการในระดับ root** ซึ่งเป็นสิ่งที่หลงเหลือจากโครงสร้างก่อน refactor เนื้อหาหลักของทุกโมดูลอยู่ภายใต้ `lessons/mod-XXX-*/` มาระยะหนึ่งแล้ว ขณะนี้ repo มีโครงสร้างตรงตามที่การตรวจสอบของ curriculum-runner คาดหวัง (`lessons/` สำหรับเนื้อหาการเรียน, `modules/` ใน repo เฉลยที่จับคู่กัน)
+- 🧹 **ลบ `lessons/mod-101-foundations/exercises/solutions/` ที่ไม่มีที่อ้างอิง** (เป็น index ไฟล์เดียวที่ซ้ำซ้อน) เฉลยอ้างอิงอยู่ใน repo คู่กัน [`ai-infra-engineer-solutions`](https://github.com/ai-infra-curriculum/ai-infra-engineer-solutions) และลิงก์ในบทเรียนต่าง ๆ ชี้ไปที่นั่นโดยตรงแล้ว
 
-| Module | Topic | Hours | Status | Quiz |
+**อัปเดตพฤษภาคม 2026:**
+- 🧪 **เขียน lab ครบทั้ง 62 รายการตามที่สัญญาไว้** ครอบคลุมทั้ง 10 โมดูล (foundations → LLM infrastructure) แต่ละ lab เป็น walkthrough ที่มีเนื้อหาจริงและรันได้ ประกอบด้วยวัตถุประสงค์ ความรู้พื้นฐาน ขั้นตอนแบบมีลำดับ checklist สำหรับตรวจสอบ การ cleanup และการแก้ไขปัญหา
+- 📒 **รายการหนังสือแนะนำใหม่ 2 รายการ:** `advanced-engineer-path.md` และ `staff-engineer-path.md` (9–18 เดือน และ 2–5 ปี ตามลำดับ)
+- 🧹 **ปรับโครงสร้าง:** แก้ไขเอกสารบรรยายที่ซ้ำกันใน mod-101, รวมตำแหน่งของแบบทดสอบ, เติมเนื้อหาจริงลงใน Makefile/pyproject ที่ว่างเปล่า, แก้ไขการอ้างสถานะใน CURRICULUM.md ให้สะท้อนความคืบหน้าจริง
+- 🔍 **ตรวจทานความถูกต้องของ CURRICULUM.md:** การอ้างว่า "เสร็จสมบูรณ์ 100%" ก่อนหน้านี้ถูกแทนที่ด้วยการแจกแจงแบบฝึกหัด/lab รายโมดูล เอกสารบรรยายและโปรเจกต์มีคุณภาพดีเยี่ยม ส่วนแบบฝึกหัดมี 32 จาก 119 รายการที่สัญญาไว้ และจะทยอยเพิ่มในการอัปเดตเนื้อหาครั้งต่อ ๆ ไป
+
+**ก่อนหน้านี้:**
+- 📝 **แบบทดสอบที่ครอบคลุม** สำหรับโมดูล 102-110 (265+ ข้อ)
+  - Module 102: Cloud Computing (กลางโมดูล + ท้ายโมดูล, 50 ข้อ)
+  - Module 103: Containerization (25 ข้อ)
+  - Module 104: Kubernetes (30 ข้อ)
+  - Module 105: Data Pipelines (25 ข้อ)
+  - Module 106: MLOps (30 ข้อ)
+  - Module 107: GPU Computing (25 ข้อ)
+  - Module 108: Monitoring (25 ข้อ)
+  - Module 109: IaC (25 ข้อ)
+  - Module 110: LLM Infrastructure (30 ข้อ)
+- 📋 **คู่มือเวอร์ชันของเทคโนโลยี** - ข้อกำหนดครบถ้วนสำหรับเครื่องมือกว่า 100 รายการ
+- 🗺️ **การอ้างอิงข้ามหลักสูตร** - การจับคู่กับแทร็ก Junior
+- 📈 **คู่มือความก้าวหน้าในอาชีพ** - Roadmap จาก Engineer สู่ Principal
+
+---
+
+## 📊 สิ่งที่รวมอยู่
+
+### 10 โมดูลการเรียนรู้ที่สมบูรณ์ (130 ไฟล์)
+
+| โมดูล | หัวข้อ | ชั่วโมง | สถานะ | แบบทดสอบ |
 |--------|-------|-------|--------|------|
-| 01 | **Foundations** | 50h | ✅ Complete (15 files) | ✅ 30Q |
-| 02 | **Cloud Computing** | 50h | ✅ Complete (11 files) | ✨ **+50Q** |
-| 03 | **Containerization** | 50h | ✅ Complete (14 files) | ✨ **+25Q** |
-| 04 | **Kubernetes** | 50h | ✅ Complete (13 files) | ✨ **+30Q** |
-| 05 | **Data Pipelines** | 50h | ✅ Complete (12 files) | ✨ **+25Q** |
-| 06 | **MLOps** | 50h | ✅ Complete (12 files) | ✨ **+30Q** |
-| 07 | **GPU Computing** | 50h | ✅ Complete (12 files) | ✨ **+25Q** |
-| 08 | **Monitoring & Observability** | 50h | ✅ Complete (11 files) | ✨ **+25Q** |
-| 09 | **Infrastructure as Code** | 50h | ✅ Complete (12 files) | ✨ **+25Q** |
-| 10 | **LLM Infrastructure** | 50h | ✅ Complete (12 files) | ✨ **+30Q** |
+| 01 | **Foundations** | 50h | ✅ เสร็จสมบูรณ์ (15 ไฟล์) | ✅ 30Q |
+| 02 | **Cloud Computing** | 50h | ✅ เสร็จสมบูรณ์ (11 ไฟล์) | ✨ **+50Q** |
+| 03 | **Containerization** | 50h | ✅ เสร็จสมบูรณ์ (14 ไฟล์) | ✨ **+25Q** |
+| 04 | **Kubernetes** | 50h | ✅ เสร็จสมบูรณ์ (13 ไฟล์) | ✨ **+30Q** |
+| 05 | **Data Pipelines** | 50h | ✅ เสร็จสมบูรณ์ (12 ไฟล์) | ✨ **+25Q** |
+| 06 | **MLOps** | 50h | ✅ เสร็จสมบูรณ์ (12 ไฟล์) | ✨ **+30Q** |
+| 07 | **GPU Computing** | 50h | ✅ เสร็จสมบูรณ์ (12 ไฟล์) | ✨ **+25Q** |
+| 08 | **Monitoring & Observability** | 50h | ✅ เสร็จสมบูรณ์ (11 ไฟล์) | ✨ **+25Q** |
+| 09 | **Infrastructure as Code** | 50h | ✅ เสร็จสมบูรณ์ (12 ไฟล์) | ✨ **+25Q** |
+| 10 | **LLM Infrastructure** | 50h | ✅ เสร็จสมบูรณ์ (12 ไฟล์) | ✨ **+30Q** |
 
-### 3 Production-Grade Projects (77 Files)
+### 3 โปรเจกต์ระดับ Production (77 ไฟล์)
 
-| Project | Technologies | Duration | Files | Status |
+| โปรเจกต์ | เทคโนโลยี | ระยะเวลา | ไฟล์ | สถานะ |
 |---------|-------------|----------|-------|--------|
-| **01: Basic Model Serving** | FastAPI + K8s + Monitoring | 30h | ~30 | ✅ Complete |
-| **02: MLOps Pipeline** | Airflow + MLflow + DVC | 40h | 30 | ✅ Complete |
-| **03: LLM Deployment** | vLLM + RAG + Vector DB | 50h | 47 | ✅ Complete |
+| **01: Basic Model Serving** | FastAPI + K8s + Monitoring | 30h | ~30 | ✅ เสร็จสมบูรณ์ |
+| **02: MLOps Pipeline** | Airflow + MLflow + DVC | 40h | 30 | ✅ เสร็จสมบูรณ์ |
+| **03: LLM Deployment** | vLLM + RAG + Vector DB | 50h | 47 | ✅ เสร็จสมบูรณ์ |
 
-**Total Repository:** 207 files | ~95,000+ lines of code | 500+ hours of learning content
-
----
-
-## 🎓 Prerequisites
-
-### Option 1: Complete Junior Curriculum (RECOMMENDED)
-
-If you've completed the [**Junior AI Infrastructure Engineer**](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning) curriculum, you have **ALL** required prerequisites! ✅
-
-The Junior curriculum covers:
-- ✅ Python fundamentals & advanced concepts
-- ✅ Linux/Unix command line mastery
-- ✅ Git & version control workflows
-- ✅ ML basics (PyTorch, TensorFlow)
-- ✅ Docker & containerization
-- ✅ Kubernetes introduction
-- ✅ API development & databases
-- ✅ Monitoring & cloud platforms
-
-**Duration**: 440 hours (22 weeks part-time, 11 weeks full-time)
-
-### Option 2: Self-Assessment
-
-**Haven't completed Junior curriculum?** Use our comprehensive [**Prerequisites Guide**](./PREREQUISITES.md) to:
-- Check your readiness with detailed skill checklists
-- Identify knowledge gaps
-- Get personalized learning recommendations
-- Run automated skill assessment
-
-### Minimum Requirements
-
-If self-studying, you must have:
-- **Python 3.9+** (intermediate level: OOP, async, testing, type hints)
-- **Linux/Unix CLI** (bash scripting, processes, debugging)
-- **Git fundamentals** (branching, merging, collaboration)
-- **ML basics** (PyTorch/TensorFlow, training, inference, evaluation)
-- **Docker basics** (images, containers, Compose)
-- **Kubernetes intro** (pods, deployments, services)
-
-**👉 Not sure if you're ready?** Read the [**Prerequisites Guide**](./PREREQUISITES.md) for detailed assessment.
+**รวมทั้ง Repository:** 207 ไฟล์ | โค้ดกว่า ~95,000 บรรทัด | เนื้อหาการเรียนรู้กว่า 500 ชั่วโมง
 
 ---
 
-## 🚀 Getting Started
+## 🎓 ความรู้พื้นฐาน
 
-### Quick Start
+### ทางเลือกที่ 1: เรียนหลักสูตร Junior ให้จบ (แนะนำ)
+
+หากคุณเรียนจบหลักสูตร [**Junior AI Infrastructure Engineer**](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning) แล้ว คุณมีความรู้พื้นฐานที่จำเป็น **ครบทั้งหมด**! ✅
+
+หลักสูตร Junior ครอบคลุม:
+- ✅ พื้นฐานและแนวคิดขั้นสูงของ Python
+- ✅ ความเชี่ยวชาญ command line ของ Linux/Unix
+- ✅ Git และ workflow ของ version control
+- ✅ พื้นฐาน ML (PyTorch, TensorFlow)
+- ✅ Docker และ containerization
+- ✅ แนะนำ Kubernetes
+- ✅ การพัฒนา API และฐานข้อมูล
+- ✅ Monitoring และ cloud platform
+
+**ระยะเวลา**: 440 ชั่วโมง (22 สัปดาห์แบบ part-time, 11 สัปดาห์แบบ full-time)
+
+### ทางเลือกที่ 2: ประเมินตนเอง
+
+**ยังไม่ได้เรียนหลักสูตร Junior?** ใช้ [**คู่มือความรู้พื้นฐาน**](./PREREQUISITES.md) ที่ครอบคลุมของเราเพื่อ:
+- ตรวจสอบความพร้อมด้วย checklist ทักษะโดยละเอียด
+- ระบุช่องว่างด้านความรู้
+- รับคำแนะนำการเรียนรู้เฉพาะบุคคล
+- รันการประเมินทักษะอัตโนมัติ
+
+### ข้อกำหนดขั้นต่ำ
+
+หากเรียนด้วยตนเอง คุณต้องมี:
+- **Python 3.9+** (ระดับกลาง: OOP, async, testing, type hint)
+- **Linux/Unix CLI** (bash scripting, process, debugging)
+- **พื้นฐาน Git** (branching, merging, การทำงานร่วมกัน)
+- **พื้นฐาน ML** (PyTorch/TensorFlow, training, inference, evaluation)
+- **พื้นฐาน Docker** (image, container, Compose)
+- **แนะนำ Kubernetes** (pod, deployment, service)
+
+**👉 ไม่แน่ใจว่าพร้อมหรือยัง?** อ่าน [**คู่มือความรู้พื้นฐาน**](./PREREQUISITES.md) สำหรับการประเมินโดยละเอียด
+
+---
+
+## 🚀 เริ่มต้นใช้งาน
+
+### เริ่มต้นอย่างรวดเร็ว
 
 ```bash
 # 1. Clone repository
@@ -169,309 +169,309 @@ cd lessons/mod-101-foundations
 cat README.md
 ```
 
-### Learning Path
+### เส้นทางการเรียนรู้
 
-1. **Modules 01-02 (Foundations)** - Start here if new to ML infrastructure
-2. **Modules 03-04 (Core Infrastructure)** - Docker and Kubernetes mastery
-3. **Modules 05-06 (MLOps)** - Data pipelines and ML operations
-4. **Modules 07-08 (Advanced)** - GPU computing and monitoring
-5. **Modules 09-10 (Modern Stack)** - IaC and LLM infrastructure
+1. **Module 01-02 (Foundations)** - เริ่มที่นี่หากเพิ่งเริ่มต้นกับ ML infrastructure
+2. **Module 03-04 (Core Infrastructure)** - เชี่ยวชาญ Docker และ Kubernetes
+3. **Module 05-06 (MLOps)** - Data pipeline และ ML operations
+4. **Module 07-08 (ขั้นสูง)** - GPU computing และ monitoring
+5. **Module 09-10 (Modern Stack)** - IaC และ LLM infrastructure
 
-**Detailed guide:** [GETTING_STARTED.md](./GETTING_STARTED.md)
+**คู่มือโดยละเอียด:** [GETTING_STARTED.md](./GETTING_STARTED.md)
 
 ---
 
-## 📖 Curriculum Overview
+## 📖 ภาพรวมหลักสูตร
 
 ### Module 01: Foundations ✅
-**50 hours | 15 files**
+**50 ชั่วโมง | 15 ไฟล์**
 
-Build your foundation in ML infrastructure:
-- ML infrastructure landscape and career paths
-- Python environment setup and best practices
-- ML frameworks (PyTorch, TensorFlow)
-- Docker fundamentals and containerization
-- REST API development with FastAPI
+สร้างพื้นฐานด้าน ML infrastructure:
+- ภาพรวมของ ML infrastructure และเส้นทางอาชีพ
+- การตั้งค่า Python environment และ best practice
+- ML framework (PyTorch, TensorFlow)
+- พื้นฐาน Docker และ containerization
+- การพัฒนา REST API ด้วย FastAPI
 
-[View Module 01 →](./lessons/mod-101-foundations/README.md)
+[ดู Module 01 →](./lessons/mod-101-foundations/README.md)
 
 ---
 
 ### Module 02: Cloud Computing ✅
-**50 hours | 11 files**
+**50 ชั่วโมง | 11 ไฟล์**
 
-Master cloud platforms for ML:
-- Cloud architecture for ML workloads
+เชี่ยวชาญ cloud platform สำหรับ ML:
+- สถาปัตยกรรม cloud สำหรับ ML workload
 - AWS (EC2, S3, EKS, SageMaker)
 - GCP (Compute Engine, GCS, GKE, Vertex AI)
 - Azure (VMs, Blob Storage, AKS, Azure ML)
-- Multi-cloud strategies and cost optimization (60-80% savings)
+- กลยุทธ์ multi-cloud และ cost optimization (ประหยัด 60-80%)
 
-[View Module 02 →](./lessons/mod-102-cloud-computing/README.md)
+[ดู Module 02 →](./lessons/mod-102-cloud-computing/README.md)
 
 ---
 
 ### Module 03: Containerization ✅
-**50 hours | 14 files**
+**50 ชั่วโมง | 14 ไฟล์**
 
-Deep dive into containers:
-- Docker architecture and best practices
-- Multi-stage builds and optimization
-- Docker Compose for multi-service applications
-- Container registries and image management
-- Security and vulnerability scanning
+เจาะลึกเรื่อง container:
+- สถาปัตยกรรม Docker และ best practice
+- Multi-stage build และการ optimize
+- Docker Compose สำหรับแอปพลิเคชันหลายเซอร์วิส
+- Container registry และการจัดการ image
+- Security และ vulnerability scanning
 
-[View Module 03 →](./lessons/mod-103-containerization/README.md)
+[ดู Module 03 →](./lessons/mod-103-containerization/README.md)
 
 ---
 
 ### Module 04: Kubernetes ✅
-**50 hours | 13 files**
+**50 ชั่วโมง | 13 ไฟล์**
 
-Master Kubernetes for ML:
-- Kubernetes architecture and components
-- Deployments, Services, ConfigMaps, Secrets
-- GPU resource management and scheduling
+เชี่ยวชาญ Kubernetes สำหรับ ML:
+- สถาปัตยกรรมและองค์ประกอบของ Kubernetes
+- Deployment, Service, ConfigMap, Secret
+- การจัดการและ scheduling ทรัพยากร GPU
 - Autoscaling (HPA, VPA, Cluster Autoscaler)
-- Helm charts and GitOps with ArgoCD
+- Helm chart และ GitOps ด้วย ArgoCD
 
-[View Module 04 →](./lessons/mod-104-kubernetes/README.md)
+[ดู Module 04 →](./lessons/mod-104-kubernetes/README.md)
 
 ---
 
 ### Module 05: Data Pipelines ✅
-**50 hours | 12 files**
+**50 ชั่วโมง | 12 ไฟล์**
 
-Build robust data pipelines:
-- Apache Airflow for workflow orchestration
-- Data processing with Apache Spark
-- Streaming data with Apache Kafka
-- Data version control with DVC
-- Data quality validation and monitoring
+สร้าง data pipeline ที่แข็งแกร่ง:
+- Apache Airflow สำหรับ workflow orchestration
+- การประมวลผลข้อมูลด้วย Apache Spark
+- Streaming data ด้วย Apache Kafka
+- Data version control ด้วย DVC
+- การตรวจสอบและ monitoring คุณภาพข้อมูล
 
-[View Module 05 →](./lessons/mod-105-data-pipelines/README.md)
+[ดู Module 05 →](./lessons/mod-105-data-pipelines/README.md)
 
 ---
 
 ### Module 06: MLOps ✅
-**50 hours | 12 files**
+**50 ชั่วโมง | 12 ไฟล์**
 
-Implement MLOps best practices:
-- Experiment tracking with MLflow
-- Model registry and versioning
-- Feature stores and engineering
-- CI/CD for ML models
-- A/B testing and experimentation
-- ML governance and best practices
+นำ best practice ของ MLOps ไปใช้:
+- Experiment tracking ด้วย MLflow
+- Model registry และ versioning
+- Feature store และ feature engineering
+- CI/CD สำหรับโมเดล ML
+- A/B testing และการทดลอง
+- ML governance และ best practice
 
-[View Module 06 →](./lessons/mod-106-mlops/README.md)
+[ดู Module 06 →](./lessons/mod-106-mlops/README.md)
 
 ---
 
 ### Module 07: GPU Computing & Distributed Training ✅
-**50 hours | 12 files**
+**50 ชั่วโมง | 12 ไฟล์**
 
-Harness GPU power:
-- CUDA programming fundamentals
-- PyTorch GPU acceleration
+ใช้พลังของ GPU อย่างเต็มที่:
+- พื้นฐานการเขียนโปรแกรม CUDA
+- GPU acceleration ใน PyTorch
 - Distributed training (DDP, FSDP)
-- Multi-GPU and multi-node training
-- Model and pipeline parallelism
+- การเทรนแบบ multi-GPU และ multi-node
+- Model parallelism และ pipeline parallelism
 - GPU memory optimization
 
-[View Module 07 →](./lessons/mod-107-gpu-computing/README.md)
+[ดู Module 07 →](./lessons/mod-107-gpu-computing/README.md)
 
 ---
 
 ### Module 08: Monitoring & Observability ✅
-**50 hours | 11 files**
+**50 ชั่วโมง | 11 ไฟล์**
 
-Build comprehensive observability:
-- Prometheus and Grafana
-- Metrics, logs, and traces (OpenTelemetry)
-- Distributed tracing with Jaeger
-- Alerting and incident response
-- Model performance monitoring
-- SLIs, SLOs, and SLAs
+สร้าง observability ที่ครอบคลุม:
+- Prometheus และ Grafana
+- Metrics, log และ trace (OpenTelemetry)
+- Distributed tracing ด้วย Jaeger
+- Alerting และ incident response
+- Monitoring ประสิทธิภาพของโมเดล
+- SLI, SLO และ SLA
 
-[View Module 08 →](./lessons/mod-108-monitoring-observability/README.md)
+[ดู Module 08 →](./lessons/mod-108-monitoring-observability/README.md)
 
 ---
 
 ### Module 09: Infrastructure as Code ✅
-**50 hours | 12 files**
+**50 ชั่วโมง | 12 ไฟล์**
 
-Automate infrastructure:
-- Terraform fundamentals and best practices
-- Pulumi for multi-language IaC
-- CloudFormation for AWS
-- State management and modules
-- Multi-environment deployments
-- GitOps workflows
+ทำ infrastructure ให้เป็นอัตโนมัติ:
+- พื้นฐาน Terraform และ best practice
+- Pulumi สำหรับ IaC หลายภาษา
+- CloudFormation สำหรับ AWS
+- State management และ module
+- Deployment หลาย environment
+- GitOps workflow
 
-[View Module 09 →](./lessons/mod-109-infrastructure-as-code/README.md)
+[ดู Module 09 →](./lessons/mod-109-infrastructure-as-code/README.md)
 
 ---
 
 ### Module 10: LLM Infrastructure ✅
-**50 hours | 12 files**
+**50 ชั่วโมง | 12 ไฟล์**
 
-Master cutting-edge LLM infrastructure (2024-2025):
-- LLM serving with vLLM and TensorRT-LLM
+เชี่ยวชาญ LLM infrastructure ล้ำสมัย (2024-2025):
+- LLM serving ด้วย vLLM และ TensorRT-LLM
 - RAG (Retrieval-Augmented Generation)
-- Vector databases (Pinecone, Weaviate, Milvus)
+- Vector database (Pinecone, Weaviate, Milvus)
 - Model quantization (FP16, INT8)
-- GPU optimization for inference
-- Cost tracking and optimization
+- GPU optimization สำหรับ inference
+- การติดตามและ optimize ค่าใช้จ่าย
 
-[View Module 10 →](./lessons/mod-110-llm-infrastructure/README.md)
+[ดู Module 10 →](./lessons/mod-110-llm-infrastructure/README.md)
 
 ---
 
-## 🛠️ Projects
+## 🛠️ โปรเจกต์
 
 ### Project 01: Basic Model Serving System ✅
-**⭐ Beginner | 30 hours | ~30 files**
+**⭐ ผู้เริ่มต้น | 30 ชั่วโมง | ~30 ไฟล์**
 
-Build a complete model serving system:
-- FastAPI REST API for image classification
-- Docker containerization with optimization
-- Kubernetes deployment with monitoring
-- Prometheus and Grafana dashboards
-- CI/CD pipeline with GitHub Actions
+สร้างระบบ model serving ที่สมบูรณ์:
+- FastAPI REST API สำหรับ image classification
+- Docker containerization พร้อมการ optimize
+- Kubernetes deployment พร้อม monitoring
+- Dashboard ของ Prometheus และ Grafana
+- CI/CD pipeline ด้วย GitHub Actions
 
-**Technologies:** FastAPI, Docker, Kubernetes, PyTorch, Prometheus, Grafana
+**เทคโนโลยี:** FastAPI, Docker, Kubernetes, PyTorch, Prometheus, Grafana
 
-[View Project 01 →](./projects/project-101-basic-model-serving/README.md)
+[ดู Project 01 →](./projects/project-101-basic-model-serving/README.md)
 
 ---
 
 ### Project 02: End-to-End MLOps Pipeline ✅
-**⭐⭐ Intermediate | 40 hours | 30 files**
+**⭐⭐ ระดับกลาง | 40 ชั่วโมง | 30 ไฟล์**
 
-Create a production MLOps pipeline:
-- Apache Airflow DAGs (data, training, deployment)
-- MLflow experiment tracking and model registry
-- DVC for data versioning
-- Automated model deployment to Kubernetes
-- Comprehensive monitoring and alerting
-- CI/CD with automated testing
+สร้าง MLOps pipeline ระดับ production:
+- Apache Airflow DAG (data, training, deployment)
+- MLflow experiment tracking และ model registry
+- DVC สำหรับ data versioning
+- Deploy โมเดลขึ้น Kubernetes โดยอัตโนมัติ
+- Monitoring และ alerting ที่ครอบคลุม
+- CI/CD พร้อม automated testing
 
-**Technologies:** Airflow, MLflow, DVC, PostgreSQL, Redis, MinIO, Kubernetes
+**เทคโนโลยี:** Airflow, MLflow, DVC, PostgreSQL, Redis, MinIO, Kubernetes
 
-[View Project 02 →](./projects/project-102-mlops-pipeline/README.md)
+[ดู Project 02 →](./projects/project-102-mlops-pipeline/README.md)
 
 ---
 
 ### Project 03: LLM Deployment Platform ✅
-**⭐⭐⭐ Advanced | 50 hours | 47 files**
+**⭐⭐⭐ ขั้นสูง | 50 ชั่วโมง | 47 ไฟล์**
 
-Deploy cutting-edge LLM infrastructure:
-- vLLM/TensorRT-LLM for optimized serving
-- RAG system with vector database (Pinecone/ChromaDB/Milvus)
+Deploy LLM infrastructure ล้ำสมัย:
+- vLLM/TensorRT-LLM สำหรับ serving ที่ optimize แล้ว
+- ระบบ RAG พร้อม vector database (Pinecone/ChromaDB/Milvus)
 - Document ingestion pipeline (PDF, TXT, web)
-- FastAPI with Server-Sent Events streaming
-- Kubernetes with GPU support
-- Cost tracking and optimization
-- Comprehensive monitoring
+- FastAPI พร้อม streaming แบบ Server-Sent Events
+- Kubernetes ที่รองรับ GPU
+- การติดตามและ optimize ค่าใช้จ่าย
+- Monitoring ที่ครอบคลุม
 
-**Technologies:** vLLM, LangChain, Vector DBs, FastAPI, Kubernetes + GPU, Transformers
+**เทคโนโลยี:** vLLM, LangChain, Vector DBs, FastAPI, Kubernetes + GPU, Transformers
 
-[View Project 03 →](./projects/project-103-llm-deployment/README.md)
-
----
-
-## 💰 Cost Considerations
-
-### Cloud Costs
-
-All learning materials can be completed within **free tier limits**:
-- **AWS**: 750 hours/month t2.micro + $300 credits (varies)
-- **GCP**: $300 credit (90 days)
-- **Azure**: $200 credit (30 days)
-
-**GPU costs** (optional, for advanced projects):
-- On-demand: $1-3/hour
-- Spot instances: $0.30-1/hour (70% savings)
-- Estimated total: $50-150 for complete curriculum
-
-### Optimization Tips
-
-- Use spot instances for training (60-90% savings)
-- Leverage free tiers across multiple cloud providers
-- Delete resources when not in use
-- Use local development where possible
+[ดู Project 03 →](./projects/project-103-llm-deployment/README.md)
 
 ---
 
-## 📚 Resources
+## 💰 ข้อพิจารณาด้านค่าใช้จ่าย
 
-### Included Documentation
-- Comprehensive lesson materials with examples
-- Code stubs with TODO comments for guided implementation
-- Complete project specifications with architecture diagrams
-- Quizzes and assessments for each module
-- Best practices and design patterns
+### ค่าใช้จ่าย Cloud
 
-### External Resources
-- 📖 **Reading Lists**: [resources/reading-lists/](./resources/reading-lists/) — advanced + staff-engineer paths
-- 🛠️ **Cheat Sheets**: [resources/cheat-sheets/](./resources/cheat-sheets/) — docker, kubernetes, git, linux, python infrastructure
+เนื้อหาการเรียนทั้งหมดสามารถเรียนจบได้ภายใน **ขีดจำกัดของ free tier**:
+- **AWS**: t2.micro 750 ชั่วโมง/เดือน + เครดิต $300 (แตกต่างกันไป)
+- **GCP**: เครดิต $300 (90 วัน)
+- **Azure**: เครดิต $200 (30 วัน)
+
+**ค่าใช้จ่าย GPU** (ไม่บังคับ สำหรับโปรเจกต์ขั้นสูง):
+- On-demand: $1-3/ชั่วโมง
+- Spot instance: $0.30-1/ชั่วโมง (ประหยัด 70%)
+- ประมาณการรวม: $50-150 สำหรับหลักสูตรทั้งหมด
+
+### เคล็ดลับการ Optimize
+
+- ใช้ spot instance สำหรับการเทรน (ประหยัด 60-90%)
+- ใช้ประโยชน์จาก free tier ของ cloud provider หลายราย
+- ลบทรัพยากรเมื่อไม่ได้ใช้งาน
+- พัฒนาบนเครื่องของตัวเองเมื่อทำได้
+
+---
+
+## 📚 แหล่งข้อมูล
+
+### เอกสารที่รวมอยู่
+- เนื้อหาบทเรียนที่ครอบคลุมพร้อมตัวอย่าง
+- Code stub พร้อม comment TODO สำหรับการพัฒนาแบบมีแนวทาง
+- ข้อกำหนดโปรเจกต์ที่สมบูรณ์พร้อมแผนภาพสถาปัตยกรรม
+- แบบทดสอบและการประเมินผลสำหรับแต่ละโมดูล
+- Best practice และ design pattern
+
+### แหล่งข้อมูลภายนอก
+- 📖 **รายการหนังสือแนะนำ**: [resources/reading-lists/](./resources/reading-lists/) — เส้นทาง advanced + staff-engineer
+- 🛠️ **Cheat Sheet**: [resources/cheat-sheets/](./resources/cheat-sheets/) — docker, kubernetes, git, linux, python infrastructure
 - ❓ **FAQ**: [resources/faq.md](./resources/faq.md)
 
-### Curriculum Documentation
-- 📋 **[Technology Versions Guide](VERSIONS.md)** - Recommended versions for all tools and frameworks
-- 🗺️ **[Curriculum Cross-Reference](https://github.com/ai-infra-curriculum/.github/blob/main/CURRICULUM_CROSS_REFERENCE.md)** - Mapping between Junior and Engineer tracks
-- 📈 **[Career Progression Guide](https://github.com/ai-infra-curriculum/.github/blob/main/CAREER_PROGRESSION.md)** - Complete career ladder from Junior to Principal
+### เอกสารหลักสูตร
+- 📋 **[คู่มือเวอร์ชันของเทคโนโลยี](VERSIONS.md)** - เวอร์ชันที่แนะนำสำหรับเครื่องมือและ framework ทั้งหมด
+- 🗺️ **[การอ้างอิงข้ามหลักสูตร](https://github.com/ai-infra-curriculum/.github/blob/main/CURRICULUM_CROSS_REFERENCE.md)** - การจับคู่ระหว่างแทร็ก Junior และ Engineer
+- 📈 **[คู่มือความก้าวหน้าในอาชีพ](https://github.com/ai-infra-curriculum/.github/blob/main/CAREER_PROGRESSION.md)** - บันไดอาชีพครบถ้วนตั้งแต่ Junior ถึง Principal
 
 ---
 
-## 🎯 Learning Outcomes & Career Impact
+## 🎯 ผลลัพธ์การเรียนรู้และผลต่ออาชีพ
 
-### After Completion, You'll Be Qualified For:
+### หลังเรียนจบ คุณจะมีคุณสมบัติสำหรับ:
 
 **AI Infrastructure Engineer**
-- 💰 Salary: $120,000 - $180,000
-- 🏢 Companies: Tech companies, AI startups, ML-focused organizations
-- 📈 Demand: Very high (growing 35% year-over-year)
+- 💰 เงินเดือน: $120,000 - $180,000
+- 🏢 บริษัท: บริษัทเทค สตาร์ทอัพด้าน AI องค์กรที่เน้น ML
+- 📈 ความต้องการ: สูงมาก (เติบโต 35% ต่อปี)
 
 **ML Platform Engineer**
-- 💰 Salary: $130,000 - $190,000
-- 🏢 Companies: Large tech firms, enterprises with ML teams
-- 📈 Demand: High (specialized role)
+- 💰 เงินเดือน: $130,000 - $190,000
+- 🏢 บริษัท: บริษัทเทคขนาดใหญ่ องค์กรที่มีทีม ML
+- 📈 ความต้องการ: สูง (ตำแหน่งเฉพาะทาง)
 
 **MLOps Engineer**
-- 💰 Salary: $110,000 - $170,000
-- 🏢 Companies: All organizations doing ML at scale
-- 📈 Demand: Very high (fastest growing ML role)
+- 💰 เงินเดือน: $110,000 - $170,000
+- 🏢 บริษัท: ทุกองค์กรที่ทำ ML ในระดับ scale
+- 📈 ความต้องการ: สูงมาก (ตำแหน่งด้าน ML ที่เติบโตเร็วที่สุด)
 
-### Skills You'll Demonstrate
+### ทักษะที่คุณจะแสดงให้เห็น
 
-✅ Kubernetes expertise with GPU scheduling
-✅ End-to-end MLOps pipeline implementation
-✅ LLM infrastructure and RAG systems
-✅ Distributed training and GPU optimization
-✅ Production monitoring and observability
-✅ Cloud platform mastery (AWS, GCP, Azure)
-✅ Infrastructure as Code with Terraform
-✅ Cost optimization strategies
+✅ ความเชี่ยวชาญ Kubernetes พร้อม GPU scheduling
+✅ การพัฒนา MLOps pipeline แบบ end-to-end
+✅ LLM infrastructure และระบบ RAG
+✅ Distributed training และ GPU optimization
+✅ Monitoring และ observability ใน production
+✅ ความเชี่ยวชาญ cloud platform (AWS, GCP, Azure)
+✅ Infrastructure as Code ด้วย Terraform
+✅ กลยุทธ์ cost optimization
 
 ---
 
-## 📊 Repository Statistics
+## 📊 สถิติของ Repository
 
-- **Total Files:** 207
-- **Estimated Lines:** ~95,000+
-- **Modules:** 10 (all complete)
-- **Projects:** 3 (all complete)
-- **Learning Hours:** 500+
-- **Technologies:** 50+
+- **จำนวนไฟล์ทั้งหมด:** 207
+- **จำนวนบรรทัดโดยประมาณ:** ~95,000+
+- **โมดูล:** 10 (เสร็จสมบูรณ์ทั้งหมด)
+- **โปรเจกต์:** 3 (เสร็จสมบูรณ์ทั้งหมด)
+- **ชั่วโมงการเรียน:** 500+
+- **เทคโนโลยี:** 50+
 
-### Technology Stack Covered
+### Technology Stack ที่ครอบคลุม
 
 **Core Infrastructure:**
 Docker, Kubernetes, Terraform, Helm, ArgoCD
 
-**ML & Data:**
+**ML และ Data:**
 PyTorch, TensorFlow, Apache Airflow, Apache Spark, Kafka, DVC
 
 **MLOps:**
@@ -480,7 +480,7 @@ MLflow, Feature Stores, Model Registry, CI/CD
 **LLM Infrastructure:**
 vLLM, TensorRT-LLM, LangChain, Vector Databases (Pinecone, Milvus, ChromaDB)
 
-**Cloud Platforms:**
+**Cloud Platform:**
 AWS (EC2, S3, EKS, SageMaker), GCP (GCE, GCS, GKE, Vertex AI), Azure (VMs, AKS, Azure ML)
 
 **Monitoring:**
@@ -491,90 +491,90 @@ CUDA, NCCL, Multi-GPU training, Distributed training
 
 ---
 
-## 🤝 Contributing
+## 🤝 การร่วมพัฒนา
 
-We welcome contributions! Please see [CONTRIBUTING.md](./CONTRIBUTING.md) for:
-- Bug reports and fixes
-- Documentation improvements
-- New exercises and examples
-- Updated best practices
-
----
-
-## 🆘 Getting Help
-
-- 📖 **Documentation**: Start with [GETTING_STARTED.md](./GETTING_STARTED.md)
-- 💬 **GitHub Discussions**: [Ask questions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
-- 🐛 **Issues**: [Report bugs](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues)
-- 📧 **Contact**: ai-infra-curriculum@joshua-ferguson.com
+เรายินดีรับการร่วมพัฒนา! โปรดดู [CONTRIBUTING.md](./CONTRIBUTING.md) สำหรับ:
+- การรายงานและแก้ไขบั๊ก
+- การปรับปรุงเอกสาร
+- แบบฝึกหัดและตัวอย่างใหม่
+- Best practice ที่อัปเดต
 
 ---
 
-## 📜 License
+## 🆘 การขอความช่วยเหลือ
 
-This project is licensed under the **MIT License** - see [LICENSE](./LICENSE) for details.
-
----
-
-## 🌟 Success Metrics
-
-Upon completion, you should be able to:
-
-- [ ] Deploy ML models to production with confidence
-- [ ] Build complete MLOps pipelines from scratch
-- [ ] Implement LLM infrastructure with RAG
-- [ ] Optimize cloud costs by 60-80%
-- [ ] Debug complex distributed systems
-- [ ] Pass technical interviews for AI Infrastructure roles
-- [ ] Confidently discuss trade-offs in system design
-- [ ] Lead infrastructure projects at your organization
+- 📖 **เอกสาร**: เริ่มต้นที่ [GETTING_STARTED.md](./GETTING_STARTED.md)
+- 💬 **GitHub Discussions**: [ถามคำถาม](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
+- 🐛 **Issues**: [รายงานบั๊ก](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues)
+- 📧 **ติดต่อ**: ai-infra-curriculum@joshua-ferguson.com
 
 ---
 
-## 🚀 Next Steps After Completion
+## 📜 สัญญาอนุญาต
 
-This curriculum prepares you for **AI Infrastructure Engineer** roles. For career progression:
+โปรเจกต์นี้อยู่ภายใต้ **MIT License** - ดูรายละเอียดที่ [LICENSE](./LICENSE)
 
-1. **Gain Experience** (1-2 years)
-   - Work on production ML systems
-   - Handle incidents and on-call rotations
-   - Contribute to open-source ML infrastructure projects
+---
 
-2. **Advance to Senior Engineer** (2-3 years total)
-   - Continue with the [Senior Engineer track](https://github.com/ai-infra-curriculum/ai-infra-senior-engineer-learning)
-   - Lead larger projects and mentor juniors
-   - Design complex systems
+## 🌟 ตัวชี้วัดความสำเร็จ
 
-3. **Become an Architect** (4-6 years total)
-   - Continue with the [Architect track](https://github.com/ai-infra-curriculum/ai-infra-architect-learning)
-   - Design enterprise ML platforms
-   - Strategic technical leadership
+เมื่อเรียนจบ คุณควรสามารถ:
+
+- [ ] Deploy โมเดล ML ขึ้น production ได้อย่างมั่นใจ
+- [ ] สร้าง MLOps pipeline ที่สมบูรณ์ได้ตั้งแต่ศูนย์
+- [ ] พัฒนา LLM infrastructure พร้อม RAG
+- [ ] Optimize ค่าใช้จ่าย cloud ได้ 60-80%
+- [ ] Debug ระบบแบบกระจายที่ซับซ้อน
+- [ ] ผ่านการสัมภาษณ์งานด้านเทคนิคสำหรับตำแหน่ง AI Infrastructure
+- [ ] อภิปรายเรื่อง trade-off ใน system design ได้อย่างมั่นใจ
+- [ ] นำโปรเจกต์ด้าน infrastructure ในองค์กรของคุณ
+
+---
+
+## 🚀 ขั้นตอนถัดไปหลังเรียนจบ
+
+หลักสูตรนี้เตรียมความพร้อมสำหรับตำแหน่ง **AI Infrastructure Engineer** สำหรับความก้าวหน้าในอาชีพ:
+
+1. **สั่งสมประสบการณ์** (1-2 ปี)
+   - ทำงานกับระบบ ML ใน production
+   - รับมือกับ incident และเข้าเวร on-call
+   - ร่วมพัฒนาโปรเจกต์ ML infrastructure แบบ open-source
+
+2. **ก้าวสู่ Senior Engineer** (รวม 2-3 ปี)
+   - เรียนต่อใน[แทร็ก Senior Engineer](https://github.com/ai-infra-curriculum/ai-infra-senior-engineer-learning)
+   - นำโปรเจกต์ที่ใหญ่ขึ้นและเป็นพี่เลี้ยงให้รุ่นน้อง
+   - ออกแบบระบบที่ซับซ้อน
+
+3. **เป็น Architect** (รวม 4-6 ปี)
+   - เรียนต่อใน[แทร็ก Architect](https://github.com/ai-infra-curriculum/ai-infra-architect-learning)
+   - ออกแบบ ML platform ระดับองค์กร
+   - เป็นผู้นำด้านเทคนิคเชิงกลยุทธ์
 
 ---
 
 <div align="center">
 
-## Ready to Master AI Infrastructure Engineering?
+## พร้อมที่จะเชี่ยวชาญ AI Infrastructure Engineering แล้วหรือยัง?
 
-**Start your journey today!**
+**เริ่มต้นเส้นทางของคุณวันนี้!**
 
-[📘 Get Started](./GETTING_STARTED.md) | [📚 View Full Curriculum](./CURRICULUM.md) | [🚀 Start Module 01](./lessons/mod-101-foundations/README.md)
-
----
-
-⭐ **Star this repository** if you find it valuable!
-
-**Share with others** learning AI Infrastructure Engineering!
+[📘 เริ่มต้นใช้งาน](./GETTING_STARTED.md) | [📚 ดูหลักสูตรทั้งหมด](./CURRICULUM.md) | [🚀 เริ่ม Module 01](./lessons/mod-101-foundations/README.md)
 
 ---
 
-*Contact: ai-infra-curriculum@joshua-ferguson.com*
+⭐ **กด Star ให้ repository นี้** หากคุณเห็นว่ามีประโยชน์!
 
-**Happy Learning!** 🎓🚀
+**แบ่งปันให้ผู้อื่น** ที่กำลังเรียนรู้ AI Infrastructure Engineering!
+
+---
+
+*ติดต่อ: ai-infra-curriculum@joshua-ferguson.com*
+
+**ขอให้สนุกกับการเรียนรู้!** 🎓🚀
 
 </div>
 
 ---
 
 <!-- aicg:maintained-by -->
-Maintained by [VeriSwarm.ai](https://veriswarm.ai)
+ดูแลโดย [VeriSwarm.ai](https://veriswarm.ai)

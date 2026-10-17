@@ -1,54 +1,54 @@
-# Getting Started - AI Infrastructure Engineer Learning Path
+# เริ่มต้นใช้งาน - AI Infrastructure Engineer Learning Path
 
-Welcome! This guide will help you set up your environment and begin your journey to becoming an AI Infrastructure Engineer.
+ยินดีต้อนรับ! คู่มือนี้จะช่วยคุณตั้งค่าสภาพแวดล้อมและเริ่มต้นเส้นทางสู่การเป็น AI Infrastructure Engineer
 
-## Table of Contents
+## สารบัญ
 
-- [Prerequisites Check](#prerequisites-check)
-- [Environment Setup](#environment-setup)
-- [Cloud Account Setup](#cloud-account-setup)
-- [Tools Installation](#tools-installation)
-- [Verify Installation](#verify-installation)
-- [Your First Lesson](#your-first-lesson)
-- [Learning Tips](#learning-tips)
-- [Troubleshooting](#troubleshooting)
-
----
-
-## Prerequisites Check
-
-Before you begin, ensure you have:
-
-### Required Skills
-
-- **Python**: Intermediate level (functions, classes, basic error handling)
-  - Test yourself: Can you write a class with methods?
-  - Test yourself: Do you understand decorators and context managers?
-- **Linux/Unix**: Basic command line navigation
-  - Test yourself: Can you navigate directories, create files, and use grep?
-- **Git**: Basic version control
-  - Test yourself: Can you clone, commit, push, and create branches?
-- **Machine Learning**: Fundamental concepts
-  - Test yourself: Do you understand training, inference, and model evaluation?
-
-### Recommended Skills
-
-- Cloud platform awareness (AWS/GCP/Azure basics)
-- Docker basics (container concepts)
-- Networking fundamentals (HTTP, DNS, load balancing)
-- SQL basics
-
-### Hardware Requirements
-
-- **Minimum**: 8GB RAM, 20GB free disk space
-- **Recommended**: 16GB RAM, 50GB free disk space, GPU (for local experiments)
-- **Internet**: Stable connection for cloud services
+- [ตรวจสอบความรู้พื้นฐาน](#prerequisites-check)
+- [ตั้งค่าสภาพแวดล้อม](#environment-setup)
+- [ตั้งค่าบัญชี Cloud](#cloud-account-setup)
+- [ติดตั้งเครื่องมือ](#tools-installation)
+- [ตรวจสอบการติดตั้ง](#verify-installation)
+- [บทเรียนแรกของคุณ](#your-first-lesson)
+- [เคล็ดลับการเรียน](#learning-tips)
+- [การแก้ไขปัญหา](#troubleshooting)
 
 ---
 
-## Environment Setup
+## ตรวจสอบความรู้พื้นฐาน
 
-### 1. Install Python 3.11+
+ก่อนเริ่ม โปรดตรวจสอบว่าคุณมี:
+
+### ทักษะที่จำเป็น
+
+- **Python**: ระดับกลาง (function, class, การจัดการ error พื้นฐาน)
+  - ทดสอบตัวเอง: คุณเขียน class ที่มี method ได้ไหม?
+  - ทดสอบตัวเอง: คุณเข้าใจ decorator และ context manager ไหม?
+- **Linux/Unix**: การใช้งาน command line พื้นฐาน
+  - ทดสอบตัวเอง: คุณเปลี่ยนไดเรกทอรี สร้างไฟล์ และใช้ grep ได้ไหม?
+- **Git**: Version control พื้นฐาน
+  - ทดสอบตัวเอง: คุณ clone, commit, push และสร้าง branch ได้ไหม?
+- **Machine Learning**: แนวคิดพื้นฐาน
+  - ทดสอบตัวเอง: คุณเข้าใจ training, inference และการประเมินผลโมเดลไหม?
+
+### ทักษะที่แนะนำ
+
+- ความรู้เบื้องต้นเกี่ยวกับ cloud platform (พื้นฐาน AWS/GCP/Azure)
+- พื้นฐาน Docker (แนวคิดเรื่อง container)
+- พื้นฐาน networking (HTTP, DNS, load balancing)
+- พื้นฐาน SQL
+
+### ข้อกำหนดด้านฮาร์ดแวร์
+
+- **ขั้นต่ำ**: RAM 8GB, พื้นที่ดิสก์ว่าง 20GB
+- **แนะนำ**: RAM 16GB, พื้นที่ดิสก์ว่าง 50GB, GPU (สำหรับการทดลองบนเครื่อง)
+- **อินเทอร์เน็ต**: การเชื่อมต่อที่เสถียรสำหรับบริการ cloud
+
+---
+
+## ตั้งค่าสภาพแวดล้อม
+
+### 1. ติดตั้ง Python 3.11+
 
 **Linux/macOS:**
 ```bash
@@ -70,9 +70,9 @@ brew install python@3.11
 ```
 
 **Windows:**
-Download from [python.org](https://www.python.org/downloads/) and install.
+ดาวน์โหลดจาก [python.org](https://www.python.org/downloads/) แล้วติดตั้ง
 
-### 2. Clone the Repository
+### 2. Clone Repository
 
 ```bash
 # Clone this repository
@@ -84,7 +84,7 @@ ls -la
 # You should see: lessons/, projects/, README.md, etc.
 ```
 
-### 3. Create Virtual Environment
+### 3. สร้าง Virtual Environment
 
 ```bash
 # Create virtual environment
@@ -100,7 +100,7 @@ venv\Scripts\activate
 # Your prompt should now show (venv)
 ```
 
-### 4. Install Dependencies
+### 4. ติดตั้ง Dependency
 
 ```bash
 # Upgrade pip
@@ -113,7 +113,7 @@ pip install -r requirements.txt
 pip list
 ```
 
-**Expected packages:**
+**แพ็กเกจที่ควรมี:**
 - fastapi
 - uvicorn
 - torch
@@ -126,21 +126,21 @@ pip list
 
 ---
 
-## Cloud Account Setup
+## ตั้งค่าบัญชี Cloud
 
-You'll need at least ONE cloud provider account (all three recommended for Module 02).
+คุณต้องมีบัญชี cloud provider อย่างน้อย **หนึ่ง** ราย (แนะนำให้มีครบทั้งสามรายสำหรับ Module 02)
 
 ### AWS Free Tier
 
-1. Go to [aws.amazon.com](https://aws.amazon.com/free/)
-2. Click "Create a Free Account"
-3. Complete registration (requires credit card but won't charge within free tier)
-4. **Free tier includes:**
-   - 750 hours/month of t2.micro or t3.micro EC2 instances (12 months)
-   - 5GB S3 storage
-   - 750 hours RDS (12 months)
+1. ไปที่ [aws.amazon.com](https://aws.amazon.com/free/)
+2. คลิก "Create a Free Account"
+3. ลงทะเบียนให้เสร็จ (ต้องใช้บัตรเครดิต แต่จะไม่ถูกเรียกเก็บเงินหากใช้งานภายใน free tier)
+4. **Free tier ประกอบด้วย:**
+   - EC2 instance แบบ t2.micro หรือ t3.micro 750 ชั่วโมง/เดือน (12 เดือน)
+   - S3 storage 5GB
+   - RDS 750 ชั่วโมง (12 เดือน)
 
-**Install AWS CLI:**
+**ติดตั้ง AWS CLI:**
 ```bash
 # Linux/macOS
 curl "https://awscli.amazonaws.com/awscli-exe-linux-x86_64.zip" -o "awscliv2.zip"
@@ -156,14 +156,14 @@ aws configure
 
 ### GCP Free Tier
 
-1. Go to [cloud.google.com/free](https://cloud.google.com/free)
-2. Click "Get started for free"
-3. Complete registration
-4. **Credits:**
-   - $300 credit for 90 days
-   - Always-free tier after credits expire
+1. ไปที่ [cloud.google.com/free](https://cloud.google.com/free)
+2. คลิก "Get started for free"
+3. ลงทะเบียนให้เสร็จ
+4. **เครดิต:**
+   - เครดิต $300 สำหรับ 90 วัน
+   - Always-free tier หลังเครดิตหมดอายุ
 
-**Install gcloud CLI:**
+**ติดตั้ง gcloud CLI:**
 ```bash
 # Linux
 curl https://sdk.cloud.google.com | bash
@@ -178,14 +178,14 @@ gcloud --version
 
 ### Azure Free Tier
 
-1. Go to [azure.microsoft.com/free](https://azure.microsoft.com/free)
-2. Click "Start free"
-3. Complete registration
-4. **Credits:**
-   - $200 credit for 30 days
-   - 12 months of free services
+1. ไปที่ [azure.microsoft.com/free](https://azure.microsoft.com/free)
+2. คลิก "Start free"
+3. ลงทะเบียนให้เสร็จ
+4. **เครดิต:**
+   - เครดิต $200 สำหรับ 30 วัน
+   - บริการฟรี 12 เดือน
 
-**Install Azure CLI:**
+**ติดตั้ง Azure CLI:**
 ```bash
 # Linux/macOS
 curl -L https://aka.ms/InstallAzureCli | bash
@@ -199,7 +199,7 @@ az login
 
 ---
 
-## Tools Installation
+## ติดตั้งเครื่องมือ
 
 ### 1. Docker
 
@@ -219,7 +219,7 @@ docker run hello-world
 ```
 
 **macOS/Windows:**
-Download and install [Docker Desktop](https://www.docker.com/products/docker-desktop/)
+ดาวน์โหลดและติดตั้ง [Docker Desktop](https://www.docker.com/products/docker-desktop/)
 
 ### 2. Kubernetes (kubectl)
 
@@ -233,7 +233,7 @@ sudo mv kubectl /usr/local/bin/
 kubectl version --client
 ```
 
-### 3. Minikube (Local Kubernetes)
+### 3. Minikube (Kubernetes บนเครื่อง)
 
 ```bash
 # Linux
@@ -259,7 +259,7 @@ sudo apt update && sudo apt install terraform
 terraform --version
 ```
 
-### 5. Git (if not installed)
+### 5. Git (หากยังไม่ได้ติดตั้ง)
 
 ```bash
 # Linux
@@ -272,9 +272,9 @@ git config --global user.email "your.email@example.com"
 
 ---
 
-## Verify Installation
+## ตรวจสอบการติดตั้ง
 
-Run this verification script to check all installations:
+รันสคริปต์ตรวจสอบนี้เพื่อเช็กการติดตั้งทั้งหมด:
 
 ```bash
 # Create verification script
@@ -328,7 +328,7 @@ chmod +x verify_setup.sh
 ./verify_setup.sh
 ```
 
-**Expected output:**
+**ผลลัพธ์ที่ควรได้:**
 ```
 === Verifying Installation ===
 
@@ -348,9 +348,9 @@ Terraform: ✅ OK
 
 ---
 
-## Your First Lesson
+## บทเรียนแรกของคุณ
 
-Now that your environment is set up, start with Module 01!
+เมื่อตั้งค่าสภาพแวดล้อมเรียบร้อยแล้ว เริ่มต้นที่ Module 01 ได้เลย!
 
 ```bash
 # Navigate to Module 01
@@ -364,57 +364,57 @@ cd 01-introduction
 cat README.md
 ```
 
-### Recommended Learning Path
+### เส้นทางการเรียนที่แนะนำ
 
-1. **Week 1-2**: Module 01, Lessons 01-04 (Foundations)
-2. **Week 3-4**: Module 01, Lessons 05-08 (Docker, APIs)
-3. **Week 5-6**: Project 01 (Basic Model Serving)
-4. **Week 7-10**: Module 02 (Cloud Computing)
-5. **Week 11+**: Continue with Module 03+
+1. **สัปดาห์ที่ 1-2**: Module 01, บทเรียน 01-04 (Foundations)
+2. **สัปดาห์ที่ 3-4**: Module 01, บทเรียน 05-08 (Docker, API)
+3. **สัปดาห์ที่ 5-6**: Project 01 (Basic Model Serving)
+4. **สัปดาห์ที่ 7-10**: Module 02 (Cloud Computing)
+5. **สัปดาห์ที่ 11+**: เรียนต่อ Module 03 เป็นต้นไป
 
-### Study Schedule Options
+### ตัวเลือกตารางการเรียน
 
-**Full-Time (40 hours/week):**
-- Complete in ~12-15 weeks
+**Full-Time (40 ชั่วโมง/สัปดาห์):**
+- เรียนจบในประมาณ 12-15 สัปดาห์
 
-**Part-Time (10 hours/week):**
-- Complete in ~50-60 weeks (~1 year)
+**Part-Time (10 ชั่วโมง/สัปดาห์):**
+- เรียนจบในประมาณ 50-60 สัปดาห์ (~1 ปี)
 
-**Weekend Warrior (20 hours/week):**
-- Complete in ~25-30 weeks (~6-7 months)
+**Weekend Warrior (20 ชั่วโมง/สัปดาห์):**
+- เรียนจบในประมาณ 25-30 สัปดาห์ (~6-7 เดือน)
 
 ---
 
-## Learning Tips
+## เคล็ดลับการเรียน
 
-### 1. Hands-On Practice
+### 1. ลงมือปฏิบัติจริง
 
-- **Don't just read**: Type out all code examples
-- **Experiment**: Modify code, break things, fix them
-- **Document**: Keep notes on what you learn
+- **อย่าแค่อ่าน**: พิมพ์ตัวอย่างโค้ดทั้งหมดด้วยตัวเอง
+- **ทดลอง**: แก้ไขโค้ด ทำให้พัง แล้วแก้ไข
+- **จดบันทึก**: จดสิ่งที่คุณได้เรียนรู้
 
-### 2. Project-Based Learning
+### 2. เรียนรู้ผ่านโปรเจกต์
 
-- Complete all exercises in each lesson
-- Build the projects from scratch (don't skip!)
-- Extend projects with your own features
+- ทำแบบฝึกหัดทั้งหมดในแต่ละบทเรียน
+- สร้างโปรเจกต์ตั้งแต่ศูนย์ (อย่าข้าม!)
+- ต่อยอดโปรเจกต์ด้วยฟีเจอร์ของคุณเอง
 
-### 3. Cloud Budget Management
+### 3. การจัดการงบประมาณ Cloud
 
-- **Set up billing alerts** in all cloud consoles (recommended: $10, $25, $50)
-- **Use free tier resources** whenever possible
-- **Shut down resources** after practice sessions
-- **Use spot/preemptible instances** for cost savings
+- **ตั้งค่า billing alert** ใน console ของ cloud ทุกราย (แนะนำ: $10, $25, $50)
+- **ใช้ทรัพยากร free tier** ทุกครั้งที่ทำได้
+- **ปิดทรัพยากร** หลังฝึกเสร็จ
+- **ใช้ spot/preemptible instance** เพื่อประหยัดค่าใช้จ่าย
 
-### 4. Community Engagement
+### 4. มีส่วนร่วมกับชุมชน
 
-- Join the [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
-- Share your projects and solutions
-- Help other learners
+- เข้าร่วม [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
+- แบ่งปันโปรเจกต์และวิธีแก้ปัญหาของคุณ
+- ช่วยเหลือผู้เรียนคนอื่น
 
-### 5. Track Your Progress
+### 5. ติดตามความคืบหน้า
 
-Use the progress tracker:
+ใช้ตัวติดตามความคืบหน้า:
 
 ```bash
 # Copy the progress template
@@ -425,13 +425,13 @@ cp progress/checklist.md progress/my-progress.md
 
 ---
 
-## Troubleshooting
+## การแก้ไขปัญหา
 
-### Common Issues
+### ปัญหาที่พบบ่อย
 
-#### Issue: `python3.11: command not found`
+#### ปัญหา: `python3.11: command not found`
 
-**Solution:**
+**วิธีแก้:**
 ```bash
 # Linux: Install Python 3.11
 sudo apt install python3.11
@@ -440,9 +440,9 @@ sudo apt install python3.11
 brew install python@3.11
 ```
 
-#### Issue: `docker: permission denied`
+#### ปัญหา: `docker: permission denied`
 
-**Solution:**
+**วิธีแก้:**
 ```bash
 # Add user to docker group
 sudo usermod -aG docker $USER
@@ -452,9 +452,9 @@ newgrp docker
 sudo docker run hello-world
 ```
 
-#### Issue: `pip install` fails with SSL errors
+#### ปัญหา: `pip install` ล้มเหลวด้วย SSL error
 
-**Solution:**
+**วิธีแก้:**
 ```bash
 # Update pip and certificates
 pip install --upgrade pip certifi
@@ -463,9 +463,9 @@ pip install --upgrade pip certifi
 pip install --trusted-host pypi.org --trusted-host files.pythonhosted.org <package>
 ```
 
-#### Issue: Out of disk space
+#### ปัญหา: พื้นที่ดิสก์เต็ม
 
-**Solution:**
+**วิธีแก้:**
 ```bash
 # Clean Docker images
 docker system prune -a
@@ -477,7 +477,7 @@ pip cache purge
 conda clean --all
 ```
 
-#### Issue: Cloud CLI authentication fails
+#### ปัญหา: การยืนยันตัวตนของ Cloud CLI ล้มเหลว
 
 **AWS:**
 ```bash
@@ -506,31 +506,31 @@ az login
 az account show
 ```
 
-### Getting Help
+### การขอความช่วยเหลือ
 
-1. **Check the FAQ**: [resources/faq.md](./resources/faq.md)
-2. **Search Issues**: [GitHub Issues](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues)
-3. **Ask in Discussions**: [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
-4. **Create an Issue**: For bugs or unclear instructions
-
----
-
-## Next Steps
-
-You're ready to begin! Here's your action plan:
-
-- [ ] Verify all tools are installed (run `verify_setup.sh`)
-- [ ] Set up at least one cloud account
-- [ ] Configure billing alerts
-- [ ] Start Module 01, Lesson 01
-- [ ] Join the GitHub Discussions community
-- [ ] Star this repository to stay updated
+1. **ดู FAQ**: [resources/faq.md](./resources/faq.md)
+2. **ค้นหา Issues**: [GitHub Issues](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues)
+3. **ถามใน Discussions**: [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
+4. **สร้าง Issue**: สำหรับบั๊กหรือคำแนะนำที่ไม่ชัดเจน
 
 ---
 
-## Quick Reference
+## ขั้นตอนถัดไป
 
-### Essential Commands
+คุณพร้อมเริ่มแล้ว! นี่คือแผนปฏิบัติของคุณ:
+
+- [ ] ตรวจสอบว่าติดตั้งเครื่องมือครบทั้งหมด (รัน `verify_setup.sh`)
+- [ ] ตั้งค่าบัญชี cloud อย่างน้อยหนึ่งบัญชี
+- [ ] ตั้งค่า billing alert
+- [ ] เริ่ม Module 01, บทเรียน 01
+- [ ] เข้าร่วมชุมชน GitHub Discussions
+- [ ] กด Star ให้ repository นี้เพื่อติดตามการอัปเดต
+
+---
+
+## อ้างอิงด่วน
+
+### คำสั่งสำคัญ
 
 ```bash
 # Activate virtual environment
@@ -557,21 +557,21 @@ gcloud compute instances list
 az vm list
 ```
 
-### Resource Limits (Free Tier)
+### ขีดจำกัดทรัพยากร (Free Tier)
 
-| Provider | Compute | Storage | Duration |
+| Provider | Compute | Storage | ระยะเวลา |
 |----------|---------|---------|----------|
-| AWS | 750h t2.micro | 5GB S3 | 12 months |
-| GCP | $300 credit | Included | 90 days |
-| Azure | $200 credit | Included | 30 days |
+| AWS | 750h t2.micro | 5GB S3 | 12 เดือน |
+| GCP | เครดิต $300 | รวมอยู่แล้ว | 90 วัน |
+| Azure | เครดิต $200 | รวมอยู่แล้ว | 30 วัน |
 
 ---
 
-**Ready to start your AI Infrastructure Engineering journey?**
+**พร้อมเริ่มต้นเส้นทาง AI Infrastructure Engineering ของคุณแล้วหรือยัง?**
 
 ```bash
 cd lessons/mod-101-foundations/01-introduction
 cat README.md
 ```
 
-Happy Learning! 🚀
+ขอให้สนุกกับการเรียนรู้! 🚀

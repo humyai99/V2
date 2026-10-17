@@ -1,49 +1,49 @@
-# Prerequisites for AI Infrastructure Engineer Curriculum
+# ความรู้พื้นฐานที่ต้องมีสำหรับหลักสูตร AI Infrastructure Engineer
 
-This curriculum is designed for engineers looking to advance their AI infrastructure skills to a mid-level professional standard. Before starting, ensure you have the necessary foundation.
-
----
-
-## 🎯 Quick Assessment
-
-**Already completed the Junior AI Infrastructure Engineer curriculum?** ✅ You're ready to start!
-
-**Haven't completed Junior curriculum?** → Use the self-assessment below to check your readiness.
+หลักสูตรนี้ออกแบบมาสำหรับวิศวกรที่ต้องการยกระดับทักษะด้าน AI infrastructure ให้ถึงมาตรฐานมืออาชีพระดับกลาง (mid-level) ก่อนเริ่มเรียน โปรดตรวจสอบว่าคุณมีพื้นฐานที่จำเป็นครบถ้วน
 
 ---
 
-## Option 1: Complete Junior Curriculum (RECOMMENDED)
+## 🎯 ประเมินอย่างรวดเร็ว
 
-The [**Junior AI Infrastructure Engineer**](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning) curriculum provides ALL prerequisites for this Engineer-level course.
+**เรียนจบหลักสูตร Junior AI Infrastructure Engineer แล้วใช่ไหม?** ✅ คุณพร้อมเริ่มเรียนแล้ว!
 
-### Direct Module Mapping
+**ยังไม่ได้เรียนหลักสูตร Junior?** → ใช้แบบประเมินตนเองด้านล่างเพื่อตรวจสอบความพร้อมของคุณ
 
-Every prerequisite for this Engineer curriculum is covered in the Junior curriculum:
+---
 
-| Engineer Prerequisite | Junior Module | Hours | What You'll Learn |
+## ทางเลือกที่ 1: เรียนหลักสูตร Junior ให้จบ (แนะนำ)
+
+หลักสูตร [**Junior AI Infrastructure Engineer**](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning) ครอบคลุมความรู้พื้นฐานที่จำเป็น **ทั้งหมด** สำหรับหลักสูตรระดับ Engineer นี้
+
+### การจับคู่โมดูลโดยตรง
+
+ความรู้พื้นฐานทุกข้อของหลักสูตร Engineer นี้มีอยู่ในหลักสูตร Junior:
+
+| ความรู้พื้นฐานของ Engineer | โมดูลของ Junior | ชั่วโมง | สิ่งที่คุณจะได้เรียนรู้ |
 |-----------------------|---------------|-------|-------------------|
-| **Python 3.9+ (intermediate level)** | [Module 001: Python Fundamentals](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-001-python-fundamentals) | 15h | OOP, type hints, testing, error handling, decorators, context managers |
-| **Linux/Unix command line basics** | [Module 002: Linux Essentials](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-002-linux-essentials) | 15h | CLI navigation, bash scripting, processes, SSH, networking, system administration |
-| **Git fundamentals** | [Module 003: Git & Version Control](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-003-git-version-control) | 10h | Branching, merging, rebasing, collaboration workflows, GitHub/GitLab |
-| **Basic ML concepts** | [Module 004: ML Basics](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-004-ml-basics) | 20h | PyTorch, TensorFlow, training, inference, evaluation, model export |
-| **Docker basics** | [Module 005: Docker & Containerization](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-005-docker-containers) | 15h | Docker images, containers, multi-stage builds, Docker Compose |
-| **Kubernetes intro** | [Module 006: Kubernetes Introduction](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-006-kubernetes-intro) | 20h | Pods, deployments, services, ConfigMaps, Secrets, basic operations |
-| **API development** | [Module 007: APIs & Web Services](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-007-apis-web-services) | 15h | REST APIs, FastAPI, Flask, authentication, testing |
-| **Database basics** | [Module 008: Databases & SQL](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-008-databases-sql) | 15h | SQL fundamentals, PostgreSQL, Redis, data modeling |
-| **Monitoring basics** | [Module 009: Monitoring & Logging](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-009-monitoring-basics) | 15h | Prometheus, Grafana, logging, alerting basics |
-| **Cloud platforms** | [Module 010: Cloud Platforms](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-010-cloud-platforms) | 20h | AWS, GCP, Azure basics - VMs, storage, networking |
+| **Python 3.9+ (ระดับกลาง)** | [Module 001: Python Fundamentals](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-001-python-fundamentals) | 15h | OOP, type hint, testing, การจัดการ error, decorator, context manager |
+| **พื้นฐาน command line ของ Linux/Unix** | [Module 002: Linux Essentials](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-002-linux-essentials) | 15h | การใช้งาน CLI, bash scripting, process, SSH, networking, การดูแลระบบ |
+| **พื้นฐาน Git** | [Module 003: Git & Version Control](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-003-git-version-control) | 10h | Branching, merging, rebasing, workflow การทำงานร่วมกัน, GitHub/GitLab |
+| **แนวคิดพื้นฐานของ ML** | [Module 004: ML Basics](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-004-ml-basics) | 20h | PyTorch, TensorFlow, training, inference, evaluation, การ export โมเดล |
+| **พื้นฐาน Docker** | [Module 005: Docker & Containerization](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-005-docker-containers) | 15h | Docker image, container, multi-stage build, Docker Compose |
+| **แนะนำ Kubernetes** | [Module 006: Kubernetes Introduction](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-006-kubernetes-intro) | 20h | Pod, deployment, service, ConfigMap, Secret, การใช้งานพื้นฐาน |
+| **การพัฒนา API** | [Module 007: APIs & Web Services](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-007-apis-web-services) | 15h | REST API, FastAPI, Flask, authentication, testing |
+| **พื้นฐานฐานข้อมูล** | [Module 008: Databases & SQL](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-008-databases-sql) | 15h | พื้นฐาน SQL, PostgreSQL, Redis, data modeling |
+| **พื้นฐาน Monitoring** | [Module 009: Monitoring & Logging](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-009-monitoring-basics) | 15h | Prometheus, Grafana, logging, พื้นฐาน alerting |
+| **Cloud platform** | [Module 010: Cloud Platforms](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-010-cloud-platforms) | 20h | พื้นฐาน AWS, GCP, Azure - VM, storage, networking |
 
-**Total Junior Curriculum**: 440 hours (22 weeks part-time, 11 weeks full-time)
+**รวมหลักสูตร Junior ทั้งหมด**: 440 ชั่วโมง (22 สัปดาห์แบบ part-time, 11 สัปดาห์แบบ full-time)
 
-### Why Complete Junior First?
+### ทำไมควรเรียน Junior ก่อน?
 
-1. **Comprehensive Coverage**: All prerequisites covered with hands-on practice
-2. **Portfolio Building**: 5 projects for your resume
-3. **Job-Ready Skills**: Qualifies you for entry-level AI infrastructure roles
-4. **Smooth Transition**: Designed to prepare you specifically for this Engineer curriculum
-5. **No Gaps**: Ensures you have ALL foundational knowledge
+1. **ครอบคลุมครบถ้วน**: ครอบคลุมความรู้พื้นฐานทั้งหมดพร้อมการฝึกปฏิบัติจริง
+2. **สร้างพอร์ตโฟลิโอ**: มี 5 โปรเจกต์สำหรับใส่ในเรซูเม่
+3. **ทักษะพร้อมทำงาน**: มีคุณสมบัติสำหรับตำแหน่ง AI infrastructure ระดับเริ่มต้น
+4. **เปลี่ยนผ่านได้อย่างราบรื่น**: ออกแบบมาเพื่อเตรียมความพร้อมสำหรับหลักสูตร Engineer นี้โดยเฉพาะ
+5. **ไม่มีช่องว่าง**: มั่นใจได้ว่าคุณมีความรู้พื้นฐาน **ทั้งหมด**
 
-### Getting Started with Junior Curriculum
+### เริ่มต้นกับหลักสูตร Junior
 
 ```bash
 # Clone the Junior repository
@@ -56,24 +56,24 @@ cat GETTING_STARTED.md
 
 ---
 
-## Option 2: Self-Assessment Checklist
+## ทางเลือกที่ 2: Checklist ประเมินตนเอง
 
-If you haven't completed the Junior curriculum, verify you can perform ALL tasks below. Missing ANY skill? → Complete the relevant Junior module first.
+หากคุณยังไม่ได้เรียนหลักสูตร Junior ให้ตรวจสอบว่าคุณทำงาน **ทั้งหมด** ด้านล่างได้ หากขาดทักษะ **ใดก็ตาม** → ให้เรียนโมดูล Junior ที่เกี่ยวข้องก่อน
 
-### Python Skills ✅
+### ทักษะ Python ✅
 
-**Required for**: All Engineer modules
+**จำเป็นสำหรับ**: ทุกโมดูลของ Engineer
 
-- [ ] Write production-quality Python with OOP, type hints, and comprehensive docstrings
-- [ ] Use async/await for concurrent programming
-- [ ] Write comprehensive unit tests with pytest (80%+ coverage)
-- [ ] Use virtual environments (venv, conda) and dependency management
-- [ ] Understand and use decorators, context managers, generators
-- [ ] Profile and optimize Python code for performance
-- [ ] Handle errors gracefully with custom exceptions
-- [ ] Use Python dataclasses and Pydantic for validation
+- [ ] เขียน Python คุณภาพระดับ production ด้วย OOP, type hint และ docstring ที่ครบถ้วน
+- [ ] ใช้ async/await สำหรับการเขียนโปรแกรมแบบ concurrent
+- [ ] เขียน unit test ที่ครอบคลุมด้วย pytest (coverage 80%+)
+- [ ] ใช้ virtual environment (venv, conda) และจัดการ dependency
+- [ ] เข้าใจและใช้งาน decorator, context manager, generator
+- [ ] Profile และ optimize โค้ด Python เพื่อประสิทธิภาพ
+- [ ] จัดการ error อย่างเหมาะสมด้วย custom exception
+- [ ] ใช้ dataclass ของ Python และ Pydantic สำหรับ validation
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```python
 # Can you build a production-quality REST API with:
 # - Type hints throughout
@@ -83,24 +83,24 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 # - Pydantic validation?
 ```
 
-**Missing skills?** → [Junior Module 001](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-001-python-fundamentals)
+**ขาดทักษะ?** → [Junior Module 001](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-001-python-fundamentals)
 
 ---
 
-### Linux/Unix Skills ✅
+### ทักษะ Linux/Unix ✅
 
-**Required for**: Cloud Computing, Containerization, Kubernetes, all deployment modules
+**จำเป็นสำหรับ**: Cloud Computing, Containerization, Kubernetes และทุกโมดูลด้าน deployment
 
-- [ ] Navigate Linux CLI efficiently (cd, ls, grep, sed, awk, find)
-- [ ] Write bash scripts for automation (loops, conditionals, functions)
-- [ ] Manage processes (ps, top, htop, kill, systemctl)
-- [ ] Understand file permissions and ownership (chmod, chown)
-- [ ] Configure SSH keys and secure remote access
-- [ ] Debug system issues using logs (/var/log, journalctl)
-- [ ] Use package managers (apt, yum, brew)
-- [ ] Understand environment variables and PATH
+- [ ] ใช้งาน Linux CLI ได้อย่างคล่องแคล่ว (cd, ls, grep, sed, awk, find)
+- [ ] เขียน bash script สำหรับงานอัตโนมัติ (loop, เงื่อนไข, function)
+- [ ] จัดการ process (ps, top, htop, kill, systemctl)
+- [ ] เข้าใจ permission และความเป็นเจ้าของไฟล์ (chmod, chown)
+- [ ] ตั้งค่า SSH key และการเข้าถึงระยะไกลอย่างปลอดภัย
+- [ ] Debug ปัญหาของระบบด้วย log (/var/log, journalctl)
+- [ ] ใช้ package manager (apt, yum, brew)
+- [ ] เข้าใจ environment variable และ PATH
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```bash
 # Can you write a bash script that:
 # - Monitors system resources
@@ -109,24 +109,24 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 # - Runs as a systemd service?
 ```
 
-**Missing skills?** → [Junior Module 002](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-002-linux-essentials)
+**ขาดทักษะ?** → [Junior Module 002](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-002-linux-essentials)
 
 ---
 
-### Git & Version Control Skills ✅
+### ทักษะ Git และ Version Control ✅
 
-**Required for**: All modules (especially IaC, MLOps, CI/CD)
+**จำเป็นสำหรับ**: ทุกโมดูล (โดยเฉพาะ IaC, MLOps, CI/CD)
 
-- [ ] Use Git workflows (feature branches, pull requests)
-- [ ] Perform branching, merging, and rebasing confidently
-- [ ] Resolve merge conflicts
-- [ ] Understand Git internals (commits, trees, blobs, refs)
-- [ ] Use GitHub/GitLab for collaboration and code review
-- [ ] Follow conventional commits and semantic versioning
-- [ ] Understand GitOps principles
-- [ ] Use git hooks for automation
+- [ ] ใช้ Git workflow (feature branch, pull request)
+- [ ] ทำ branching, merging และ rebasing ได้อย่างมั่นใจ
+- [ ] แก้ไข merge conflict
+- [ ] เข้าใจกลไกภายในของ Git (commit, tree, blob, ref)
+- [ ] ใช้ GitHub/GitLab สำหรับการทำงานร่วมกันและ code review
+- [ ] ปฏิบัติตาม conventional commits และ semantic versioning
+- [ ] เข้าใจหลักการ GitOps
+- [ ] ใช้ git hook สำหรับงานอัตโนมัติ
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```bash
 # Can you:
 # - Set up a GitOps workflow with ArgoCD?
@@ -134,24 +134,24 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 # - Manage multiple release branches?
 ```
 
-**Missing skills?** → [Junior Module 003](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-003-git-version-control)
+**ขาดทักษะ?** → [Junior Module 003](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-003-git-version-control)
 
 ---
 
-### Machine Learning Skills ✅
+### ทักษะ Machine Learning ✅
 
-**Required for**: All modules (foundation for all AI infrastructure work)
+**จำเป็นสำหรับ**: ทุกโมดูล (เป็นพื้นฐานของงาน AI infrastructure ทั้งหมด)
 
-- [ ] Train basic models with PyTorch or TensorFlow
-- [ ] Understand training, validation, and testing splits
-- [ ] Perform model evaluation (accuracy, precision, recall, F1, AUC)
-- [ ] Export and load trained models (checkpoint, ONNX)
-- [ ] Understand overfitting, underfitting, and regularization
-- [ ] Use data loaders and preprocessing pipelines
-- [ ] Debug training issues (loss not decreasing, NaN values)
-- [ ] Understand basic neural network architectures
+- [ ] เทรนโมเดลพื้นฐานด้วย PyTorch หรือ TensorFlow
+- [ ] เข้าใจการแบ่งข้อมูล training, validation และ testing
+- [ ] ประเมินผลโมเดล (accuracy, precision, recall, F1, AUC)
+- [ ] Export และโหลดโมเดลที่เทรนแล้ว (checkpoint, ONNX)
+- [ ] เข้าใจ overfitting, underfitting และ regularization
+- [ ] ใช้ data loader และ preprocessing pipeline
+- [ ] Debug ปัญหาการเทรน (loss ไม่ลดลง, ค่า NaN)
+- [ ] เข้าใจสถาปัตยกรรม neural network พื้นฐาน
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```python
 # Can you:
 # - Train a CNN for image classification?
@@ -160,24 +160,24 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 # - Export model for production serving?
 ```
 
-**Missing skills?** → [Junior Module 004](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-004-ml-basics)
+**ขาดทักษะ?** → [Junior Module 004](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-004-ml-basics)
 
 ---
 
-### Docker & Containerization Skills ✅
+### ทักษะ Docker และ Containerization ✅
 
-**Required for**: Containerization, Kubernetes, MLOps, all deployment modules
+**จำเป็นสำหรับ**: Containerization, Kubernetes, MLOps และทุกโมดูลด้าน deployment
 
-- [ ] Build Docker images with Dockerfiles
-- [ ] Use multi-stage builds for optimization
-- [ ] Run containers with volume mounts and port mapping
-- [ ] Use Docker Compose for multi-service applications
-- [ ] Understand container networking (bridge, host, overlay)
-- [ ] Manage container resources (CPU, memory limits)
-- [ ] Debug container issues (logs, exec, inspect)
-- [ ] Understand container security basics (user namespaces, read-only filesystems)
+- [ ] Build Docker image ด้วย Dockerfile
+- [ ] ใช้ multi-stage build เพื่อ optimize
+- [ ] รัน container พร้อม volume mount และ port mapping
+- [ ] ใช้ Docker Compose สำหรับแอปพลิเคชันหลายเซอร์วิส
+- [ ] เข้าใจ container networking (bridge, host, overlay)
+- [ ] จัดการทรัพยากรของ container (CPU, memory limit)
+- [ ] Debug ปัญหาของ container (logs, exec, inspect)
+- [ ] เข้าใจพื้นฐาน container security (user namespace, read-only filesystem)
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```bash
 # Can you:
 # - Build optimized ML serving container (<500MB)?
@@ -185,24 +185,24 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 # - Implement health checks and auto-restart?
 ```
 
-**Missing skills?** → [Junior Module 005](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-005-docker-containers)
+**ขาดทักษะ?** → [Junior Module 005](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-005-docker-containers)
 
 ---
 
-### Kubernetes Skills ✅
+### ทักษะ Kubernetes ✅
 
-**Required for**: Kubernetes, MLOps, Monitoring modules
+**จำเป็นสำหรับ**: โมดูล Kubernetes, MLOps, Monitoring
 
-- [ ] Deploy applications to Kubernetes
-- [ ] Understand pods, deployments, services, ingress
-- [ ] Use ConfigMaps and Secrets for configuration
-- [ ] Debug pod issues (logs, describe, exec, port-forward)
-- [ ] Understand basic resource management (requests, limits)
-- [ ] Use kubectl effectively
-- [ ] Understand Kubernetes networking basics
-- [ ] Deploy multi-tier applications
+- [ ] Deploy แอปพลิเคชันขึ้น Kubernetes
+- [ ] เข้าใจ pod, deployment, service, ingress
+- [ ] ใช้ ConfigMap และ Secret สำหรับการตั้งค่า
+- [ ] Debug ปัญหาของ pod (logs, describe, exec, port-forward)
+- [ ] เข้าใจการจัดการทรัพยากรพื้นฐาน (requests, limits)
+- [ ] ใช้ kubectl ได้อย่างมีประสิทธิภาพ
+- [ ] เข้าใจพื้นฐาน networking ของ Kubernetes
+- [ ] Deploy แอปพลิเคชันแบบ multi-tier
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```bash
 # Can you:
 # - Deploy ML model API to Kubernetes?
@@ -211,24 +211,24 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 # - Debug pod startup failures?
 ```
 
-**Missing skills?** → [Junior Module 006](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-006-kubernetes-intro)
+**ขาดทักษะ?** → [Junior Module 006](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-006-kubernetes-intro)
 
 ---
 
-### API Development Skills ✅
+### ทักษะการพัฒนา API ✅
 
-**Required for**: Foundations, MLOps, LLM Infrastructure modules
+**จำเป็นสำหรับ**: โมดูล Foundations, MLOps, LLM Infrastructure
 
-- [ ] Build REST APIs with FastAPI or Flask
-- [ ] Implement authentication and authorization
-- [ ] Write API tests (unit and integration)
-- [ ] Generate OpenAPI/Swagger documentation
-- [ ] Implement rate limiting and caching
-- [ ] Handle errors and validation properly
-- [ ] Use async endpoints for high concurrency
-- [ ] Deploy APIs to production
+- [ ] สร้าง REST API ด้วย FastAPI หรือ Flask
+- [ ] พัฒนา authentication และ authorization
+- [ ] เขียน API test (unit และ integration)
+- [ ] สร้างเอกสาร OpenAPI/Swagger
+- [ ] พัฒนา rate limiting และ caching
+- [ ] จัดการ error และ validation อย่างถูกต้อง
+- [ ] ใช้ async endpoint สำหรับ concurrency สูง
+- [ ] Deploy API ขึ้น production
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```python
 # Can you build an API that:
 # - Serves ML model predictions?
@@ -237,24 +237,24 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 # - Has auto-generated docs?
 ```
 
-**Missing skills?** → [Junior Module 007](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-007-apis-web-services)
+**ขาดทักษะ?** → [Junior Module 007](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-007-apis-web-services)
 
 ---
 
-### Database Skills ✅
+### ทักษะฐานข้อมูล ✅
 
-**Required for**: Data Pipelines, MLOps modules
+**จำเป็นสำหรับ**: โมดูล Data Pipelines, MLOps
 
-- [ ] Write complex SQL queries (joins, aggregations, subqueries)
-- [ ] Design normalized database schemas
-- [ ] Use PostgreSQL or MySQL for production
-- [ ] Understand indexing and query optimization
-- [ ] Use Redis for caching
-- [ ] Perform database migrations
-- [ ] Implement connection pooling
-- [ ] Understand ACID properties and transactions
+- [ ] เขียน SQL query ที่ซับซ้อน (join, aggregation, subquery)
+- [ ] ออกแบบ database schema แบบ normalized
+- [ ] ใช้ PostgreSQL หรือ MySQL สำหรับ production
+- [ ] เข้าใจ indexing และ query optimization
+- [ ] ใช้ Redis สำหรับ caching
+- [ ] ทำ database migration
+- [ ] พัฒนา connection pooling
+- [ ] เข้าใจคุณสมบัติ ACID และ transaction
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```sql
 -- Can you:
 -- - Design schema for ML experiment tracking?
@@ -262,24 +262,24 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 -- - Implement caching strategy?
 ```
 
-**Missing skills?** → [Junior Module 008](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-008-databases-sql)
+**ขาดทักษะ?** → [Junior Module 008](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-008-databases-sql)
 
 ---
 
-### Monitoring & Logging Skills ✅
+### ทักษะ Monitoring และ Logging ✅
 
-**Required for**: Monitoring & Observability module
+**จำเป็นสำหรับ**: โมดูล Monitoring & Observability
 
-- [ ] Set up Prometheus for metrics collection
-- [ ] Create Grafana dashboards
-- [ ] Implement application logging (structured logs)
-- [ ] Configure alerts based on metrics
-- [ ] Understand metrics types (counter, gauge, histogram)
-- [ ] Debug issues using logs and metrics
-- [ ] Implement log aggregation
-- [ ] Understand basic observability concepts
+- [ ] ตั้งค่า Prometheus สำหรับเก็บ metrics
+- [ ] สร้าง Grafana dashboard
+- [ ] พัฒนา application logging (structured log)
+- [ ] ตั้งค่า alert ตาม metrics
+- [ ] เข้าใจประเภทของ metrics (counter, gauge, histogram)
+- [ ] Debug ปัญหาด้วย log และ metrics
+- [ ] พัฒนา log aggregation
+- [ ] เข้าใจแนวคิด observability พื้นฐาน
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```bash
 # Can you:
 # - Set up Prometheus + Grafana for ML API?
@@ -287,24 +287,24 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 # - Configure alerts for service downtime?
 ```
 
-**Missing skills?** → [Junior Module 009](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-009-monitoring-basics)
+**ขาดทักษะ?** → [Junior Module 009](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-009-monitoring-basics)
 
 ---
 
-### Cloud Platform Skills ✅
+### ทักษะ Cloud Platform ✅
 
-**Required for**: Cloud Computing, all deployment modules
+**จำเป็นสำหรับ**: Cloud Computing และทุกโมดูลด้าน deployment
 
-- [ ] Deploy VMs and storage on AWS/GCP/Azure
-- [ ] Use cloud CLI tools (aws-cli, gcloud, az)
-- [ ] Understand cloud networking (VPCs, subnets, security groups)
-- [ ] Deploy containerized applications to cloud
-- [ ] Monitor cloud resources and costs
-- [ ] Use managed services (RDS, Cloud SQL, S3, GCS)
-- [ ] Implement basic IAM (users, roles, policies)
-- [ ] Understand cloud pricing models
+- [ ] Deploy VM และ storage บน AWS/GCP/Azure
+- [ ] ใช้เครื่องมือ CLI ของ cloud (aws-cli, gcloud, az)
+- [ ] เข้าใจ cloud networking (VPC, subnet, security group)
+- [ ] Deploy แอปพลิเคชันแบบ container ขึ้น cloud
+- [ ] Monitor ทรัพยากรและค่าใช้จ่ายบน cloud
+- [ ] ใช้ managed service (RDS, Cloud SQL, S3, GCS)
+- [ ] พัฒนา IAM พื้นฐาน (user, role, policy)
+- [ ] เข้าใจรูปแบบการคิดราคาของ cloud
 
-**Test Yourself**:
+**ทดสอบตัวเอง**:
 ```bash
 # Can you:
 # - Deploy Kubernetes cluster to cloud?
@@ -312,80 +312,80 @@ If you haven't completed the Junior curriculum, verify you can perform ALL tasks
 # - Implement cost monitoring and alerts?
 ```
 
-**Missing skills?** → [Junior Module 010](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-010-cloud-platforms)
+**ขาดทักษะ?** → [Junior Module 010](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning/tree/main/lessons/mod-010-cloud-platforms)
 
 ---
 
-## Option 3: Alternative Pathways
+## ทางเลือกที่ 3: เส้นทางอื่น
 
-### If You Have Industry Experience
+### หากคุณมีประสบการณ์ในอุตสาหกรรม
 
-Engineers with **1-2 years** of experience in related fields may be able to skip some Junior modules:
+วิศวกรที่มีประสบการณ์ **1-2 ปี** ในสายงานที่เกี่ยวข้องอาจข้ามบางโมดูลของ Junior ได้:
 
-#### DevOps/SRE Background
-**Can likely skip**: Junior Modules 002, 003, 005 (Linux, Git, Docker)
-**Should review**: Modules 004, 006, 009 (ML Basics, Kubernetes, Monitoring)
-**Must complete**: Modules 001, 007, 008 (Python for ML, APIs, Databases)
+#### พื้นฐานสาย DevOps/SRE
+**น่าจะข้ามได้**: Junior Module 002, 003, 005 (Linux, Git, Docker)
+**ควรทบทวน**: Module 004, 006, 009 (ML Basics, Kubernetes, Monitoring)
+**ต้องเรียน**: Module 001, 007, 008 (Python สำหรับ ML, API, ฐานข้อมูล)
 
-#### Backend Development Background
-**Can likely skip**: Junior Modules 001, 003, 007, 008 (Python, Git, APIs, Databases)
-**Should review**: Modules 005, 006, 009 (Docker, Kubernetes, Monitoring)
-**Must complete**: Modules 002, 004 (Linux, ML Basics)
+#### พื้นฐานสาย Backend Development
+**น่าจะข้ามได้**: Junior Module 001, 003, 007, 008 (Python, Git, API, ฐานข้อมูล)
+**ควรทบทวน**: Module 005, 006, 009 (Docker, Kubernetes, Monitoring)
+**ต้องเรียน**: Module 002, 004 (Linux, ML Basics)
 
-#### Data Engineering Background
-**Can likely skip**: Junior Modules 001, 008, 009 (Python, Databases, Monitoring)
-**Should review**: Modules 002, 003, 005 (Linux, Git, Docker)
-**Must complete**: Modules 004, 006 (ML Basics, Kubernetes)
+#### พื้นฐานสาย Data Engineering
+**น่าจะข้ามได้**: Junior Module 001, 008, 009 (Python, ฐานข้อมูล, Monitoring)
+**ควรทบทวน**: Module 002, 003, 005 (Linux, Git, Docker)
+**ต้องเรียน**: Module 004, 006 (ML Basics, Kubernetes)
 
-#### ML/Data Science Background
-**Can likely skip**: Junior Module 004 (ML Basics)
-**Should review**: Modules 001, 007 (Python for infrastructure, APIs)
-**Must complete**: Modules 002, 003, 005, 006, 009 (Linux, Git, Docker, Kubernetes, Monitoring)
+#### พื้นฐานสาย ML/Data Science
+**น่าจะข้ามได้**: Junior Module 004 (ML Basics)
+**ควรทบทวน**: Module 001, 007 (Python สำหรับ infrastructure, API)
+**ต้องเรียน**: Module 002, 003, 005, 006, 009 (Linux, Git, Docker, Kubernetes, Monitoring)
 
-**Recommendation**: Even with experience, review ALL Junior modules to ensure no gaps. The Junior curriculum focuses on AI/ML infrastructure specifically, which may differ from general software engineering.
-
----
-
-## Recommended Study Plans
-
-### Plan A: Fast Track (Have Most Prerequisites)
-**Duration**: 4-6 weeks
-
-**Week 1**: Self-assess using checklists above
-**Week 2**: Complete any missing Junior modules
-**Week 3**: Review Junior projects for hands-on practice
-**Week 4**: Quick refresher on weak areas
-**Week 5-6**: Begin Engineer Module 101 (Foundations)
-
-**Best for**: Engineers with 1-2 years DevOps/ML experience
+**คำแนะนำ**: แม้จะมีประสบการณ์แล้ว ก็ควรทบทวนโมดูล Junior **ทั้งหมด** เพื่อให้มั่นใจว่าไม่มีช่องว่าง หลักสูตร Junior เน้นเฉพาะด้าน AI/ML infrastructure ซึ่งอาจแตกต่างจาก software engineering ทั่วไป
 
 ---
 
-### Plan B: Standard Track (Complete Junior First)
-**Duration**: 22-24 weeks
+## แผนการเรียนที่แนะนำ
 
-**Weeks 1-22**: Complete entire Junior curriculum (440 hours)
-**Week 23**: Build capstone project and polish portfolio
-**Week 24**: Begin Engineer Module 101 (Foundations)
+### แผน A: Fast Track (มีความรู้พื้นฐานเกือบครบ)
+**ระยะเวลา**: 4-6 สัปดาห์
 
-**Best for**: Career changers, bootcamp grads, recent CS graduates
+**สัปดาห์ที่ 1**: ประเมินตนเองด้วย checklist ด้านบน
+**สัปดาห์ที่ 2**: เรียนโมดูล Junior ที่ยังขาด
+**สัปดาห์ที่ 3**: ทบทวนโปรเจกต์ Junior เพื่อฝึกปฏิบัติ
+**สัปดาห์ที่ 4**: ทบทวนจุดอ่อนอย่างรวดเร็ว
+**สัปดาห์ที่ 5-6**: เริ่ม Engineer Module 101 (Foundations)
 
----
-
-### Plan C: Part-Time Track (Working Professionals)
-**Duration**: 44-48 weeks
-
-**Weeks 1-44**: Complete Junior curriculum part-time (10 hours/week)
-**Weeks 45-47**: Build capstone project
-**Week 48**: Begin Engineer curriculum
-
-**Best for**: Working professionals learning in evenings/weekends
+**เหมาะสำหรับ**: วิศวกรที่มีประสบการณ์ DevOps/ML 1-2 ปี
 
 ---
 
-## Automated Skill Assessment
+### แผน B: Standard Track (เรียน Junior ให้จบก่อน)
+**ระยะเวลา**: 22-24 สัปดาห์
 
-### Run the Self-Assessment Tool
+**สัปดาห์ที่ 1-22**: เรียนหลักสูตร Junior ทั้งหมด (440 ชั่วโมง)
+**สัปดาห์ที่ 23**: สร้างโปรเจกต์ capstone และขัดเกลาพอร์ตโฟลิโอ
+**สัปดาห์ที่ 24**: เริ่ม Engineer Module 101 (Foundations)
+
+**เหมาะสำหรับ**: ผู้เปลี่ยนสายงาน ผู้จบ bootcamp ผู้จบการศึกษาด้าน CS ใหม่
+
+---
+
+### แผน C: Part-Time Track (ผู้ที่ทำงานประจำ)
+**ระยะเวลา**: 44-48 สัปดาห์
+
+**สัปดาห์ที่ 1-44**: เรียนหลักสูตร Junior แบบ part-time (10 ชั่วโมง/สัปดาห์)
+**สัปดาห์ที่ 45-47**: สร้างโปรเจกต์ capstone
+**สัปดาห์ที่ 48**: เริ่มหลักสูตร Engineer
+
+**เหมาะสำหรับ**: ผู้ที่ทำงานประจำและเรียนช่วงเย็น/วันหยุด
+
+---
+
+## การประเมินทักษะอัตโนมัติ
+
+### รันเครื่องมือประเมินตนเอง
 
 ```bash
 # Clone Junior repository
@@ -401,154 +401,154 @@ python scripts/assess_skills.py
 # - Estimated time to readiness
 ```
 
-The assessment tool checks:
-- Python coding ability (via coding challenges)
-- Linux/Git knowledge (via command simulations)
-- Docker/Kubernetes hands-on (via practical tasks)
-- ML fundamentals (via conceptual questions)
-- Cloud platform familiarity (via scenario questions)
+เครื่องมือประเมินจะตรวจสอบ:
+- ความสามารถในการเขียนโค้ด Python (ผ่านโจทย์เขียนโค้ด)
+- ความรู้ Linux/Git (ผ่านการจำลองคำสั่ง)
+- การใช้งาน Docker/Kubernetes จริง (ผ่านงานภาคปฏิบัติ)
+- พื้นฐาน ML (ผ่านคำถามเชิงแนวคิด)
+- ความคุ้นเคยกับ cloud platform (ผ่านคำถามเชิงสถานการณ์)
 
-**Passing score**: 70%+ in all areas
-**Recommended**: 85%+ for smooth transition to Engineer curriculum
-
----
-
-## Getting Help
-
-### If You're Unsure About Your Readiness
-
-**Option 1**: Post in [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
-- Share your background and experience
-- Get personalized recommendations from community
-
-**Option 2**: Join our [Discord Server](https://discord.gg/ai-infra-curriculum)
-- Ask questions in #prerequisites channel
-- Get feedback from instructors and peers
-
-**Option 3**: Schedule Office Hours
-- Weekly Q&A sessions (Fridays 3-4pm PT)
-- 1-on-1 prerequisite consultations (by appointment)
-
-**Option 4**: Review Junior Curriculum Structure
-- Browse the [Junior course structure](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning)
-- Try the first exercise of each module
-- If you can complete them easily, you may be ready
+**คะแนนผ่าน**: 70%+ ในทุกด้าน
+**แนะนำ**: 85%+ เพื่อการเปลี่ยนผ่านสู่หลักสูตร Engineer อย่างราบรื่น
 
 ---
 
-## Success Metrics: Are You Ready?
+## การขอความช่วยเหลือ
 
-You're ready for the Engineer curriculum when you can confidently:
+### หากคุณไม่แน่ใจเรื่องความพร้อม
 
-### Technical Capabilities
-- [ ] Deploy a complete ML application (API + Docker + K8s + monitoring) from scratch
-- [ ] Debug production issues in distributed systems
-- [ ] Write infrastructure automation scripts (Python + Bash)
-- [ ] Explain ML model serving architecture and trade-offs
-- [ ] Navigate and troubleshoot cloud environments
-- [ ] Understand and optimize cloud costs
-- [ ] Implement CI/CD pipelines for ML applications
-- [ ] Monitor and alert on system and model performance
+**ทางเลือกที่ 1**: โพสต์ใน [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
+- แบ่งปันพื้นฐานและประสบการณ์ของคุณ
+- รับคำแนะนำเฉพาะบุคคลจากชุมชน
 
-### Assessment Scores
-- [ ] Pass Junior curriculum assessments with 80%+ average
-- [ ] Complete at least 2 Junior projects with "Excellent" grade
-- [ ] Demonstrate proficiency in self-assessment checklist
-- [ ] Build a portfolio project demonstrating all prerequisite skills
+**ทางเลือกที่ 2**: เข้าร่วม [Discord Server](https://discord.gg/ai-infra-curriculum) ของเรา
+- ถามคำถามในช่อง #prerequisites
+- รับ feedback จากผู้สอนและเพื่อนผู้เรียน
 
-### Time Investment Ready
-- [ ] Can commit 40+ hours/week (full-time) or 20+ hours/week (part-time)
-- [ ] Have 6+ months available for dedicated learning
-- [ ] Can access cloud accounts (AWS/GCP/Azure free tiers)
-- [ ] Have suitable hardware (8GB+ RAM, decent CPU, GPU optional)
+**ทางเลือกที่ 3**: นัด Office Hours
+- ช่วงถาม-ตอบรายสัปดาห์ (วันศุกร์ 15.00-16.00 น. PT)
+- ปรึกษาเรื่องความรู้พื้นฐานแบบตัวต่อตัว (ตามนัดหมาย)
+
+**ทางเลือกที่ 4**: ศึกษาโครงสร้างหลักสูตร Junior
+- ดู[โครงสร้างหลักสูตร Junior](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning)
+- ลองทำแบบฝึกหัดแรกของแต่ละโมดูล
+- หากทำได้อย่างง่ายดาย คุณอาจพร้อมแล้ว
 
 ---
 
-## What Happens If You Start Without Prerequisites?
+## ตัวชี้วัดความสำเร็จ: คุณพร้อมหรือยัง?
 
-**Scenario 1**: Missing Python/Linux/Git basics
-❌ **Result**: Will struggle in Module 101, unable to complete exercises
-✅ **Fix**: Complete Junior Modules 001-003 first (40 hours)
+คุณพร้อมสำหรับหลักสูตร Engineer เมื่อคุณสามารถทำสิ่งต่อไปนี้ได้อย่างมั่นใจ:
 
-**Scenario 2**: Missing ML fundamentals
-❌ **Result**: Won't understand ML infrastructure trade-offs
-✅ **Fix**: Complete Junior Module 004 (20 hours)
+### ความสามารถทางเทคนิค
+- [ ] Deploy แอปพลิเคชัน ML ที่สมบูรณ์ (API + Docker + K8s + monitoring) ตั้งแต่ศูนย์
+- [ ] Debug ปัญหา production ในระบบแบบกระจาย
+- [ ] เขียนสคริปต์สำหรับ infrastructure automation (Python + Bash)
+- [ ] อธิบายสถาปัตยกรรม ML model serving และ trade-off
+- [ ] ใช้งานและแก้ไขปัญหาในสภาพแวดล้อม cloud
+- [ ] เข้าใจและ optimize ค่าใช้จ่ายบน cloud
+- [ ] พัฒนา CI/CD pipeline สำหรับแอปพลิเคชัน ML
+- [ ] Monitor และตั้ง alert สำหรับประสิทธิภาพของระบบและโมเดล
 
-**Scenario 3**: Missing Docker/Kubernetes
-❌ **Result**: Can't complete containerization and orchestration modules
-✅ **Fix**: Complete Junior Modules 005-006 (35 hours)
+### คะแนนการประเมิน
+- [ ] ผ่านการประเมินของหลักสูตร Junior ด้วยคะแนนเฉลี่ย 80%+
+- [ ] ทำโปรเจกต์ Junior อย่างน้อย 2 โปรเจกต์ได้เกรด "Excellent"
+- [ ] แสดงความเชี่ยวชาญตาม checklist ประเมินตนเอง
+- [ ] สร้างโปรเจกต์พอร์ตโฟลิโอที่แสดงทักษะพื้นฐานทั้งหมด
 
-**Scenario 4**: Missing monitoring/cloud basics
-❌ **Result**: Struggle with observability and deployment modules
-✅ **Fix**: Complete Junior Modules 009-010 (35 hours)
-
-**Bottom line**: Starting without prerequisites will significantly slow your progress and reduce learning effectiveness. We strongly recommend completing the Junior curriculum or validating all prerequisite skills first.
+### พร้อมลงทุนเวลา
+- [ ] สามารถทุ่มเท 40+ ชั่วโมง/สัปดาห์ (full-time) หรือ 20+ ชั่วโมง/สัปดาห์ (part-time)
+- [ ] มีเวลา 6+ เดือนสำหรับการเรียนอย่างจริงจัง
+- [ ] เข้าถึงบัญชี cloud ได้ (free tier ของ AWS/GCP/Azure)
+- [ ] มีฮาร์ดแวร์ที่เหมาะสม (RAM 8GB+, CPU พอใช้, GPU ไม่บังคับ)
 
 ---
 
-## Prerequisites Timeline Summary
+## จะเกิดอะไรขึ้นหากเริ่มเรียนโดยไม่มีความรู้พื้นฐาน?
 
-| Starting Point | Time to Ready | Recommended Path |
+**สถานการณ์ที่ 1**: ขาดพื้นฐาน Python/Linux/Git
+❌ **ผลลัพธ์**: จะเรียน Module 101 อย่างยากลำบาก และทำแบบฝึกหัดไม่ได้
+✅ **วิธีแก้**: เรียน Junior Module 001-003 ก่อน (40 ชั่วโมง)
+
+**สถานการณ์ที่ 2**: ขาดพื้นฐาน ML
+❌ **ผลลัพธ์**: จะไม่เข้าใจ trade-off ของ ML infrastructure
+✅ **วิธีแก้**: เรียน Junior Module 004 (20 ชั่วโมง)
+
+**สถานการณ์ที่ 3**: ขาดพื้นฐาน Docker/Kubernetes
+❌ **ผลลัพธ์**: ไม่สามารถเรียนโมดูล containerization และ orchestration ให้จบได้
+✅ **วิธีแก้**: เรียน Junior Module 005-006 (35 ชั่วโมง)
+
+**สถานการณ์ที่ 4**: ขาดพื้นฐาน monitoring/cloud
+❌ **ผลลัพธ์**: เรียนโมดูล observability และ deployment อย่างยากลำบาก
+✅ **วิธีแก้**: เรียน Junior Module 009-010 (35 ชั่วโมง)
+
+**สรุป**: การเริ่มเรียนโดยไม่มีความรู้พื้นฐานจะทำให้ความก้าวหน้าช้าลงอย่างมากและลดประสิทธิภาพการเรียนรู้ เราแนะนำอย่างยิ่งให้เรียนหลักสูตร Junior หรือตรวจสอบทักษะพื้นฐานทั้งหมดก่อน
+
+---
+
+## สรุปกรอบเวลาสำหรับความรู้พื้นฐาน
+
+| จุดเริ่มต้น | เวลาจนพร้อม | เส้นทางที่แนะนำ |
 |---------------|---------------|------------------|
-| **Complete beginner** | 22-44 weeks | Complete full Junior curriculum |
-| **Some coding experience** | 16-22 weeks | Complete Junior, skip familiar modules |
-| **1-2 years DevOps/Backend** | 8-12 weeks | Self-assess, fill gaps, review modules |
-| **1-2 years ML Engineering** | 6-10 weeks | Focus on infrastructure modules (002, 005, 006, 009) |
-| **Current Junior grad** | 0 weeks | Start immediately! ✅ |
+| **ผู้เริ่มต้นจากศูนย์** | 22-44 สัปดาห์ | เรียนหลักสูตร Junior ทั้งหมด |
+| **มีประสบการณ์เขียนโค้ดบ้าง** | 16-22 สัปดาห์ | เรียน Junior โดยข้ามโมดูลที่คุ้นเคย |
+| **DevOps/Backend 1-2 ปี** | 8-12 สัปดาห์ | ประเมินตนเอง เติมช่องว่าง ทบทวนโมดูล |
+| **ML Engineering 1-2 ปี** | 6-10 สัปดาห์ | เน้นโมดูลด้าน infrastructure (002, 005, 006, 009) |
+| **เพิ่งจบหลักสูตร Junior** | 0 สัปดาห์ | เริ่มได้ทันที! ✅ |
 
 ---
 
-## Ready to Begin?
+## พร้อมเริ่มต้นแล้วหรือยัง?
 
-### ✅ If You Have All Prerequisites
+### ✅ หากคุณมีความรู้พื้นฐานครบ
 
-**Congratulations!** You're ready to start the Engineer curriculum.
+**ยินดีด้วย!** คุณพร้อมเริ่มหลักสูตร Engineer แล้ว
 
-**Next steps**:
-1. Read the [Getting Started Guide](./GETTING_STARTED.md)
-2. Set up your development environment
-3. Begin [Module 101: Foundations](./lessons/mod-101-foundations/README.md)
+**ขั้นตอนถัดไป**:
+1. อ่าน[คู่มือเริ่มต้นใช้งาน](./GETTING_STARTED.md)
+2. ตั้งค่า development environment ของคุณ
+3. เริ่ม [Module 101: Foundations](./lessons/mod-101-foundations/README.md)
 
-### ⚠️ If You're Missing Prerequisites
+### ⚠️ หากคุณยังขาดความรู้พื้นฐาน
 
-**Don't worry!** The Junior curriculum is designed to get you ready.
+**ไม่ต้องกังวล!** หลักสูตร Junior ออกแบบมาเพื่อเตรียมความพร้อมให้คุณ
 
-**Next steps**:
-1. Visit the [Junior AI Infrastructure Engineer](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning) repository
-2. Complete relevant modules (or all modules for comprehensive preparation)
-3. Build your portfolio with Junior projects
-4. Return here when ready
-
----
-
-## Questions?
-
-**Can I start the Engineer curriculum while completing Junior prerequisites?**
-Not recommended. You'll be more successful completing prerequisites first.
-
-**How long does the Junior curriculum take?**
-- Full-time: 11 weeks (40 hours/week)
-- Part-time: 22 weeks (20 hours/week)
-- Working professionals: 44 weeks (10 hours/week)
-
-**Do I need to complete ALL Junior modules?**
-If you can pass the self-assessment with 80%+ in all areas, you can skip modules. But we recommend completing all for comprehensive preparation.
-
-**Can I get credit for industry experience?**
-The self-assessment checklist allows you to validate skills from any source. If you can demonstrate proficiency, prerequisites are met regardless of where you learned them.
-
-**What if I fail the self-assessment?**
-Complete the relevant Junior modules, then retake the assessment. There's no penalty for retaking.
+**ขั้นตอนถัดไป**:
+1. ไปที่ repository [Junior AI Infrastructure Engineer](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning)
+2. เรียนโมดูลที่เกี่ยวข้อง (หรือทุกโมดูลเพื่อการเตรียมตัวอย่างครบถ้วน)
+3. สร้างพอร์ตโฟลิโอด้วยโปรเจกต์ของ Junior
+4. กลับมาที่นี่เมื่อพร้อม
 
 ---
 
-**Start Your Journey Today:**
+## มีคำถาม?
+
+**ฉันเริ่มหลักสูตร Engineer ไปพร้อมกับเรียนความรู้พื้นฐานจาก Junior ได้ไหม?**
+ไม่แนะนำ คุณจะประสบความสำเร็จมากกว่าหากเรียนความรู้พื้นฐานให้จบก่อน
+
+**หลักสูตร Junior ใช้เวลานานเท่าไร?**
+- Full-time: 11 สัปดาห์ (40 ชั่วโมง/สัปดาห์)
+- Part-time: 22 สัปดาห์ (20 ชั่วโมง/สัปดาห์)
+- ผู้ที่ทำงานประจำ: 44 สัปดาห์ (10 ชั่วโมง/สัปดาห์)
+
+**ต้องเรียนโมดูล Junior ทั้งหมดหรือไม่?**
+หากคุณผ่านการประเมินตนเองด้วยคะแนน 80%+ ในทุกด้าน คุณสามารถข้ามโมดูลได้ แต่เราแนะนำให้เรียนทั้งหมดเพื่อการเตรียมตัวอย่างครบถ้วน
+
+**ประสบการณ์ในอุตสาหกรรมนำมาเทียบได้ไหม?**
+Checklist ประเมินตนเองช่วยให้คุณตรวจสอบทักษะจากแหล่งใดก็ได้ หากคุณแสดงความเชี่ยวชาญได้ ถือว่ามีความรู้พื้นฐานครบ ไม่ว่าคุณจะเรียนรู้มาจากที่ใด
+
+**หากไม่ผ่านการประเมินตนเองล่ะ?**
+เรียนโมดูล Junior ที่เกี่ยวข้อง แล้วทำการประเมินใหม่ ไม่มีบทลงโทษสำหรับการประเมินซ้ำ
+
+---
+
+**เริ่มต้นเส้นทางของคุณวันนี้:**
 
 👉 **[Junior AI Infrastructure Engineer Learning Path](https://github.com/ai-infra-curriculum/ai-infra-junior-engineer-learning)**
 
-👉 **[Engineer Curriculum Getting Started](./GETTING_STARTED.md)** (if prerequisites complete)
+👉 **[เริ่มต้นหลักสูตร Engineer](./GETTING_STARTED.md)** (หากมีความรู้พื้นฐานครบแล้ว)
 
 ---
 
-*Last Updated: October 2025*
-*Maintained by: AI Infrastructure Curriculum Team*
+*อัปเดตล่าสุด: ตุลาคม 2025*
+*ดูแลโดย: AI Infrastructure Curriculum Team*
