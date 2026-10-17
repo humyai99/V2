@@ -1,3 +1,3 @@
-# Resources
+# แหล่งข้อมูล
 
-Store shared tools, cheat sheets, templates, and reading lists here.
+จัดเก็บเครื่องมือที่ใช้ร่วมกัน, cheat sheet, เทมเพลต และรายการหนังสือแนะนำไว้ที่นี่

@@ -1,331 +1,331 @@
-# Code of Conduct
+# หลักปฏิบัติ (Code of Conduct)
 
-## Our Pledge
+## คำมั่นสัญญาของเรา
 
-We as members, contributors, and leaders pledge to make participation in our community a harassment-free experience for everyone, regardless of age, body size, visible or invisible disability, ethnicity, sex characteristics, gender identity and expression, level of experience, education, socio-economic status, nationality, personal appearance, race, religion, or sexual identity and orientation.
+ในฐานะสมาชิก ผู้ร่วมพัฒนา และผู้นำ เราให้คำมั่นว่าจะทำให้การมีส่วนร่วมในชุมชนของเราเป็นประสบการณ์ที่ปราศจากการคุกคามสำหรับทุกคน โดยไม่คำนึงถึงอายุ รูปร่าง ความพิการที่มองเห็นหรือมองไม่เห็น ชาติพันธุ์ ลักษณะทางเพศ อัตลักษณ์และการแสดงออกทางเพศ ระดับประสบการณ์ การศึกษา สถานะทางเศรษฐกิจและสังคม สัญชาติ รูปลักษณ์ภายนอก เชื้อชาติ ศาสนา หรืออัตลักษณ์และรสนิยมทางเพศ
 
-We pledge to act and interact in ways that contribute to an open, welcoming, diverse, inclusive, and healthy community.
+เราให้คำมั่นว่าจะปฏิบัติและมีปฏิสัมพันธ์ในแบบที่ช่วยสร้างชุมชนที่เปิดกว้าง เป็นมิตร หลากหลาย ครอบคลุมทุกคน และมีสุขภาวะที่ดี
 
-## Our Standards
+## มาตรฐานของเรา
 
-### Positive Behavior
+### พฤติกรรมเชิงบวก
 
-Examples of behavior that contributes to a positive environment:
+ตัวอย่างพฤติกรรมที่ช่วยสร้างสภาพแวดล้อมเชิงบวก:
 
-- **Be Respectful**: Treat everyone with respect and consideration
-- **Be Welcoming**: Welcome newcomers and help them get started
-- **Be Collaborative**: Work together and share knowledge
-- **Be Patient**: Everyone learns at their own pace
-- **Be Constructive**: Provide helpful, actionable feedback
-- **Be Empathetic**: Understand different perspectives and experiences
-- **Be Professional**: Maintain professionalism in all interactions
-- **Give Credit**: Acknowledge others' contributions and ideas
+- **ให้ความเคารพ**: ปฏิบัติต่อทุกคนด้วยความเคารพและใส่ใจ
+- **เป็นมิตร**: ต้อนรับผู้มาใหม่และช่วยให้พวกเขาเริ่มต้นได้
+- **ร่วมมือกัน**: ทำงานร่วมกันและแบ่งปันความรู้
+- **อดทน**: ทุกคนเรียนรู้ในจังหวะของตนเอง
+- **สร้างสรรค์**: ให้ feedback ที่เป็นประโยชน์และนำไปปฏิบัติได้
+- **เห็นอกเห็นใจ**: เข้าใจมุมมองและประสบการณ์ที่แตกต่าง
+- **เป็นมืออาชีพ**: รักษาความเป็นมืออาชีพในทุกการปฏิสัมพันธ์
+- **ให้เครดิต**: ยอมรับผลงานและความคิดของผู้อื่น
 
-### Unacceptable Behavior
+### พฤติกรรมที่ไม่เป็นที่ยอมรับ
 
-Examples of unacceptable behavior include:
+ตัวอย่างพฤติกรรมที่ไม่เป็นที่ยอมรับ ได้แก่:
 
-- **Harassment**: Any form of harassment, intimidation, or bullying
-- **Discrimination**: Discriminatory jokes, language, or behavior
-- **Personal Attacks**: Attacking someone personally rather than their ideas
-- **Trolling**: Deliberately inflammatory or off-topic comments
-- **Privacy Violations**: Sharing others' private information without permission
-- **Sexual Content**: Unwelcome sexual attention or advances
-- **Spam**: Excessive self-promotion or off-topic content
-- **Dishonesty**: Plagiarism, impersonation, or other deceptive practices
+- **การคุกคาม**: การคุกคาม ข่มขู่ หรือกลั่นแกล้งในรูปแบบใดก็ตาม
+- **การเลือกปฏิบัติ**: มุกตลก ถ้อยคำ หรือพฤติกรรมที่เลือกปฏิบัติ
+- **การโจมตีส่วนตัว**: การโจมตีตัวบุคคลแทนที่จะวิจารณ์ความคิด
+- **Trolling**: ความคิดเห็นที่ยั่วยุโดยเจตนาหรือนอกประเด็น
+- **การละเมิดความเป็นส่วนตัว**: การเปิดเผยข้อมูลส่วนตัวของผู้อื่นโดยไม่ได้รับอนุญาต
+- **เนื้อหาทางเพศ**: การให้ความสนใจหรือการรุกล้ำทางเพศที่ไม่พึงประสงค์
+- **สแปม**: การโปรโมตตัวเองมากเกินไปหรือเนื้อหานอกประเด็น
+- **ความไม่ซื่อสัตย์**: การลอกเลียนผลงาน การแอบอ้างเป็นผู้อื่น หรือการหลอกลวงในรูปแบบอื่น
 
-## Our Responsibilities
+## ความรับผิดชอบของเรา
 
-### Maintainers
+### Maintainer
 
-Project maintainers are responsible for:
+Maintainer ของโปรเจกต์มีหน้าที่:
 
-- Clarifying and enforcing standards of acceptable behavior
-- Taking appropriate and fair corrective action
-- Removing, editing, or rejecting contributions that violate this Code of Conduct
-- Communicating reasons for moderation decisions when appropriate
+- ชี้แจงและบังคับใช้มาตรฐานพฤติกรรมที่ยอมรับได้
+- ดำเนินการแก้ไขอย่างเหมาะสมและเป็นธรรม
+- ลบ แก้ไข หรือปฏิเสธการมีส่วนร่วมที่ละเมิดหลักปฏิบัตินี้
+- สื่อสารเหตุผลของการตัดสินใจในการกลั่นกรองเมื่อเหมาะสม
 
-### Community Members
+### สมาชิกชุมชน
 
-Community members are expected to:
+สมาชิกชุมชนควร:
 
-- Read and follow this Code of Conduct
-- Report violations to project maintainers
-- Support a welcoming and inclusive environment
-- Accept constructive feedback gracefully
-- Focus on what's best for the community
+- อ่านและปฏิบัติตามหลักปฏิบัตินี้
+- รายงานการละเมิดต่อ maintainer ของโปรเจกต์
+- สนับสนุนสภาพแวดล้อมที่เป็นมิตรและครอบคลุมทุกคน
+- ยอมรับ feedback ที่สร้างสรรค์อย่างมีน้ำใจ
+- มุ่งเน้นสิ่งที่ดีที่สุดสำหรับชุมชน
 
-## Scope
+## ขอบเขต
 
-This Code of Conduct applies to:
+หลักปฏิบัตินี้ใช้กับ:
 
-- All project spaces (repository, issues, discussions, pull requests)
-- Official communication channels (Slack, email lists)
-- Events and meetups (virtual or in-person)
-- Social media when representing the project
-- Any other community interactions
+- พื้นที่ทั้งหมดของโปรเจกต์ (repository, issues, discussions, pull requests)
+- ช่องทางการสื่อสารอย่างเป็นทางการ (Slack, email list)
+- งานอีเวนต์และ meetup (ออนไลน์หรือพบปะตัวจริง)
+- โซเชียลมีเดียเมื่อเป็นตัวแทนของโปรเจกต์
+- การปฏิสัมพันธ์อื่น ๆ ในชุมชน
 
-It also applies when representing the project in public spaces.
+และยังใช้เมื่อเป็นตัวแทนของโปรเจกต์ในพื้นที่สาธารณะด้วย
 
-## Enforcement
+## การบังคับใช้
 
-### Reporting Violations
+### การรายงานการละเมิด
 
-If you experience or witness unacceptable behavior:
+หากคุณประสบหรือพบเห็นพฤติกรรมที่ไม่เป็นที่ยอมรับ:
 
-1. **Report to maintainers**: Email conduct@ai-infra-learning.org (or open a confidential issue)
-2. **Provide details**: Include what happened, when, where, and who was involved
-3. **Be specific**: Include links, screenshots, or other evidence if available
-4. **Maintain confidentiality**: Reports will be handled discreetly
+1. **รายงานต่อ maintainer**: อีเมลถึง conduct@ai-infra-learning.org (หรือเปิด issue แบบลับ)
+2. **ให้รายละเอียด**: ระบุว่าเกิดอะไรขึ้น เมื่อไร ที่ไหน และใครเกี่ยวข้อง
+3. **ระบุให้ชัดเจน**: แนบลิงก์ ภาพหน้าจอ หรือหลักฐานอื่น ๆ หากมี
+4. **รักษาความลับ**: รายงานจะได้รับการดำเนินการอย่างรอบคอบ
 
-### What to Include in a Report
+### สิ่งที่ควรระบุในรายงาน
 
-- Your contact information
-- Names of people involved
-- Description of the incident
-- Date and time
-- Context and circumstances
-- Any supporting evidence
-- Any other relevant information
+- ข้อมูลติดต่อของคุณ
+- ชื่อของผู้ที่เกี่ยวข้อง
+- รายละเอียดของเหตุการณ์
+- วันและเวลา
+- บริบทและสถานการณ์
+- หลักฐานประกอบ
+- ข้อมูลอื่น ๆ ที่เกี่ยวข้อง
 
-### Enforcement Process
+### กระบวนการบังคับใช้
 
-1. **Review**: Maintainers review the report
-2. **Investigation**: Gather additional information if needed
-3. **Decision**: Determine appropriate response
-4. **Action**: Implement consequences
-5. **Follow-up**: Monitor for repeated violations
+1. **ทบทวน**: Maintainer ทบทวนรายงาน
+2. **สอบสวน**: รวบรวมข้อมูลเพิ่มเติมหากจำเป็น
+3. **ตัดสินใจ**: กำหนดการตอบสนองที่เหมาะสม
+4. **ดำเนินการ**: บังคับใช้บทลงโทษ
+5. **ติดตามผล**: เฝ้าระวังการละเมิดซ้ำ
 
-### Consequences
+### บทลงโทษ
 
-Violations may result in:
-
-**1. Warning**
-- **Action**: Private written warning
-- **For**: Minor first-time offenses
-- **Duration**: Documented in records
-
-**2. Temporary Ban**
-- **Action**: Temporary suspension from participation
-- **For**: Repeated minor violations or single moderate violation
-- **Duration**: 7 days to 3 months
-
-**3. Permanent Ban**
-- **Action**: Permanent exclusion from community
-- **For**: Serious violations, repeated violations after warnings
-- **Duration**: Indefinite
-
-### Appeals
-
-If you disagree with an enforcement decision:
-
-1. Email appeals@ai-infra-learning.org within 7 days
-2. Explain why you believe the decision was incorrect
-3. Maintainers will review and respond within 14 days
-4. Appeal decisions are final
-
-## Specific Scenarios
-
-### In Discussions and Issues
-
-**Do:**
-- Ask questions clearly and provide context
-- Search for existing discussions before posting
-- Thank people for their help
-- Mark solutions when your issue is resolved
-- Use appropriate labels and tags
-
-**Don't:**
-- Demand immediate responses
-- Post the same question multiple times
-- Go off-topic
-- Argue in circles
-- Use ALL CAPS (unless for acronyms)
-
-### In Pull Requests
-
-**Do:**
-- Describe your changes clearly
-- Respond to feedback constructively
-- Test your code before submitting
-- Follow contribution guidelines
-- Be patient during review
-
-**Don't:**
-- Take criticism of code personally
-- Submit incomplete or untested code
-- Ignore reviewer feedback
-- Make large changes without discussion
-- Argue over style preferences (follow project standards)
-
-### In Code Reviews
-
-**Do:**
-- Focus on the code, not the person
-- Explain the "why" behind suggestions
-- Acknowledge good work
-- Ask questions rather than making demands
-- Suggest alternatives
-
-**Don't:**
-- Use harsh or judgmental language
-- Dismiss concerns without explanation
-- Block PRs over minor style issues
-- Demand changes without justification
-- Review your own code (conflict of interest)
-
-### When Asking for Help
-
-**Do:**
-- Search documentation first
-- Provide minimal reproducible example
-- Include error messages and logs
-- Specify your environment
-- Show what you've tried
-
-**Don't:**
-- Expect people to do your work
-- Get frustrated with helpers
-- Ignore follow-up questions
-- Cross-post to multiple channels
-- Ping maintainers directly (use public channels)
-
-### When Helping Others
-
-**Do:**
-- Be patient with beginners
-- Provide explanations, not just answers
-- Point to relevant documentation
-- Encourage learning
-- Celebrate progress
-
-**Don't:**
-- Make people feel stupid
-- Say "just Google it"
-- Provide solutions without explanation
-- Gatekeep based on knowledge level
-- Use jargon unnecessarily
-
-## Inclusive Language
-
-### Preferred Terms
-
-- Use "they/them" if gender is unknown
-- Say "allowlist/denylist" instead of "whitelist/blacklist"
-- Say "primary/replica" instead of "master/slave"
-- Say "folks" or "everyone" instead of "guys"
-- Use person-first language: "person with disability" not "disabled person"
-
-### Avoid
-
-- Gendered language (assuming everyone is male)
-- Ableist language ("crazy", "lame", "blind spot")
-- Violent metaphors ("kill the process" → "stop the process")
-- Cultural assumptions (not everyone celebrates the same holidays)
-- Idioms that don't translate well
-
-## Conflict Resolution
-
-### If You Have a Disagreement
-
-1. **Assume good intentions**: Most conflicts are misunderstandings
-2. **Communicate directly**: Talk to the person privately first
-3. **Focus on issues, not people**: Critique ideas, not individuals
-4. **Seek to understand**: Ask questions before judging
-5. **Find common ground**: Look for areas of agreement
-6. **Compromise**: Be willing to meet in the middle
-7. **Involve a mediator**: If direct communication doesn't work
-
-### If You Made a Mistake
-
-1. **Acknowledge it**: Admit when you're wrong
-2. **Apologize**: Say sorry sincerely
-3. **Make amends**: Fix the harm caused
-4. **Learn from it**: Don't repeat the mistake
-5. **Move forward**: Don't dwell on it unnecessarily
-
-### If Someone Made a Mistake
-
-1. **Give benefit of doubt**: Assume it was unintentional
-2. **Educate kindly**: Explain why it was problematic
-3. **Accept apologies**: Don't hold grudges
-4. **Model behavior**: Show the right way to act
-5. **Move forward**: Focus on improvement, not punishment
-
-## Creating an Inclusive Environment
-
-### For Beginners
-
-- Provide beginner-friendly documentation
-- Label "good first issue" for newcomers
-- Offer mentorship opportunities
-- Celebrate first contributions
-- Be patient with basic questions
-
-### For Diverse Contributors
-
-- Use inclusive language
-- Be mindful of time zones
-- Accommodate different communication styles
-- Recognize cultural differences
-- Provide multiple ways to contribute
-
-### For Everyone
-
-- Encourage participation from all backgrounds
-- Amplify underrepresented voices
-- Challenge bias when you see it
-- Create safe spaces for discussion
-- Recognize diverse contributions
-
-## Attribution
-
-This Code of Conduct is adapted from:
+การละเมิดอาจนำไปสู่:
+
+**1. การตักเตือน**
+- **การดำเนินการ**: ตักเตือนเป็นลายลักษณ์อักษรแบบส่วนตัว
+- **สำหรับ**: การกระทำผิดเล็กน้อยครั้งแรก
+- **ระยะเวลา**: บันทึกไว้ในประวัติ
+
+**2. การแบนชั่วคราว**
+- **การดำเนินการ**: ระงับการมีส่วนร่วมชั่วคราว
+- **สำหรับ**: การละเมิดเล็กน้อยซ้ำ ๆ หรือการละเมิดระดับปานกลางหนึ่งครั้ง
+- **ระยะเวลา**: 7 วันถึง 3 เดือน
+
+**3. การแบนถาวร**
+- **การดำเนินการ**: ตัดออกจากชุมชนอย่างถาวร
+- **สำหรับ**: การละเมิดร้ายแรง หรือการละเมิดซ้ำหลังได้รับคำเตือน
+- **ระยะเวลา**: ไม่มีกำหนด
+
+### การอุทธรณ์
+
+หากคุณไม่เห็นด้วยกับการตัดสินใจในการบังคับใช้:
+
+1. อีเมลถึง appeals@ai-infra-learning.org ภายใน 7 วัน
+2. อธิบายว่าเหตุใดคุณเชื่อว่าการตัดสินใจนั้นไม่ถูกต้อง
+3. Maintainer จะทบทวนและตอบกลับภายใน 14 วัน
+4. ผลการอุทธรณ์ถือเป็นที่สิ้นสุด
+
+## สถานการณ์เฉพาะ
+
+### ใน Discussions และ Issues
+
+**ควรทำ:**
+- ถามคำถามให้ชัดเจนและให้บริบท
+- ค้นหา discussion ที่มีอยู่ก่อนโพสต์
+- ขอบคุณผู้ที่ช่วยเหลือ
+- ทำเครื่องหมายคำตอบเมื่อปัญหาได้รับการแก้ไข
+- ใช้ label และ tag ที่เหมาะสม
+
+**ไม่ควรทำ:**
+- เรียกร้องให้ตอบทันที
+- โพสต์คำถามเดิมซ้ำหลายครั้ง
+- ออกนอกประเด็น
+- โต้เถียงวนไปวนมา
+- ใช้ตัวพิมพ์ใหญ่ทั้งหมด (ยกเว้นตัวย่อ)
+
+### ใน Pull Request
+
+**ควรทำ:**
+- อธิบายการเปลี่ยนแปลงให้ชัดเจน
+- ตอบสนองต่อ feedback อย่างสร้างสรรค์
+- ทดสอบโค้ดก่อนส่ง
+- ปฏิบัติตามแนวทางการร่วมพัฒนา
+- อดทนระหว่างการรีวิว
+
+**ไม่ควรทำ:**
+- ถือเอาคำวิจารณ์โค้ดเป็นเรื่องส่วนตัว
+- ส่งโค้ดที่ไม่สมบูรณ์หรือยังไม่ได้ทดสอบ
+- เพิกเฉยต่อ feedback ของผู้รีวิว
+- ทำการเปลี่ยนแปลงขนาดใหญ่โดยไม่ได้พูดคุยก่อน
+- โต้เถียงเรื่องสไตล์ที่ชอบ (ให้ทำตามมาตรฐานของโปรเจกต์)
+
+### ใน Code Review
+
+**ควรทำ:**
+- มุ่งเน้นที่โค้ด ไม่ใช่ตัวบุคคล
+- อธิบาย "เหตุผล" เบื้องหลังข้อเสนอแนะ
+- ชื่นชมงานที่ดี
+- ตั้งคำถามแทนการเรียกร้อง
+- เสนอทางเลือก
+
+**ไม่ควรทำ:**
+- ใช้ถ้อยคำรุนแรงหรือตัดสิน
+- ปัดตกข้อกังวลโดยไม่อธิบาย
+- Block PR เพราะปัญหาสไตล์เล็กน้อย
+- เรียกร้องให้เปลี่ยนแปลงโดยไม่มีเหตุผล
+- รีวิวโค้ดของตัวเอง (ผลประโยชน์ทับซ้อน)
+
+### เมื่อขอความช่วยเหลือ
+
+**ควรทำ:**
+- ค้นหาในเอกสารก่อน
+- ให้ตัวอย่างขั้นต่ำที่ทำซ้ำได้ (minimal reproducible example)
+- แนบข้อความ error และ log
+- ระบุสภาพแวดล้อมของคุณ
+- แสดงสิ่งที่คุณได้ลองแล้ว
+
+**ไม่ควรทำ:**
+- คาดหวังให้ผู้อื่นทำงานแทนคุณ
+- หงุดหงิดใส่ผู้ที่ช่วยเหลือ
+- เพิกเฉยต่อคำถามติดตาม
+- โพสต์ซ้ำในหลายช่องทาง
+- Ping maintainer โดยตรง (ให้ใช้ช่องทางสาธารณะ)
+
+### เมื่อช่วยเหลือผู้อื่น
+
+**ควรทำ:**
+- อดทนกับผู้เริ่มต้น
+- ให้คำอธิบาย ไม่ใช่แค่คำตอบ
+- แนะนำเอกสารที่เกี่ยวข้อง
+- ส่งเสริมการเรียนรู้
+- ยินดีกับความก้าวหน้า
+
+**ไม่ควรทำ:**
+- ทำให้ผู้อื่นรู้สึกโง่
+- พูดว่า "ไป Google เอาเอง"
+- ให้คำตอบโดยไม่อธิบาย
+- กีดกันผู้อื่นตามระดับความรู้
+- ใช้ศัพท์เฉพาะโดยไม่จำเป็น
+
+## ภาษาที่ครอบคลุมทุกคน
+
+### คำที่ควรใช้
+
+- ใช้ "they/them" หากไม่ทราบเพศ
+- ใช้ "allowlist/denylist" แทน "whitelist/blacklist"
+- ใช้ "primary/replica" แทน "master/slave"
+- ใช้ "folks" หรือ "everyone" แทน "guys"
+- ใช้ภาษาที่ให้ความสำคัญกับบุคคลก่อน: "person with disability" ไม่ใช่ "disabled person"
+
+### สิ่งที่ควรหลีกเลี่ยง
+
+- ภาษาที่ระบุเพศ (การสันนิษฐานว่าทุกคนเป็นผู้ชาย)
+- ภาษาที่ดูถูกผู้พิการ ("crazy", "lame", "blind spot")
+- อุปมาที่รุนแรง ("kill the process" → "stop the process")
+- การสันนิษฐานทางวัฒนธรรม (ไม่ใช่ทุกคนที่ฉลองเทศกาลเดียวกัน)
+- สำนวนที่แปลแล้วสื่อความหมายได้ไม่ดี
+
+## การแก้ไขความขัดแย้ง
+
+### หากคุณมีความเห็นไม่ตรงกัน
+
+1. **คิดว่าอีกฝ่ายมีเจตนาดี**: ความขัดแย้งส่วนใหญ่เกิดจากความเข้าใจผิด
+2. **สื่อสารโดยตรง**: คุยกับบุคคลนั้นเป็นการส่วนตัวก่อน
+3. **มุ่งเน้นที่ประเด็น ไม่ใช่ตัวบุคคล**: วิจารณ์ความคิด ไม่ใช่ตัวคน
+4. **พยายามทำความเข้าใจ**: ถามคำถามก่อนตัดสิน
+5. **หาจุดร่วม**: มองหาประเด็นที่เห็นตรงกัน
+6. **ประนีประนอม**: ยินดีพบกันครึ่งทาง
+7. **ให้คนกลางเข้ามาช่วย**: หากการสื่อสารโดยตรงไม่ได้ผล
+
+### หากคุณทำผิดพลาด
+
+1. **ยอมรับ**: ยอมรับเมื่อคุณผิด
+2. **ขอโทษ**: กล่าวขอโทษอย่างจริงใจ
+3. **แก้ไข**: แก้ไขความเสียหายที่เกิดขึ้น
+4. **เรียนรู้**: อย่าทำผิดซ้ำ
+5. **ก้าวต่อไป**: อย่าจมอยู่กับมันโดยไม่จำเป็น
+
+### หากผู้อื่นทำผิดพลาด
+
+1. **ให้ประโยชน์แห่งความสงสัย**: คิดว่าเป็นการกระทำโดยไม่ได้ตั้งใจ
+2. **ให้ความรู้อย่างสุภาพ**: อธิบายว่าเหตุใดจึงเป็นปัญหา
+3. **ยอมรับคำขอโทษ**: อย่าผูกใจเจ็บ
+4. **เป็นแบบอย่าง**: แสดงวิธีปฏิบัติที่ถูกต้อง
+5. **ก้าวต่อไป**: มุ่งเน้นการปรับปรุง ไม่ใช่การลงโทษ
+
+## การสร้างสภาพแวดล้อมที่ครอบคลุมทุกคน
+
+### สำหรับผู้เริ่มต้น
+
+- จัดทำเอกสารที่เป็นมิตรกับผู้เริ่มต้น
+- ติด label "good first issue" สำหรับผู้มาใหม่
+- เปิดโอกาสให้มีพี่เลี้ยง (mentorship)
+- ยินดีกับการร่วมพัฒนาครั้งแรก
+- อดทนกับคำถามพื้นฐาน
+
+### สำหรับผู้ร่วมพัฒนาที่หลากหลาย
+
+- ใช้ภาษาที่ครอบคลุมทุกคน
+- คำนึงถึงเขตเวลาที่แตกต่าง
+- ปรับตัวให้เข้ากับรูปแบบการสื่อสารที่แตกต่าง
+- ตระหนักถึงความแตกต่างทางวัฒนธรรม
+- เปิดช่องทางการมีส่วนร่วมที่หลากหลาย
+
+### สำหรับทุกคน
+
+- ส่งเสริมการมีส่วนร่วมจากทุกภูมิหลัง
+- ขยายเสียงของกลุ่มที่มีตัวแทนน้อย
+- ท้าทายอคติเมื่อพบเห็น
+- สร้างพื้นที่ปลอดภัยสำหรับการพูดคุย
+- ยอมรับการมีส่วนร่วมที่หลากหลาย
+
+## ที่มา
+
+หลักปฏิบัตินี้ดัดแปลงมาจาก:
 
 - [Contributor Covenant v2.1](https://www.contributor-covenant.org/version/2/1/code_of_conduct.html)
 - [Python Community Code of Conduct](https://www.python.org/psf/conduct/)
 - [Rust Code of Conduct](https://www.rust-lang.org/policies/code-of-conduct)
 
-## Updates
+## การอัปเดต
 
-This Code of Conduct may be updated periodically. Major changes will be announced in:
+หลักปฏิบัตินี้อาจได้รับการอัปเดตเป็นระยะ การเปลี่ยนแปลงสำคัญจะประกาศผ่าน:
 
 - GitHub Discussions
-- Project README
-- Email to active contributors
+- README ของโปรเจกต์
+- อีเมลถึงผู้ร่วมพัฒนาที่ยังคงทำงานอยู่
 
-## Contact
+## ติดต่อ
 
-- **Email**: conduct@ai-infra-learning.org
-- **Confidential Reports**: Use GitHub's private vulnerability reporting
-- **Urgent Issues**: Contact maintainers directly
+- **อีเมล**: conduct@ai-infra-learning.org
+- **รายงานแบบลับ**: ใช้ private vulnerability reporting ของ GitHub
+- **ปัญหาเร่งด่วน**: ติดต่อ maintainer โดยตรง
 
-## License
+## สัญญาอนุญาต
 
-This Code of Conduct is licensed under [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/).
+หลักปฏิบัตินี้อยู่ภายใต้สัญญาอนุญาต [CC BY 4.0](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
-## Summary
+## สรุป
 
-**In Short:**
+**โดยย่อ:**
 
-1. **Be Kind**: Treat everyone with respect
-2. **Be Helpful**: Support others in learning
-3. **Be Professional**: Maintain appropriate conduct
-4. **Be Inclusive**: Welcome diverse perspectives
-5. **Be Accountable**: Take responsibility for your actions
+1. **มีน้ำใจ**: ปฏิบัติต่อทุกคนด้วยความเคารพ
+2. **ช่วยเหลือ**: สนับสนุนผู้อื่นในการเรียนรู้
+3. **เป็นมืออาชีพ**: รักษาความประพฤติที่เหมาะสม
+4. **ครอบคลุมทุกคน**: ต้อนรับมุมมองที่หลากหลาย
+5. **รับผิดชอบ**: รับผิดชอบต่อการกระทำของตนเอง
 
-**If you see something, say something.** Help us maintain a welcoming community.
+**หากพบเห็นสิ่งใด ให้แจ้ง** ช่วยเรารักษาชุมชนที่เป็นมิตร
 
 ---
 
 <div align="center">
 
-**Questions about this Code of Conduct?**
+**มีคำถามเกี่ยวกับหลักปฏิบัตินี้หรือไม่?**
 
-[Open a Discussion](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions) | [Contact Maintainers](mailto:conduct@ai-infra-learning.org)
+[เปิด Discussion](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions) | [ติดต่อ Maintainer](mailto:conduct@ai-infra-learning.org)
 
-**Together, we create a better learning environment for everyone.**
+**ร่วมกันสร้างสภาพแวดล้อมการเรียนรู้ที่ดีขึ้นสำหรับทุกคน**
 
 </div>

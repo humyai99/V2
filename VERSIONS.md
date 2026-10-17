@@ -1,75 +1,75 @@
-# Technology Versions - Engineer Track
+# เวอร์ชันของเทคโนโลยี - แทร็ก Engineer
 
-**Last Updated**: January 2025
+**อัปเดตล่าสุด**: มกราคม 2025
 
-This document specifies the recommended and tested versions for all technologies used in the AI Infrastructure Engineer curriculum.
+เอกสารนี้ระบุเวอร์ชันที่แนะนำและผ่านการทดสอบแล้วสำหรับเทคโนโลยีทั้งหมดที่ใช้ในหลักสูตร AI Infrastructure Engineer
 
-## Core Languages & Runtimes
+## ภาษาและ Runtime หลัก
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **Python** | 3.11+ | Recommended: 3.11 or 3.12 for production |
-| **Go** | 1.21+ | For high-performance services |
+| **Python** | 3.11+ | แนะนำ: 3.11 หรือ 3.12 สำหรับ production |
+| **Go** | 1.21+ | สำหรับเซอร์วิสประสิทธิภาพสูง |
 | **Bash** | 5.0+ | Shell scripting |
-| **Node.js** | 20 LTS | For tooling/monitoring dashboards |
+| **Node.js** | 20 LTS | สำหรับเครื่องมือ/dashboard สำหรับ monitoring |
 
-## Advanced ML Frameworks
+## ML Framework ขั้นสูง
 
-### Training Frameworks
-| Package | Version | Purpose |
+### Framework สำหรับการเทรน
+| แพ็กเกจ | เวอร์ชัน | วัตถุประสงค์ |
 |---------|---------|---------|
-| **PyTorch** | 2.1.0+ | Primary training framework |
-| **PyTorch Lightning** | 2.1.0+ | Training orchestration |
-| **TensorFlow** | 2.15.0+ | Alternative framework |
-| **JAX** | 0.4.20+ | High-performance research |
-| **DeepSpeed** | 0.12+ | Large-scale distributed training |
+| **PyTorch** | 2.1.0+ | Framework หลักสำหรับการเทรน |
+| **PyTorch Lightning** | 2.1.0+ | จัดการลำดับขั้นตอนการเทรน |
+| **TensorFlow** | 2.15.0+ | Framework ทางเลือก |
+| **JAX** | 0.4.20+ | งานวิจัยประสิทธิภาพสูง |
+| **DeepSpeed** | 0.12+ | Distributed training ขนาดใหญ่ |
 
 ### LLM Infrastructure
-| Package | Version | Purpose |
+| แพ็กเกจ | เวอร์ชัน | วัตถุประสงค์ |
 |---------|---------|---------|
-| **transformers** | 4.35.0+ | Hugging Face models |
-| **vLLM** | 0.2.6+ | High-throughput LLM serving |
-| **TGI (Text Generation Inference)** | 1.3+ | Hugging Face serving |
-| **TensorRT-LLM** | 0.6+ | NVIDIA optimized LLM inference |
-| **llama.cpp** | Latest | CPU/low-resource LLM inference |
+| **transformers** | 4.35.0+ | โมเดลของ Hugging Face |
+| **vLLM** | 0.2.6+ | LLM serving แบบ high-throughput |
+| **TGI (Text Generation Inference)** | 1.3+ | Serving ของ Hugging Face |
+| **TensorRT-LLM** | 0.6+ | LLM inference ที่ปรับแต่งโดย NVIDIA |
+| **llama.cpp** | ล่าสุด | LLM inference บน CPU/ทรัพยากรจำกัด |
 
 ### Model Optimization
-| Package | Version | Purpose |
+| แพ็กเกจ | เวอร์ชัน | วัตถุประสงค์ |
 |---------|---------|---------|
-| **ONNX** | 1.15.0+ | Model format conversion |
-| **TensorRT** | 8.6+ | NVIDIA inference optimization |
-| **OpenVINO** | 2023.2+ | Intel inference optimization |
-| **bitsandbytes** | 0.41+ | Quantization library |
+| **ONNX** | 1.15.0+ | แปลงรูปแบบโมเดล |
+| **TensorRT** | 8.6+ | Inference optimization ของ NVIDIA |
+| **OpenVINO** | 2023.2+ | Inference optimization ของ Intel |
+| **bitsandbytes** | 0.41+ | ไลบรารีสำหรับ quantization |
 
-## MLOps & Workflow Orchestration
+## MLOps และ Workflow Orchestration
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
 | **Apache Airflow** | 2.7+ | Workflow orchestration |
-| **Kubeflow** | 1.8+ | ML platform on Kubernetes |
-| **MLflow** | 2.9+ | Experiment tracking & model registry |
+| **Kubeflow** | 1.8+ | ML platform บน Kubernetes |
+| **MLflow** | 2.9+ | Experiment tracking และ model registry |
 | **DVC** | 3.30+ | Data version control |
-| **Great Expectations** | 0.18+ | Data validation |
+| **Great Expectations** | 0.18+ | ตรวจสอบความถูกต้องของข้อมูล |
 
-### Feature Stores
-| Technology | Version | Purpose |
+### Feature Store
+| เทคโนโลยี | เวอร์ชัน | วัตถุประสงค์ |
 |------------|---------|---------|
 | **Feast** | 0.35+ | Feature store |
-| **Tecton** | Latest | Enterprise feature platform |
+| **Tecton** | ล่าสุด | Feature platform ระดับองค์กร |
 
 ## Kubernetes Ecosystem
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **Kubernetes** | 1.28+ | Production clusters |
-| **kubectl** | 1.28+ | Match cluster version |
+| **Kubernetes** | 1.28+ | Cluster สำหรับ production |
+| **kubectl** | 1.28+ | ให้ตรงกับเวอร์ชันของ cluster |
 | **Helm** | 3.13+ | Package manager |
 | **Kustomize** | 5.2+ | Configuration management |
 | **ArgoCD** | 2.9+ | GitOps CD |
-| **Flux** | 2.2+ | Alternative GitOps |
+| **Flux** | 2.2+ | GitOps ทางเลือก |
 
-### Kubernetes Operators
-| Operator | Version | Purpose |
+### Kubernetes Operator
+| Operator | เวอร์ชัน | วัตถุประสงค์ |
 |----------|---------|---------|
 | **Training Operator** | 1.7+ | Distributed training (PyTorch, TF) |
 | **KServe** | 0.12+ | Model serving |
@@ -77,259 +77,259 @@ This document specifies the recommended and tested versions for all technologies
 | **Ray Operator** | 1.0+ | Distributed compute |
 
 ### Service Mesh
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
 | **Istio** | 1.20+ | Service mesh |
-| **Linkerd** | 2.14+ | Lightweight service mesh |
+| **Linkerd** | 2.14+ | Service mesh แบบ lightweight |
 
 ## Cloud Native Storage
 
-| Technology | Version | Purpose |
+| เทคโนโลยี | เวอร์ชัน | วัตถุประสงค์ |
 |------------|---------|---------|
-| **Rook-Ceph** | 1.13+ | Distributed storage operator |
-| **MinIO** | RELEASE.2024-01 | S3-compatible object storage |
+| **Rook-Ceph** | 1.13+ | Operator สำหรับ distributed storage |
+| **MinIO** | RELEASE.2024-01 | Object storage ที่รองรับ S3 |
 | **JuiceFS** | 1.1+ | Distributed POSIX filesystem |
 
-## Container Technologies
+## เทคโนโลยี Container
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
 | **Docker** | 24.0+ | Container runtime |
 | **containerd** | 1.7+ | Container runtime (production) |
-| **CRI-O** | 1.28+ | Lightweight container runtime |
-| **Buildah** | 1.33+ | Container image builder |
-| **Podman** | 4.8+ | Daemonless containers |
+| **CRI-O** | 1.28+ | Container runtime แบบ lightweight |
+| **Buildah** | 1.33+ | เครื่องมือ build container image |
+| **Podman** | 4.8+ | Container แบบไม่ใช้ daemon |
 
-### GPU Container Support
-| Technology | Version | Notes |
+### การรองรับ GPU ใน Container
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **NVIDIA Container Toolkit** | 1.14+ | Docker GPU support |
-| **NVIDIA Device Plugin** | 0.14+ | Kubernetes GPU support |
+| **NVIDIA Container Toolkit** | 1.14+ | รองรับ GPU ใน Docker |
+| **NVIDIA Device Plugin** | 0.14+ | รองรับ GPU ใน Kubernetes |
 | **MIG Manager** | 0.6+ | Multi-Instance GPU |
 
-## Cloud Platforms - Advanced
+## Cloud Platform - ขั้นสูง
 
-### AWS Services
-| Service | Recommended Version | Notes |
+### บริการของ AWS
+| บริการ | เวอร์ชันที่แนะนำ | หมายเหตุ |
 |---------|-------------------|-------|
 | **EKS** | 1.28 | Managed Kubernetes |
-| **SageMaker** | Latest | Managed ML platform |
-| **EMR** | 6.15+ | Big data processing |
-| **Batch** | Latest | Batch computing |
-| **Step Functions** | Latest | Workflow orchestration |
+| **SageMaker** | ล่าสุด | Managed ML platform |
+| **EMR** | 6.15+ | ประมวลผล big data |
+| **Batch** | ล่าสุด | Batch computing |
+| **Step Functions** | ล่าสุด | Workflow orchestration |
 
-### GCP Services
-| Service | Recommended Version | Notes |
+### บริการของ GCP
+| บริการ | เวอร์ชันที่แนะนำ | หมายเหตุ |
 |---------|-------------------|-------|
 | **GKE** | 1.28 | Managed Kubernetes |
-| **Vertex AI** | Latest | Managed ML platform |
-| **Dataflow** | Latest | Stream/batch processing |
-| **TPU** | v5e | Tensor Processing Units |
+| **Vertex AI** | ล่าสุด | Managed ML platform |
+| **Dataflow** | ล่าสุด | ประมวลผลแบบ stream/batch |
+| **TPU** | v5e | Tensor Processing Unit |
 
-### Azure Services
-| Service | Recommended Version | Notes |
+### บริการของ Azure
+| บริการ | เวอร์ชันที่แนะนำ | หมายเหตุ |
 |---------|-------------------|-------|
 | **AKS** | 1.28 | Managed Kubernetes |
-| **Azure ML** | Latest | Managed ML platform |
-| **Azure Batch** | Latest | Batch computing |
+| **Azure ML** | ล่าสุด | Managed ML platform |
+| **Azure Batch** | ล่าสุด | Batch computing |
 
-## Observability Stack - Production Grade
+## Observability Stack - ระดับ Production
 
-### Metrics & Monitoring
-| Technology | Version | Notes |
+### Metrics และ Monitoring
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **Prometheus** | 2.48+ | Metrics collection |
-| **Thanos** | 0.33+ | Long-term Prometheus storage |
-| **VictoriaMetrics** | 1.95+ | High-performance metrics DB |
+| **Prometheus** | 2.48+ | เก็บ metrics |
+| **Thanos** | 0.33+ | Storage ระยะยาวสำหรับ Prometheus |
+| **VictoriaMetrics** | 1.95+ | Metrics DB ประสิทธิภาพสูง |
 | **Grafana** | 10.2+ | Visualization |
 | **Grafana Loki** | 2.9+ | Log aggregation |
 | **Grafana Tempo** | 2.3+ | Distributed tracing |
 
-### APM & Tracing
-| Technology | Version | Notes |
+### APM และ Tracing
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
 | **Jaeger** | 1.52+ | Distributed tracing |
 | **OpenTelemetry** | 1.21+ | Observability framework |
-| **Datadog Agent** | 7.50+ | Commercial APM |
-| **New Relic** | Latest | Commercial APM |
+| **Datadog Agent** | 7.50+ | APM เชิงพาณิชย์ |
+| **New Relic** | ล่าสุด | APM เชิงพาณิชย์ |
 
 ### Logging
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **Elasticsearch** | 8.11+ | Log storage & search |
-| **OpenSearch** | 2.11+ | Elasticsearch fork |
+| **Elasticsearch** | 8.11+ | จัดเก็บและค้นหา log |
+| **OpenSearch** | 2.11+ | Fork ของ Elasticsearch |
 | **Fluentd** | 1.16+ | Log collector |
-| **Vector** | 0.34+ | High-performance log collector |
+| **Vector** | 0.34+ | Log collector ประสิทธิภาพสูง |
 
 ## Infrastructure as Code
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **Terraform** | 1.6+ | Multi-cloud IaC |
-| **Pulumi** | 3.95+ | Modern IaC with real languages |
-| **Crossplane** | 1.14+ | Kubernetes-native IaC |
+| **Terraform** | 1.6+ | IaC แบบ multi-cloud |
+| **Pulumi** | 3.95+ | IaC สมัยใหม่ที่ใช้ภาษาโปรแกรมจริง |
+| **Crossplane** | 1.14+ | IaC แบบ Kubernetes-native |
 | **Ansible** | 2.16+ | Configuration management |
 
-### Terraform Providers
-| Provider | Version | Notes |
+### Terraform Provider
+| Provider | เวอร์ชัน | หมายเหตุ |
 |----------|---------|-------|
-| `hashicorp/aws` | ~> 5.0 | AWS resources |
-| `hashicorp/google` | ~> 5.0 | GCP resources |
-| `hashicorp/azurerm` | ~> 3.0 | Azure resources |
-| `hashicorp/kubernetes` | ~> 2.24 | Kubernetes resources |
-| `hashicorp/helm` | ~> 2.12 | Helm releases |
+| `hashicorp/aws` | ~> 5.0 | ทรัพยากร AWS |
+| `hashicorp/google` | ~> 5.0 | ทรัพยากร GCP |
+| `hashicorp/azurerm` | ~> 3.0 | ทรัพยากร Azure |
+| `hashicorp/kubernetes` | ~> 2.24 | ทรัพยากร Kubernetes |
+| `hashicorp/helm` | ~> 2.12 | Helm release |
 
-## Data Processing
+## การประมวลผลข้อมูล
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **Apache Spark** | 3.5+ | Distributed data processing |
+| **Apache Spark** | 3.5+ | ประมวลผลข้อมูลแบบกระจาย |
 | **Apache Kafka** | 3.6+ | Event streaming |
 | **Apache Flink** | 1.18+ | Stream processing |
-| **Dask** | 2023.12+ | Parallel Python |
-| **Ray** | 2.9+ | Distributed Python |
+| **Dask** | 2023.12+ | Python แบบขนาน |
+| **Ray** | 2.9+ | Python แบบกระจาย |
 
-## Database Technologies - Production
+## เทคโนโลยีฐานข้อมูล - Production
 
 ### Relational
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **PostgreSQL** | 16+ | Production database |
-| **MySQL** | 8.2+ | Alternative RDBMS |
+| **PostgreSQL** | 16+ | ฐานข้อมูลสำหรับ production |
+| **MySQL** | 8.2+ | RDBMS ทางเลือก |
 | **CockroachDB** | 23.2+ | Distributed SQL |
 
 ### NoSQL
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **Redis** | 7.2+ | In-memory cache/store |
+| **Redis** | 7.2+ | Cache/store แบบ in-memory |
 | **MongoDB** | 7.0+ | Document database |
 | **Cassandra** | 4.1+ | Wide-column store |
-| **ScyllaDB** | 5.4+ | High-performance Cassandra alternative |
+| **ScyllaDB** | 5.4+ | ทางเลือกแทน Cassandra ประสิทธิภาพสูง |
 
-### Vector Databases
-| Technology | Version | Notes |
+### Vector Database
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **Pinecone** | Latest | Managed vector DB |
-| **Weaviate** | 1.23+ | Open-source vector DB |
+| **Pinecone** | ล่าสุด | Managed vector DB |
+| **Weaviate** | 1.23+ | Vector DB แบบ open-source |
 | **Milvus** | 2.3+ | Vector similarity search |
 | **Qdrant** | 1.7+ | Vector search engine |
 | **ChromaDB** | 0.4+ | Embedding database |
 
 ## CI/CD
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **GitHub Actions** | Latest | CI/CD platform |
-| **GitLab CI** | 16.7+ | Alternative CI/CD |
-| **Jenkins** | 2.426+ | Traditional CI/CD |
-| **Tekton** | 0.54+ | Kubernetes-native CI/CD |
-| **Argo Workflows** | 3.5+ | Kubernetes workflows |
+| **GitHub Actions** | ล่าสุด | CI/CD platform |
+| **GitLab CI** | 16.7+ | CI/CD ทางเลือก |
+| **Jenkins** | 2.426+ | CI/CD แบบดั้งเดิม |
+| **Tekton** | 0.54+ | CI/CD แบบ Kubernetes-native |
+| **Argo Workflows** | 3.5+ | Workflow บน Kubernetes |
 
-## Security & Secrets Management
+## Security และ Secrets Management
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
 | **HashiCorp Vault** | 1.15+ | Secrets management |
-| **Sealed Secrets** | 0.24+ | Kubernetes secrets encryption |
-| **External Secrets** | 0.9+ | Secrets sync to Kubernetes |
-| **SOPS** | 3.8+ | Encrypted file management |
-| **cert-manager** | 1.13+ | TLS certificate management |
+| **Sealed Secrets** | 0.24+ | เข้ารหัส secret ของ Kubernetes |
+| **External Secrets** | 0.9+ | Sync secret เข้าสู่ Kubernetes |
+| **SOPS** | 3.8+ | จัดการไฟล์ที่เข้ารหัส |
+| **cert-manager** | 1.13+ | จัดการ TLS certificate |
 
-## GPU & Accelerator Support
+## การรองรับ GPU และ Accelerator
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **CUDA** | 12.2+ | NVIDIA GPU programming |
-| **cuDNN** | 8.9+ | Deep learning primitives |
-| **NCCL** | 2.19+ | Multi-GPU communication |
+| **CUDA** | 12.2+ | การเขียนโปรแกรมบน NVIDIA GPU |
+| **cuDNN** | 8.9+ | Primitive สำหรับ deep learning |
+| **NCCL** | 2.19+ | การสื่อสารระหว่าง multi-GPU |
 | **NVIDIA Driver** | 535+ | GPU driver |
-| **ROCm** | 5.7+ | AMD GPU support |
+| **ROCm** | 5.7+ | รองรับ AMD GPU |
 
 ### GPU Monitoring
-| Technology | Version | Purpose |
+| เทคโนโลยี | เวอร์ชัน | วัตถุประสงค์ |
 |------------|---------|---------|
-| **DCGM** | 3.3+ | NVIDIA datacenter GPU monitoring |
-| **dcgm-exporter** | 3.3+ | Prometheus DCGM exporter |
+| **DCGM** | 3.3+ | Monitoring GPU ใน datacenter ของ NVIDIA |
+| **dcgm-exporter** | 3.3+ | Prometheus exporter สำหรับ DCGM |
 
-## Performance & Cost Optimization
+## Performance และ Cost Optimization
 
-| Technology | Version | Purpose |
+| เทคโนโลยี | เวอร์ชัน | วัตถุประสงค์ |
 |------------|---------|---------|
-| **Karpenter** | 0.32+ | Kubernetes autoscaling |
-| **Cluster Autoscaler** | 1.28+ | Traditional K8s autoscaling |
-| **KEDA** | 2.12+ | Event-driven autoscaling |
-| **Kubecost** | 1.108+ | Cost monitoring |
+| **Karpenter** | 0.32+ | Autoscaling ของ Kubernetes |
+| **Cluster Autoscaler** | 1.28+ | Autoscaling ของ K8s แบบดั้งเดิม |
+| **KEDA** | 2.12+ | Autoscaling แบบ event-driven |
+| **Kubecost** | 1.108+ | Monitoring ค่าใช้จ่าย |
 
-## Service Discovery & Configuration
+## Service Discovery และ Configuration
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
-| **Consul** | 1.17+ | Service mesh & discovery |
+| **Consul** | 1.17+ | Service mesh และ discovery |
 | **etcd** | 3.5+ | Distributed key-value store |
 | **CoreDNS** | 1.11+ | DNS server |
 
-## Message Queues
+## Message Queue
 
-| Technology | Version | Notes |
+| เทคโนโลยี | เวอร์ชัน | หมายเหตุ |
 |------------|---------|-------|
 | **RabbitMQ** | 3.12+ | Message broker |
-| **NATS** | 2.10+ | Cloud-native messaging |
-| **Pulsar** | 3.1+ | Distributed messaging |
+| **NATS** | 2.10+ | Messaging แบบ cloud-native |
+| **Pulsar** | 3.1+ | Messaging แบบกระจาย |
 
-## Testing & Quality
+## Testing และคุณภาพ
 
-| Technology | Version | Purpose |
+| เทคโนโลยี | เวอร์ชัน | วัตถุประสงค์ |
 |------------|---------|---------|
-| **pytest** | 7.4+ | Python testing |
+| **pytest** | 7.4+ | Testing สำหรับ Python |
 | **locust** | 2.18+ | Load testing |
 | **k6** | 0.48+ | Load testing |
 | **Chaos Mesh** | 2.6+ | Chaos engineering |
 | **Litmus** | 3.8+ | Chaos engineering |
 
-## Python Packages - Advanced
+## แพ็กเกจ Python - ขั้นสูง
 
 ### Distributed Computing
-| Package | Version | Purpose |
+| แพ็กเกจ | เวอร์ชัน | วัตถุประสงค์ |
 |---------|---------|---------|
 | **ray[default]** | 2.9+ | Distributed computing |
 | **dask[complete]** | 2023.12+ | Parallel computing |
 | **horovod** | 0.28+ | Distributed deep learning |
 
 ### Performance
-| Package | Version | Purpose |
+| แพ็กเกจ | เวอร์ชัน | วัตถุประสงค์ |
 |---------|---------|---------|
 | **numba** | 0.58+ | JIT compilation |
-| **cython** | 3.0+ | C extensions for Python |
-| **pyarrow** | 14.0+ | Apache Arrow for Python |
+| **cython** | 3.0+ | C extension สำหรับ Python |
+| **pyarrow** | 14.0+ | Apache Arrow สำหรับ Python |
 
-## Version Compatibility Matrix
+## ตารางความเข้ากันได้ของเวอร์ชัน
 
 ### Kubernetes + CUDA + PyTorch
-| Kubernetes | CUDA | PyTorch | Status |
+| Kubernetes | CUDA | PyTorch | สถานะ |
 |-----------|------|---------|--------|
-| 1.28 | 12.2 | 2.1+ | ✅ Recommended |
-| 1.28 | 12.1 | 2.1+ | ✅ Supported |
-| 1.27 | 12.2 | 2.1+ | ⚠️  Maintenance only |
+| 1.28 | 12.2 | 2.1+ | ✅ แนะนำ |
+| 1.28 | 12.1 | 2.1+ | ✅ รองรับ |
+| 1.27 | 12.2 | 2.1+ | ⚠️  บำรุงรักษาเท่านั้น |
 
-### Cloud Provider Kubernetes Versions
-| Provider | Supported Versions | Recommended |
+### เวอร์ชัน Kubernetes ของ Cloud Provider
+| Provider | เวอร์ชันที่รองรับ | แนะนำ |
 |----------|-------------------|-------------|
 | AWS EKS | 1.26, 1.27, 1.28 | 1.28 |
 | GCP GKE | 1.26, 1.27, 1.28, 1.29 | 1.28 |
 | Azure AKS | 1.26, 1.27, 1.28 | 1.28 |
 
-## Deprecated Technologies
+## เทคโนโลยีที่เลิกใช้แล้ว
 
-| Technology | Deprecated Version | End of Support | Migration Path |
+| เทคโนโลยี | เวอร์ชันที่เลิกใช้ | สิ้นสุดการสนับสนุน | แนวทางการย้าย |
 |------------|-------------------|----------------|----------------|
-| Python | < 3.10 | Already EOL | Upgrade to 3.11+ |
-| Kubernetes | < 1.26 | Dec 2024 | Upgrade to 1.28+ |
-| TensorFlow | 1.x | EOL | Use TensorFlow 2.15+ |
-| Docker Swarm | All | Consider deprecated | Migrate to Kubernetes |
+| Python | < 3.10 | EOL แล้ว | อัปเกรดเป็น 3.11+ |
+| Kubernetes | < 1.26 | ธ.ค. 2024 | อัปเกรดเป็น 1.28+ |
+| TensorFlow | 1.x | EOL | ใช้ TensorFlow 2.15+ |
+| Docker Swarm | ทั้งหมด | ถือว่าเลิกใช้แล้ว | ย้ายไปใช้ Kubernetes |
 
-## Installation Commands - Quick Reference
+## คำสั่งติดตั้ง - อ้างอิงด่วน
 
-### MLOps Tools
+### เครื่องมือ MLOps
 ```bash
 # MLflow
 pip install mlflow==2.9.2
@@ -341,7 +341,7 @@ pip install dvc[all]==3.30.0
 pip install kfp==2.5.0
 ```
 
-### Kubernetes Tools
+### เครื่องมือ Kubernetes
 ```bash
 # Helm
 curl https://raw.githubusercontent.com/helm/helm/main/scripts/get-helm-3 | bash
@@ -366,37 +366,37 @@ curl -fsSL https://get.pulumi.com | sh
 curl -sL https://raw.githubusercontent.com/crossplane/crossplane/master/install.sh | sh
 ```
 
-## Performance Benchmarks (Reference)
+## Performance Benchmark (อ้างอิง)
 
-### LLM Inference Throughput (tokens/second)
-| Model Size | CPU | T4 GPU | A10G | A100 |
+### Throughput ของ LLM Inference (tokens/วินาที)
+| ขนาดโมเดล | CPU | T4 GPU | A10G | A100 |
 |-----------|-----|---------|------|------|
 | 7B params | ~1 | ~20 | ~50 | ~100 |
 | 13B params | ~0.5 | ~10 | ~25 | ~50 |
 | 70B params | N/A | N/A | ~5 | ~15 |
 
-*Using vLLM with FP16, batch size 1*
+*ใช้ vLLM กับ FP16, batch size 1*
 
-## Support & Updates
+## การสนับสนุนและการอัปเดต
 
-- **Update Frequency**: Quarterly (January, April, July, October)
-- **Security Patches**: As released
-- **Breaking Changes**: 30-day advance notice minimum
-- **Version Support**: Latest 2 major versions
+- **ความถี่ในการอัปเดต**: รายไตรมาส (มกราคม, เมษายน, กรกฎาคม, ตุลาคม)
+- **Security Patch**: ทันทีที่มีการปล่อย
+- **Breaking Change**: แจ้งล่วงหน้าอย่างน้อย 30 วัน
+- **การสนับสนุนเวอร์ชัน**: 2 major version ล่าสุด
 
-## Production Readiness Checklist
+## Checklist ความพร้อมสำหรับ Production
 
-Before deploying to production, ensure:
+ก่อน deploy ขึ้น production ให้ตรวจสอบว่า:
 
-- [ ] Using LTS/stable versions (not bleeding edge)
-- [ ] Security patches applied
-- [ ] Compatibility tested in staging
-- [ ] Monitoring configured
-- [ ] Backup/disaster recovery tested
-- [ ] Documentation updated
-- [ ] Team trained on new versions
+- [ ] ใช้เวอร์ชัน LTS/stable (ไม่ใช่ bleeding edge)
+- [ ] ติดตั้ง security patch แล้ว
+- [ ] ทดสอบความเข้ากันได้ใน staging แล้ว
+- [ ] ตั้งค่า monitoring แล้ว
+- [ ] ทดสอบ backup/disaster recovery แล้ว
+- [ ] อัปเดตเอกสารแล้ว
+- [ ] ทีมได้รับการอบรมเรื่องเวอร์ชันใหม่แล้ว
 
 ---
 
-**Maintained by**: AI Infrastructure Engineering Team
-**Contact**: See repository issues for version-specific questions
+**ดูแลโดย**: AI Infrastructure Engineering Team
+**ติดต่อ**: ดู issues ใน repository สำหรับคำถามเกี่ยวกับเวอร์ชันเฉพาะ

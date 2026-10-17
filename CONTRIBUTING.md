@@ -1,110 +1,110 @@
-# Contributing to AI Infrastructure Engineer Learning Path
+# การร่วมพัฒนา AI Infrastructure Engineer Learning Path
 
-Thank you for your interest in contributing! This document provides guidelines for contributing to this project.
+ขอบคุณที่สนใจร่วมพัฒนา! เอกสารนี้อธิบายแนวทางสำหรับการร่วมพัฒนาโปรเจกต์นี้
 
-## Table of Contents
+## สารบัญ
 
-- [Code of Conduct](#code-of-conduct)
-- [How Can I Contribute?](#how-can-i-contribute)
-- [Getting Started](#getting-started)
-- [Contribution Guidelines](#contribution-guidelines)
-- [Style Guidelines](#style-guidelines)
-- [Commit Message Guidelines](#commit-message-guidelines)
-- [Pull Request Process](#pull-request-process)
-- [Community](#community)
-
----
-
-## Code of Conduct
-
-This project adheres to a Code of Conduct that all contributors are expected to follow. Please read [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) before contributing.
-
-**In short:**
-- Be respectful and inclusive
-- Welcome newcomers
-- Focus on constructive feedback
-- Assume good intentions
+- [หลักปฏิบัติ](#code-of-conduct)
+- [ฉันจะร่วมพัฒนาได้อย่างไร?](#how-can-i-contribute)
+- [เริ่มต้นใช้งาน](#getting-started)
+- [แนวทางการร่วมพัฒนา](#contribution-guidelines)
+- [แนวทางด้านสไตล์](#style-guidelines)
+- [แนวทางการเขียน Commit Message](#commit-message-guidelines)
+- [กระบวนการ Pull Request](#pull-request-process)
+- [ชุมชน](#community)
 
 ---
 
-## How Can I Contribute?
+## หลักปฏิบัติ
 
-### 🐛 Reporting Bugs
+โปรเจกต์นี้ยึดถือหลักปฏิบัติ (Code of Conduct) ที่ผู้ร่วมพัฒนาทุกคนต้องปฏิบัติตาม กรุณาอ่าน [CODE_OF_CONDUCT.md](./CODE_OF_CONDUCT.md) ก่อนร่วมพัฒนา
 
-Found a bug? Help us fix it!
-
-**Before submitting:**
-- Check if the issue already exists
-- Verify it's not listed in known issues
-- Test with the latest version
-
-**Submit a bug report:**
-1. Use the bug report template
-2. Provide clear title and description
-3. Include steps to reproduce
-4. Add error messages or screenshots
-5. Specify your environment (OS, Python version, etc.)
-
-### 💡 Suggesting Enhancements
-
-Have an idea to improve the curriculum?
-
-**Submit an enhancement:**
-1. Check if it's already suggested
-2. Use the feature request template
-3. Explain the use case
-4. Describe the proposed solution
-5. Consider implementation complexity
-
-### 📚 Improving Documentation
-
-Documentation improvements are always welcome!
-
-**Areas to contribute:**
-- Fix typos or unclear explanations
-- Add more examples
-- Improve code comments
-- Translate to other languages
-- Add diagrams or visualizations
-
-### 🧪 Adding Exercises
-
-Help learners practice more!
-
-**Exercise guidelines:**
-- Should reinforce lesson concepts
-- Include clear requirements
-- Provide starter code
-- Add solution in separate branch
-- Include difficulty level
-
-### 🎯 Creating Projects
-
-Propose new hands-on projects!
-
-**Project requirements:**
-- Align with curriculum level
-- Include comprehensive README
-- Provide code stubs with TODO comments
-- Add tests
-- Document architecture
-
-### ✅ Reviewing Pull Requests
-
-Help review contributions!
-
-**Review guidelines:**
-- Be constructive and kind
-- Test the changes locally
-- Check for clarity and completeness
-- Verify code quality
-- Ensure documentation is updated
+**โดยย่อ:**
+- ให้ความเคารพและเปิดรับทุกคน
+- ต้อนรับผู้มาใหม่
+- มุ่งเน้น feedback ที่สร้างสรรค์
+- คิดว่าผู้อื่นมีเจตนาดี
 
 ---
 
-## Getting Started
+## ฉันจะร่วมพัฒนาได้อย่างไร?
 
-### 1. Fork the Repository
+### 🐛 การรายงานบั๊ก
+
+พบบั๊กใช่ไหม? ช่วยเราแก้ไขได้!
+
+**ก่อนส่งรายงาน:**
+- ตรวจสอบว่ามี issue นี้อยู่แล้วหรือไม่
+- ตรวจสอบว่าไม่ได้อยู่ในรายการปัญหาที่ทราบแล้ว
+- ทดสอบกับเวอร์ชันล่าสุด
+
+**การส่งรายงานบั๊ก:**
+1. ใช้เทมเพลตรายงานบั๊ก
+2. ระบุหัวข้อและคำอธิบายที่ชัดเจน
+3. ระบุขั้นตอนการทำซ้ำ
+4. แนบข้อความ error หรือภาพหน้าจอ
+5. ระบุสภาพแวดล้อมของคุณ (OS, เวอร์ชัน Python ฯลฯ)
+
+### 💡 การเสนอการปรับปรุง
+
+มีไอเดียในการปรับปรุงหลักสูตรใช่ไหม?
+
+**การเสนอการปรับปรุง:**
+1. ตรวจสอบว่ามีผู้เสนอไว้แล้วหรือไม่
+2. ใช้เทมเพลตขอฟีเจอร์
+3. อธิบาย use case
+4. อธิบายแนวทางแก้ไขที่เสนอ
+5. พิจารณาความซับซ้อนในการพัฒนา
+
+### 📚 การปรับปรุงเอกสาร
+
+ยินดีรับการปรับปรุงเอกสารเสมอ!
+
+**ส่วนที่สามารถร่วมพัฒนาได้:**
+- แก้คำผิดหรือคำอธิบายที่ไม่ชัดเจน
+- เพิ่มตัวอย่าง
+- ปรับปรุง comment ในโค้ด
+- แปลเป็นภาษาอื่น
+- เพิ่มแผนภาพหรือภาพประกอบ
+
+### 🧪 การเพิ่มแบบฝึกหัด
+
+ช่วยให้ผู้เรียนได้ฝึกฝนมากขึ้น!
+
+**แนวทางสำหรับแบบฝึกหัด:**
+- ควรช่วยเสริมแนวคิดของบทเรียน
+- มีข้อกำหนดที่ชัดเจน
+- มี starter code
+- เพิ่มเฉลยไว้ใน branch แยก
+- ระบุระดับความยาก
+
+### 🎯 การสร้างโปรเจกต์
+
+เสนอโปรเจกต์ภาคปฏิบัติใหม่!
+
+**ข้อกำหนดของโปรเจกต์:**
+- สอดคล้องกับระดับของหลักสูตร
+- มี README ที่ครอบคลุม
+- มี code stub พร้อม comment TODO
+- เพิ่ม test
+- จัดทำเอกสารสถาปัตยกรรม
+
+### ✅ การรีวิว Pull Request
+
+ช่วยรีวิวการร่วมพัฒนา!
+
+**แนวทางการรีวิว:**
+- สร้างสรรค์และสุภาพ
+- ทดสอบการเปลี่ยนแปลงบนเครื่องของคุณ
+- ตรวจสอบความชัดเจนและความครบถ้วน
+- ตรวจสอบคุณภาพโค้ด
+- ตรวจสอบว่าอัปเดตเอกสารแล้ว
+
+---
+
+## เริ่มต้นใช้งาน
+
+### 1. Fork Repository
 
 ```bash
 # Click "Fork" button on GitHub
@@ -113,7 +113,7 @@ git clone https://github.com/YOUR-USERNAME/ai-infra-engineer-learning.git
 cd ai-infra-engineer-learning
 ```
 
-### 2. Set Up Development Environment
+### 2. ตั้งค่า Development Environment
 
 ```bash
 # Create virtual environment
@@ -128,7 +128,7 @@ pip install -r requirements-dev.txt  # Development dependencies
 pre-commit install
 ```
 
-### 3. Create a Branch
+### 3. สร้าง Branch
 
 ```bash
 # Create a feature branch
@@ -138,11 +138,11 @@ git checkout -b feature/your-feature-name
 git checkout -b fix/bug-description
 ```
 
-### 4. Make Your Changes
+### 4. แก้ไขตามต้องการ
 
-Follow the style guidelines below.
+ปฏิบัติตามแนวทางด้านสไตล์ด้านล่าง
 
-### 5. Test Your Changes
+### 5. ทดสอบการเปลี่ยนแปลง
 
 ```bash
 # Run tests
@@ -156,7 +156,7 @@ black --check .
 markdownlint **/*.md
 ```
 
-### 6. Commit and Push
+### 6. Commit และ Push
 
 ```bash
 # Stage changes
@@ -169,85 +169,85 @@ git commit -m "Add: Feature description"
 git push origin feature/your-feature-name
 ```
 
-### 7. Create Pull Request
+### 7. สร้าง Pull Request
 
-- Go to your fork on GitHub
-- Click "New Pull Request"
-- Fill out the PR template
-- Link related issues
-- Request review
-
----
-
-## Contribution Guidelines
-
-### Lesson Contributions
-
-**Structure:**
-- Follow existing lesson format
-- Include learning objectives
-- Add hands-on exercises
-- Provide self-check questions
-- Include summary section
-
-**Content:**
-- Use clear, concise language
-- Explain concepts before showing code
-- Include real-world examples
-- Add diagrams where helpful
-- Cite sources for statistics or quotes
-
-**Code Examples:**
-- Should be complete and runnable
-- Include necessary imports
-- Add inline comments
-- Follow Python best practices
-- Test all code before submitting
-
-### Project Contributions
-
-**Requirements:**
-- Comprehensive README with:
-  - Project overview
-  - Learning objectives
-  - Prerequisites
-  - Setup instructions
-  - Architecture diagram
-- Code stubs with TODO comments
-- Test files
-- Documentation templates
-- .env.example file
-
-**Code Quality:**
-- Type hints for function signatures
-- Docstrings for all functions/classes
-- Error handling
-- Logging where appropriate
-- Configuration via environment variables
-
-### Documentation Contributions
-
-**Markdown Style:**
-- Use headers hierarchically (# > ## > ###)
-- Add table of contents for long docs
-- Use code blocks with language specifiers
-- Add alt text to images
-- Keep line length under 120 characters
-
-**Content:**
-- Write for beginners
-- Define technical terms
-- Use active voice
-- Be concise
-- Include examples
+- ไปที่ fork ของคุณบน GitHub
+- คลิก "New Pull Request"
+- กรอกเทมเพลต PR
+- ลิงก์ issue ที่เกี่ยวข้อง
+- ขอให้มีการรีวิว
 
 ---
 
-## Style Guidelines
+## แนวทางการร่วมพัฒนา
 
-### Python Code Style
+### การร่วมพัฒนาบทเรียน
 
-We follow **PEP 8** with some modifications:
+**โครงสร้าง:**
+- ทำตามรูปแบบบทเรียนที่มีอยู่
+- ระบุวัตถุประสงค์การเรียนรู้
+- เพิ่มแบบฝึกหัดภาคปฏิบัติ
+- มีคำถามสำหรับตรวจสอบตนเอง
+- มีส่วนสรุป
+
+**เนื้อหา:**
+- ใช้ภาษาที่ชัดเจนและกระชับ
+- อธิบายแนวคิดก่อนแสดงโค้ด
+- ใส่ตัวอย่างจากการใช้งานจริง
+- เพิ่มแผนภาพในจุดที่ช่วยให้เข้าใจ
+- อ้างอิงแหล่งที่มาของสถิติหรือคำพูด
+
+**ตัวอย่างโค้ด:**
+- ควรสมบูรณ์และรันได้จริง
+- มี import ที่จำเป็นครบถ้วน
+- เพิ่ม inline comment
+- ปฏิบัติตาม best practice ของ Python
+- ทดสอบโค้ดทั้งหมดก่อนส่ง
+
+### การร่วมพัฒนาโปรเจกต์
+
+**ข้อกำหนด:**
+- README ที่ครอบคลุม ประกอบด้วย:
+  - ภาพรวมของโปรเจกต์
+  - วัตถุประสงค์การเรียนรู้
+  - ความรู้พื้นฐานที่ต้องมี
+  - ขั้นตอนการติดตั้ง
+  - แผนภาพสถาปัตยกรรม
+- Code stub พร้อม comment TODO
+- ไฟล์ test
+- เทมเพลตเอกสาร
+- ไฟล์ .env.example
+
+**คุณภาพโค้ด:**
+- Type hint สำหรับ function signature
+- Docstring สำหรับทุก function/class
+- การจัดการ error
+- Logging ในจุดที่เหมาะสม
+- กำหนดค่าผ่าน environment variable
+
+### การร่วมพัฒนาเอกสาร
+
+**สไตล์ Markdown:**
+- ใช้ header ตามลำดับชั้น (# > ## > ###)
+- เพิ่มสารบัญสำหรับเอกสารยาว
+- ใช้ code block พร้อมระบุภาษา
+- เพิ่ม alt text ให้รูปภาพ
+- ความยาวบรรทัดไม่เกิน 120 ตัวอักษร
+
+**เนื้อหา:**
+- เขียนสำหรับผู้เริ่มต้น
+- อธิบายศัพท์เทคนิค
+- ใช้ประโยคกรรตุวาจก (active voice)
+- กระชับ
+- ใส่ตัวอย่าง
+
+---
+
+## แนวทางด้านสไตล์
+
+### สไตล์โค้ด Python
+
+เราปฏิบัติตาม **PEP 8** โดยมีการปรับเปลี่ยนบางส่วน:
 
 ```python
 # Use type hints
@@ -272,13 +272,13 @@ mcp = "/data/checkpoints"  # Bad
 # Use Google-style docstrings
 ```
 
-**Tools:**
-- **black**: Code formatter (line length: 100)
+**เครื่องมือ:**
+- **black**: Code formatter (ความยาวบรรทัด: 100)
 - **flake8**: Linter
 - **mypy**: Type checker
-- **isort**: Import sorter
+- **isort**: จัดเรียง import
 
-### Markdown Style
+### สไตล์ Markdown
 
 ```markdown
 # Use ATX-style headers
@@ -297,25 +297,25 @@ def example():
 1. Use numbers for ordered lists
 ```
 
-### Documentation Style
+### สไตล์เอกสาร
 
-**File naming:**
-- Use lowercase with hyphens: `getting-started.md`
-- Be descriptive: `aws-ml-infrastructure.md` not `aws.md`
+**การตั้งชื่อไฟล์:**
+- ใช้ตัวพิมพ์เล็กคั่นด้วยขีด: `getting-started.md`
+- ตั้งชื่อให้สื่อความหมาย: `aws-ml-infrastructure.md` ไม่ใช่ `aws.md`
 
-**Structure:**
-- Start with title and brief description
-- Add table of contents for docs > 500 words
-- Use consistent header levels
-- End with "Next Steps" or "Summary"
+**โครงสร้าง:**
+- เริ่มด้วยชื่อเรื่องและคำอธิบายสั้น ๆ
+- เพิ่มสารบัญสำหรับเอกสารที่ยาวกว่า 500 คำ
+- ใช้ระดับ header ให้สม่ำเสมอ
+- ปิดท้ายด้วย "ขั้นตอนถัดไป" หรือ "สรุป"
 
 ---
 
-## Commit Message Guidelines
+## แนวทางการเขียน Commit Message
 
-We follow **Conventional Commits** specification:
+เราปฏิบัติตามข้อกำหนด **Conventional Commits**:
 
-### Format
+### รูปแบบ
 
 ```
 <type>(<scope>): <subject>
@@ -325,17 +325,17 @@ We follow **Conventional Commits** specification:
 <footer>
 ```
 
-### Types
+### ประเภท
 
-- **feat**: New feature
-- **fix**: Bug fix
-- **docs**: Documentation changes
-- **style**: Code style changes (formatting, no logic change)
-- **refactor**: Code refactoring
-- **test**: Adding or updating tests
-- **chore**: Maintenance tasks
+- **feat**: ฟีเจอร์ใหม่
+- **fix**: แก้บั๊ก
+- **docs**: เปลี่ยนแปลงเอกสาร
+- **style**: เปลี่ยนสไตล์โค้ด (การจัดรูปแบบ ไม่เปลี่ยน logic)
+- **refactor**: Refactor โค้ด
+- **test**: เพิ่มหรืออัปเดต test
+- **chore**: งานบำรุงรักษา
 
-### Examples
+### ตัวอย่าง
 
 ```bash
 # Feature
@@ -357,31 +357,31 @@ git commit -m "feat(module-02): Add AWS ML infrastructure lesson
 Closes #123"
 ```
 
-### Best Practices
+### Best Practice
 
-- Use imperative mood: "Add feature" not "Added feature"
-- Keep subject line under 72 characters
-- Capitalize subject line
-- No period at end of subject
-- Separate subject from body with blank line
-- Wrap body at 72 characters
-- Reference issues in footer
+- ใช้รูปคำสั่ง (imperative mood): "Add feature" ไม่ใช่ "Added feature"
+- บรรทัด subject ยาวไม่เกิน 72 ตัวอักษร
+- ขึ้นต้นบรรทัด subject ด้วยตัวพิมพ์ใหญ่
+- ไม่ใส่จุดท้าย subject
+- เว้นบรรทัดว่างระหว่าง subject กับ body
+- ตัดบรรทัด body ที่ 72 ตัวอักษร
+- อ้างอิง issue ใน footer
 
 ---
 
-## Pull Request Process
+## กระบวนการ Pull Request
 
-### Before Submitting
+### ก่อนส่ง
 
-- [ ] Code follows style guidelines
-- [ ] All tests pass
-- [ ] Documentation is updated
-- [ ] Commit messages follow guidelines
-- [ ] Branch is up to date with main
+- [ ] โค้ดเป็นไปตามแนวทางด้านสไตล์
+- [ ] Test ทั้งหมดผ่าน
+- [ ] อัปเดตเอกสารแล้ว
+- [ ] Commit message เป็นไปตามแนวทาง
+- [ ] Branch อัปเดตตรงกับ main แล้ว
 
-### PR Template
+### เทมเพลต PR
 
-Fill out all sections:
+กรอกให้ครบทุกส่วน:
 
 ```markdown
 ## Description
@@ -407,39 +407,39 @@ How was this tested?
 Closes #123
 ```
 
-### Review Process
+### กระบวนการรีวิว
 
-1. **Automated Checks**: CI/CD runs automatically
-   - Tests must pass
-   - Linting must pass
-   - Code coverage maintained
+1. **การตรวจสอบอัตโนมัติ**: CI/CD ทำงานโดยอัตโนมัติ
+   - Test ต้องผ่าน
+   - Linting ต้องผ่าน
+   - รักษา code coverage ไว้
 
-2. **Manual Review**: At least one maintainer reviews
-   - Code quality
-   - Documentation
+2. **การรีวิวโดยคน**: มี maintainer อย่างน้อยหนึ่งคนรีวิว
+   - คุณภาพโค้ด
+   - เอกสาร
    - Test coverage
-   - Design decisions
+   - การตัดสินใจด้านการออกแบบ
 
-3. **Feedback**: Address review comments
-   - Make requested changes
-   - Push updates to same branch
-   - Respond to comments
+3. **Feedback**: ตอบสนองต่อ comment จากการรีวิว
+   - แก้ไขตามที่ร้องขอ
+   - Push การอัปเดตไปยัง branch เดิม
+   - ตอบกลับ comment
 
-4. **Merge**: Once approved
-   - Maintainer will merge
-   - Delete your branch after merge
-   - Update your fork
+4. **Merge**: เมื่อได้รับการอนุมัติ
+   - Maintainer จะเป็นผู้ merge
+   - ลบ branch ของคุณหลัง merge
+   - อัปเดต fork ของคุณ
 
-### After Merge
+### หลัง Merge
 
-- Update your fork:
+- อัปเดต fork ของคุณ:
   ```bash
   git checkout main
   git pull upstream main
   git push origin main
   ```
 
-- Delete merged branch:
+- ลบ branch ที่ merge แล้ว:
   ```bash
   git branch -d feature/your-feature-name
   git push origin --delete feature/your-feature-name
@@ -447,9 +447,9 @@ Closes #123
 
 ---
 
-## Development Setup
+## การตั้งค่าสำหรับการพัฒนา
 
-### Required Tools
+### เครื่องมือที่จำเป็น
 
 ```bash
 # Install development dependencies
@@ -464,9 +464,9 @@ pip install -r requirements-dev.txt
 # - markdownlint (markdown linting)
 ```
 
-### Pre-commit Hooks
+### Pre-commit Hook
 
-We use pre-commit to ensure code quality:
+เราใช้ pre-commit เพื่อรักษาคุณภาพโค้ด:
 
 ```bash
 # Install hooks
@@ -476,15 +476,15 @@ pre-commit install
 pre-commit run --all-files
 ```
 
-**Hooks include:**
-- trailing-whitespace: Remove trailing whitespace
-- end-of-file-fixer: Ensure files end with newline
-- check-yaml: Validate YAML files
-- black: Format Python code
-- flake8: Lint Python code
-- markdownlint: Lint markdown files
+**Hook ที่ใช้:**
+- trailing-whitespace: ลบช่องว่างท้ายบรรทัด
+- end-of-file-fixer: ตรวจสอบให้ไฟล์จบด้วยบรรทัดใหม่
+- check-yaml: ตรวจสอบความถูกต้องของไฟล์ YAML
+- black: จัดรูปแบบโค้ด Python
+- flake8: Lint โค้ด Python
+- markdownlint: Lint ไฟล์ markdown
 
-### Running Tests
+### การรัน Test
 
 ```bash
 # Run all tests
@@ -500,7 +500,7 @@ pytest --cov=src tests/
 pytest tests/test_api.py::test_health_endpoint
 ```
 
-### Building Documentation
+### การ Build เอกสาร
 
 ```bash
 # Preview markdown locally
@@ -515,60 +515,60 @@ grip README.md --browser
 
 ---
 
-## Community
+## ชุมชน
 
-### Getting Help
+### การขอความช่วยเหลือ
 
-- **GitHub Discussions**: Ask questions, share ideas
-- **Issue Tracker**: Report bugs, request features
+- **GitHub Discussions**: ถามคำถาม แบ่งปันไอเดีย
+- **Issue Tracker**: รายงานบั๊ก ขอฟีเจอร์
 
-Real-time chat and recurring office hours are not currently scheduled. Open a Discussion if you'd like to coordinate a study group.
+ขณะนี้ยังไม่มีการจัดแชตแบบเรียลไทม์หรือ office hours ประจำ หากต้องการจัดกลุ่มติว ให้เปิด Discussion
 
-### Recognition
+### การยกย่อง
 
-Contributors are recognized in:
-- Contributors section in README
-- Release notes for significant contributions
-- Hall of Fame for major contributions
+ผู้ร่วมพัฒนาจะได้รับการยกย่องใน:
+- ส่วน Contributors ใน README
+- Release note สำหรับการร่วมพัฒนาที่สำคัญ
+- Hall of Fame สำหรับการร่วมพัฒนาครั้งใหญ่
 
-### Becoming a Maintainer
+### การเป็น Maintainer
 
-Active contributors may be invited to become maintainers:
+ผู้ร่วมพัฒนาที่มีส่วนร่วมอย่างต่อเนื่องอาจได้รับเชิญให้เป็น maintainer:
 
-**Criteria:**
-- Consistent, high-quality contributions
-- Good understanding of project goals
-- Helpful in reviews and discussions
-- Commitment to project values
+**เกณฑ์:**
+- ร่วมพัฒนาอย่างสม่ำเสมอและมีคุณภาพสูง
+- เข้าใจเป้าหมายของโปรเจกต์เป็นอย่างดี
+- ช่วยเหลือในการรีวิวและการพูดคุย
+- ยึดมั่นในคุณค่าของโปรเจกต์
 
-**Responsibilities:**
-- Review pull requests
-- Triage issues
-- Maintain code quality
-- Help shape project direction
-
----
-
-## Questions?
-
-- Read the [FAQ](./resources/faq.md)
-- Ask in [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
-- Open an issue with "question" label
+**หน้าที่:**
+- รีวิว pull request
+- คัดกรอง issue
+- รักษาคุณภาพโค้ด
+- ช่วยกำหนดทิศทางของโปรเจกต์
 
 ---
 
-## License
+## มีคำถาม?
 
-By contributing, you agree that your contributions will be licensed under the MIT License.
+- อ่าน [FAQ](./resources/faq.md)
+- ถามใน [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
+- เปิด issue พร้อม label "question"
+
+---
+
+## สัญญาอนุญาต
+
+การร่วมพัฒนาถือว่าคุณยอมรับให้ผลงานของคุณอยู่ภายใต้ MIT License
 
 ---
 
 <div align="center">
 
-**Thank you for contributing! 🎉**
+**ขอบคุณที่ร่วมพัฒนา! 🎉**
 
-Every contribution, no matter how small, helps make this learning resource better for everyone.
+ทุกการมีส่วนร่วม ไม่ว่าจะเล็กเพียงใด ล้วนช่วยให้แหล่งเรียนรู้นี้ดีขึ้นสำหรับทุกคน
 
-[Back to README](./README.md)
+[กลับไปที่ README](./README.md)
 
 </div>

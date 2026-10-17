@@ -1,8 +1,8 @@
-# Assessments
+# การประเมินผล
 
-This directory holds **track-level** assessments that span multiple modules. Per-module quizzes live alongside their module under `lessons/mod-NNN-*/quizzes/`.
+ไดเรกทอรีนี้เก็บการประเมินผล **ระดับแทร็ก** ที่ครอบคลุมหลายโมดูล ส่วนแบบทดสอบรายโมดูลจะอยู่คู่กับโมดูลนั้น ๆ ภายใต้ `lessons/mod-NNN-*/quizzes/`
 
-## Layout
+## โครงสร้าง
 
 ```
 assessments/
@@ -13,14 +13,14 @@ assessments/
 └── rubrics/              Grading rubrics for projects and exams
 ```
 
-## Per-module quizzes (canonical locations)
+## แบบทดสอบรายโมดูล (ตำแหน่งหลัก)
 
-Each module owns its own quiz file. The canonical location is `lessons/mod-NNN-*/quizzes/module-quiz.md`. Module 02 additionally has a `mid-module-quiz.md` and `final-quiz.md` covering different lesson ranges.
+แต่ละโมดูลมีไฟล์แบบทดสอบของตนเอง ตำแหน่งหลักคือ `lessons/mod-NNN-*/quizzes/module-quiz.md` โดยโมดูล 02 มี `mid-module-quiz.md` และ `final-quiz.md` เพิ่มเติม ซึ่งครอบคลุมบทเรียนคนละช่วง
 
-| Module | Path |
+| โมดูล | พาธ |
 |---|---|
 | 101 | `lessons/mod-101-foundations/quizzes/module-quiz.md` |
-| 102 | `lessons/mod-102-cloud-computing/quizzes/` (mid, final, module) |
+| 102 | `lessons/mod-102-cloud-computing/quizzes/` (กลางโมดูล, ท้ายโมดูล, โมดูล) |
 | 103 | `lessons/mod-103-containerization/quizzes/module-quiz.md` |
 | 104 | `lessons/mod-104-kubernetes/quizzes/module-quiz.md` |
 | 105 | `lessons/mod-105-data-pipelines/quizzes/module-quiz.md` |
@@ -30,14 +30,14 @@ Each module owns its own quiz file. The canonical location is `lessons/mod-NNN-*
 | 109 | `lessons/mod-109-infrastructure-as-code/quizzes/module-quiz.md` |
 | 110 | `lessons/mod-110-llm-infrastructure/quizzes/module-quiz.md` |
 
-## Track-level assessments here
+## การประเมินผลระดับแทร็กในไดเรกทอรีนี้
 
-| File | Purpose |
+| ไฟล์ | วัตถุประสงค์ |
 |---|---|
-| `coding-challenges/challenge-01-model-api.md` | Multi-module coding challenge: build a model API spanning Docker + Kubernetes + monitoring. |
-| `practical-exams/midterm-practical-exam.md` | Mid-track practical exam covering modules 101–105. |
-| `rubrics/project-assessment-rubric.md` | Rubric used to grade all three end-of-track projects. |
+| `coding-challenges/challenge-01-model-api.md` | โจทย์เขียนโค้ดข้ามหลายโมดูล: สร้าง model API ที่ครอบคลุม Docker + Kubernetes + monitoring |
+| `practical-exams/midterm-practical-exam.md` | ข้อสอบภาคปฏิบัติกลางแทร็ก ครอบคลุมโมดูล 101–105 |
+| `rubrics/project-assessment-rubric.md` | รูบริกที่ใช้ให้คะแนนโปรเจกต์ท้ายแทร็กทั้งสามโปรเจกต์ |
 
-## Grading
+## การให้คะแนน
 
-Each quiz and exam in this repo includes its own pass/fail threshold (typically 80%). For project rubrics, see `rubrics/project-assessment-rubric.md`.
+แบบทดสอบและข้อสอบแต่ละชุดใน repo นี้มีเกณฑ์ผ่าน/ไม่ผ่านของตนเอง (โดยทั่วไปคือ 80%) สำหรับรูบริกของโปรเจกต์ ดูที่ `rubrics/project-assessment-rubric.md`

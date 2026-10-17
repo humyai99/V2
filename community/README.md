@@ -1,48 +1,48 @@
-# Community Guidelines
+# แนวทางของชุมชน
 
-Welcome to the AI Infrastructure Engineer Learning Community! 🎉
+ยินดีต้อนรับสู่ AI Infrastructure Engineer Learning Community! 🎉
 
-This directory contains resources for engaging with the learning community, contributing to the curriculum, and connecting with fellow learners.
+ไดเรกทอรีนี้รวบรวมแหล่งข้อมูลสำหรับการมีส่วนร่วมกับชุมชนผู้เรียน การร่วมพัฒนาหลักสูตร และการเชื่อมต่อกับเพื่อนผู้เรียนคนอื่น ๆ
 
-## 🤝 How to Get Involved
+## 🤝 วิธีเข้าร่วม
 
-### For Learners
+### สำหรับผู้เรียน
 
-1. **Join Discussions** - Share your progress, ask questions, get help
-2. **Share Projects** - Show off your implementations
-3. **Provide Feedback** - Help improve the curriculum
-4. **Help Others** - Answer questions from fellow learners
-5. **Contribute** - Add exercises, examples, or documentation
+1. **เข้าร่วม Discussions** - แบ่งปันความคืบหน้า ถามคำถาม และขอความช่วยเหลือ
+2. **แบ่งปันโปรเจกต์** - อวดผลงานที่คุณพัฒนา
+3. **ให้ Feedback** - ช่วยปรับปรุงหลักสูตร
+4. **ช่วยเหลือผู้อื่น** - ตอบคำถามของเพื่อนผู้เรียน
+5. **ร่วมพัฒนา** - เพิ่มแบบฝึกหัด ตัวอย่าง หรือเอกสาร
 
-### For Contributors
+### สำหรับผู้ร่วมพัฒนา
 
-See [CONTRIBUTING.md](./CONTRIBUTING.md) for detailed contribution guidelines.
+ดู [CONTRIBUTING.md](./CONTRIBUTING.md) สำหรับแนวทางการร่วมพัฒนาโดยละเอียด
 
-## 📚 Community Resources
+## 📚 แหล่งข้อมูลของชุมชน
 
-### Communication Channels
+### ช่องทางการสื่อสาร
 
-- **GitHub Discussions**: [Ask questions and share ideas](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
-- **GitHub Issues**: [Report bugs or request features](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues)
-- **Email**: ai-infra-curriculum@joshua-ferguson.com
+- **GitHub Discussions**: [ถามคำถามและแบ่งปันไอเดีย](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
+- **GitHub Issues**: [รายงานบั๊กหรือขอฟีเจอร์](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues)
+- **อีเมล**: ai-infra-curriculum@joshua-ferguson.com
 
-### Getting Help
+### การขอความช่วยเหลือ
 
-1. **Check existing resources** - Look through READMEs, documentation, and discussions
-2. **Search issues** - Your question might already be answered
-3. **Ask in discussions** - Post your question with context
-4. **Be specific** - Include error messages, code snippets, and what you've tried
+1. **ตรวจสอบแหล่งข้อมูลที่มีอยู่** - อ่าน README เอกสาร และ discussions
+2. **ค้นหา issues** - คำถามของคุณอาจมีคำตอบอยู่แล้ว
+3. **ถามใน discussions** - โพสต์คำถามพร้อมบริบท
+4. **ระบุให้ชัดเจน** - แนบข้อความ error, ตัวอย่างโค้ด และสิ่งที่คุณได้ลองทำไปแล้ว
 
-### Asking Good Questions
+### การตั้งคำถามที่ดี
 
-A good question includes:
-- **Context**: What module/project are you working on?
-- **Goal**: What are you trying to achieve?
-- **Problem**: What's not working? Include error messages.
-- **Attempts**: What have you tried so far?
-- **Environment**: OS, Python version, relevant tools
+คำถามที่ดีควรประกอบด้วย:
+- **บริบท**: คุณกำลังทำโมดูล/โปรเจกต์ใดอยู่?
+- **เป้าหมาย**: คุณต้องการทำอะไรให้สำเร็จ?
+- **ปัญหา**: อะไรที่ไม่ทำงาน? แนบข้อความ error ด้วย
+- **สิ่งที่ลองแล้ว**: คุณได้ลองทำอะไรไปแล้วบ้าง?
+- **สภาพแวดล้อม**: OS, เวอร์ชัน Python, เครื่องมือที่เกี่ยวข้อง
 
-**Example:**
+**ตัวอย่าง:**
 ```
 Module 04 - Kubernetes: Issue with GPU scheduling
 
@@ -61,75 +61,75 @@ What I've tried:
 Pod YAML: [paste minimal reproducible example]
 ```
 
-## 🌟 Community Expectations
+## 🌟 ความคาดหวังต่อชุมชน
 
-### Code of Conduct
+### หลักปฏิบัติ (Code of Conduct)
 
-This is a learning community. We expect:
+นี่คือชุมชนแห่งการเรียนรู้ เราคาดหวังให้ทุกคน:
 
-✅ **Be Respectful**
-- Treat everyone with respect
-- Welcome newcomers
-- Be patient with those learning
-- Provide constructive feedback
+✅ **ให้ความเคารพ**
+- ปฏิบัติต่อทุกคนด้วยความเคารพ
+- ต้อนรับผู้มาใหม่
+- อดทนกับผู้ที่กำลังเรียนรู้
+- ให้ feedback ที่สร้างสรรค์
 
-✅ **Be Helpful**
-- Share knowledge generously
-- Explain concepts clearly
-- Point to resources
-- Celebrate others' success
+✅ **ช่วยเหลือกัน**
+- แบ่งปันความรู้อย่างเต็มที่
+- อธิบายแนวคิดให้ชัดเจน
+- แนะนำแหล่งข้อมูล
+- ยินดีกับความสำเร็จของผู้อื่น
 
-✅ **Be Professional**
-- Keep discussions on-topic
-- Avoid spam or self-promotion
-- Respect intellectual property
-- Give credit where due
+✅ **เป็นมืออาชีพ**
+- พูดคุยให้ตรงประเด็น
+- หลีกเลี่ยงสแปมหรือการโปรโมตตัวเอง
+- เคารพทรัพย์สินทางปัญญา
+- ให้เครดิตแก่เจ้าของผลงาน
 
-❌ **Not Tolerated**
-- Harassment or discrimination
-- Sharing of solutions to assessments
-- Plagiarism
-- Spam or excessive self-promotion
+❌ **สิ่งที่ไม่ยอมรับ**
+- การคุกคามหรือการเลือกปฏิบัติ
+- การแชร์เฉลยของการประเมินผล
+- การลอกเลียนผลงาน
+- สแปมหรือการโปรโมตตัวเองมากเกินไป
 
-## 🎓 Study Groups
+## 🎓 กลุ่มติว
 
-### Finding Study Partners
+### การหาเพื่อนติว
 
-Looking for accountability or collaboration?
+กำลังมองหาคนช่วยกระตุ้นหรือร่วมงานด้วยใช่ไหม?
 
-1. **Post in Discussions** - "Looking for study partner"
-2. **Share your timezone and availability**
-3. **Mention your experience level**
-4. **State your goals and timeline**
+1. **โพสต์ใน Discussions** - "Looking for study partner"
+2. **แจ้งเขตเวลาและเวลาที่สะดวก**
+3. **ระบุระดับประสบการณ์ของคุณ**
+4. **บอกเป้าหมายและกรอบเวลา**
 
-### Study Group Ideas
+### ไอเดียสำหรับกลุ่มติว
 
-- **Weekly sync** - Share progress, discuss challenges
-- **Pair programming** - Work through exercises together
-- **Code review** - Review each other's projects
-- **Mock interviews** - Practice technical interviews
+- **Weekly sync** - แบ่งปันความคืบหน้า พูดคุยเรื่องความท้าทาย
+- **Pair programming** - ทำแบบฝึกหัดไปด้วยกัน
+- **Code review** - รีวิวโปรเจกต์ของกันและกัน
+- **Mock interview** - ฝึกสัมภาษณ์งานด้านเทคนิค
 
-## 🏆 Recognition
+## 🏆 การยกย่อง
 
 ### Hall of Fame
 
-We recognize outstanding community contributions:
+เรายกย่องผู้ที่มีส่วนร่วมกับชุมชนอย่างโดดเด่น:
 
-- **Helpful Helpers** - Most helpful in discussions
-- **Quality Contributors** - Best code/docs contributions
-- **Project Showcases** - Impressive project implementations
-- **Bug Hunters** - Found and reported significant issues
+- **Helpful Helpers** - ผู้ที่ช่วยเหลือมากที่สุดใน discussions
+- **Quality Contributors** - ผู้ร่วมพัฒนาโค้ด/เอกสารได้ดีที่สุด
+- **Project Showcases** - ผลงานโปรเจกต์ที่น่าประทับใจ
+- **Bug Hunters** - ผู้ค้นพบและรายงานปัญหาสำคัญ
 
-### Sharing Your Success
+### แบ่งปันความสำเร็จของคุณ
 
-Completed the curriculum? Share your story!
+เรียนจบหลักสูตรแล้วใช่ไหม? มาแบ่งปันเรื่องราวของคุณ!
 
-- **LinkedIn** - Tag #AIInfrastructure #MLOps
-- **Blog post** - Write about your journey
-- **Project demos** - Share your portfolio
-- **Give back** - Help the next cohort
+- **LinkedIn** - แท็ก #AIInfrastructure #MLOps
+- **บล็อก** - เขียนเล่าเส้นทางการเรียนรู้ของคุณ
+- **เดโมโปรเจกต์** - แบ่งปันพอร์ตโฟลิโอของคุณ
+- **ตอบแทนชุมชน** - ช่วยเหลือผู้เรียนรุ่นถัดไป
 
-## 📂 Directory Structure
+## 📂 โครงสร้างไดเรกทอรี
 
 ```
 community/
@@ -140,19 +140,19 @@ community/
 └── FAQ.md
 ```
 
-## 📬 Contact
+## 📬 ติดต่อ
 
-- **Email**: ai-infra-curriculum@joshua-ferguson.com
+- **อีเมล**: ai-infra-curriculum@joshua-ferguson.com
 - **GitHub**: https://github.com/ai-infra-curriculum
 - **Discussions**: https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions
 
 ---
 
-## 🚀 Ready to Connect?
+## 🚀 พร้อมเชื่อมต่อแล้วหรือยัง?
 
-- [Join Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
-- [Report an Issue](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues/new)
-- [Contribute](./CONTRIBUTING.md)
-- [Code of Conduct](../CODE_OF_CONDUCT.md)
+- [เข้าร่วม Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
+- [รายงาน Issue](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues/new)
+- [ร่วมพัฒนา](./CONTRIBUTING.md)
+- [หลักปฏิบัติ](../CODE_OF_CONDUCT.md)
 
-**Happy Learning!** 🎓
+**ขอให้สนุกกับการเรียนรู้!** 🎓

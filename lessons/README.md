@@ -1,3 +1,3 @@
-# Lessons
+# บทเรียน
 
-Each module directory should include a `README.md`, lecture notes, an `exercises/` directory, a quiz, and module resources.
+แต่ละไดเรกทอรีของโมดูลควรมี `README.md`, เอกสารประกอบการบรรยาย, ไดเรกทอรี `exercises/`, แบบทดสอบ และแหล่งข้อมูลประจำโมดูล

@@ -1,3 +1,3 @@
-# Projects
+# โปรเจกต์
 
-Store hands-on projects and capstones for this track here.
+จัดเก็บโปรเจกต์ภาคปฏิบัติและ capstone ของแทร็กนี้ไว้ที่นี่
