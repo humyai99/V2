@@ -4,32 +4,32 @@
 
 ## สารบัญ
 
-- [ภาพรวมหลักสูตร](#curriculum-overview)
-- [ปรัชญาการเรียนรู้](#learning-philosophy)
-- [โครงสร้างหลักสูตร](#curriculum-structure)
-- [ความรู้พื้นฐานที่ต้องมี](#prerequisites)
-- [ผลลัพธ์การเรียนรู้](#learning-outcomes)
-- [โมดูล](#modules)
-  - [โมดูล 01: พื้นฐาน](#module-01-foundations)
-  - [โมดูล 02: พื้นฐาน Cloud Computing](#module-02-cloud-computing-fundamentals)
-  - [โมดูล 03: Containerization และ Docker](#module-03-containerization--docker)
-  - [โมดูล 04: พื้นฐาน Kubernetes](#module-04-kubernetes-fundamentals)
-  - [โมดูล 05: วิศวกรรม Data Pipeline](#module-05-data-pipeline-engineering)
-  - [โมดูล 06: พื้นฐาน MLOps](#module-06-mlops-fundamentals)
-  - [โมดูล 07: GPU Computing และการเร่งความเร็ว ML](#module-07-gpu-computing--ml-acceleration)
-  - [โมดูล 08: Monitoring และ Observability](#module-08-monitoring--observability)
-  - [โมดูล 09: Infrastructure as Code](#module-09-infrastructure-as-code)
-  - [โมดูล 10: LLM Infrastructure](#module-10-llm-infrastructure)
-- [โปรเจกต์](#projects)
-  - [โปรเจกต์ 01: ระบบ Model Serving พื้นฐาน](#project-101-basic-model-serving-system)
-  - [โปรเจกต์ 02: MLOps Pipeline](#project-102-mlops-pipeline)
-  - [โปรเจกต์ 103: การ Deploy LLM ระดับ Production](#project-103-production-llm-deployment)
-- [กลยุทธ์การประเมินผล](#assessment-strategy)
-- [เวลาที่ต้องใช้](#time-commitment)
-- [แผนการเรียน](#study-plans)
-- [เส้นทางอาชีพ](#career-progression)
-- [แหล่งเรียนรู้](#learning-resources)
-- [การขอความช่วยเหลือ](#getting-help)
+- [ภาพรวมหลักสูตร](#ภาพรวมหลักสูตร)
+- [ปรัชญาการเรียนรู้](#ปรัชญาการเรียนรู้)
+- [โครงสร้างหลักสูตร](#โครงสร้างหลักสูตร)
+- [ความรู้พื้นฐานที่ต้องมี](#ความรู้พื้นฐานที่ต้องมี)
+- [ผลลัพธ์การเรียนรู้](#ผลลัพธ์การเรียนรู้)
+- [โมดูล](#โมดูล)
+  - [โมดูล 01: พื้นฐาน](#โมดูล-01-พื้นฐาน)
+  - [โมดูล 02: พื้นฐาน Cloud Computing](#โมดูล-02-พื้นฐาน-cloud-computing)
+  - [โมดูล 03: Containerization และ Docker](#โมดูล-03-containerization-และ-docker)
+  - [โมดูล 04: พื้นฐาน Kubernetes](#โมดูล-04-พื้นฐาน-kubernetes)
+  - [โมดูล 05: วิศวกรรม Data Pipeline](#โมดูล-05-วิศวกรรม-data-pipeline)
+  - [โมดูล 06: พื้นฐาน MLOps](#โมดูล-06-พื้นฐาน-mlops)
+  - [โมดูล 07: GPU Computing และการเร่งความเร็ว ML](#โมดูล-07-gpu-computing-และการเร่งความเร็ว-ml)
+  - [โมดูล 08: Monitoring และ Observability](#โมดูล-08-monitoring-และ-observability)
+  - [โมดูล 09: Infrastructure as Code](#โมดูล-09-infrastructure-as-code)
+  - [โมดูล 10: LLM Infrastructure](#โมดูล-10-llm-infrastructure)
+- [โปรเจกต์](#โปรเจกต์)
+  - [โปรเจกต์ 01: ระบบ Model Serving พื้นฐาน](#โปรเจกต์-01-ระบบ-model-serving-พื้นฐาน)
+  - [โปรเจกต์ 02: MLOps Pipeline](#โปรเจกต์-02-mlops-pipeline)
+  - [โปรเจกต์ 103: การ Deploy LLM ระดับ Production](#โปรเจกต์-103-การ-deploy-llm-ระดับ-production)
+- [กลยุทธ์การประเมินผล](#กลยุทธ์การประเมินผล)
+- [เวลาที่ต้องใช้](#เวลาที่ต้องใช้)
+- [แผนการเรียน](#แผนการเรียน)
+- [เส้นทางอาชีพ](#เส้นทางอาชีพ)
+- [แหล่งเรียนรู้](#แหล่งเรียนรู้)
+- [การขอความช่วยเหลือ](#การขอความช่วยเหลือ)
 
 ---
 
@@ -44,7 +44,7 @@
 - **ชั่วโมงการเรียนรู้**: 500+ ชั่วโมง
 - **โมดูล**: 10 โมดูลที่สมบูรณ์
 - **โปรเจกต์**: 3 โปรเจกต์แบบต่อเนื่อง
-- **สถานะ**: 🚧 อยู่ระหว่างการพัฒนา — ดู [บันทึกความคืบหน้า](#progress-notes) ด้านล่างสำหรับสถานะความสมบูรณ์ของแบบฝึกหัด/lab ในแต่ละโมดูล
+- **สถานะ**: 🚧 อยู่ระหว่างการพัฒนา — ดู [บันทึกความคืบหน้า](#บันทึกความคืบหน้า) ด้านล่างสำหรับสถานะความสมบูรณ์ของแบบฝึกหัด/lab ในแต่ละโมดูล
 
 ### จุดเด่นของหลักสูตรนี้
 
