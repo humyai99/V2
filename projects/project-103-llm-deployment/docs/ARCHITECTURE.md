@@ -1,54 +1,54 @@
-# LLM Deployment Platform Architecture
+# สถาปัตยกรรมของแพลตฟอร์ม LLM Deployment
 
-## Overview
+## ภาพรวม
 
-TODO: Describe the overall system architecture
+TODO: อธิบายสถาปัตยกรรมโดยรวมของระบบ
 
-## Components
+## องค์ประกอบ (Components)
 
 ### 1. LLM Serving Layer
-- **Technology**: vLLM or TensorRT-LLM
-- **Model**: Llama 2 7B (configurable)
-- **Optimizations**: FP16 quantization, continuous batching
-- **TODO**: Document model loading, inference pipeline, GPU utilization
+- **เทคโนโลยี**: vLLM หรือ TensorRT-LLM
+- **โมเดล**: Llama 2 7B (ปรับเปลี่ยนได้)
+- **การปรับแต่ง**: FP16 quantization, continuous batching
+- **TODO**: บันทึกการโหลดโมเดล, inference pipeline, การใช้งาน GPU
 
-### 2. RAG System
-- **Embedding Model**: all-MiniLM-L6-v2 or similar
+### 2. ระบบ RAG
+- **Embedding Model**: all-MiniLM-L6-v2 หรือใกล้เคียง
 - **Vector Database**: Pinecone/ChromaDB
-- **Chunking Strategy**: Recursive text splitting
-- **TODO**: Document retrieval flow, context injection
+- **กลยุทธ์การ Chunking**: Recursive text splitting
+- **TODO**: บันทึก retrieval flow, การแทรก context
 
 ### 3. API Layer
 - **Framework**: FastAPI
 - **Endpoints**: /generate, /rag-generate, /health, /metrics
-- **Features**: Streaming, rate limiting, authentication
-- **TODO**: Document API design, middleware stack
+- **ฟีเจอร์**: Streaming, rate limiting, authentication
+- **TODO**: บันทึกการออกแบบ API, middleware stack
 
 ### 4. Monitoring
 - **Metrics**: Prometheus
 - **Visualization**: Grafana
 - **Logging**: Structured JSON logs
-- **TODO**: Document metrics, dashboards, alerts
+- **TODO**: บันทึก metrics, dashboards, alerts
 
-## Data Flow
+## การไหลของข้อมูล (Data Flow)
 
-TODO: Add sequence diagrams for:
-1. Standard generation request
-2. RAG-augmented generation
+TODO: เพิ่ม sequence diagram สำหรับ:
+1. Request สร้างข้อความแบบมาตรฐาน
+2. การสร้างข้อความเสริมด้วย RAG
 3. Streaming response
 
-## Deployment Architecture
+## สถาปัตยกรรมการ Deploy
 
-TODO: Document Kubernetes deployment:
-- Pod configuration
-- Resource allocation
-- Autoscaling strategy
+TODO: บันทึกการ deploy บน Kubernetes:
+- การตั้งค่า Pod
+- การจัดสรรทรัพยากร
+- กลยุทธ์ Autoscaling
 - GPU node pools
 
-## Security
+## ความปลอดภัย (Security)
 
-TODO: Document security measures:
+TODO: บันทึกมาตรการความปลอดภัย:
 - API key authentication
 - Rate limiting
-- Input validation
-- Secret management
+- การตรวจสอบ input (Input validation)
+- การจัดการ secret

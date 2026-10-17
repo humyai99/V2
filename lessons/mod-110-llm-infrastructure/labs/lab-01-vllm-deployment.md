@@ -1,13 +1,13 @@
-# Lab 01: Deploy an LLM with vLLM
+# Lab 01: Deploy LLM ด้วย vLLM
 
-**Duration:** 75 min  **Prerequisites:** GPU with ≥12GB VRAM; Docker with NVIDIA toolkit
+**ระยะเวลา:** 75 นาที  **ข้อกำหนดเบื้องต้น:** GPU ที่มี VRAM ≥12GB; Docker พร้อม NVIDIA toolkit
 
-## Objective
-Run a 7B-parameter LLM (Mistral-7B or Llama-3-8B-Instruct) via vLLM's OpenAI-compatible server, benchmark throughput vs HuggingFace baseline, and use PagedAttention's KV-cache to fit more concurrent requests.
+## วัตถุประสงค์
+รัน LLM ขนาด 7B พารามิเตอร์ (Mistral-7B หรือ Llama-3-8B-Instruct) ผ่าน server ที่เข้ากันได้กับ OpenAI ของ vLLM, benchmark throughput เทียบกับ baseline ของ HuggingFace และใช้ KV-cache ของ PagedAttention เพื่อรองรับ request พร้อมกันได้มากขึ้น
 
-## Steps
+## ขั้นตอน
 
-### 1. Pull and start vLLM
+### 1. Pull และเริ่ม vLLM
 ```bash
 docker run -d --gpus all --name vllm \
   -p 8000:8000 \
@@ -18,14 +18,14 @@ docker run -d --gpus all --name vllm \
   --max-model-len 4096 \
   --dtype bfloat16
 ```
-Wait ~5-10 min for download + load.
+รอประมาณ 5-10 นาทีสำหรับการดาวน์โหลดและโหลดโมเดล
 
-### 2. Verify
+### 2. ตรวจสอบ
 ```bash
 curl http://localhost:8000/v1/models
 ```
 
-### 3. Single completion (OpenAI-compatible)
+### 3. Completion เดี่ยว (เข้ากันได้กับ OpenAI)
 ```bash
 curl http://localhost:8000/v1/chat/completions \
   -H 'content-type: application/json' \
@@ -63,7 +63,7 @@ asyncio.run(bench())
 PY
 ```
 
-### 5. Compare to HF transformers baseline
+### 5. เปรียบเทียบกับ baseline ของ HF transformers
 ```python
 from transformers import pipeline
 import time
@@ -72,23 +72,23 @@ t0=time.perf_counter()
 for _ in range(8): pipe("Write a haiku about Kubernetes.", max_new_tokens=64)
 print(f"hf: {8/(time.perf_counter()-t0):.1f} req/s")
 ```
-Expect vLLM 5-10× higher RPS at the same concurrency.
+คาดว่า vLLM จะได้ RPS สูงกว่า 5-10 เท่าที่ระดับ concurrency เดียวกัน
 
-### 6. Monitor with vLLM metrics
-vLLM exposes `/metrics` (Prometheus). Scrape it; key metrics: `vllm:num_requests_running`, `vllm:gpu_cache_usage_perc`.
+### 6. Monitor ด้วย metrics ของ vLLM
+vLLM เปิด `/metrics` (Prometheus) ให้ใช้งาน ให้ scrape endpoint นี้; metrics สำคัญได้แก่ `vllm:num_requests_running`, `vllm:gpu_cache_usage_perc`
 
-## Validation
-- [ ] `/v1/models` lists the served model.
-- [ ] Single completion returns reasonable text.
-- [ ] Benchmark shows ≥10 req/s at concurrency 16 on a single 24GB GPU.
-- [ ] `gpu_cache_usage_perc` grows under load.
+## การตรวจสอบผล
+- [ ] `/v1/models` แสดงรายการโมเดลที่ serve อยู่
+- [ ] Completion เดี่ยวคืนข้อความที่สมเหตุสมผล
+- [ ] Benchmark แสดง ≥10 req/s ที่ concurrency 16 บน GPU 24GB หนึ่งตัว
+- [ ] `gpu_cache_usage_perc` เพิ่มขึ้นเมื่อมีโหลด
 
-## Cleanup
+## การทำความสะอาด
 ```bash
 docker stop vllm && docker rm vllm
 ```
 
-## Troubleshooting
-- **OOM on load** — Reduce `--max-model-len` or use a quantized variant (`--quantization awq`).
-- **`Cannot find HF token`** — Mistral requires HF auth; set `HF_TOKEN` and pass via `-e`.
-- **Very slow first request** — CUDA graphs compiling; subsequent requests are fast.
+## การแก้ไขปัญหา
+- **OOM ขณะโหลด** — ลด `--max-model-len` หรือใช้รุ่นที่ quantize แล้ว (`--quantization awq`)
+- **`Cannot find HF token`** — Mistral ต้องการการยืนยันตัวตนกับ HF; ตั้งค่า `HF_TOKEN` และส่งผ่าน `-e`
+- **Request แรกช้ามาก** — CUDA graphs กำลังคอมไพล์; request ถัดไปจะเร็ว

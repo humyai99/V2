@@ -1,18 +1,18 @@
-# Lab 07: Drift Monitoring with Evidently
+# Lab 07: Drift Monitoring ด้วย Evidently
 
-**Duration:** 60 min  **Prerequisites:** Python 3.11+; baseline dataset on hand
+**ระยะเวลา:** 60 นาที  **สิ่งที่ต้องมีก่อน:** Python 3.11+; มี baseline dataset พร้อมใช้
 
-## Objective
-Compute feature and prediction drift between a baseline (training) dataset and a recent production sample. Produce an HTML report and a JSON summary suitable for alerting on.
+## วัตถุประสงค์
+คำนวณ feature drift และ prediction drift ระหว่าง baseline dataset (ข้อมูล training) กับตัวอย่างข้อมูล production ล่าสุด สร้างรายงาน HTML และสรุปผลแบบ JSON ที่เหมาะสำหรับใช้ทำ alert
 
-## Steps
+## ขั้นตอน
 
-### 1. Install
+### 1. ติดตั้ง
 ```bash
 pip install 'evidently==0.4.30' pandas pyarrow
 ```
 
-### 2. Two datasets
+### 2. Dataset สองชุด
 ```python
 import pandas as pd, numpy as np
 np.random.seed(42)
@@ -32,7 +32,7 @@ prod = pd.DataFrame({
 })
 ```
 
-### 3. Run drift report
+### 3. รันรายงาน drift
 ```python
 from evidently.report import Report
 from evidently.metric_preset import DataDriftPreset, TargetDriftPreset
@@ -43,13 +43,13 @@ rpt.save_html("drift_report.html")
 res = rpt.as_dict()
 ```
 
-### 4. Open the HTML
+### 4. เปิดไฟล์ HTML
 ```bash
 open drift_report.html
 ```
-See per-feature drift scores, distributions, and a summary.
+ดูคะแนน drift ราย feature, การกระจายตัวของข้อมูล และสรุปผล
 
-### 5. Extract pass/fail to JSON
+### 5. ดึงผล pass/fail ออกมาเป็น JSON
 ```python
 import json
 summary = {
@@ -64,20 +64,20 @@ json.dump(summary, open("drift_summary.json", "w"), indent=2, default=str)
 print(json.dumps(summary, indent=2, default=str))
 ```
 
-### 6. Schedule
-Wrap in a daily Airflow DAG; alert if `dataset_drift` is True for 3 days in a row.
+### 6. ตั้งเวลา
+ห่อไว้ใน Airflow DAG ที่รันรายวัน; แจ้งเตือนหาก `dataset_drift` เป็น True ติดต่อกัน 3 วัน
 
-## Validation
-- [ ] HTML report opens and shows distribution overlays for each feature.
-- [ ] `n_drifted` ≥ 2 with the test data above.
-- [ ] JSON summary is suitable for piping into an alerting system.
+## การตรวจสอบ
+- [ ] รายงาน HTML เปิดได้และแสดงกราฟซ้อนการกระจายตัวของแต่ละ feature
+- [ ] `n_drifted` ≥ 2 เมื่อใช้ข้อมูลทดสอบข้างต้น
+- [ ] สรุปผล JSON เหมาะสำหรับส่งต่อไปยังระบบ alerting
 
-## Cleanup
+## การล้างข้อมูล
 ```bash
 rm drift_report.html drift_summary.json
 ```
 
-## Troubleshooting
-- **`dataset_drift` always False** — Default test (KS for numerical, chi2 for categorical) needs a real shift; the synthetic data here is calibrated to trigger.
-- **HTML report too large to embed in Slack** — Use the JSON summary for alerting, link to the HTML for investigation.
-- **Drift on a feature you don't care about** — Use `ColumnMapping` to exclude.
+## การแก้ปัญหา
+- **`dataset_drift` เป็น False เสมอ** — การทดสอบเริ่มต้น (KS สำหรับข้อมูลตัวเลข, chi2 สำหรับข้อมูลหมวดหมู่) ต้องการการเปลี่ยนแปลงจริง; ข้อมูลสังเคราะห์ที่นี่ถูกปรับให้ trigger ได้
+- **รายงาน HTML ใหญ่เกินกว่าจะฝังใน Slack** — ใช้สรุปผล JSON สำหรับ alert และลิงก์ไปยัง HTML สำหรับการตรวจสอบเชิงลึก
+- **เกิด drift กับ feature ที่คุณไม่สนใจ** — ใช้ `ColumnMapping` เพื่อตัดออก

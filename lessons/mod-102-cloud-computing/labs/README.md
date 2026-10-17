@@ -1,12 +1,12 @@
-# Module 102 — Labs
+# Module 102 — แล็บ
 
-Four cloud-specific labs. Each requires an account with the corresponding provider (free tier sufficient for everything here). Estimated $0–5 in costs across all four if you clean up promptly.
+แล็บเฉพาะคลาวด์สี่รายการ แต่ละแล็บต้องมีบัญชีกับผู้ให้บริการที่เกี่ยวข้อง (free tier เพียงพอสำหรับทุกอย่างในนี้) ประมาณการค่าใช้จ่ายรวม $0–5 สำหรับทั้งสี่แล็บ หากคุณลบทรัพยากรทันที
 
-| # | Lab | Provider | Duration |
+| # | แล็บ | ผู้ให้บริการ | ระยะเวลา |
 |---|---|---|---|
-| 01 | [Provision an ML-ready AWS environment](lab-01-aws-ml-infra.md) | AWS | 90 min |
-| 02 | [Provision an ML-ready GCP environment](lab-02-gcp-ml-infra.md) | GCP | 90 min |
-| 03 | [Provision an ML-ready Azure environment](lab-03-azure-ml-infra.md) | Azure | 90 min |
-| 04 | [Multi-cloud deployment with a single tool](lab-04-multi-cloud-deployment.md) | Any 2 | 90 min |
+| 01 | [จัดเตรียมสภาพแวดล้อม AWS ที่พร้อมสำหรับ ML](lab-01-aws-ml-infra.md) | AWS | 90 นาที |
+| 02 | [จัดเตรียมสภาพแวดล้อม GCP ที่พร้อมสำหรับ ML](lab-02-gcp-ml-infra.md) | GCP | 90 นาที |
+| 03 | [จัดเตรียมสภาพแวดล้อม Azure ที่พร้อมสำหรับ ML](lab-03-azure-ml-infra.md) | Azure | 90 นาที |
+| 04 | [Multi-cloud deployment ด้วยเครื่องมือเดียว](lab-04-multi-cloud-deployment.md) | 2 รายใดก็ได้ | 90 นาที |
 
-**Always run the Cleanup step.** Forgotten resources accrue cost.
+**ต้องทำขั้นตอน Cleanup เสมอ** ทรัพยากรที่ถูกลืมไว้จะสะสมค่าใช้จ่าย

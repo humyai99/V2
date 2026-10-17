@@ -1,24 +1,24 @@
-# Module 101 — Labs
+# Module 101 — แล็บ
 
-Five guided practical labs that build foundational skills for the rest of the curriculum. Do them in order; each builds on the previous.
+แล็บภาคปฏิบัติแบบมีคำแนะนำห้าแล็บ ที่สร้างทักษะพื้นฐานสำหรับหลักสูตรส่วนที่เหลือ ให้ทำตามลำดับ เพราะแต่ละแล็บต่อยอดจากแล็บก่อนหน้า
 
-| # | Lab | Duration |
+| # | แล็บ | ระยะเวลา |
 |---|---|---|
-| 01 | [Set up a reproducible Python dev environment](lab-01-python-dev-environment.md) | 45 min |
-| 02 | [Build, run, and inspect your first Docker container](lab-02-first-docker-container.md) | 60 min |
-| 03 | [Stand up a local Kubernetes cluster with kind](lab-03-local-kind-cluster.md) | 60 min |
-| 04 | [Serve a scikit-learn model behind a FastAPI endpoint](lab-04-serve-sklearn-model.md) | 75 min |
-| 05 | [Add basic Prometheus instrumentation to the FastAPI service](lab-05-instrument-with-prometheus.md) | 60 min |
+| 01 | [ตั้งค่า Python dev environment ที่ทำซ้ำได้](lab-01-python-dev-environment.md) | 45 นาที |
+| 02 | [Build, run และตรวจสอบ Docker container แรกของคุณ](lab-02-first-docker-container.md) | 60 นาที |
+| 03 | [สร้าง Kubernetes cluster แบบ local ด้วย kind](lab-03-local-kind-cluster.md) | 60 นาที |
+| 04 | [Serve โมเดล scikit-learn ผ่าน FastAPI endpoint](lab-04-serve-sklearn-model.md) | 75 นาที |
+| 05 | [เพิ่ม Prometheus instrumentation พื้นฐานให้กับ FastAPI service](lab-05-instrument-with-prometheus.md) | 60 นาที |
 
-## How to use the labs
+## วิธีใช้แล็บ
 
-Each lab is a hands-on session you can complete on your laptop. The lab files follow the same shape:
+แต่ละแล็บเป็นการลงมือปฏิบัติที่คุณทำให้เสร็จได้บนแล็ปท็อปของคุณ ไฟล์แล็บทั้งหมดมีโครงสร้างเหมือนกัน:
 
-- **Objective** — one paragraph on what you'll have when you're done.
-- **Prerequisites** — exactly what must be installed and configured.
-- **Steps** — numbered, with exact commands and expected output.
-- **Validation** — how to know it worked (don't skip this).
-- **Cleanup** — undo what you set up.
-- **Troubleshooting** — the failures we've actually seen.
+- **Objective** — หนึ่งย่อหน้าบอกว่าคุณจะได้อะไรเมื่อทำเสร็จ
+- **Prerequisites** — สิ่งที่ต้องติดตั้งและตั้งค่าไว้อย่างชัดเจน
+- **Steps** — ขั้นตอนที่มีหมายเลข พร้อมคำสั่งที่แน่นอนและผลลัพธ์ที่คาดหวัง
+- **Validation** — วิธีรู้ว่าทำได้สำเร็จ (อย่าข้ามขั้นนี้)
+- **Cleanup** — ย้อนกลับสิ่งที่คุณตั้งค่าไว้
+- **Troubleshooting** — ความล้มเหลวที่เราเคยเจอจริง
 
-Read the whole lab once before starting. If a step's expected output differs from what you see, stop and investigate — the failure now is cheaper than debugging downstream.
+อ่านแล็บทั้งหมดหนึ่งรอบก่อนเริ่ม หากผลลัพธ์ที่คาดหวังของขั้นตอนใดต่างจากที่คุณเห็น ให้หยุดและตรวจสอบ — การแก้ความล้มเหลวตอนนี้ถูกกว่าการไป debug ในขั้นตอนถัดไป

@@ -1,15 +1,15 @@
-# Deployment Guide
+# คู่มือการ Deploy
 
-## Prerequisites
+## สิ่งที่ต้องมีก่อน (Prerequisites)
 
-1. Kubernetes cluster with GPU support
-2. kubectl configured
-3. Docker registry access
-4. GPU drivers installed
+1. Kubernetes cluster ที่รองรับ GPU
+2. ตั้งค่า kubectl เรียบร้อยแล้ว
+3. สิทธิ์เข้าถึง Docker registry
+4. ติดตั้ง GPU drivers แล้ว
 
-TODO: Add detailed prerequisites
+TODO: เพิ่มรายละเอียดสิ่งที่ต้องมีก่อน
 
-## Deployment Steps
+## ขั้นตอนการ Deploy
 
 ### 1. Build Docker Image
 ```bash
@@ -17,30 +17,30 @@ TODO: Add detailed prerequisites
 docker build -t llm-server:latest .
 ```
 
-### 2. Push to Registry
+### 2. Push ไปยัง Registry
 ```bash
 # TODO: Add push commands
 ```
 
-### 3. Deploy to Kubernetes
+### 3. Deploy ไปยัง Kubernetes
 ```bash
 # TODO: Add kubectl commands
 kubectl apply -f kubernetes/
 ```
 
-### 4. Verify Deployment
+### 4. ตรวจสอบการ Deploy
 ```bash
 # TODO: Add verification commands
 ```
 
-## Configuration
+## การตั้งค่า (Configuration)
 
-TODO: Document configuration options
+TODO: บันทึกตัวเลือกการตั้งค่า
 
-## Monitoring
+## การ Monitoring
 
-TODO: Document monitoring setup
+TODO: บันทึกการตั้งค่า monitoring
 
-## Troubleshooting
+## การแก้ไขปัญหา (Troubleshooting)
 
-TODO: Add common issues and solutions
+TODO: เพิ่มปัญหาที่พบบ่อยและวิธีแก้ไข

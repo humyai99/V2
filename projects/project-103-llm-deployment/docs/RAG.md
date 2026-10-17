@@ -1,58 +1,58 @@
-# RAG Implementation Guide
+# คู่มือการ Implement RAG
 
-## What is RAG?
+## RAG คืออะไร?
 
-Retrieval-Augmented Generation (RAG) combines:
-1. Information retrieval from a knowledge base
-2. LLM generation conditioned on retrieved context
+Retrieval-Augmented Generation (RAG) เป็นการผสมผสาน:
+1. การดึงข้อมูล (information retrieval) จาก knowledge base
+2. การสร้างข้อความด้วย LLM โดยอิงจาก context ที่ดึงมา
 
-TODO: Add detailed explanation and diagrams
+TODO: เพิ่มคำอธิบายโดยละเอียดและแผนภาพ
 
-## Implementation Steps
+## ขั้นตอนการ Implement
 
-### 1. Document Ingestion
-TODO: Document how to:
-- Load documents from various sources
-- Process and clean text
-- Chunk documents appropriately
+### 1. การนำเข้าเอกสาร (Document Ingestion)
+TODO: บันทึกวิธีการ:
+- โหลดเอกสารจากแหล่งต่างๆ
+- ประมวลผลและทำความสะอาดข้อความ
+- แบ่ง chunk เอกสารอย่างเหมาะสม
 
-### 2. Embedding Generation
-TODO: Document:
-- Choosing embedding model
-- Generating embeddings
-- Batch processing for efficiency
+### 2. การสร้าง Embedding
+TODO: บันทึกเรื่อง:
+- การเลือก embedding model
+- การสร้าง embeddings
+- การประมวลผลแบบ batch เพื่อประสิทธิภาพ
 
-### 3. Vector Storage
-TODO: Document:
-- Setting up vector database
-- Indexing documents
-- Metadata management
+### 3. การจัดเก็บ Vector
+TODO: บันทึกเรื่อง:
+- การตั้งค่า vector database
+- การทำ index เอกสาร
+- การจัดการ metadata
 
-### 4. Retrieval
-TODO: Document:
-- Query embedding generation
+### 4. การดึงข้อมูล (Retrieval)
+TODO: บันทึกเรื่อง:
+- การสร้าง embedding ของ query
 - Similarity search
-- Reranking strategies
+- กลยุทธ์ reranking
 
-### 5. Generation
-TODO: Document:
-- Context injection into prompts
+### 5. การสร้างข้อความ (Generation)
+TODO: บันทึกเรื่อง:
+- การแทรก context ลงใน prompt
 - Prompt templates
-- Citation of sources
+- การอ้างอิงแหล่งที่มา
 
-## Best Practices
+## แนวปฏิบัติที่ดี (Best Practices)
 
-TODO: Add best practices for:
-- Chunk size selection
-- Overlap configuration
-- Metadata filtering
-- Query rewriting
-- Result reranking
+TODO: เพิ่มแนวปฏิบัติที่ดีสำหรับ:
+- การเลือกขนาด chunk
+- การตั้งค่า overlap
+- การกรองด้วย metadata
+- การเขียน query ใหม่ (Query rewriting)
+- การ rerank ผลลัพธ์
 
-## Common Issues
+## ปัญหาที่พบบ่อย
 
-TODO: Document solutions to:
-- Poor retrieval quality
-- Context too long
-- Slow retrieval
-- Inconsistent responses
+TODO: บันทึกวิธีแก้ปัญหา:
+- คุณภาพการดึงข้อมูลต่ำ
+- Context ยาวเกินไป
+- การดึงข้อมูลช้า
+- คำตอบไม่สม่ำเสมอ

@@ -1,11 +1,11 @@
-# Module 108 — Labs
+# Module 108 — แล็บ
 
-Five labs covering metrics, dashboards, logs, traces, and alerts.
+แล็บห้าชุดที่ครอบคลุม metrics, dashboard, log, trace และ alert
 
-| # | Lab | Duration |
+| # | แล็บ | ระยะเวลา |
 |---|---|---|
-| 01 | [Instrument a Python service with Prometheus](lab-01-prometheus-instrumentation.md) | 60 min |
-| 02 | [Build a Grafana dashboard from scratch](lab-02-grafana-dashboards.md) | 75 min |
-| 03 | [Send logs to Loki](lab-03-loki-logging.md) | 60 min |
-| 04 | [Distributed tracing with OpenTelemetry + Jaeger](lab-04-distributed-tracing.md) | 75 min |
-| 05 | [Author alert rules with multi-window burn rates](lab-05-alerting-rules.md) | 60 min |
+| 01 | [ติดตั้ง instrumentation ให้ Python service ด้วย Prometheus](lab-01-prometheus-instrumentation.md) | 60 นาที |
+| 02 | [สร้าง Grafana dashboard ตั้งแต่เริ่มต้น](lab-02-grafana-dashboards.md) | 75 นาที |
+| 03 | [ส่ง log ไปยัง Loki](lab-03-loki-logging.md) | 60 นาที |
+| 04 | [Distributed tracing ด้วย OpenTelemetry + Jaeger](lab-04-distributed-tracing.md) | 75 นาที |
+| 05 | [เขียน alert rule ด้วย multi-window burn rate](lab-05-alerting-rules.md) | 60 นาที |

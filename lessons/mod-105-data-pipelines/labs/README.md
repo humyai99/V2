@@ -1,12 +1,12 @@
-# Module 105 — Labs
+# Module 105 — แล็บ
 
-Six labs covering Airflow, Spark, Kafka, DVC, and data quality.
+แล็บหกชุดที่ครอบคลุม Airflow, Spark, Kafka, DVC และคุณภาพข้อมูล (data quality)
 
-| # | Lab | Duration |
+| # | แล็บ | ระยะเวลา |
 |---|---|---|
-| 01 | [Run Airflow locally with docker-compose](lab-01-airflow-local.md) | 60 min |
-| 02 | [Author your first DAG](lab-02-dag-development.md) | 75 min |
-| 03 | [Run a Spark batch job locally](lab-03-spark-job.md) | 60 min |
-| 04 | [Stream events through Kafka](lab-04-kafka-streaming.md) | 75 min |
-| 05 | [Version data and models with DVC](lab-05-dvc-versioning.md) | 60 min |
-| 06 | [Validate data with Great Expectations](lab-06-data-quality.md) | 60 min |
+| 01 | [รัน Airflow บนเครื่องด้วย docker-compose](lab-01-airflow-local.md) | 60 นาที |
+| 02 | [เขียน DAG แรกของคุณ](lab-02-dag-development.md) | 75 นาที |
+| 03 | [รัน Spark batch job บนเครื่อง](lab-03-spark-job.md) | 60 นาที |
+| 04 | [สตรีม event ผ่าน Kafka](lab-04-kafka-streaming.md) | 75 นาที |
+| 05 | [ทำเวอร์ชันข้อมูลและโมเดลด้วย DVC](lab-05-dvc-versioning.md) | 60 นาที |
+| 06 | [ตรวจสอบความถูกต้องของข้อมูลด้วย Great Expectations](lab-06-data-quality.md) | 60 นาที |

@@ -1,19 +1,19 @@
-# Lab 03: Stand Up a Vector Database (Qdrant)
+# Lab 03: ตั้งค่า Vector Database (Qdrant)
 
-**Duration:** 60 min  **Prerequisites:** Docker
+**ระยะเวลา:** 60 นาที  **ข้อกำหนดเบื้องต้น:** Docker
 
-## Objective
-Run Qdrant locally, create a collection, upsert vectors with metadata, and run filtered nearest-neighbor queries.
+## วัตถุประสงค์
+รัน Qdrant บนเครื่อง local สร้าง collection, upsert vector พร้อม metadata และรัน nearest-neighbor query แบบมีตัวกรอง
 
-## Steps
+## ขั้นตอน
 
-### 1. Run Qdrant
+### 1. รัน Qdrant
 ```bash
 docker run -d --name qdrant -p 6333:6333 -p 6334:6334 qdrant/qdrant:v1.10.0
 ```
-HTTP API on 6333; gRPC on 6334. Dashboard at http://localhost:6333/dashboard.
+HTTP API อยู่ที่พอร์ต 6333; gRPC อยู่ที่ 6334 Dashboard อยู่ที่ http://localhost:6333/dashboard
 
-### 2. Create a collection
+### 2. สร้าง collection
 ```python
 from qdrant_client import QdrantClient
 from qdrant_client.http.models import Distance, VectorParams
@@ -25,7 +25,7 @@ client.recreate_collection(
 )
 ```
 
-### 3. Upsert with payload
+### 3. Upsert พร้อม payload
 ```python
 from qdrant_client.http.models import PointStruct
 import numpy as np
@@ -42,7 +42,7 @@ client.upsert(collection_name="docs", points=points)
 print(client.count("docs"))
 ```
 
-### 4. Plain nearest-neighbor
+### 4. Nearest-neighbor แบบธรรมดา
 ```python
 q = np.random.rand(384).tolist()
 hits = client.search(collection_name="docs", query_vector=q, limit=5)
@@ -50,7 +50,7 @@ for h in hits:
     print(h.id, h.score, h.payload)
 ```
 
-### 5. Filtered search
+### 5. การค้นหาแบบมีตัวกรอง
 ```python
 from qdrant_client.http.models import Filter, FieldCondition, MatchValue
 hits = client.search(
@@ -61,31 +61,31 @@ hits = client.search(
 )
 ```
 
-### 6. Update payload (no need to re-embed)
+### 6. อัปเดต payload (ไม่ต้อง embed ใหม่)
 ```python
 client.set_payload(collection_name="docs", payload={"tag": "important"}, points=[1, 2, 3])
 ```
 
-### 7. Snapshot for backup
+### 7. Snapshot สำหรับสำรองข้อมูล
 ```python
 client.create_snapshot(collection_name="docs")
 client.list_snapshots(collection_name="docs")
 ```
 
-### 8. Pair with the RAG pipeline (lab 02)
-Replace the FAISS in-memory index with Qdrant. Production gains: persistence, filtering, multi-collection.
+### 8. ใช้ร่วมกับ RAG pipeline (lab 02)
+แทนที่ index แบบ in-memory ของ FAISS ด้วย Qdrant สิ่งที่ได้ใน production: persistence, การกรอง, หลาย collection
 
-## Validation
-- [ ] Collection visible in Qdrant dashboard with 1000 points.
-- [ ] Nearest-neighbor returns 5 results ordered by score.
-- [ ] Filtered search returns only points with `category=a`.
+## การตรวจสอบผล
+- [ ] เห็น collection ใน Qdrant dashboard พร้อม 1000 points
+- [ ] Nearest-neighbor คืนผลลัพธ์ 5 รายการเรียงตาม score
+- [ ] การค้นหาแบบมีตัวกรองคืนเฉพาะ points ที่มี `category=a`
 
-## Cleanup
+## การทำความสะอาด
 ```bash
 docker stop qdrant && docker rm qdrant
 ```
 
-## Troubleshooting
-- **Snapshot fails** — Qdrant needs a writable volume; the docker run above uses the default ephemeral volume.
-- **Filter returns 0 results** — Check field name spelling; payload keys are case-sensitive.
-- **`Wrong vector size`** — Collection size must match vector dim exactly.
+## การแก้ไขปัญหา
+- **Snapshot ล้มเหลว** — Qdrant ต้องการ volume ที่เขียนได้; คำสั่ง docker run ข้างต้นใช้ volume ชั่วคราวค่าเริ่มต้น
+- **ตัวกรองคืนผลลัพธ์ 0 รายการ** — ตรวจสอบการสะกดชื่อ field; key ของ payload แยกตัวพิมพ์เล็ก-ใหญ่
+- **`Wrong vector size`** — ขนาดของ collection ต้องตรงกับมิติของ vector พอดี

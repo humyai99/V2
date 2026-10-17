@@ -1,19 +1,19 @@
-# Lab 01: CUDA Hello-World and Device Introspection
+# Lab 01: CUDA Hello-World และการตรวจสอบข้อมูลอุปกรณ์
 
-**Duration:** 45 min  **Prerequisites:** NVIDIA GPU + CUDA Toolkit installed
+**ระยะเวลา:** 45 นาที  **สิ่งที่ต้องมีก่อน:** NVIDIA GPU + ติดตั้ง CUDA Toolkit แล้ว
 
-## Objective
-Verify your CUDA toolchain is healthy, write and compile a minimal kernel, and query device properties programmatically.
+## วัตถุประสงค์
+ตรวจสอบว่า CUDA toolchain ทำงานได้ปกติ เขียนและคอมไพล์ kernel ขนาดเล็ก และ query คุณสมบัติของอุปกรณ์ผ่านโปรแกรม
 
-## Steps
+## ขั้นตอน
 
-### 1. Verify the toolchain
+### 1. ตรวจสอบ toolchain
 ```bash
 nvidia-smi                 # GPU detected
 nvcc --version             # CUDA compiler installed
 ```
 
-### 2. Minimal kernel: vector add
+### 2. Kernel ขนาดเล็ก: บวกเวกเตอร์
 ```cuda
 // vector_add.cu
 #include <cstdio>
@@ -52,7 +52,7 @@ nvcc -O2 -o vector_add vector_add.cu
 # Expected: o[0]=3.000000 o[N-1]=3.000000
 ```
 
-### 3. Device introspection
+### 3. ตรวจสอบข้อมูลอุปกรณ์
 ```cuda
 // device_info.cu
 #include <cstdio>
@@ -72,24 +72,24 @@ int main() {
 nvcc -o device_info device_info.cu && ./device_info
 ```
 
-### 4. Profile with nsys
+### 4. Profile ด้วย nsys
 ```bash
 nsys profile --stats=true ./vector_add
 ```
-Look for kernel time vs memcpy time.
+สังเกตเวลาของ kernel เทียบกับเวลาของ memcpy
 
-## Validation
-- [ ] `nvidia-smi` shows your GPU.
-- [ ] `vector_add` prints `3.0` for both first and last element.
-- [ ] `device_info` lists at least one device.
-- [ ] `nsys` stats show non-trivial CUDA API calls.
+## การตรวจสอบผล
+- [ ] `nvidia-smi` แสดง GPU ของคุณ
+- [ ] `vector_add` พิมพ์ค่า `3.0` ทั้งสมาชิกตัวแรกและตัวสุดท้าย
+- [ ] `device_info` แสดงอุปกรณ์อย่างน้อยหนึ่งตัว
+- [ ] สถิติของ `nsys` แสดงการเรียก CUDA API ที่มีนัยสำคัญ
 
-## Cleanup
+## การล้างทรัพยากร
 ```bash
 rm vector_add device_info *.cu
 ```
 
-## Troubleshooting
-- **`nvcc: command not found`** — Install CUDA Toolkit; add `/usr/local/cuda/bin` to PATH.
-- **`no CUDA-capable device is detected`** — Driver not loaded; `sudo modprobe nvidia` on Linux.
-- **Kernel returns wrong values** — Check grid/block dim arithmetic; for N=1M and block=256, grid must be 4096.
+## การแก้ปัญหา
+- **`nvcc: command not found`** — ติดตั้ง CUDA Toolkit และเพิ่ม `/usr/local/cuda/bin` ลงใน PATH
+- **`no CUDA-capable device is detected`** — Driver ยังไม่ถูกโหลด ใช้ `sudo modprobe nvidia` บน Linux
+- **Kernel คืนค่าผิด** — ตรวจสอบการคำนวณขนาด grid/block สำหรับ N=1M และ block=256 ค่า grid ต้องเป็น 4096

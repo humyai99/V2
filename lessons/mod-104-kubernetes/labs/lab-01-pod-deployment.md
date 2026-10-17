@@ -1,13 +1,13 @@
-# Lab 01: Your First Pod and Deployment
+# Lab 01: Pod และ Deployment แรกของคุณ
 
-**Duration:** 60 min  **Prerequisites:** kind/minikube cluster running
+**ระยะเวลา:** 60 นาที  **ข้อกำหนดเบื้องต้น:** มีคลัสเตอร์ kind/minikube ทำงานอยู่
 
-## Objective
-Run a bare Pod, then graduate to a Deployment with replicas, rolling updates, and rollback.
+## วัตถุประสงค์
+รัน Pod เปล่า ๆ จากนั้นขยับไปใช้ Deployment ที่มี replicas, rolling updates และ rollback
 
-## Steps
+## ขั้นตอน
 
-### 1. Run a bare Pod
+### 1. รัน Pod เปล่า
 ```bash
 kubectl run nginx --image=nginx:1.27 --port=80
 kubectl get pods
@@ -17,9 +17,9 @@ curl http://localhost:8080
 kill %1
 kubectl delete pod nginx
 ```
-Notice the Pod stays gone — no controller is recreating it.
+สังเกตว่า Pod หายไปเลย — ไม่มี controller คอยสร้างมันขึ้นมาใหม่
 
-### 2. Promote to a Deployment
+### 2. ยกระดับเป็น Deployment
 ```yaml
 # deployment.yaml
 apiVersion: apps/v1
@@ -46,7 +46,7 @@ kubectl delete pod -l app=web --field-selector=status.phase=Running --grace-peri
 kubectl get pods -l app=web                                                            # replaced
 ```
 
-### 3. Roll out a new image
+### 3. Roll out image ใหม่
 ```bash
 kubectl set image deployment/web nginx=nginx:1.27-alpine
 kubectl rollout status deployment/web
@@ -59,7 +59,7 @@ kubectl rollout undo deployment/web
 kubectl rollout history deployment/web
 ```
 
-### 5. Tweak the rollout strategy
+### 5. ปรับแต่งกลยุทธ์การ rollout
 ```yaml
 spec:
   strategy:
@@ -68,19 +68,19 @@ spec:
       maxSurge: 1
       maxUnavailable: 0
 ```
-Re-apply, redeploy with a new image, observe stricter rollout: at most 4 pods at any time, at least 3 Ready.
+apply ใหม่ แล้ว redeploy ด้วย image ใหม่ สังเกตการ rollout ที่เข้มงวดขึ้น: มี pod ไม่เกิน 4 ตัวในเวลาใดก็ตาม และ Ready อย่างน้อย 3 ตัว
 
-## Validation
-- [ ] `kubectl get deployment web` shows 3/3 Ready.
-- [ ] After deleting one pod, a replacement appears within seconds.
-- [ ] `kubectl rollout history` shows at least 3 revisions.
-- [ ] Rollback restores the previous image (verify with `kubectl describe pod -l app=web | grep Image`).
+## การตรวจสอบ
+- [ ] `kubectl get deployment web` แสดง 3/3 Ready
+- [ ] หลังจากลบ pod หนึ่งตัว จะมีตัวแทนปรากฏขึ้นภายในไม่กี่วินาที
+- [ ] `kubectl rollout history` แสดงอย่างน้อย 3 revisions
+- [ ] Rollback คืนค่า image ก่อนหน้า (ตรวจสอบด้วย `kubectl describe pod -l app=web | grep Image`).
 
-## Cleanup
+## การล้างข้อมูล
 ```bash
 kubectl delete -f deployment.yaml
 ```
 
-## Troubleshooting
-- **Pods stuck Pending** — `kubectl describe pod` shows scheduling reasons (insufficient CPU/memory, taints).
-- **Rollout hangs** — `kubectl rollout status --timeout=30s` then `kubectl describe` the new pods.
+## การแก้ไขปัญหา
+- **Pods ค้างที่สถานะ Pending** — `kubectl describe pod` จะแสดงเหตุผลของการจัดตาราง (CPU/memory ไม่พอ, taints)
+- **Rollout ค้าง** — ใช้ `kubectl rollout status --timeout=30s` แล้ว `kubectl describe` pods ตัวใหม่

@@ -1,13 +1,13 @@
-# Lab 02: Author Your First DAG
+# แล็บ 02: เขียน DAG แรกของคุณ
 
-**Duration:** 75 min  **Prerequisites:** Lab 01 complete; Airflow running
+**ระยะเวลา:** 75 นาที  **ความรู้พื้นฐานที่ต้องมี:** ทำแล็บ 01 เสร็จแล้ว และ Airflow กำลังทำงานอยู่
 
-## Objective
-Build an end-to-end DAG that mimics a real ML pipeline: download data, transform it, train a small model, and write metrics back. Use TaskFlow API and demonstrate dependencies, retries, and XCom.
+## วัตถุประสงค์
+สร้าง DAG แบบ end-to-end ที่จำลอง ML pipeline จริง: ดาวน์โหลดข้อมูล แปลงข้อมูล (transform) เทรนโมเดลขนาดเล็ก และเขียน metrics กลับ โดยใช้ TaskFlow API และสาธิต dependencies, retries และ XCom
 
-## Steps
+## ขั้นตอน
 
-### 1. Project DAG
+### 1. DAG ของโปรเจกต์
 ```python
 # dags/iris_pipeline.py
 from __future__ import annotations
@@ -75,19 +75,19 @@ with DAG(
     report(train(transform(download())))
 ```
 
-### 2. Drop into the dags/ folder and watch it appear
-The scheduler scans every 30s.
+### 2. วางไฟล์ไว้ในโฟลเดอร์ dags/ แล้วรอดูให้ปรากฏ
+Scheduler จะสแกนทุก 30 วินาที
 
-### 3. Trigger and watch
-UI → iris_pipeline → Trigger DAG with logical date today.
+### 3. Trigger และติดตามผล
+UI → iris_pipeline → Trigger DAG โดยใช้ logical date เป็นวันนี้
 
-### 4. Observe XCom flow
-Click into the `train` task → XCom tab → see the dict passed to `report`.
+### 4. สังเกตการไหลของ XCom
+คลิกเข้าไปที่ task `train` → แท็บ XCom → จะเห็น dict ที่ส่งต่อไปยัง `report`
 
-### 5. Force a failure to test retries
-Edit `transform` to `raise RuntimeError("synthetic")`. Trigger. Watch it retry twice before final fail.
+### 5. บังคับให้ล้มเหลวเพื่อทดสอบ retries
+แก้ไข `transform` ให้ `raise RuntimeError("synthetic")` แล้ว trigger ดูว่ามัน retry สองครั้งก่อนจะล้มเหลวในที่สุด
 
-### 6. Convert to use TaskGroups for clarity
+### 6. ปรับไปใช้ TaskGroups เพื่อความชัดเจน
 ```python
 from airflow.utils.task_group import TaskGroup
 with TaskGroup("data") as data_grp:
@@ -95,18 +95,18 @@ with TaskGroup("data") as data_grp:
 report(train(clean))
 ```
 
-## Validation
-- [ ] DAG appears in UI.
-- [ ] All 4 tasks run successfully in order.
-- [ ] XCom from `train` is visible.
-- [ ] Forced failure produces 2 retries.
+## การตรวจสอบ
+- [ ] DAG ปรากฏใน UI
+- [ ] Task ทั้ง 4 ตัวรันสำเร็จตามลำดับ
+- [ ] มองเห็น XCom จาก `train`
+- [ ] การบังคับให้ล้มเหลวทำให้เกิดการ retry 2 ครั้ง
 
-## Cleanup
+## การล้างทรัพยากร
 ```bash
 rm ~/airflow/dags/iris_pipeline.py
 ```
 
-## Troubleshooting
-- **DAG doesn't appear** — Syntax error: `airflow dags list-import-errors` shows them.
-- **`@task` not recognized** — Older Airflow version; `from airflow.decorators import task` requires 2.0+.
-- **XCom too large** — Default backend limits to 48KB; use S3/GCS backend or write file paths through XCom and data to object storage.
+## การแก้ไขปัญหา
+- **DAG ไม่ปรากฏ** — มี syntax error: `airflow dags list-import-errors` จะแสดงรายการให้เห็น
+- **ไม่รู้จัก `@task`** — Airflow เวอร์ชันเก่า; `from airflow.decorators import task` ต้องใช้ 2.0 ขึ้นไป
+- **XCom ใหญ่เกินไป** — backend ค่าเริ่มต้นจำกัดที่ 48KB ให้ใช้ backend แบบ S3/GCS หรือส่ง file path ผ่าน XCom แล้วเก็บข้อมูลไว้ใน object storage

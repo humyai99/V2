@@ -1,13 +1,13 @@
-# Lab 02: PyTorch GPU Inference and Benchmarking
+# Lab 02: PyTorch GPU Inference และการทำ Benchmark
 
-**Duration:** 60 min  **Prerequisites:** PyTorch with CUDA installed
+**ระยะเวลา:** 60 นาที  **สิ่งที่ต้องมีก่อน:** ติดตั้ง PyTorch ที่รองรับ CUDA แล้ว
 
-## Objective
-Load a real model (ResNet-50 from torchvision), move it to GPU, and benchmark CPU vs GPU throughput on a synthetic batch.
+## วัตถุประสงค์
+โหลดโมเดลจริง (ResNet-50 จาก torchvision) ย้ายไปไว้บน GPU และ benchmark throughput ของ CPU เทียบกับ GPU บน batch ข้อมูลสังเคราะห์
 
-## Steps
+## ขั้นตอน
 
-### 1. Setup
+### 1. การตั้งค่า
 ```python
 import time, torch
 from torchvision.models import resnet50, ResNet50_Weights
@@ -42,7 +42,7 @@ with torch.inference_mode():
 print(f"gpu per-batch: {gpu_s*1000:.1f} ms   speedup: {cpu_s/gpu_s:.1f}x")
 ```
 
-### 4. Throughput vs batch size
+### 4. Throughput เทียบกับ batch size
 ```python
 for bs in (1, 4, 8, 16, 32, 64):
     x = torch.randn(bs, 3, 224, 224, device=device)
@@ -54,7 +54,7 @@ for bs in (1, 4, 8, 16, 32, 64):
     print(f"bs={bs:3d} per-batch={s*1000:6.1f}ms throughput={bs/s:7.1f} img/s")
 ```
 
-### 5. fp16 with autocast
+### 5. fp16 ด้วย autocast
 ```python
 with torch.inference_mode(), torch.amp.autocast("cuda", dtype=torch.float16):
     for _ in range(3): model_gpu(x_gpu); torch.cuda.synchronize()
@@ -70,15 +70,15 @@ compiled = torch.compile(model_gpu, mode="reduce-overhead")
 # Compare against eager.
 ```
 
-## Validation
-- [ ] GPU speedup ≥ 5× over CPU for batch 8 (consumer GPU).
-- [ ] Per-image latency drops as batch size grows (until you hit memory limits).
-- [ ] fp16 is 1.5-2× faster than fp32 on Ampere or newer.
+## การตรวจสอบผล
+- [ ] GPU เร็วกว่า CPU ≥ 5× สำหรับ batch 8 (GPU ระดับ consumer)
+- [ ] Latency ต่อภาพลดลงเมื่อ batch size เพิ่มขึ้น (จนกว่าจะชนขีดจำกัดหน่วยความจำ)
+- [ ] fp16 เร็วกว่า fp32 1.5-2× บน Ampere หรือใหม่กว่า
 
-## Cleanup
-None.
+## การล้างทรัพยากร
+ไม่มี
 
-## Troubleshooting
-- **`cuda out of memory`** — Reduce batch size. Check `nvidia-smi` for other processes hogging memory.
-- **fp16 slower than fp32** — Pascal-era GPU without Tensor Cores. fp16 only wins on Volta+.
-- **`torch.compile` errors** — Some ops not yet supported; fall back to eager with `model_compiled = torch.compile(model_gpu, dynamic=True)`.
+## การแก้ปัญหา
+- **`cuda out of memory`** — ลด batch size และตรวจสอบ `nvidia-smi` ว่ามี process อื่นยึดหน่วยความจำอยู่หรือไม่
+- **fp16 ช้ากว่า fp32** — เป็น GPU ยุค Pascal ที่ไม่มี Tensor Cores โดย fp16 จะเร็วกว่าเฉพาะบน Volta ขึ้นไป
+- **`torch.compile` errors** — บาง op ยังไม่รองรับ ให้ fallback ไปใช้ eager หรือใช้ `model_compiled = torch.compile(model_gpu, dynamic=True)`.

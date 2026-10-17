@@ -1,20 +1,20 @@
-# Lab 03: ConfigMaps and Secrets
+# Lab 03: ConfigMaps และ Secrets
 
-**Duration:** 60 min  **Prerequisites:** Lab 02 complete
+**ระยะเวลา:** 60 นาที  **ข้อกำหนดเบื้องต้น:** ทำ Lab 02 เสร็จแล้ว
 
-## Objective
-Externalize app configuration with ConfigMaps and Secrets, mount as env vars and as files, and rotate without restarting unnecessarily.
+## วัตถุประสงค์
+แยกการตั้งค่าแอปออกมาภายนอกด้วย ConfigMaps และ Secrets, mount เป็น env vars และเป็นไฟล์ และหมุนเวียน (rotate) ค่าโดยไม่ต้อง restart โดยไม่จำเป็น
 
-## Steps
+## ขั้นตอน
 
-### 1. Create a ConfigMap from literals and a file
+### 1. สร้าง ConfigMap จาก literals และไฟล์
 ```bash
 echo "log_level: info" > app.conf
 kubectl create configmap app-config --from-literal=APP_ENV=staging --from-file=app.conf=app.conf
 kubectl get cm app-config -o yaml
 ```
 
-### 2. Mount as env vars
+### 2. Mount เป็น env vars
 ```yaml
 spec:
   containers:
@@ -23,7 +23,7 @@ spec:
         - configMapRef: { name: app-config }
 ```
 
-### 3. Mount the file at /etc/app/
+### 3. Mount ไฟล์ไว้ที่ /etc/app/
 ```yaml
       volumeMounts:
         - name: cfg
@@ -33,7 +33,7 @@ spec:
       configMap: { name: app-config }
 ```
 
-### 4. Create a Secret
+### 4. สร้าง Secret
 ```bash
 kubectl create secret generic db-creds \
   --from-literal=username=app \
@@ -41,7 +41,7 @@ kubectl create secret generic db-creds \
 kubectl get secret db-creds -o yaml      # base64-encoded
 ```
 
-### 5. Project Secret keys as env vars
+### 5. ฉาย (project) Secret keys เป็น env vars
 ```yaml
       env:
         - name: DB_USER
@@ -52,33 +52,33 @@ kubectl get secret db-creds -o yaml      # base64-encoded
             secretKeyRef: { name: db-creds, key: password }
 ```
 
-### 6. Rotate Secret without restart (file mounts only)
+### 6. Rotate Secret โดยไม่ต้อง restart (เฉพาะ file mounts)
 ```bash
 kubectl create secret generic db-creds --from-literal=password='n3wp4ss' --dry-run=client -o yaml \
   | kubectl apply -f -
 ```
-File mounts update within ~60s (kubelet sync). Env-var injections require pod restart.
+File mounts จะอัปเดตภายในประมาณ 60 วินาที (kubelet sync) ส่วนการ inject ผ่าน env var ต้อง restart pod
 
-### 7. Encrypted secrets — SealedSecrets or External Secrets
-Sketch:
+### 7. Secrets แบบเข้ารหัส — SealedSecrets หรือ External Secrets
+โครงร่าง:
 ```bash
 helm install sealed-secrets sealed-secrets/sealed-secrets -n kube-system
 echo -n 'mypass' | kubectl create secret generic test --dry-run=client --from-file=password=/dev/stdin -o yaml \
   | kubeseal --format yaml > sealed-secret.yaml      # safe to commit
 ```
 
-## Validation
-- [ ] `kubectl exec pod -- env | grep APP_ENV` shows `staging`.
-- [ ] `kubectl exec pod -- cat /etc/app/app.conf` shows your file.
-- [ ] After rotating Secret values, file mounts reflect new values within 60s without pod restart.
-- [ ] Trying to view the Secret with `kubectl get secret db-creds -o yaml` shows base64 (not plaintext).
+## การตรวจสอบ
+- [ ] `kubectl exec pod -- env | grep APP_ENV` แสดง `staging`
+- [ ] `kubectl exec pod -- cat /etc/app/app.conf` แสดงไฟล์ของคุณ
+- [ ] หลังจาก rotate ค่า Secret แล้ว file mounts สะท้อนค่าใหม่ภายใน 60 วินาทีโดยไม่ต้อง restart pod
+- [ ] เมื่อลองดู Secret ด้วย `kubectl get secret db-creds -o yaml` จะเห็นเป็น base64 (ไม่ใช่ plaintext)
 
-## Cleanup
+## การล้างข้อมูล
 ```bash
 kubectl delete cm app-config secret db-creds
 ```
 
-## Troubleshooting
-- **Pod doesn't restart on env change** — Env vars are injected at start. Restart manually: `kubectl rollout restart deployment/...`.
-- **Secret looks "encrypted" but isn't** — Base64 is encoding, not encryption. Use SealedSecrets or External Secrets for at-rest encryption.
-- **File mount didn't update** — Check kubelet sync interval; on kind it's 60s by default.
+## การแก้ไขปัญหา
+- **Pod ไม่ restart เมื่อ env เปลี่ยน** — env vars ถูก inject ตอนเริ่มต้นเท่านั้น ให้ restart ด้วยตนเอง: `kubectl rollout restart deployment/...`
+- **Secret ดูเหมือน "เข้ารหัส" แต่จริง ๆ ไม่ใช่** — Base64 คือการ encoding ไม่ใช่การเข้ารหัส (encryption) ให้ใช้ SealedSecrets หรือ External Secrets สำหรับการเข้ารหัสขณะจัดเก็บ (at-rest)
+- **File mount ไม่อัปเดต** — ตรวจสอบ sync interval ของ kubelet บน kind ค่าเริ่มต้นคือ 60 วินาที

@@ -1,13 +1,13 @@
-# Lab 01: Dockerfile Optimization for ML Workloads
+# Lab 01: การ Optimize Dockerfile สำหรับ ML Workload
 
-**Duration:** 60 min  **Prerequisites:** Docker installed; lab 02 of mod-101 complete
+**ระยะเวลา:** 60 นาที  **สิ่งที่ต้องมีก่อน:** ติดตั้ง Docker แล้ว; ทำแล็บ 02 ของ mod-101 เสร็จแล้ว
 
-## Objective
-Take a naive ML Dockerfile and apply optimizations: layer ordering, multi-stage builds, BuildKit cache mounts, and `.dockerignore`. Measure image size and build time before/after.
+## วัตถุประสงค์
+นำ Dockerfile สำหรับ ML แบบพื้นฐานมาปรับให้ดีขึ้น: การเรียงลำดับ layer, multi-stage build, BuildKit cache mount และ `.dockerignore` แล้ววัดขนาด image และเวลา build ก่อน/หลัง
 
-## Steps
+## ขั้นตอน
 
-### 1. Start with a naive Dockerfile
+### 1. เริ่มจาก Dockerfile แบบพื้นฐาน
 ```dockerfile
 FROM python:3.11
 WORKDIR /app
@@ -15,14 +15,14 @@ COPY . .
 RUN pip install -r requirements.txt
 CMD ["python", "app.py"]
 ```
-Build it and note size: `docker build -t naive .` → typically 1.2-1.5 GB.
+Build แล้วจดขนาดไว้: `docker build -t naive .` → โดยทั่วไปจะได้ 1.2-1.5 GB
 
-### 2. Switch to slim base + .dockerignore
+### 2. เปลี่ยนไปใช้ slim base + .dockerignore
 ```dockerfile
 FROM python:3.11-slim
 ...
 ```
-Add `.dockerignore`:
+เพิ่ม `.dockerignore`:
 ```
 __pycache__/
 *.pyc
@@ -32,24 +32,24 @@ tests/
 *.md
 ```
 
-### 3. Order layers by change frequency
-Copy `requirements.txt` and install before copying source — cached if requirements don't change:
+### 3. เรียง layer ตามความถี่ของการเปลี่ยนแปลง
+Copy `requirements.txt` และติดตั้งก่อน copy source code — จะถูก cache ไว้ถ้า requirements ไม่เปลี่ยน:
 ```dockerfile
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 COPY . .
 ```
 
-### 4. Use BuildKit cache mount for pip
+### 4. ใช้ BuildKit cache mount สำหรับ pip
 ```dockerfile
 # syntax=docker/dockerfile:1.6
 FROM python:3.11-slim
 RUN --mount=type=cache,target=/root/.cache/pip \
     pip install --no-cache-dir -r requirements.txt
 ```
-Build with `DOCKER_BUILDKIT=1 docker build`.
+Build ด้วย `DOCKER_BUILDKIT=1 docker build`
 
-### 5. Multi-stage to drop build tools
+### 5. ใช้ multi-stage เพื่อตัด build tool ออก
 ```dockerfile
 FROM python:3.11 AS builder
 RUN pip wheel --wheel-dir /wheels -r requirements.txt
@@ -59,22 +59,22 @@ COPY --from=builder /wheels /wheels
 RUN pip install --no-index --find-links=/wheels -r requirements.txt && rm -rf /wheels
 ```
 
-### 6. Measure
+### 6. วัดผล
 ```bash
 docker images | grep -E 'naive|optimized'
 hyperfine 'docker build --no-cache -t opt .'
 ```
 
-## Validation
-- [ ] Optimized image < 400 MB (vs naive > 1 GB).
-- [ ] Second build (no source changes) < 5 seconds (cache hit on pip layer).
-- [ ] `docker history opt` shows fewer than 10 layers.
+## การตรวจสอบ
+- [ ] Image ที่ optimize แล้ว < 400 MB (เทียบกับแบบพื้นฐาน > 1 GB)
+- [ ] Build ครั้งที่สอง (ไม่มีการเปลี่ยน source) < 5 วินาที (cache hit ที่ layer ของ pip)
+- [ ] `docker history opt` แสดงน้อยกว่า 10 layer
 
-## Cleanup
+## การ Cleanup
 ```bash
 docker rmi naive opt
 ```
 
-## Troubleshooting
-- **Cache mount has no effect** — Ensure BuildKit is enabled (`docker buildx version` reports >=0.10).
-- **Slim image missing system libs** — Install `gcc`/`g++` in builder stage, not runtime.
+## การแก้ปัญหา
+- **Cache mount ไม่มีผล** — ตรวจสอบว่าเปิดใช้ BuildKit แล้ว (`docker buildx version` รายงาน >=0.10)
+- **Slim image ขาด system library** — ติดตั้ง `gcc`/`g++` ใน builder stage ไม่ใช่ใน runtime

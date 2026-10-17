@@ -1,13 +1,13 @@
 # Lab 02: Service Discovery — ClusterIP, NodePort, LoadBalancer
 
-**Duration:** 45 min  **Prerequisites:** Lab 01 complete
+**ระยะเวลา:** 45 นาที  **ข้อกำหนดเบื้องต้น:** ทำ Lab 01 เสร็จแล้ว
 
-## Objective
-Understand how Services route traffic to Pods, the difference between ClusterIP/NodePort/LoadBalancer, and how DNS works inside the cluster.
+## วัตถุประสงค์
+ทำความเข้าใจว่า Services ส่งต่อ traffic ไปยัง Pods อย่างไร ความแตกต่างระหว่าง ClusterIP/NodePort/LoadBalancer และ DNS ทำงานอย่างไรภายในคลัสเตอร์
 
-## Steps
+## ขั้นตอน
 
-### 1. ClusterIP (default)
+### 1. ClusterIP (ค่าเริ่มต้น)
 ```yaml
 apiVersion: v1
 kind: Service
@@ -21,7 +21,7 @@ kubectl apply -f svc.yaml
 kubectl get svc web
 ```
 
-### 2. Hit it from inside the cluster
+### 2. เรียกใช้งานจากภายในคลัสเตอร์
 ```bash
 kubectl run probe --rm -it --image=curlimages/curl --restart=Never -- sh
 # Inside the probe container:
@@ -31,7 +31,7 @@ nslookup web                          # resolves to ClusterIP
 exit
 ```
 
-### 3. NodePort — exposes a port on every node
+### 3. NodePort — เปิดพอร์ตบนทุก node
 ```yaml
 spec:
   type: NodePort
@@ -45,36 +45,36 @@ kubectl apply -f svc.yaml
 curl http://localhost:8080            # via kind port-mapping
 ```
 
-### 4. LoadBalancer (cloud) or via metallb (local)
-On a cloud cluster, `type: LoadBalancer` allocates an external IP. On kind, install metallb for the same UX:
+### 4. LoadBalancer (บนคลาวด์) หรือผ่าน metallb (บนเครื่อง local)
+บนคลัสเตอร์คลาวด์ `type: LoadBalancer` จะจัดสรร external IP ให้ ส่วนบน kind ให้ติดตั้ง metallb เพื่อให้ได้ประสบการณ์ใช้งานแบบเดียวกัน:
 ```bash
 kubectl apply -f https://raw.githubusercontent.com/metallb/metallb/v0.14.5/config/manifests/metallb-native.yaml
 # Then configure an address pool (see metallb docs).
 ```
 
-### 5. Inspect endpoints
+### 5. ตรวจสอบ endpoints
 ```bash
 kubectl get endpoints web              # one IP per Ready pod
 kubectl describe svc web | head -20
 ```
 
-### 6. Service vs label selector mismatches
-Change the Deployment's pod label to `app: web-v2`. Service selector still says `app: web`. Watch endpoints empty out:
+### 6. Service กับ label selector ที่ไม่ตรงกัน
+เปลี่ยน pod label ของ Deployment เป็น `app: web-v2` ขณะที่ selector ของ Service ยังเป็น `app: web` แล้วดู endpoints ว่างลง:
 ```bash
 kubectl get endpoints web -w
 ```
 
-## Validation
-- [ ] DNS resolves `web` to the ClusterIP from inside the cluster.
-- [ ] `kubectl get endpoints web` lists one IP per Ready pod.
-- [ ] Breaking the label selector → endpoints empty → external traffic fails.
+## การตรวจสอบ
+- [ ] DNS resolve `web` เป็น ClusterIP ได้จากภายในคลัสเตอร์
+- [ ] `kubectl get endpoints web` แสดง IP หนึ่งรายการต่อ pod ที่ Ready หนึ่งตัว
+- [ ] ทำให้ label selector พัง → endpoints ว่าง → traffic จากภายนอกล้มเหลว
 
-## Cleanup
+## การล้างข้อมูล
 ```bash
 kubectl delete svc web
 ```
 
-## Troubleshooting
-- **`Service has no endpoints`** — Label selector doesn't match any Ready pod. Check `kubectl get pods --show-labels`.
-- **NodePort unreachable from host** — kind's port mapping must include the nodePort (see kind-config.yaml from mod-101 lab 03).
-- **DNS resolution fails inside cluster** — CoreDNS pod unhealthy. `kubectl get pods -n kube-system | grep dns`.
+## การแก้ไขปัญหา
+- **`Service has no endpoints`** — label selector ไม่ตรงกับ pod ที่ Ready ตัวใดเลย ตรวจสอบด้วย `kubectl get pods --show-labels`
+- **เข้าถึง NodePort จาก host ไม่ได้** — port mapping ของ kind ต้องรวม nodePort ไว้ด้วย (ดู kind-config.yaml จาก mod-101 lab 03)
+- **DNS resolution ล้มเหลวภายในคลัสเตอร์** — pod ของ CoreDNS ไม่ healthy ตรวจด้วย `kubectl get pods -n kube-system | grep dns`

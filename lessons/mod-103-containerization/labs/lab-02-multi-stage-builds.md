@@ -1,16 +1,16 @@
-# Lab 02: Multi-Stage Builds for Slim Production Images
+# Lab 02: Multi-Stage Build สำหรับ Production Image ที่เล็กกระชับ
 
-**Duration:** 60 min  **Prerequisites:** Lab 01 complete
+**ระยะเวลา:** 60 นาที  **สิ่งที่ต้องมีก่อน:** ทำ Lab 01 เสร็จแล้ว
 
-## Objective
-Use multi-stage Dockerfiles to separate build-time concerns (compilers, large dev SDKs) from runtime, producing an image that contains only what's needed to serve traffic.
+## วัตถุประสงค์
+ใช้ Dockerfile แบบ multi-stage เพื่อแยกสิ่งที่ต้องใช้ตอน build (compiler, dev SDK ขนาดใหญ่) ออกจาก runtime ให้ได้ image ที่มีเฉพาะสิ่งที่จำเป็นสำหรับรับ traffic เท่านั้น
 
-## Steps
+## ขั้นตอน
 
-### 1. Identify the problem
-Many ML libraries (`xgboost`, `lightgbm`, `pyarrow`, native CUDA bindings) need a C/C++ toolchain at install time but not at runtime. A single-stage image ships hundreds of MB of unnecessary build tools.
+### 1. ระบุปัญหา
+ML library หลายตัว (`xgboost`, `lightgbm`, `pyarrow`, native CUDA binding) ต้องใช้ C/C++ toolchain ตอนติดตั้ง แต่ไม่ต้องใช้ตอน runtime Image แบบ single-stage จึงพก build tool ที่ไม่จำเป็นไปด้วยหลายร้อย MB
 
-### 2. Three-stage build for a PyTorch service
+### 2. Build แบบสาม stage สำหรับ service ที่ใช้ PyTorch
 ```dockerfile
 # syntax=docker/dockerfile:1.6
 
@@ -40,27 +40,27 @@ USER 1000
 CMD ["myapp"]
 ```
 
-### 3. Verify size delta
+### 3. ตรวจสอบความต่างของขนาด
 ```bash
 docker build --target deps -t app:deps .
 docker build --target runtime -t app:runtime .
 docker images app
 ```
-`runtime` should be < 50% of `deps`.
+`runtime` ควรมีขนาด < 50% ของ `deps`
 
-### 4. Reproduce a real-world example with PyTorch
-Use `pytorch/pytorch:2.3-runtime` in the runtime stage; copy your model + entrypoint only.
+### 4. ทำซ้ำกับตัวอย่างจริงที่ใช้ PyTorch
+ใช้ `pytorch/pytorch:2.3-runtime` ใน runtime stage; copy เฉพาะ model + entrypoint ของคุณ
 
-## Validation
-- [ ] `docker image inspect app:runtime` shows `pip` and `python` present but no `gcc`/`g++`.
-- [ ] Runtime image size < 1.5 GB (or whatever your target is).
-- [ ] App starts and responds successfully.
+## การตรวจสอบ
+- [ ] `docker image inspect app:runtime` แสดงว่ามี `pip` และ `python` แต่ไม่มี `gcc`/`g++`
+- [ ] ขนาด runtime image < 1.5 GB (หรือตามเป้าหมายของคุณ)
+- [ ] App เริ่มทำงานและตอบสนองได้สำเร็จ
 
-## Cleanup
+## การ Cleanup
 ```bash
 docker rmi app:deps app:appbuild app:runtime 2>/dev/null
 ```
 
-## Troubleshooting
-- **Missing shared libs at runtime** — Some PyTorch ops need `libgomp1`; add `apt-get install -y libgomp1` in runtime stage.
-- **Wheels from stage 1 incompatible** — Stage 1 and stage 3 must use the same Python minor version (3.11.x ↔ 3.11.x).
+## การแก้ปัญหา
+- **ขาด shared library ตอน runtime** — PyTorch op บางตัวต้องใช้ `libgomp1`; เพิ่ม `apt-get install -y libgomp1` ใน runtime stage
+- **Wheel จาก stage 1 ใช้ร่วมกันไม่ได้** — Stage 1 และ stage 3 ต้องใช้ Python minor version เดียวกัน (3.11.x ↔ 3.11.x)

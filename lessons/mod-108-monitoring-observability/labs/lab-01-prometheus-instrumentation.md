@@ -1,13 +1,13 @@
-# Lab 01: Instrument a Python Service with Prometheus
+# Lab 01: ติดตั้ง Instrumentation ให้ Python Service ด้วย Prometheus
 
-**Duration:** 60 min  **Prerequisites:** Python 3.11+, Docker
+**ระยะเวลา:** 60 นาที  **สิ่งที่ต้องมีก่อน:** Python 3.11+, Docker
 
-## Objective
-Add Counter, Histogram, and Gauge metrics to a FastAPI service; expose them on `/metrics`; run Prometheus locally to scrape; query in the UI.
+## วัตถุประสงค์
+เพิ่ม metrics แบบ Counter, Histogram และ Gauge ให้กับ FastAPI service; เปิดเผยผ่าน `/metrics`; รัน Prometheus บนเครื่องเพื่อ scrape; และ query ผ่าน UI
 
-## Steps
+## ขั้นตอน
 
-### 1. Sample service
+### 1. Service ตัวอย่าง
 ```python
 # app.py
 import time, random
@@ -53,36 +53,36 @@ scrape_configs:
       - targets: ['host.docker.internal:8000']
 ```
 
-### 3. Run Prometheus in Docker
+### 3. รัน Prometheus ใน Docker
 ```bash
 docker run -d --name prom -p 9090:9090 -v $PWD/prometheus.yml:/etc/prometheus/prometheus.yml prom/prometheus
 ```
 
-### 4. Drive traffic
+### 4. สร้าง traffic
 ```bash
 for i in $(seq 1 200); do curl -s -X POST http://localhost:8000/predict -d '{}' -H 'content-type: application/json' > /dev/null; done
 ```
 
-### 5. Query in Prometheus UI (http://localhost:9090)
+### 5. Query ใน Prometheus UI (http://localhost:9090)
 - `predictions_total`
 - `rate(predictions_total[1m])`
 - `sum by (status) (rate(predictions_total[5m]))`
 - `histogram_quantile(0.95, sum by (le) (rate(inference_latency_seconds_bucket[5m])))`
 - `inflight_requests`
 
-## Validation
-- [ ] `/metrics` endpoint returns Prometheus exposition format.
-- [ ] Prometheus targets page shows `app` UP.
-- [ ] All 5 queries return non-empty data after the traffic drive.
+## การตรวจสอบ
+- [ ] endpoint `/metrics` คืนค่าในรูปแบบ Prometheus exposition format
+- [ ] หน้า targets ของ Prometheus แสดง `app` เป็น UP
+- [ ] query ทั้ง 5 รายการคืนข้อมูลที่ไม่ว่างหลังจากสร้าง traffic แล้ว
 
-## Cleanup
+## การเก็บกวาด
 ```bash
 docker stop prom && docker rm prom
 pkill -f uvicorn
 rm prometheus.yml app.py
 ```
 
-## Troubleshooting
-- **Targets page shows DOWN** — `host.docker.internal` only resolves on macOS/Windows; on Linux use the host IP or `--add-host=host.docker.internal:host-gateway`.
-- **No data for `inflight_requests`** — Gauge that hits zero between scrapes. Add a longer-running endpoint to see it.
-- **`histogram_quantile returns NaN`** — Not enough samples in the window; widen `[5m]` to `[15m]` or drive more traffic.
+## การแก้ไขปัญหา
+- **หน้า Targets แสดง DOWN** — `host.docker.internal` resolve ได้เฉพาะบน macOS/Windows เท่านั้น; บน Linux ให้ใช้ IP ของ host หรือ `--add-host=host.docker.internal:host-gateway`
+- **ไม่มีข้อมูลสำหรับ `inflight_requests`** — Gauge มีค่าเป็นศูนย์ในช่วงระหว่างการ scrape แต่ละครั้ง ให้เพิ่ม endpoint ที่ทำงานนานขึ้นเพื่อให้เห็นค่า
+- **`histogram_quantile returns NaN`** — จำนวน sample ใน window ไม่เพียงพอ; ขยาย `[5m]` เป็น `[15m]` หรือสร้าง traffic เพิ่ม

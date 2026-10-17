@@ -1,64 +1,64 @@
-# Lab 02: Build a Grafana Dashboard from Scratch
+# Lab 02: สร้าง Grafana Dashboard ตั้งแต่เริ่มต้น
 
-**Duration:** 75 min  **Prerequisites:** Lab 01; Grafana installed
+**ระยะเวลา:** 75 นาที  **สิ่งที่ต้องมีก่อน:** Lab 01; ติดตั้ง Grafana แล้ว
 
-## Objective
-Stand up Grafana, connect to Prometheus, and build a 5-panel dashboard for the FastAPI service: RPS, error rate, p95 latency, in-flight requests, error budget.
+## วัตถุประสงค์
+ตั้งค่า Grafana ให้พร้อมใช้งาน เชื่อมต่อกับ Prometheus และสร้าง dashboard 5 panel สำหรับ FastAPI service ได้แก่ RPS, error rate, p95 latency, in-flight requests และ error budget
 
-## Steps
+## ขั้นตอน
 
-### 1. Run Grafana
+### 1. รัน Grafana
 ```bash
 docker run -d --name grafana -p 3000:3000 \
   -e GF_SECURITY_ADMIN_PASSWORD=admin grafana/grafana:11.1.0
 ```
-http://localhost:3000  user `admin` pass `admin`.
+http://localhost:3000  ผู้ใช้ `admin` รหัสผ่าน `admin`
 
-### 2. Add Prometheus data source
+### 2. เพิ่ม data source ของ Prometheus
 - URL: `http://host.docker.internal:9090`
-- Click "Save & Test" → green checkmark.
+- คลิก "Save & Test" → จะเห็นเครื่องหมายถูกสีเขียว
 
-### 3. Build the panels
-For each, "Add visualization" → choose Prometheus → paste the query → set unit → save.
+### 3. สร้าง panel
+สำหรับแต่ละ panel ให้เลือก "Add visualization" → เลือก Prometheus → วาง query → ตั้งค่า unit → บันทึก
 
 **Panel 1: RPS (timeseries)**
 - `sum(rate(predictions_total[1m]))`
-- Unit: req/s. Legend: total RPS.
+- Unit: req/s  Legend: total RPS
 
 **Panel 2: Error Rate (stat)**
 - `100 * sum(rate(predictions_total{status="error"}[5m])) / sum(rate(predictions_total[5m]))`
-- Unit: percent (0-100). Thresholds: green <1, yellow 1-5, red >5.
+- Unit: percent (0-100)  Thresholds: เขียว <1, เหลือง 1-5, แดง >5
 
 **Panel 3: Latency p50/p95/p99 (timeseries)**
 - `histogram_quantile(0.50, sum by (le) (rate(inference_latency_seconds_bucket[5m])))` legend `p50`
-- p95 and p99 with corresponding quantiles.
-- Unit: seconds.
+- p95 และ p99 ใช้ quantile ที่สอดคล้องกัน
+- Unit: seconds
 
 **Panel 4: In-flight requests (timeseries)**
 - `inflight_requests`
 
 **Panel 5: 30-day error budget burn (stat)**
 - `1 - (sum(increase(predictions_total{status="error"}[30d])) / sum(increase(predictions_total[30d]))) / 0.01`
-- (Assumes SLO of 99% availability.) Unit: percent.
+- (สมมติว่า SLO คือ availability 99%) Unit: percent
 
 ### 4. Templating variables
-Settings → Variables → Add `service` variable with query `label_values(predictions_total, service)`. Use in queries as `{service=~"$service"}`.
+Settings → Variables → เพิ่มตัวแปร `service` ด้วย query `label_values(predictions_total, service)` แล้วนำไปใช้ใน query เป็น `{service=~"$service"}`
 
-### 5. Export and import
-Settings → JSON Model → copy the JSON. Save as `dashboard.json`. To restore, "Import JSON" on a new Grafana.
+### 5. Export และ import
+Settings → JSON Model → คัดลอก JSON แล้วบันทึกเป็น `dashboard.json` หากต้องการกู้คืน ให้ใช้ "Import JSON" บน Grafana ตัวใหม่
 
-## Validation
-- [ ] Data source connection test succeeds.
-- [ ] All 5 panels render with data after driving traffic.
-- [ ] Time range selector affects all panels.
-- [ ] Dashboard JSON exports cleanly.
+## การตรวจสอบ
+- [ ] การทดสอบการเชื่อมต่อ data source สำเร็จ
+- [ ] panel ทั้ง 5 แสดงข้อมูลหลังจากสร้าง traffic แล้ว
+- [ ] ตัวเลือกช่วงเวลา (time range) มีผลกับทุก panel
+- [ ] export dashboard JSON ได้โดยไม่มีปัญหา
 
-## Cleanup
+## การเก็บกวาด
 ```bash
 docker stop grafana && docker rm grafana
 ```
 
-## Troubleshooting
-- **All panels show "No data"** — Data source URL points to the wrong host; check from inside the Grafana container with `docker exec grafana wget -O- http://host.docker.internal:9090/api/v1/query?query=up`.
-- **Latency panel returns 0** — Histogram buckets misspecified. Buckets must be cumulative (e.g., 0.005, 0.01, 0.025…).
-- **Variables don't resolve** — Variable query needs to return labels, not values; use `label_values()`.
+## การแก้ไขปัญหา
+- **ทุก panel แสดง "No data"** — URL ของ data source ชี้ไปยัง host ที่ผิด; ตรวจสอบจากภายใน container ของ Grafana ด้วย `docker exec grafana wget -O- http://host.docker.internal:9090/api/v1/query?query=up`.
+- **Latency panel คืนค่า 0** — กำหนด histogram bucket ไม่ถูกต้อง bucket ต้องเป็นแบบสะสม (cumulative) (เช่น 0.005, 0.01, 0.025…)
+- **ตัวแปร resolve ไม่ได้** — query ของตัวแปรต้องคืนค่าเป็น label ไม่ใช่ value; ให้ใช้ `label_values()`

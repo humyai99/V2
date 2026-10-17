@@ -1,26 +1,26 @@
-# Lab 03: Run a Spark Batch Job Locally
+# แล็บ 03: รัน Spark Batch Job บนเครื่อง
 
-**Duration:** 60 min  **Prerequisites:** Java 11+, Python 3.11+
+**ระยะเวลา:** 60 นาที  **ความรู้พื้นฐานที่ต้องมี:** Java 11+, Python 3.11+
 
-## Objective
-Run PySpark locally, process a meaningful dataset (NYC taxi trips sample), and write Parquet output partitioned by date.
+## วัตถุประสงค์
+รัน PySpark บนเครื่อง ประมวลผล dataset ที่มีความหมาย (ตัวอย่างข้อมูลการเดินทางของแท็กซี่ NYC) และเขียนผลลัพธ์เป็น Parquet ที่แบ่ง partition ตามวันที่
 
-## Steps
+## ขั้นตอน
 
-### 1. Install PySpark
+### 1. ติดตั้ง PySpark
 ```bash
 python -m venv venv && source venv/bin/activate
 pip install 'pyspark==3.5.1' pyarrow
 ```
 
-### 2. Get sample data
+### 2. ดาวน์โหลดข้อมูลตัวอย่าง
 ```bash
 mkdir -p data
 curl -LfO https://d37ci6vzurychx.cloudfront.net/trip-data/yellow_tripdata_2024-01.parquet
 mv yellow_tripdata_2024-01.parquet data/
 ```
 
-### 3. Write the Spark job
+### 3. เขียน Spark job
 ```python
 # job.py
 from pyspark.sql import SparkSession, functions as F
@@ -59,13 +59,13 @@ print("done")
 spark.stop()
 ```
 
-### 4. Run it
+### 4. รัน job
 ```bash
 python job.py
 ls data/trips_by_pickup/
 ```
 
-### 5. Read it back to confirm
+### 5. อ่านกลับมาเพื่อยืนยัน
 ```python
 import pyspark
 spark = pyspark.sql.SparkSession.builder.getOrCreate()
@@ -74,23 +74,23 @@ out.show(10)
 out.filter("date = '2024-01-15'").orderBy(F.desc("trips")).show(5)
 ```
 
-### 6. Tune for your laptop
+### 6. ปรับจูนให้เหมาะกับแล็ปท็อปของคุณ
 ```python
 .config("spark.driver.memory", "4g")
 .config("spark.sql.shuffle.partitions", "4")    # default 200, way too many for laptop
 ```
 
-## Validation
-- [ ] Job completes in <2 minutes.
-- [ ] Output directory contains `date=2024-01-01/`, `date=2024-01-02/`, etc.
-- [ ] Re-reading produces the expected aggregated rows.
+## การตรวจสอบ
+- [ ] Job ทำงานเสร็จภายในเวลาน้อยกว่า 2 นาที
+- [ ] ไดเรกทอรีผลลัพธ์มี `date=2024-01-01/`, `date=2024-01-02/` เป็นต้น
+- [ ] การอ่านซ้ำได้แถวที่ aggregate แล้วตามที่คาดไว้
 
-## Cleanup
+## การล้างทรัพยากร
 ```bash
 rm -rf data/
 ```
 
-## Troubleshooting
-- **`Java HotSpot Memory error`** — Lower `spark.driver.memory` or process fewer days.
-- **`Permission denied: jps`** — Java isn't on PATH; `brew install openjdk@17 && export JAVA_HOME=...`.
-- **Too many output files** — `repartition("date")` before `partitionBy` keeps one file per date partition.
+## การแก้ไขปัญหา
+- **`Java HotSpot Memory error`** — ลดค่า `spark.driver.memory` หรือประมวลผลจำนวนวันให้น้อยลง
+- **`Permission denied: jps`** — Java ไม่อยู่ใน PATH; `brew install openjdk@17 && export JAVA_HOME=...`
+- **ไฟล์ผลลัพธ์มากเกินไป** — ใช้ `repartition("date")` ก่อน `partitionBy` เพื่อให้เหลือหนึ่งไฟล์ต่อ partition ของวันที่

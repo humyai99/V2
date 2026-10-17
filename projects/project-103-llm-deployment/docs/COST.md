@@ -1,25 +1,25 @@
-# Cost Analysis and Optimization
+# การวิเคราะห์และปรับลดต้นทุน
 
-## Cost Components
+## องค์ประกอบของต้นทุน
 
-1. **Compute (GPU)**: $0.50-4.00/hour
-2. **Inference**: $0.0002-0.06 per 1K tokens
-3. **Storage**: $0.02-0.10 per GB/month
-4. **Network**: Data transfer costs
+1. **Compute (GPU)**: $0.50-4.00/ชั่วโมง
+2. **Inference**: $0.0002-0.06 ต่อ 1K tokens
+3. **Storage**: $0.02-0.10 ต่อ GB/เดือน
+4. **Network**: ค่าใช้จ่ายในการโอนถ่ายข้อมูล
 
-TODO: Add detailed breakdown
+TODO: เพิ่มรายละเอียดการแจกแจงต้นทุน
 
-## Monthly Cost Estimates
+## ประมาณการต้นทุนรายเดือน
 
-### Small Deployment (1000 requests/day)
-TODO: Calculate costs
+### Deployment ขนาดเล็ก (1000 requests/วัน)
+TODO: คำนวณต้นทุน
 
-### Medium Deployment (10,000 requests/day)
-TODO: Calculate costs
+### Deployment ขนาดกลาง (10,000 requests/วัน)
+TODO: คำนวณต้นทุน
 
-### Large Deployment (100,000 requests/day)
-TODO: Calculate costs
+### Deployment ขนาดใหญ่ (100,000 requests/วัน)
+TODO: คำนวณต้นทุน
 
-## Optimization Strategies
+## กลยุทธ์การปรับลดต้นทุน
 
-TODO: Document cost-saving techniques
+TODO: บันทึกเทคนิคการประหยัดต้นทุน

@@ -1,14 +1,14 @@
-# Lab 02: Build a RAG Pipeline End-to-End
+# Lab 02: สร้าง RAG Pipeline แบบครบวงจร
 
-**Duration:** 90 min  **Prerequisites:** Lab 01 vLLM running; Qdrant (lab 03) or in-memory FAISS
+**ระยะเวลา:** 90 นาที  **ข้อกำหนดเบื้องต้น:** vLLM จาก Lab 01 กำลังรันอยู่; Qdrant (lab 03) หรือ FAISS แบบ in-memory
 
-## Objective
-Ingest a small document corpus, embed it, store in a vector DB, retrieve top-k for a user query, and pass to the LLM via prompt template. Measure retrieval precision and end-to-end latency.
+## วัตถุประสงค์
+นำเข้าชุดเอกสารขนาดเล็ก ทำ embedding จัดเก็บใน vector DB ดึง top-k สำหรับ query ของผู้ใช้ และส่งให้ LLM ผ่าน prompt template วัดความแม่นยำของการดึงข้อมูล (retrieval precision) และ latency แบบ end-to-end
 
-## Steps
+## ขั้นตอน
 
-### 1. Sample corpus
-Use the Python docs ToC or any small set of markdown files.
+### 1. ชุดเอกสารตัวอย่าง
+ใช้สารบัญของเอกสาร Python หรือไฟล์ markdown ชุดเล็ก ๆ ใดก็ได้
 ```bash
 mkdir corpus && cd corpus
 curl -L https://raw.githubusercontent.com/python/cpython/main/Doc/tutorial/introduction.rst -o intro.rst
@@ -41,7 +41,7 @@ emb = SentenceTransformer("sentence-transformers/all-MiniLM-L6-v2")
 vectors = emb.encode([d["text"] for d in docs], normalize_embeddings=True)
 ```
 
-### 4. Index in FAISS (in-memory; for prod use Qdrant per lab 03)
+### 4. สร้าง index ใน FAISS (in-memory; สำหรับ prod ให้ใช้ Qdrant ตาม lab 03)
 ```python
 import faiss, numpy as np
 index = faiss.IndexFlatIP(vectors.shape[1])    # cosine via normalized inner product
@@ -58,7 +58,7 @@ def retrieve(query, k=4):
 print(retrieve("how do for loops work in python"))
 ```
 
-### 6. Compose prompt and call LLM
+### 6. ประกอบ prompt และเรียก LLM
 ```python
 from openai import OpenAI
 client = OpenAI(base_url="http://localhost:8000/v1", api_key="dummy")
@@ -97,17 +97,17 @@ for q, expected_sources in test_set:
     print(q, "->", "PASS" if any(e in sources for e in expected_sources) else "FAIL", sources)
 ```
 
-## Validation
-- [ ] Retrieval returns relevant chunks for known queries.
-- [ ] Answer cites source ids when context is sufficient.
-- [ ] Answer says "I don't know" when context doesn't contain the answer (test by asking about Rust).
+## การตรวจสอบผล
+- [ ] Retrieval คืน chunk ที่เกี่ยวข้องสำหรับ query ที่รู้คำตอบอยู่แล้ว
+- [ ] คำตอบอ้างอิง source id เมื่อ context เพียงพอ
+- [ ] คำตอบบอกว่า "I don't know" เมื่อ context ไม่มีคำตอบ (ทดสอบโดยถามเกี่ยวกับ Rust)
 
-## Cleanup
+## การทำความสะอาด
 ```bash
 cd .. && rm -rf corpus
 ```
 
-## Troubleshooting
-- **Hallucinated answers** — Lower temperature; tighten the "don't know" instruction; verify retrieved chunks actually contain the answer.
-- **Wrong source retrieved** — Chunk size too small or too large. 300-800 chars works for prose; smaller for code.
-- **Slow first embedding** — Model download on first run; cache lives in `~/.cache/torch/sentence_transformers/`.
+## การแก้ไขปัญหา
+- **คำตอบแบบ hallucination** — ลด temperature; ทำให้คำสั่ง "don't know" เข้มงวดขึ้น; ตรวจสอบว่า chunk ที่ดึงมามีคำตอบจริง
+- **ดึง source ผิด** — ขนาด chunk เล็กหรือใหญ่เกินไป 300-800 ตัวอักษรเหมาะกับข้อความทั่วไป; ใช้ขนาดเล็กกว่าสำหรับโค้ด
+- **Embedding ครั้งแรกช้า** — มีการดาวน์โหลดโมเดลในการรันครั้งแรก; cache อยู่ที่ `~/.cache/torch/sentence_transformers/`
