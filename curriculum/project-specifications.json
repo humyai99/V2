@@ -1,0 +1,148 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "ai-infra-engineer-learning project specifications",
+  "description": "Canonical project specifications for the AI Infrastructure Engineer learning track. Each project README cites the spec ID below (e.g. proj-101, proj-102, proj-103). Treat this file as the source of truth for project scope, deliverables, and acceptance criteria.",
+  "version": "1.0.0",
+  "last_updated": "2026-05-23",
+  "projects": [
+    {
+      "id": "proj-101",
+      "slug": "project-101-basic-model-serving",
+      "title": "Basic Model Serving with FastAPI + Docker + Kubernetes",
+      "duration_hours": 30,
+      "difficulty": "medium",
+      "prerequisites": [
+        "Module 101 (Foundations) complete",
+        "Module 102 (Cloud Computing) complete",
+        "Module 103 (Containerization) complete",
+        "Module 104 (Kubernetes) complete"
+      ],
+      "summary": "Build a production-grade FastAPI inference service for a scikit-learn classifier. Containerize, deploy to Kubernetes with HPA, expose via Ingress, and instrument with Prometheus metrics + Grafana dashboards.",
+      "learning_outcomes": [
+        "Serve an sklearn model behind a typed FastAPI interface with versioned response schema",
+        "Author a multi-stage Dockerfile with explicit, pinned base images",
+        "Deploy to k8s with resource requests/limits, liveness + readiness probes, and HPA",
+        "Add Prometheus metrics (latency histogram, request counter, in-flight gauge) and a Grafana dashboard",
+        "Operate the system: rolling update, rollback, scale up/down"
+      ],
+      "deliverables": [
+        "Working FastAPI service in src/",
+        "Dockerfile with multi-stage build and non-root runtime user",
+        "Kubernetes manifests (Deployment, Service, Ingress, HPA, ServiceMonitor)",
+        "Grafana dashboard JSON",
+        "README walking through local + cluster deployment",
+        "Tests: pytest unit + integration tests with at least 70% line coverage"
+      ],
+      "acceptance_criteria": [
+        "POST /predict returns sub-100ms latency at P95 for a single-request load",
+        "GET /health and GET /ready respond correctly under all observed states (cold start, ready, model load failure)",
+        "Service scales from 1 to 5 replicas under load via HPA",
+        "Grafana dashboard renders all four golden signals",
+        "All tests pass in CI"
+      ],
+      "tech_stack": ["FastAPI", "scikit-learn", "Docker", "Kubernetes", "Prometheus", "Grafana", "pytest"],
+      "rubric_dimensions": [
+        "Service quality (correctness + latency)",
+        "Container quality (size, security, layering)",
+        "Kubernetes quality (probes, HPA, RBAC, NetworkPolicy)",
+        "Observability quality (metrics coverage, dashboard usability)",
+        "Code quality (tests, types, structure)"
+      ]
+    },
+    {
+      "id": "proj-102",
+      "slug": "project-102-mlops-pipeline",
+      "title": "End-to-End MLOps Pipeline with MLflow + DVC + Airflow",
+      "duration_hours": 40,
+      "difficulty": "medium-high",
+      "prerequisites": [
+        "proj-101 complete (or equivalent prior FastAPI + K8s deploy experience)",
+        "Module 105 (Data Pipelines) complete",
+        "Module 106 (MLOps) complete",
+        "Familiarity with Python ML training workflows"
+      ],
+      "summary": "Build an end-to-end MLOps pipeline. Data ingestion via Airflow, feature engineering with versioned artifacts via DVC, experiment tracking + model registry via MLflow, automated retraining triggered by drift detection, and a deployment step that promotes registry models to the serving cluster.",
+      "learning_outcomes": [
+        "Author an Airflow DAG that ingests, validates, and transforms data with retry + alerting semantics",
+        "Use DVC to version both data and model artifacts in a way that survives team handoffs",
+        "Track experiments in MLflow with consistent naming, tagging, and parameter/metric conventions",
+        "Promote model versions through Staging → Production with explicit governance gates",
+        "Implement drift detection that triggers retraining automatically when feature distributions shift"
+      ],
+      "deliverables": [
+        "Airflow DAGs in airflow/dags/",
+        "DVC pipeline config (dvc.yaml + params.yaml)",
+        "MLflow tracking server deployment (docker-compose for local, K8s for prod)",
+        "Drift detection job (Evidently or similar)",
+        "Model promotion workflow with audit log",
+        "Architecture diagram + operations runbook"
+      ],
+      "acceptance_criteria": [
+        "Airflow DAG runs end-to-end without manual intervention",
+        "DVC reproduces a prior model run byte-for-byte from a tagged commit",
+        "MLflow registry shows at least 3 model versions with clear stage transitions",
+        "Drift detection correctly flags a synthetic shift (concept drift inserted manually)",
+        "Promotion blocked by a failing gate (e.g., accuracy regression on holdout set)"
+      ],
+      "tech_stack": ["Airflow 2.8+", "MLflow 2.9+", "DVC 3.x", "Great Expectations / Pandera", "Evidently"],
+      "rubric_dimensions": [
+        "Pipeline reliability (idempotency, retries, error handling)",
+        "Reproducibility (can a colleague rerun a prior model from a tag)",
+        "Tracking discipline (naming conventions, tagging, artifact completeness)",
+        "Governance (gate enforcement, audit logging)",
+        "Operational maturity (runbooks, alerting, dashboards)"
+      ]
+    },
+    {
+      "id": "proj-103",
+      "slug": "project-103-llm-deployment",
+      "title": "Production LLM Inference Service with Optimization",
+      "duration_hours": 50,
+      "difficulty": "high",
+      "prerequisites": [
+        "proj-101 + proj-102 complete (or equivalent serving + MLOps experience)",
+        "Module 107 (GPU Computing) complete",
+        "Module 110 (LLM Infrastructure) complete",
+        "Access to at least one A10G / A100 / H100 / L40S GPU instance (cloud or local)"
+      ],
+      "summary": "Deploy an open-source LLM (Llama-3.1 or Mistral family) behind a production HTTP+SSE API with continuous batching, PagedAttention, prefix caching, FP8 / AWQ quantization, streaming, prometheus metrics, and rigorous load + cost analysis.",
+      "learning_outcomes": [
+        "Choose an inference framework (vLLM vs TGI vs Triton) with explicit trade-off reasoning",
+        "Configure continuous batching + PagedAttention + prefix caching for the workload mix",
+        "Apply quantization (AWQ, GPTQ, or FP8) and measure the accuracy/latency/throughput trade-off",
+        "Build a streaming SSE API with backpressure, request cancellation, and per-tenant rate limits",
+        "Run a load test and produce a cost-per-million-tokens breakdown across hardware tiers"
+      ],
+      "deliverables": [
+        "Working serving stack (docker-compose for local dev, Helm chart for K8s)",
+        "Prometheus metrics covering queue depth, time-to-first-token, inter-token latency, GPU mem usage",
+        "Grafana dashboard tailored to LLM serving",
+        "Load test harness (k6 or locust) with reproducible scenarios",
+        "Cost analysis spreadsheet (or doc) comparing at least 3 hardware options",
+        "Top-15 troubleshooting runbook in docs/TROUBLESHOOTING.md"
+      ],
+      "acceptance_criteria": [
+        "Sustain ≥ 50 concurrent streams with TTFT < 500ms P95 on the target GPU",
+        "Quantized variant within 1.5pp of baseline on a held-out evaluation set",
+        "Streaming API supports client cancellation (server stops generating within 100ms)",
+        "Grafana dashboard surfaces queue saturation and KV cache pressure correctly",
+        "Documented cost-per-million-tokens within 15% of measured production cost"
+      ],
+      "tech_stack": ["vLLM 0.6+", "FastAPI", "Triton (optional)", "Prometheus", "Grafana", "k6 or locust", "AWQ or GPTQ", "FlashAttention-2 or -3"],
+      "rubric_dimensions": [
+        "Throughput + latency under load (vs target)",
+        "Optimization rigor (quantization + batching tuning)",
+        "API quality (streaming, backpressure, cancellation)",
+        "Observability quality (metrics + dashboards + alerts)",
+        "Cost discipline (analysis + recommendations)"
+      ]
+    }
+  ],
+  "schema_notes": {
+    "id": "Stable identifier referenced from project README files.",
+    "slug": "Matches the directory name under projects/.",
+    "duration_hours": "Estimated focused work hours, including reading + implementation + write-up.",
+    "difficulty": "One of: easy, medium, medium-high, high, advanced.",
+    "rubric_dimensions": "High-level grading axes; the project's own rubric.md (if present) provides per-level descriptors."
+  }
+}
