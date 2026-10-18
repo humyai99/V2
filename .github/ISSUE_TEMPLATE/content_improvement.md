@@ -1,52 +1,52 @@
 ---
-name: Content Improvement
-about: Suggest improvements to existing lessons or projects
+name: ปรับปรุงเนื้อหา
+about: เสนอการปรับปรุงบทเรียนหรือโปรเจกต์ที่มีอยู่
 title: '[CONTENT] '
 labels: content, enhancement
 assignees: ''
 ---
 
-## Content Location
+## ตำแหน่งเนื้อหา
 
-**Module/Lesson**: (e.g., Module 02, Lesson 05)
-**Project**: (if applicable)
-**File**: (e.g., `lessons/mod-102-cloud-computing/05-cloud-storage.md`)
+**โมดูล/บทเรียน**: (เช่น โมดูล 02 บทเรียน 05)
+**โปรเจกต์**: (ถ้าเกี่ยวข้อง)
+**ไฟล์**: (เช่น `lessons/mod-102-cloud-computing/05-cloud-storage.md`)
 
-## Current Content Issue
+## ปัญหาของเนื้อหาปัจจุบัน
 
-Describe what's unclear, incorrect, or could be improved.
+อธิบายส่วนที่ไม่ชัดเจน ไม่ถูกต้อง หรือควรปรับปรุง
 
-## Suggested Improvement
+## สิ่งที่เสนอให้ปรับปรุง
 
-What specific changes would you suggest?
+ระบุการเปลี่ยนแปลงที่ต้องการ
 
-## Reason for Improvement
+## เหตุผล
 
-Why would this make the content better?
+อธิบายว่าการเปลี่ยนแปลงนี้ช่วยให้เนื้อหาดีขึ้นอย่างไร
 
-## Type of Improvement
+## ประเภทการปรับปรุง
 
-- [ ] Clarity - Make explanation easier to understand
-- [ ] Accuracy - Fix technical inaccuracy
-- [ ] Completeness - Add missing information
-- [ ] Examples - Add or improve code examples
-- [ ] Exercises - Add or improve practice exercises
-- [ ] Depth - Add more detailed explanation
-- [ ] Simplification - Make content more beginner-friendly
-- [ ] Formatting - Improve readability or structure
+- [ ] ความชัดเจน — อธิบายให้อ่านเข้าใจง่ายขึ้น
+- [ ] ความถูกต้อง — แก้ข้อมูลทางเทคนิค
+- [ ] ความครบถ้วน — เพิ่มข้อมูลที่ขาด
+- [ ] ตัวอย่าง — เพิ่มหรือปรับตัวอย่างโค้ด
+- [ ] แบบฝึกหัด — เพิ่มหรือปรับแบบฝึกหัด
+- [ ] ความลึก — อธิบายรายละเอียดเพิ่ม
+- [ ] ความง่าย — ทำให้ผู้เริ่มต้นเข้าใจได้
+- [ ] รูปแบบ — ปรับให้อ่านง่ายขึ้น
 
-## Target Audience Impact
+## กลุ่มผู้เรียนที่ได้รับประโยชน์
 
-Who would benefit most from this improvement?
-- [ ] Complete beginners
-- [ ] Those with some ML experience
-- [ ] Those transitioning from software engineering
-- [ ] All learners
+ใครได้รับประโยชน์มากที่สุด?
+- [ ] ผู้เริ่มต้น
+- [ ] ผู้ที่มีประสบการณ์ ML บ้างแล้ว
+- [ ] ผู้ที่ย้ายจากงานวิศวกรรมซอฟต์แวร์
+- [ ] ผู้เรียนทุกคน
 
-## Additional Context
+## ข้อมูลเพิ่มเติม
 
-Any additional information, links, or resources to support your suggestion.
+เพิ่มข้อมูล ลิงก์ หรือแหล่งอ้างอิงประกอบข้อเสนอ
 
-## Willing to Contribute
+## ความประสงค์ที่จะช่วยทำ
 
-- [ ] I'm willing to submit a PR with these improvements
+- [ ] ฉันยินดีส่ง PR เพื่อปรับปรุงเนื้อหานี้

@@ -1,39 +1,39 @@
 ---
-name: Question
-about: Ask a question about the curriculum or learning path
+name: คำถาม
+about: ถามเกี่ยวกับหลักสูตรหรือเส้นทางการเรียนรู้
 title: '[QUESTION] '
 labels: question
 assignees: ''
 ---
 
-## Question
+## คำถาม
 
-Ask your question clearly and concisely.
+เขียนคำถามให้ชัดเจนและกระชับ
 
-## Context
+## บริบท
 
-**Module/Lesson**: (if applicable)
-**Project**: (if applicable)
+**โมดูล/บทเรียน**: (ถ้าเกี่ยวข้อง)
+**โปรเจกต์**: (ถ้าเกี่ยวข้อง)
 
-## What I've Tried
+## สิ่งที่ลองทำแล้ว
 
-Describe what you've already tried or researched.
+อธิบายสิ่งที่ลองทำหรือค้นคว้ามาแล้ว
 
-## What I'm Trying to Achieve
+## สิ่งที่ต้องการทำ
 
-Explain what you're trying to accomplish or understand.
+อธิบายสิ่งที่ต้องการทำหรือทำความเข้าใจ
 
-## Additional Information
+## ข้อมูลเพิ่มเติม
 
-Any additional context, code snippets, or screenshots that might help.
+เพิ่มบริบท ตัวอย่างโค้ด หรือภาพหน้าจอที่ช่วยอธิบายคำถาม
 
 ```python
-# Code snippet if relevant
+# ตัวอย่างโค้ด (ถ้าเกี่ยวข้อง)
 ```
 
-## Resources Consulted
+## แหล่งข้อมูลที่ตรวจแล้ว
 
-- [ ] Checked lesson materials
-- [ ] Searched existing issues
-- [ ] Consulted documentation
-- [ ] Searched online
+- [ ] อ่านบทเรียนแล้ว
+- [ ] ค้นหา issues ที่มีอยู่แล้ว
+- [ ] อ่านเอกสารที่เกี่ยวข้องแล้ว
+- [ ] ค้นหาข้อมูลออนไลน์แล้ว

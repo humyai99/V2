@@ -1,55 +1,55 @@
 ---
-name: Bug Report
-about: Report a bug or issue with the learning materials
+name: รายงานข้อผิดพลาด
+about: รายงานข้อผิดพลาดในสื่อการเรียน
 title: '[BUG] '
 labels: bug
 assignees: ''
 ---
 
-## Bug Description
+## รายละเอียดข้อผิดพลาด
 
-A clear and concise description of what the bug is.
+อธิบายข้อผิดพลาดอย่างชัดเจนและกระชับ
 
-## Location
+## ตำแหน่งที่พบ
 
-**Module/Lesson**: (e.g., Module 01, Lesson 03)
-**Project**: (e.g., Project 01 - Basic Model Serving)
-**File**: (e.g., `lessons/mod-101-foundations/03-ml-infrastructure-basics.md`)
+**โมดูล/บทเรียน**: (เช่น โมดูล 01 บทเรียน 03)
+**โปรเจกต์**: (เช่น โปรเจกต์ 01 — Basic Model Serving)
+**ไฟล์**: (เช่น `lessons/mod-101-foundations/03-ml-infrastructure-basics.md`)
 
-## Expected Behavior
+## ผลที่คาดหวัง
 
-What you expected to happen.
+อธิบายผลที่คาดว่าจะเกิดขึ้น
 
-## Actual Behavior
+## ผลที่เกิดขึ้นจริง
 
-What actually happened.
+อธิบายผลที่เกิดขึ้นจริง
 
-## Steps to Reproduce
+## ขั้นตอนทำให้เกิดปัญหาซ้ำ
 
-1. Go to '...'
-2. Run command '...'
-3. See error
+1. ไปที่ '...'
+2. รันคำสั่ง '...'
+3. พบข้อผิดพลาด
 
-## Error Message
+## ข้อความข้อผิดพลาด
 
 ```
-Paste error message here
+วางข้อความข้อผิดพลาดที่นี่
 ```
 
-## Environment
+## สภาพแวดล้อม
 
-- **OS**: (e.g., Ubuntu 22.04, macOS 13.0, Windows 11)
-- **Python Version**: (e.g., 3.11.5)
-- **Browser** (if applicable): (e.g., Chrome 120)
+- **ระบบปฏิบัติการ**: (เช่น Ubuntu 22.04, macOS 13.0, Windows 11)
+- **เวอร์ชัน Python**: (เช่น 3.11.5)
+- **เบราว์เซอร์** (ถ้าเกี่ยวข้อง): (เช่น Chrome 120)
 
-## Screenshots
+## ภาพหน้าจอ
 
-If applicable, add screenshots to help explain your problem.
+แนบภาพหน้าจอเพื่ออธิบายปัญหา (ถ้ามี)
 
-## Additional Context
+## ข้อมูลเพิ่มเติม
 
-Any other context about the problem.
+เพิ่มข้อมูลอื่นที่เกี่ยวข้องกับปัญหา
 
-## Possible Solution
+## แนวทางแก้ไขที่เป็นไปได้
 
-If you have ideas on how to fix this, please share.
+หากมีแนวทางแก้ไข โปรดแบ่งปัน

@@ -1,45 +1,45 @@
 ---
-name: Feature Request
-about: Suggest an idea for improving the curriculum
+name: เสนอความสามารถใหม่
+about: เสนอแนวคิดเพื่อปรับปรุงหลักสูตร
 title: '[FEATURE] '
 labels: enhancement
 assignees: ''
 ---
 
-## Feature Description
+## รายละเอียด
 
-A clear and concise description of what you want to happen.
+อธิบายสิ่งที่ต้องการให้เกิดขึ้นอย่างชัดเจนและกระชับ
 
-## Problem Statement
+## ปัญหาที่ต้องการแก้
 
-What problem does this feature solve? Is your feature request related to a problem?
+ความสามารถนี้แก้ปัญหาอะไร?
 
-## Proposed Solution
+## แนวทางที่เสนอ
 
-Describe the solution you'd like to see.
+อธิบายแนวทางที่ต้องการ
 
-## Alternative Solutions
+## แนวทางอื่น
 
-Describe any alternative solutions or features you've considered.
+อธิบายแนวทางหรือความสามารถอื่นที่พิจารณาแล้ว
 
-## Use Case
+## กรณีใช้งาน
 
-How would this feature benefit learners?
+ความสามารถนี้ช่วยผู้เรียนอย่างไร?
 
-## Implementation Suggestions
+## ข้อเสนอในการทำ
 
-If you have ideas on how to implement this, please share.
+หากมีแนวคิดว่าจะทำอย่างไร โปรดแบ่งปัน
 
-## Additional Context
+## ข้อมูลเพิ่มเติม
 
-Add any other context, screenshots, or examples about the feature request.
+เพิ่มบริบท ภาพหน้าจอ หรือตัวอย่างประกอบ
 
-## Priority
+## ความสำคัญ
 
-- [ ] High - Critical for learning experience
-- [ ] Medium - Would significantly improve experience
-- [ ] Low - Nice to have
+- [ ] สูง — จำเป็นต่อการเรียนรู้
+- [ ] กลาง — ช่วยให้เรียนรู้ได้ดีขึ้นมาก
+- [ ] ต่ำ — มีแล้วจะดี
 
-## Willing to Contribute
+## ความประสงค์ที่จะช่วยทำ
 
-- [ ] I'm willing to work on implementing this feature
+- [ ] ฉันยินดีช่วยพัฒนาความสามารถนี้
