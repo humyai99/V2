@@ -1,171 +1,178 @@
-# Module 05: Data Pipelines and Orchestration
+# โมดูล 05: ไปป์ไลน์ข้อมูลและการจัดลำดับงาน
 
-## Overview
+## ภาพรวม
 
-This module covers the essential skills for building, orchestrating, and managing data pipelines for machine learning workflows. You'll learn how to automate data collection, transformation, and preparation using industry-standard tools like Apache Airflow, implement data versioning with DVC, process large-scale datasets with Apache Spark, and ensure data quality throughout your ML pipelines.
+โมดูลนี้สอนทักษะในการสร้าง จัดลำดับ และดูแลไปป์ไลน์ข้อมูลสำหรับงานแมชชีนเลิร์นนิง คุณจะได้ใช้ Apache Airflow เพื่อทำงานเก็บ แปลง และเตรียมข้อมูลแบบอัตโนมัติ ใช้ DVC จัดการเวอร์ชันข้อมูล ประมวลผลข้อมูลขนาดใหญ่ด้วย Apache Spark และตรวจสอบคุณภาพข้อมูลตลอดไปป์ไลน์ ML
 
-## Learning Objectives
+## ผลลัพธ์การเรียนรู้
 
-By the end of this module, you will be able to:
+เมื่อจบโมดูลนี้ คุณจะสามารถ:
 
-- Design and implement scalable data pipeline architectures for ML
-- Build and orchestrate complex workflows using Apache Airflow
-- Version datasets and track data lineage with DVC
-- Process large-scale data using Apache Spark
-- Handle streaming data with Apache Kafka basics
-- Implement data validation and quality checks
-- Monitor data pipelines and handle errors gracefully
-- Build end-to-end ML training pipelines
+- ออกแบบและสร้างสถาปัตยกรรมไปป์ไลน์ข้อมูลสำหรับ ML ที่ขยายขนาดได้
+- สร้างและจัดลำดับเวิร์กโฟลว์ด้วย Apache Airflow
+- จัดการเวอร์ชันชุดข้อมูลและติดตามที่มาของข้อมูลด้วย DVC
+- ประมวลผลข้อมูลขนาดใหญ่ด้วย Apache Spark
+- จัดการข้อมูลแบบสตรีมด้วยพื้นฐาน Apache Kafka
+- ตรวจสอบความถูกต้องและคุณภาพข้อมูล
+- เฝ้าติดตามไปป์ไลน์และจัดการข้อผิดพลาด
+- สร้างไปป์ไลน์เทรนโมเดล ML ตั้งแต่ต้นจนจบ
 
-## Prerequisites
+## ความรู้พื้นฐานที่ควรมี
 
-- Completed Module 01-04 (Foundations through Kubernetes)
-- Python programming skills
-- Understanding of SQL and databases
-- Basic understanding of distributed systems
-- Familiarity with Docker and Kubernetes
+- เรียนโมดูล 01–04 ตั้งแต่พื้นฐานถึง Kubernetes แล้ว
+- เขียน Python ได้
+- เข้าใจ SQL และฐานข้อมูล
+- เข้าใจระบบแบบกระจายเบื้องต้น
+- คุ้นเคยกับ Docker และ Kubernetes
 
-## Module Structure
+## โครงสร้างโมดูล
 
-### Lessons
+### บทเรียน
 
-1. **Data Pipeline Architecture for ML** (90 min)
-   - ML data pipeline patterns and best practices
-   - Data sources, transformations, and destinations
-   - Batch vs streaming pipelines
-   - Pipeline design principles
+1. **สถาปัตยกรรมไปป์ไลน์ข้อมูลสำหรับ ML** (90 นาที)
+   - รูปแบบไปป์ไลน์ข้อมูล ML และแนวปฏิบัติที่ดี
+   - แหล่งข้อมูล การแปลงข้อมูล และปลายทางข้อมูล
+   - ไปป์ไลน์แบบแบตช์เทียบกับแบบสตรีม
+   - หลักการออกแบบไปป์ไลน์
 
-2. **Apache Airflow Fundamentals** (120 min)
-   - Introduction to workflow orchestration
-   - Airflow architecture and components
-   - Installing Airflow on Kubernetes
-   - Writing your first DAG
+2. **พื้นฐาน Apache Airflow** (120 นาที)
+   - การจัดลำดับงานในเวิร์กโฟลว์
+   - สถาปัตยกรรมและส่วนประกอบของ Airflow
+   - ติดตั้ง Airflow บน Kubernetes
+   - เขียน DAG แรก
 
-3. **Advanced Airflow for ML** (120 min)
-   - Complex DAG patterns for ML workflows
-   - TaskFlow API and XComs
-   - Dynamic DAGs and parameterization
-   - Airflow operators for ML (Python, Spark, Kubernetes)
+3. **Airflow ขั้นสูงสำหรับ ML** (120 นาที)
+   - รูปแบบ DAG ที่ซับซ้อนสำหรับเวิร์กโฟลว์ ML
+   - TaskFlow API และ XComs
+   - DAG แบบไดนามิกและการกำหนดพารามิเตอร์
+   - Airflow operators สำหรับ ML (Python, Spark, Kubernetes)
 
-4. **Data Versioning with DVC** (90 min)
-   - Why version data like code
-   - DVC setup and configuration
-   - Tracking datasets, models, and experiments
-   - Remote storage backends (S3, GCS, Azure)
-   - Data pipelines with DVC
+4. **การจัดการเวอร์ชันข้อมูลด้วย DVC** (90 นาที)
+   - เหตุผลที่ควรจัดการเวอร์ชันข้อมูลเหมือนโค้ด
+   - ติดตั้งและตั้งค่า DVC
+   - ติดตามชุดข้อมูล โมเดล และการทดลอง
+   - พื้นที่จัดเก็บระยะไกล (S3, GCS, Azure)
+   - ไปป์ไลน์ข้อมูลด้วย DVC
 
-5. **Data Processing with Apache Spark** (120 min)
-   - Spark architecture and RDD/DataFrame API
-   - PySpark for data transformations
-   - Running Spark on Kubernetes
-   - Optimizing Spark jobs for ML data
+5. **การประมวลผลข้อมูลด้วย Apache Spark** (120 นาที)
+   - สถาปัตยกรรม Spark และ API ของ RDD/DataFrame
+   - แปลงข้อมูลด้วย PySpark
+   - รัน Spark บน Kubernetes
+   - ปรับประสิทธิภาพงาน Spark สำหรับข้อมูล ML
 
-6. **Streaming Data with Kafka** (90 min)
-   - Stream processing fundamentals
-   - Kafka architecture (producers, consumers, topics)
-   - Real-time feature engineering
-   - Integrating Kafka with ML pipelines
+6. **ข้อมูลแบบสตรีมด้วย Kafka** (90 นาที)
+   - พื้นฐานการประมวลผลสตรีม
+   - สถาปัตยกรรม Kafka (producers, consumers, topics)
+   - สร้างคุณลักษณะข้อมูลแบบเรียลไทม์
+   - เชื่อม Kafka เข้ากับไปป์ไลน์ ML
 
-7. **Data Quality and Validation** (90 min)
-   - Data quality frameworks (Great Expectations, Pandera)
-   - Schema validation and drift detection
-   - Automated data testing
-   - Monitoring data quality metrics
+7. **คุณภาพและการตรวจสอบข้อมูล** (90 นาที)
+   - เฟรมเวิร์กคุณภาพข้อมูล (Great Expectations, Pandera)
+   - ตรวจสอบ schema และตรวจจับ drift
+   - ทดสอบข้อมูลแบบอัตโนมัติ
+   - เฝ้าติดตามตัวชี้วัดคุณภาพข้อมูล
 
-8. **Pipeline Monitoring and Error Handling** (90 min)
-   - Airflow monitoring and alerting
-   - Logging best practices
-   - Error handling and retries
-   - SLA monitoring for data pipelines
-   - Production troubleshooting
+8. **การเฝ้าติดตามไปป์ไลน์และจัดการข้อผิดพลาด** (90 นาที)
+   - เฝ้าติดตามและแจ้งเตือนด้วย Airflow
+   - แนวปฏิบัติในการบันทึก log
+   - จัดการข้อผิดพลาดและลองทำงานซ้ำ
+   - เฝ้าติดตาม SLA ของไปป์ไลน์ข้อมูล
+   - แก้ปัญหาในระบบที่ใช้งานจริง
 
-## Hands-On Projects
+## โปรเจกต์ภาคปฏิบัติ
 
-### Project 1: Build an Airflow Data Pipeline
-Create a production-ready Airflow DAG that:
-- Fetches data from multiple sources (APIs, databases, S3)
-- Performs data transformations and validation
-- Stores processed data for ML training
-- Handles errors and sends alerts
+### โปรเจกต์ 1: สร้างไปป์ไลน์ข้อมูลด้วย Airflow
 
-### Project 2: Implement Data Versioning
-Set up DVC for a ML project:
-- Version large datasets (10GB+)
-- Track data lineage and transformations
-- Create reproducible data pipelines
-- Integrate with Git workflows
+สร้าง Airflow DAG สำหรับใช้งานจริงที่:
 
-### Project 3: Spark Data Processing Pipeline
-Build a PySpark pipeline that:
-- Processes large-scale datasets (100GB+)
-- Performs feature engineering
-- Runs on Kubernetes with dynamic scaling
-- Optimizes for performance and cost
+- ดึงข้อมูลจากหลายแหล่ง (API, ฐานข้อมูล, S3)
+- แปลงและตรวจสอบข้อมูล
+- เก็บข้อมูลที่ประมวลผลแล้วเพื่อเทรน ML
+- จัดการข้อผิดพลาดและส่งการแจ้งเตือน
 
-### Project 4: End-to-End ML Training Pipeline
-Combine all tools to create a complete pipeline:
-- Airflow orchestration
-- DVC data versioning
-- Spark data processing
-- Data quality validation
-- Model training trigger
+### โปรเจกต์ 2: จัดการเวอร์ชันข้อมูล
 
-## Assessment
+ตั้งค่า DVC สำหรับโปรเจกต์ ML เพื่อ:
 
-- **Quiz**: Data pipeline concepts, Airflow, DVC, Spark (25 questions)
-- **Practical Exam**: Build a production data pipeline with monitoring
-- **Code Review**: Submit DAGs and pipelines for review
+- จัดการเวอร์ชันชุดข้อมูลขนาดใหญ่ (10 GB ขึ้นไป)
+- ติดตามที่มาและการแปลงข้อมูล
+- สร้างไปป์ไลน์ข้อมูลที่ทำซ้ำผลลัพธ์ได้
+- ทำงานร่วมกับ Git
 
-## Estimated Time
+### โปรเจกต์ 3: ไปป์ไลน์ประมวลผลข้อมูลด้วย Spark
 
-- **Lessons**: 12 hours
-- **Hands-on projects**: 20 hours
-- **Reading and practice**: 13 hours
-- **Total**: ~45 hours
+สร้างไปป์ไลน์ PySpark ที่:
 
-## Tools and Technologies
+- ประมวลผลชุดข้อมูลขนาดใหญ่ (100 GB ขึ้นไป)
+- สร้างคุณลักษณะข้อมูลสำหรับโมเดล
+- รันบน Kubernetes และปรับขนาดตามโหลด
+- ปรับประสิทธิภาพและค่าใช้จ่าย
 
-- **Orchestration**: Apache Airflow 2.7+
-- **Data Versioning**: DVC 3.0+
-- **Data Processing**: Apache Spark 3.4+, PySpark
-- **Streaming**: Apache Kafka 3.5+
-- **Data Quality**: Great Expectations, Pandera
-- **Storage**: S3, GCS, Azure Blob Storage
-- **Infrastructure**: Docker, Kubernetes, Helm
+### โปรเจกต์ 4: ไปป์ไลน์เทรน ML ตั้งแต่ต้นจนจบ
 
-## Real-World Applications
+รวมเครื่องมือทั้งหมดเป็นไปป์ไลน์เดียว:
 
-This module prepares you for:
-- **Data Engineer** roles at ML-focused companies
-- **ML Infrastructure Engineer** with pipeline responsibilities
-- **MLOps Engineer** building end-to-end workflows
-- Companies: Uber, Airbnb, Netflix, Spotify (all use Airflow + Spark extensively)
+- จัดลำดับงานด้วย Airflow
+- จัดการเวอร์ชันข้อมูลด้วย DVC
+- ประมวลผลข้อมูลด้วย Spark
+- ตรวจสอบคุณภาพข้อมูล
+- เริ่มงานเทรนโมเดล
 
-## Additional Resources
+## การประเมินผล
 
-### Documentation
-- [Apache Airflow Documentation](https://airflow.apache.org/docs/)
-- [DVC Documentation](https://dvc.org/doc)
-- [Apache Spark Documentation](https://spark.apache.org/docs/latest/)
-- [Apache Kafka Documentation](https://kafka.apache.org/documentation/)
+- **แบบทดสอบ:** แนวคิดไปป์ไลน์ข้อมูล Airflow, DVC และ Spark (25 ข้อ)
+- **สอบภาคปฏิบัติ:** สร้างไปป์ไลน์ข้อมูลที่เฝ้าติดตามได้
+- **รีวิวโค้ด:** ส่ง DAG และไปป์ไลน์ให้ตรวจ
 
-### Books
-- "Data Pipelines Pocket Reference" by James Densmore
-- "Designing Data-Intensive Applications" by Martin Kleppmann
-- "Learning Spark" by Jules Damji et al.
+## เวลาที่ใช้โดยประมาณ
 
-### Courses
+- **บทเรียน:** 12 ชั่วโมง
+- **โปรเจกต์ภาคปฏิบัติ:** 20 ชั่วโมง
+- **อ่านและฝึกเพิ่มเติม:** 13 ชั่วโมง
+- **รวม:** ประมาณ 45 ชั่วโมง
+
+## เครื่องมือและเทคโนโลยี
+
+- **จัดลำดับงาน:** Apache Airflow 2.7+
+- **จัดการเวอร์ชันข้อมูล:** DVC 3.0+
+- **ประมวลผลข้อมูล:** Apache Spark 3.4+, PySpark
+- **ข้อมูลแบบสตรีม:** Apache Kafka 3.5+
+- **คุณภาพข้อมูล:** Great Expectations, Pandera
+- **พื้นที่จัดเก็บ:** S3, GCS, Azure Blob Storage
+- **โครงสร้างพื้นฐาน:** Docker, Kubernetes, Helm
+
+## การนำไปใช้งานจริง
+
+โมดูลนี้ช่วยเตรียมทักษะสำหรับงาน Data Engineer, ML Infrastructure Engineer ที่ดูแลไปป์ไลน์ และ MLOps Engineer ที่สร้างเวิร์กโฟลว์ครบวงจร
+
+## แหล่งข้อมูลเพิ่มเติม
+
+### เอกสาร
+
+- [เอกสาร Apache Airflow](https://airflow.apache.org/docs/)
+- [เอกสาร DVC](https://dvc.org/doc)
+- [เอกสาร Apache Spark](https://spark.apache.org/docs/latest/)
+- [เอกสาร Apache Kafka](https://kafka.apache.org/documentation/)
+
+### หนังสือ
+
+- *Data Pipelines Pocket Reference* โดย James Densmore
+- *Designing Data-Intensive Applications* โดย Martin Kleppmann
+- *Learning Spark* โดย Jules Damji และคณะ
+
+### คอร์ส
+
 - Airflow Fundamentals (Astronomer)
 - Data Engineering with Databricks
 - Kafka Streams for Data Processing
 
-## Support
+## ช่องทางช่วยเหลือ
 
-- Review the lesson materials and hands-on exercises
-- Practice with the provided code examples
-- Join the Airflow Community Slack
-- Check Stack Overflow for common issues
+- ทบทวนบทเรียนและแบบฝึกหัด
+- ฝึกกับตัวอย่างโค้ดที่ให้มา
+- เข้าร่วม Airflow Community Slack
+- ค้นหาปัญหาที่พบบ่อยใน Stack Overflow
 
 ---
 
-**Ready to build production data pipelines for ML?** Let's start with Lesson 01!
+**พร้อมสร้างไปป์ไลน์ข้อมูลสำหรับ ML แล้วหรือยัง?** เริ่มที่บทเรียน 01 ได้เลย

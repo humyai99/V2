@@ -1,347 +1,254 @@
-# Frequently Asked Questions (FAQ)
+# คำถามที่พบบ่อย (FAQ)
 
-## General Questions
+## คำถามทั่วไป
 
-### What is this learning path about?
+### เส้นทางการเรียนรู้นี้เกี่ยวกับอะไร?
 
-This is a comprehensive curriculum designed to help you become an AI Infrastructure Engineer. It covers everything from Docker and Kubernetes to cloud platforms, distributed training, and production ML systems.
+หลักสูตรนี้ช่วยเตรียมทักษะสำหรับงาน AI Infrastructure Engineer ครอบคลุม Docker, Kubernetes, แพลตฟอร์มคลาวด์, การเทรนแบบกระจาย และระบบ ML ที่ใช้งานจริง
 
-### Who is this course for?
+### หลักสูตรนี้เหมาะกับใคร?
 
-This course is for:
-- Software engineers wanting to transition to AI infrastructure
-- ML engineers who want to understand infrastructure better
-- DevOps engineers looking to specialize in ML infrastructure
-- Anyone interested in building and scaling ML systems
+- วิศวกรซอฟต์แวร์ที่อยากย้ายมาทำงานด้านโครงสร้างพื้นฐาน AI
+- วิศวกร ML ที่อยากเข้าใจโครงสร้างพื้นฐานมากขึ้น
+- วิศวกร DevOps ที่อยากเชี่ยวชาญโครงสร้างพื้นฐาน ML
+- ทุกคนที่สนใจสร้างและขยายระบบ ML
 
-### What are the prerequisites?
+### ต้องมีพื้นฐานอะไร?
 
-**Required:**
-- Python programming (intermediate level)
-- Basic Linux/Unix command line
-- Git basics
-- Basic ML concepts
+**จำเป็น:** Python ระดับกลาง, คำสั่ง Linux/Unix เบื้องต้น, Git เบื้องต้น และแนวคิด ML เบื้องต้น
 
-**Recommended:**
-- Cloud platform awareness
-- Docker basics
-- Networking fundamentals
+**แนะนำ:** ความคุ้นเคยกับแพลตฟอร์มคลาวด์, Docker และเครือข่าย
 
-### How long does it take to complete?
+### ใช้เวลาเรียนนานเท่าไร?
 
-- **Full-time** (40 hours/week): 12-15 weeks
-- **Part-time** (10 hours/week): 50-60 weeks (~1 year)
-- **Weekend** (20 hours/week): 25-30 weeks (~6-7 months)
+- **เต็มเวลา** (40 ชั่วโมง/สัปดาห์): 12–15 สัปดาห์
+- **นอกเวลา** (10 ชั่วโมง/สัปดาห์): 50–60 สัปดาห์ (ประมาณ 1 ปี)
+- **วันหยุด** (20 ชั่วโมง/สัปดาห์): 25–30 สัปดาห์ (ประมาณ 6–7 เดือน)
 
-Total: 500+ hours of content
+เนื้อหารวมมากกว่า 500 ชั่วโมง
 
-### Is this course free?
+### หลักสูตรนี้ฟรีหรือไม่?
 
-The learning materials are completely free and open-source (MIT License). However, you may incur costs for:
-- Cloud resources (most exercises fit within free tier limits)
-- GPU instances for training projects (estimated <$100 total)
+สื่อการเรียนฟรีและเป็นโอเพนซอร์สภายใต้สัญญาอนุญาต MIT แต่อาจมีค่าใช้จ่ายสำหรับทรัพยากรคลาวด์และเครื่อง GPU ที่ใช้ทำโปรเจกต์ ตรวจสอบราคาและสิทธิใช้งานฟรีของผู้ให้บริการก่อนเริ่มใช้งาน
 
-### Do I get a certificate?
+### จะได้รับใบรับรองหรือไม่?
 
-Currently, this is a self-paced learning path without formal certification. However, completing all projects gives you a strong portfolio to showcase to employers.
+ขณะนี้เป็นหลักสูตรเรียนด้วยตนเอง ไม่มีใบรับรองอย่างเป็นทางการ แต่โปรเจกต์ที่ทำเสร็จใช้เป็นผลงานประกอบการสมัครงานได้
 
 ---
 
-## Technical Questions
+## คำถามด้านเทคนิค
 
-### What programming languages do I need to know?
+### ต้องรู้ภาษาโปรแกรมอะไร?
 
-Primarily **Python**. You should be comfortable with:
-- Functions and classes
-- File I/O and error handling
-- Package management (pip, venv)
-- Basic async/await concepts
+หลัก ๆ คือ **Python** ควรใช้ฟังก์ชันและคลาส อ่านเขียนไฟล์ จัดการข้อผิดพลาด จัดการแพ็กเกจด้วย `pip`/`venv` และเข้าใจ `async`/`await` เบื้องต้น
 
-### Which cloud provider should I use?
+### ควรใช้ผู้ให้บริการคลาวด์รายใด?
 
-Ideally, all three (AWS, GCP, Azure) as Module 02 covers each. However, you can start with any one:
-- **AWS**: Most popular in industry, extensive ML services
-- **GCP**: Strong ML/AI focus, good for experimentation
-- **Azure**: Growing fast, good for enterprise
+โมดูล 02 ครอบคลุม AWS, GCP และ Azure คุณเริ่มจากรายใดรายหนึ่งได้:
 
-All have free tier or credits for new users.
+- **AWS:** ใช้แพร่หลายและมีบริการ ML ให้เลือกมาก
+- **GCP:** เน้นงาน ML/AI และเหมาะกับการทดลอง
+- **Azure:** พบได้บ่อยในองค์กรขนาดใหญ่
 
-### Do I need a GPU?
+แต่ละรายอาจมีสิทธิใช้งานฟรีหรือเครดิตสำหรับผู้ใช้ใหม่
 
-**For local development:** No, most exercises work on CPU.
+### ต้องมี GPU หรือไม่?
 
-**For training projects:** You'll need GPU access, but you can use:
-- Cloud GPU instances (AWS, GCP, Azure)
-- Google Colab (free tier available)
-- Kaggle notebooks (free GPU access)
+**สำหรับพัฒนาในเครื่อง:** แบบฝึกหัดส่วนใหญ่ใช้ CPU ได้
 
-### What if I get stuck on an exercise?
+**สำหรับโปรเจกต์เทรนโมเดล:** อาจต้องใช้ GPU จากผู้ให้บริการคลาวด์, Google Colab หรือ Kaggle Notebooks สิทธิใช้งานฟรีขึ้นอยู่กับผู้ให้บริการ
 
-1. Re-read the lesson material
-2. Check the FAQ (you're here!)
-3. Search existing [GitHub Issues](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues)
-4. Ask in [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
-5. Open a new issue with the `question` label
+### หากติดขัดกับแบบฝึกหัดควรทำอย่างไร?
 
-### Can I skip modules?
+1. กลับไปอ่านบทเรียน
+2. ค้นหาใน FAQ นี้
+3. ค้นหา [GitHub Issues](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues) ที่มีอยู่
+4. ถามใน [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
+5. เปิด issue ใหม่พร้อมป้าย `question`
 
-While the curriculum is designed to be progressive, you can skip modules if you already have the knowledge. However:
-- Complete the quiz to verify your understanding
-- Make sure you have the prerequisite skills for later modules
+### ข้ามโมดูลได้หรือไม่?
+
+ได้หากมีความรู้อยู่แล้ว แต่ควรทำแบบทดสอบเพื่อยืนยันความเข้าใจ และตรวจว่ามีพื้นฐานพอสำหรับโมดูลถัดไป
 
 ---
 
-## Project Questions
+## คำถามเกี่ยวกับโปรเจกต์
 
-### How do I know if my project is correct?
+### จะรู้ได้อย่างไรว่าโปรเจกต์ถูกต้อง?
 
-Since these are learning projects with code stubs:
-1. All tests should pass (when you implement the TODOs)
-2. The application should run without errors
-3. Compare your implementation against best practices in the lessons
-4. Share your code in Discussions for community feedback
+1. การทดสอบทั้งหมดควรผ่านหลังทำส่วน `TODO` เสร็จ
+2. แอปพลิเคชันควรทำงานโดยไม่มีข้อผิดพลาด
+3. เปรียบเทียบวิธีที่ทำกับแนวปฏิบัติในบทเรียน
+4. แชร์โค้ดใน Discussions เพื่อรับข้อเสนอแนะ
 
-### Can I use different technologies than suggested?
+### ใช้เทคโนโลยีอื่นแทนที่แนะนำได้หรือไม่?
 
-Yes! The stubs provide one approach, but you're encouraged to:
-- Try alternative frameworks or libraries
-- Implement additional features
-- Optimize for different requirements
+ได้ โค้ดตั้งต้นเป็นเพียงแนวทางหนึ่ง คุณสามารถลองเฟรมเวิร์กหรือไลบรารีอื่น เพิ่มความสามารถ และปรับให้เหมาะกับข้อกำหนดที่ต่างกันได้ แล้วแชร์ผลงานใน Discussions
 
-Share your alternative implementations in Discussions!
+### ควรทำทุกโปรเจกต์หรือไม่?
 
-### Should I complete all projects?
+ควรทำหากต้องการเรียนรู้ครบทุกหัวข้อ แต่ละโปรเจกต์ฝึกแนวคิดต่างกัน ดูรายการโปรเจกต์ปัจจุบันใน [ภาพรวมโปรเจกต์](../projects/README.md)
 
-**Yes**, if you want the full learning experience. Each project reinforces different concepts:
-- Project 01: Foundations (serving, Docker, K8s)
-- Project 02: Distributed training
-- Project 03: MLOps pipelines
-- Project 04: Auto-scaling systems
-- Project 05: Complete ML platform
+### นำโปรเจกต์ไปใส่แฟ้มผลงานได้หรือไม่?
 
-### Can I add projects to my portfolio?
-
-Absolutely! All project code you write is yours. These projects make excellent portfolio pieces for job applications.
+ได้ โค้ดที่คุณเขียนเองเป็นผลงานของคุณ และเหมาะสำหรับใช้ประกอบการสมัครงาน
 
 ---
 
-## Cloud & Cost Questions
+## คำถามเกี่ยวกับคลาวด์และค่าใช้จ่าย
 
-### How much will cloud resources cost?
+### ทรัพยากรคลาวด์มีค่าใช้จ่ายเท่าไร?
 
-**Estimated total cost:** <$100 if you exceed free tier limits.
+ค่าใช้จ่ายขึ้นอยู่กับผู้ให้บริการ ภูมิภาค ประเภทเครื่อง และระยะเวลาใช้งาน ตัวเลขประมาณการในหลักสูตรอาจเปลี่ยนแปลงได้ ควรตรวจสอบราคาล่าสุดก่อนสร้างทรัพยากร
 
-**Cost breakdown:**
-- Module 01-02 (AWS/GCP/Azure basics): Free tier
-- Module 03-04 (Kubernetes): ~$20
-- Module 05-06 (Distributed training): ~$30-50
-- Module 07-10 (Production systems): ~$20-30
+วิธีลดค่าใช้จ่าย:
 
-**Cost-saving tips:**
-- Use free tier whenever possible
-- Shut down resources when not in use
-- Use spot/preemptible instances (60-90% cheaper)
-- Set billing alerts
+- ใช้สิทธิใช้งานฟรีเมื่อเหมาะสม
+- ปิดหรือลบทรัพยากรเมื่อเลิกใช้
+- ใช้ spot/preemptible instances กับงานที่หยุดชั่วคราวได้
+- ตั้งค่าการแจ้งเตือนงบประมาณ
 
-### How do I avoid unexpected cloud bills?
+### ป้องกันบิลคลาวด์ที่ไม่คาดคิดอย่างไร?
 
-1. **Set up billing alerts** immediately (recommended: $10, $25, $50)
-2. **Shut down resources** after each session
-3. **Use cloud budget tools**:
-   - AWS Budgets
-   - GCP Budget Alerts
-   - Azure Cost Management
-4. **Monitor usage daily**
-5. **Use auto-shutdown scripts** (provided in lessons)
+1. ตั้งค่าการแจ้งเตือนค่าใช้จ่าย เช่น ที่ $10, $25 และ $50
+2. ปิดหรือลบทรัพยากรหลังแต่ละช่วงการเรียน
+3. ใช้ AWS Budgets, GCP Budget Alerts หรือ Azure Cost Management
+4. ตรวจสอบการใช้งานทุกวัน
+5. ใช้สคริปต์ปิดทรัพยากรอัตโนมัติในบทเรียน
 
-### Can I complete the course without cloud access?
+### เรียนโดยไม่ใช้คลาวด์ได้หรือไม่?
 
-Module 01 can be completed locally. However, Modules 02+ require cloud access for:
-- Cloud storage and networking
-- Managed ML services
-- Kubernetes clusters
-- Distributed training
-
-You can use free tier/credits to minimize costs.
+โมดูล 01 ทำในเครื่องได้ แต่โมดูลถัดไปบางส่วนต้องใช้คลาวด์ เช่น พื้นที่จัดเก็บ เครือข่าย บริการ ML แบบจัดการให้ คลัสเตอร์ Kubernetes และการเทรนแบบกระจาย ใช้สิทธิใช้งานฟรีหรือเครดิตเพื่อลดค่าใช้จ่ายได้
 
 ---
 
-## Career Questions
+## คำถามเกี่ยวกับอาชีพ
 
-### What jobs can I get after completing this?
+### เรียนจบแล้วสมัครงานอะไรได้บ้าง?
 
-You'll be qualified for:
-- **AI Infrastructure Engineer** ($120k-$180k)
-- **ML Platform Engineer** ($130k-$190k)
-- **MLOps Engineer** ($110k-$170k)
-- **Senior Cloud Engineer** (ML focus) ($130k-$200k)
+ทักษะในหลักสูตรเกี่ยวข้องกับงาน AI Infrastructure Engineer, ML Platform Engineer, MLOps Engineer และ Cloud Engineer ที่เน้น ML คุณสมบัติที่ต้องใช้และค่าตอบแทนแตกต่างกันตามพื้นที่ ประสบการณ์ และตำแหน่ง
 
-### How does this compare to a bootcamp or degree?
+### หลักสูตรนี้ต่างจากบูตแคมป์หรือปริญญาอย่างไร?
 
-**Advantages:**
-- Free and open-source
-- Self-paced
-- Hands-on, project-based
-- Industry-aligned curriculum
+**ข้อดี:** ฟรี เป็นโอเพนซอร์ส เรียนตามจังหวะตัวเอง และเน้นลงมือทำผ่านโปรเจกต์
 
-**Considerations:**
-- No formal certification
-- Requires self-discipline
-- No instructor support (community-supported)
-- No career placement services
+**สิ่งที่ควรพิจารณา:** ไม่มีใบรับรองอย่างเป็นทางการ ต้องมีวินัยในการเรียน ไม่มีผู้สอนประจำ และไม่มีบริการจัดหางาน
 
-### What should I do after completing this?
+### เรียนจบแล้วควรทำอะไรต่อ?
 
-1. **Build your portfolio**: Publish your projects on GitHub
-2. **Write about it**: Blog about what you learned
-3. **Contribute back**: Help improve this curriculum
-4. **Network**: Join ML infrastructure communities
-5. **Apply for jobs**: Use your portfolio to demonstrate skills
-6. **Keep learning**: Technology evolves rapidly
+1. เผยแพร่โปรเจกต์บน GitHub เพื่อสร้างแฟ้มผลงาน
+2. เขียนบทความสรุปสิ่งที่เรียนรู้
+3. ช่วยปรับปรุงหลักสูตรนี้
+4. เข้าร่วมชุมชนด้านโครงสร้างพื้นฐาน ML
+5. ใช้ผลงานประกอบการสมัครงาน
+6. เรียนรู้เทคโนโลยีใหม่ต่อเนื่อง
 
-### Should I contribute to open source?
+### ควรมีส่วนร่วมกับโอเพนซอร์สหรือไม่?
 
-**Yes!** Contributing to this repository or other ML infrastructure projects:
-- Demonstrates your skills
-- Builds your network
-- Helps you learn
-- Looks great on your resume
+ควร การช่วยพัฒนา repository นี้หรือโปรเจกต์ด้านโครงสร้างพื้นฐาน ML อื่น ๆ ช่วยฝึกทักษะ สร้างเครือข่าย และแสดงผลงานที่ตรวจสอบได้
 
 ---
 
-## Content Questions
+## คำถามเกี่ยวกับเนื้อหา
 
-### Why are there TODOs in the code?
+### ทำไมในโค้ดจึงมี `TODO`?
 
-The code stubs with TODOs are intentional! They:
-- Guide your implementation
-- Provide hints and best practices
-- Allow you to learn by doing
-- Let you take ownership of the code
+โค้ดตั้งต้นใส่ `TODO` ไว้เพื่อชี้แนวทางและคำใบ้ ให้คุณฝึกทำส่วนสำคัญด้วยตนเอง เฉลยฉบับสมบูรณ์อยู่ใน repository เฉลยที่แยกต่างหาก
 
-Complete solutions are available in the separate solutions repository.
+### วิดีโอสอนอยู่ที่ไหน?
 
-### Where are the video tutorials?
+หลักสูตรนี้ใช้เนื้อหาแบบข้อความ ซึ่งอ่านตามจังหวะของตนเอง ค้นหาและอ้างอิงได้ง่าย และใช้แบนด์วิดท์น้อย อาจมีวิดีโอเพิ่มในอนาคต
 
-This is a text-based curriculum. Benefits:
-- Self-paced (skim or deep-dive as needed)
-- Easy to search and reference
-- Accessible (no bandwidth requirements)
-- Can be translated
+### แปลเป็นภาษาอื่นได้หรือไม่?
 
-Video tutorials may be added in the future.
+ได้ เรายินดีรับงานแปล ดูแนวทางใน [CONTRIBUTING.md](../CONTRIBUTING.md)
 
-### Can I translate this to another language?
+### เนื้อหาอัปเดตบ่อยแค่ไหน?
 
-Yes! We welcome translations. See [CONTRIBUTING.md](../CONTRIBUTING.md) for guidelines.
-
-### How often is the content updated?
-
-The curriculum is actively maintained:
-- **Quarterly updates**: New tools and best practices
-- **Bug fixes**: As reported by community
-- **Content improvements**: Based on feedback
-- **New modules**: As technology evolves
+หลักสูตรมีการดูแลต่อเนื่อง ทั้งการแก้ข้อผิดพลาด ปรับคำอธิบาย และเพิ่มเนื้อหาตามข้อเสนอแนะ
 
 ---
 
-## Community Questions
+## คำถามเกี่ยวกับชุมชน
 
-### How can I get help?
+### ขอความช่วยเหลือได้อย่างไร?
 
-1. **Read documentation**: Lessons, README, this FAQ
-2. **Search issues**: Someone may have asked already
-3. **GitHub Discussions**: Ask the community
-4. **Open an issue**: For bugs or unclear content
+อ่านบทเรียน README และ FAQ นี้ก่อน จากนั้นค้นหา issue ที่มีอยู่ ถามใน GitHub Discussions หรือเปิด issue เมื่อพบข้อผิดพลาดหรือเนื้อหาที่ไม่ชัดเจน
 
-### How can I contribute?
+### จะช่วยพัฒนาหลักสูตรได้อย่างไร?
 
-See [CONTRIBUTING.md](../CONTRIBUTING.md) for detailed guidelines. Ways to contribute:
-- Fix typos or errors
-- Improve explanations
-- Add examples or exercises
-- Review pull requests
-- Help answer questions
-- Share your experience
+ดู [CONTRIBUTING.md](../CONTRIBUTING.md) คุณสามารถแก้คำผิด ปรับคำอธิบาย เพิ่มตัวอย่างหรือแบบฝึกหัด รีวิว pull request ตอบคำถาม และแบ่งปันประสบการณ์
 
-### Is there a community chat?
+### มีห้องแชตชุมชนหรือไม่?
 
-[GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions) is the supported channel today. Real-time chat (Slack/Discord) and recurring office hours are not currently scheduled — open a Discussion if you'd like to coordinate a study group.
+ช่องทางที่รองรับขณะนี้คือ [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions) ยังไม่มีกำหนดแชตสดหรือช่วงพบปะประจำ หากต้องการจัดกลุ่มเรียนร่วมกัน ให้เปิด Discussion
 
-### Can I share my progress?
+### แชร์ความคืบหน้าได้หรือไม่?
 
-Yes! We encourage it:
-- Share in GitHub Discussions
-- Tag #AIInfraLearning on social media
-- Write blog posts about your journey
-- Create videos of your projects
+ได้ คุณสามารถโพสต์ใน GitHub Discussions ใช้แฮชแท็ก `#AIInfraLearning` เขียนบล็อก หรือทำวิดีโอเกี่ยวกับโปรเจกต์ที่ทำ
 
 ---
 
-## Troubleshooting
+## การแก้ปัญหาเบื้องต้น
 
-### Docker permission denied
+### Docker แจ้งว่าไม่มีสิทธิ์ใช้งาน
 
 ```bash
-# Add your user to docker group
+# เพิ่มผู้ใช้ของคุณเข้ากลุ่ม docker
 sudo usermod -aG docker $USER
 newgrp docker
 ```
 
-### Python import errors
+### Python นำเข้าโมดูลไม่ได้
 
 ```bash
-# Activate virtual environment
+# เปิดใช้งาน virtual environment
 source venv/bin/activate
 
-# Reinstall dependencies
+# ติดตั้ง dependencies ใหม่
 pip install -r requirements.txt
 ```
 
-### Kubernetes connection refused
+### Kubernetes ปฏิเสธการเชื่อมต่อ
 
 ```bash
-# Start minikube
+# เริ่ม minikube
 minikube start
 
-# Verify
+# ตรวจสอบ
 kubectl get nodes
 ```
 
-### AWS CLI not configured
+### ยังไม่ได้ตั้งค่า AWS CLI
 
 ```bash
-# Configure AWS CLI
+# ตั้งค่า AWS CLI
 aws configure
 
-# Enter your:
-# - Access Key ID
-# - Secret Access Key
-# - Default region (e.g., us-east-1)
-# - Output format (json)
+# กรอก Access Key ID, Secret Access Key,
+# ภูมิภาคเริ่มต้น (เช่น us-east-1) และรูปแบบผลลัพธ์ (json)
 ```
 
-### Out of disk space
+### พื้นที่ดิสก์ไม่พอ
 
 ```bash
-# Clean Docker
+# ล้างข้อมูล Docker ที่ไม่ใช้
 docker system prune -a
 
-# Clean pip cache
+# ล้างแคช pip
 pip cache purge
 
-# Check disk usage
+# ตรวจสอบการใช้ดิสก์
 df -h
 ```
 
 ---
 
-## Still Have Questions?
+## ยังมีคำถาม?
 
-- **Search existing**: [GitHub Issues](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues)
-- **Ask community**: [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
-- **Report bug**: Open a new [issue](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues/new)
+- **ค้นหาเรื่องที่เคยถาม:** [GitHub Issues](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues)
+- **ถามชุมชน:** [GitHub Discussions](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/discussions)
+- **รายงานข้อผิดพลาด:** เปิด [issue ใหม่](https://github.com/ai-infra-curriculum/ai-infra-engineer-learning/issues/new)
 
----
-
-**Didn't find your answer? Open a discussion or issue!**
+หากยังไม่พบคำตอบ ลองเปิด Discussion หรือ issue เพื่อถามเพิ่มเติม

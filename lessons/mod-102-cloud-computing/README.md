@@ -1,242 +1,223 @@
-# Module 02: Cloud Computing for ML Infrastructure
+# โมดูล 02: คลาวด์คอมพิวติงสำหรับโครงสร้างพื้นฐาน ML
 
-**Duration:** 50 hours
-**Difficulty:** Intermediate
-**Prerequisites:** Module 01 complete
+**ระยะเวลา:** 50 ชั่วโมงของบทเรียน
 
-## Module Overview
+**ระดับ:** กลาง
 
-This module provides an in-depth exploration of cloud computing platforms for ML infrastructure. You'll learn to architect, deploy, and manage ML systems across AWS, GCP, and Azure, with a focus on cost optimization, scalability, and production best practices.
+**ความรู้พื้นฐาน:** เรียนโมดูล 01 แล้ว
 
-## Learning Objectives
+## ภาพรวมโมดูล
 
-By the end of this module, you will be able to:
+โมดูลนี้พาเจาะลึกแพลตฟอร์มคลาวด์สำหรับโครงสร้างพื้นฐาน ML คุณจะได้ออกแบบ ติดตั้ง และดูแลระบบ ML บน AWS, GCP และ Azure โดยเน้นค่าใช้จ่าย การขยายขนาด และแนวปฏิบัติสำหรับระบบที่ใช้งานจริง
 
-1. **Compare and choose** appropriate cloud platforms for ML workloads
-2. **Design cloud-native** ML architectures across AWS, GCP, and Azure
-3. **Optimize costs** for ML infrastructure in the cloud
-4. **Deploy and manage** compute resources (VMs, containers, serverless)
-5. **Configure storage** solutions for datasets and models
-6. **Implement networking** for secure and performant ML systems
-7. **Use managed ML services** (SageMaker, Vertex AI, Azure ML)
-8. **Build multi-cloud** and hybrid strategies
+## ผลลัพธ์การเรียนรู้
 
-## Module Structure
+เมื่อจบโมดูลนี้ คุณจะสามารถ:
 
-### Lesson 01: Cloud Architecture for ML (6 hours)
-- Cloud architecture patterns
-- Compute, storage, networking fundamentals
-- ML-specific considerations
-- Cost modeling and estimation
-- Hands-on: Design ML system architecture
+1. เปรียบเทียบและเลือกแพลตฟอร์มคลาวด์ให้เหมาะกับงาน ML
+2. ออกแบบสถาปัตยกรรม ML แบบ cloud-native บน AWS, GCP และ Azure
+3. ปรับค่าใช้จ่ายของโครงสร้างพื้นฐาน ML บนคลาวด์
+4. ติดตั้งและดูแลทรัพยากรประมวลผล เช่น VM, คอนเทนเนอร์ และ serverless
+5. ตั้งค่าพื้นที่จัดเก็บชุดข้อมูลและโมเดล
+6. ออกแบบเครือข่ายให้ระบบ ML ปลอดภัยและมีประสิทธิภาพ
+7. ใช้บริการ ML แบบจัดการให้ เช่น SageMaker, Vertex AI และ Azure ML
+8. วางกลยุทธ์หลายคลาวด์และระบบไฮบริด
 
-### Lesson 02: AWS for ML Infrastructure (7 hours)
-- AWS ecosystem overview
+## โครงสร้างโมดูล
+
+### บทเรียน 01: สถาปัตยกรรมคลาวด์สำหรับ ML (6 ชั่วโมง)
+
+- รูปแบบสถาปัตยกรรมคลาวด์
+- พื้นฐานการประมวลผล พื้นที่จัดเก็บ และเครือข่าย
+- ข้อพิจารณาเฉพาะของงาน ML
+- การจำลองและประมาณค่าใช้จ่าย
+- ภาคปฏิบัติ: ออกแบบสถาปัตยกรรมระบบ ML
+
+### บทเรียน 02: AWS สำหรับโครงสร้างพื้นฐาน ML (7 ชั่วโมง)
+
+- ภาพรวมบริการ AWS
 - EC2, S3, EBS, VPC
 - EKS (Elastic Kubernetes Service)
-- SageMaker deep dive
-- IAM and security
-- Hands-on: Deploy ML system on AWS
+- เจาะลึก SageMaker
+- IAM และความปลอดภัย
+- ภาคปฏิบัติ: ติดตั้งระบบ ML บน AWS
 
-### Lesson 03: Google Cloud Platform for ML (7 hours)
-- GCP ecosystem overview
+### บทเรียน 03: Google Cloud Platform สำหรับ ML (7 ชั่วโมง)
+
+- ภาพรวมบริการ GCP
 - Compute Engine, Cloud Storage, GKE
-- Vertex AI platform
-- TPU access and usage
-- GCP networking
-- Hands-on: Deploy ML system on GCP
+- แพลตฟอร์ม Vertex AI
+- การเข้าถึงและใช้ TPU
+- เครือข่าย GCP
+- ภาคปฏิบัติ: ติดตั้งระบบ ML บน GCP
 
-### Lesson 04: Azure for ML Infrastructure (6 hours)
-- Azure ecosystem overview
+### บทเรียน 04: Azure สำหรับโครงสร้างพื้นฐาน ML (6 ชั่วโมง)
+
+- ภาพรวมบริการ Azure
 - Virtual Machines, Blob Storage, AKS
 - Azure Machine Learning
-- Azure OpenAI integration
-- Enterprise features
-- Hands-on: Deploy ML system on Azure
+- การเชื่อมต่อ Azure OpenAI
+- ความสามารถสำหรับองค์กร
+- ภาคปฏิบัติ: ติดตั้งระบบ ML บน Azure
 
-### Lesson 05: Cloud Storage for ML (6 hours)
+### บทเรียน 05: พื้นที่จัดเก็บบนคลาวด์สำหรับ ML (6 ชั่วโมง)
+
 - Object storage (S3, GCS, Blob)
 - Block storage (EBS, Persistent Disks)
 - File storage (EFS, Filestore)
-- Data lakes and data warehouses
-- Caching strategies
-- Hands-on: Optimize data pipeline
+- Data lakes และ data warehouses
+- กลยุทธ์การใช้แคช
+- ภาคปฏิบัติ: ปรับประสิทธิภาพไปป์ไลน์ข้อมูล
 
-### Lesson 06: Cloud Networking for ML (6 hours)
-- VPC and subnet design
-- Load balancers and traffic management
-- CDN for model serving
-- VPN and hybrid connectivity
+### บทเรียน 06: เครือข่ายคลาวด์สำหรับ ML (6 ชั่วโมง)
+
+- ออกแบบ VPC และ subnet
+- Load balancer และการจัดการทราฟฟิก
+- CDN สำหรับให้บริการโมเดล
+- VPN และการเชื่อมต่อแบบไฮบริด
 - Service mesh (Istio)
-- Hands-on: Secure multi-tier ML system
+- ภาคปฏิบัติ: ป้องกันระบบ ML หลายชั้น
 
-### Lesson 07: Managed ML Services (6 hours)
-- SageMaker vs Vertex AI vs Azure ML
-- Training jobs and endpoints
+### บทเรียน 07: บริการ ML แบบจัดการให้ (6 ชั่วโมง)
+
+- เปรียบเทียบ SageMaker, Vertex AI และ Azure ML
+- งานเทรนและ endpoints
 - Feature stores
-- Model registry and versioning
-- AutoML capabilities
-- Hands-on: Compare managed services
+- ทะเบียนและเวอร์ชันโมเดล
+- ความสามารถ AutoML
+- ภาคปฏิบัติ: เปรียบเทียบบริการ
 
-### Lesson 08: Multi-Cloud and Cost Optimization (6 hours)
-- Multi-cloud strategies
-- Cloud cost management
-- Reserved instances and savings plans
-- Spot instances for training
-- Cost monitoring and alerts
-- Hands-on: Optimize cloud spending
+### บทเรียน 08: หลายคลาวด์และการปรับค่าใช้จ่าย (6 ชั่วโมง)
 
-## Prerequisites
+- กลยุทธ์หลายคลาวด์
+- การจัดการค่าใช้จ่ายคลาวด์
+- Reserved instances และ savings plans
+- Spot instances สำหรับงานเทรน
+- การเฝ้าติดตามและแจ้งเตือนค่าใช้จ่าย
+- ภาคปฏิบัติ: ปรับค่าใช้จ่ายคลาวด์
 
-**Required:**
-- Completed Module 01
-- Basic understanding of cloud concepts
-- Familiarity with command-line interfaces
-- Active account on at least one cloud platform (free tier)
+## ความรู้พื้นฐานที่ควรมี
 
-**Recommended:**
-- Linux/Unix command-line experience
-- Basic networking knowledge
-- Understanding of infrastructure as code
+**จำเป็น:** เรียนโมดูล 01 แล้ว เข้าใจแนวคิดคลาวด์เบื้องต้น ใช้คำสั่งในเทอร์มินัลได้ และมีบัญชีใช้งานบนคลาวด์อย่างน้อยหนึ่งราย
 
-## Required Tools and Accounts
+**แนะนำ:** ใช้คำสั่ง Linux/Unix ได้ รู้พื้นฐานเครือข่าย และเข้าใจ Infrastructure as Code
 
-### Cloud Platform Accounts
-- **AWS**: Free tier account (https://aws.amazon.com/free/)
-- **GCP**: $300 free credit (https://cloud.google.com/free)
-- **Azure**: $200 free credit (https://azure.microsoft.com/free/)
+## เครื่องมือและบัญชีที่ต้องใช้
 
-### CLI Tools
+### บัญชีคลาวด์
+
+- [AWS](https://aws.amazon.com/free/)
+- [GCP](https://cloud.google.com/free)
+- [Azure](https://azure.microsoft.com/free/)
+
+สิทธิใช้งานฟรีและเครดิตอาจเปลี่ยนแปลงได้ ตรวจสอบเงื่อนไขปัจจุบันบนเว็บไซต์ของแต่ละราย
+
+### เครื่องมือ CLI
+
 ```bash
 # AWS CLI
 pip install awscli
 
 # GCP SDK
-# Download from: https://cloud.google.com/sdk/docs/install
+# ดาวน์โหลดจาก: https://cloud.google.com/sdk/docs/install
 
 # Azure CLI
 pip install azure-cli
 
 # Terraform (Infrastructure as Code)
-# Download from: https://www.terraform.io/downloads
+# ดาวน์โหลดจาก: https://www.terraform.io/downloads
 ```
 
-### Optional Tools
-- Pulumi (Alternative IaC)
-- Cloud cost monitoring tools
-- Network debugging tools (traceroute, curl, etc.)
+### เครื่องมือเพิ่มเติม
 
-## Assessment
+- Pulumi (ทางเลือกสำหรับ IaC)
+- เครื่องมือติดตามค่าใช้จ่ายคลาวด์
+- เครื่องมือตรวจปัญหาเครือข่าย เช่น `traceroute` และ `curl`
 
-### Quizzes
-- Mid-module quiz (after Lesson 04): 20 questions
-- Final quiz (after Lesson 08): 30 questions
+## การประเมินผล
 
-### Practical Exercises
-- Exercise 01: Multi-cloud deployment
-- Exercise 02: Cost optimization challenge
-- Exercise 03: Network architecture design
+### แบบทดสอบ
 
-### Capstone Project
-**Project:** Deploy a production-ready ML system with:
-- Multi-region deployment
-- Auto-scaling
-- Cost under $50/month
-- 99.9% availability
-- Comprehensive monitoring
+- ระหว่างโมดูล หลังบทเรียน 04: 20 ข้อ
+- ปลายโมดูล หลังบทเรียน 08: 30 ข้อ
 
-## Learning Path
+### แบบฝึกหัดภาคปฏิบัติ
 
-```
-Module 01 (Complete) ──► Module 02 (Current) ──► Module 03
-    ↓                         ↓                      ↓
-Foundations            Cloud Computing        Kubernetes
+- แบบฝึกหัด 01: ติดตั้งระบบบนหลายคลาวด์
+- แบบฝึกหัด 02: โจทย์ปรับค่าใช้จ่าย
+- แบบฝึกหัด 03: ออกแบบสถาปัตยกรรมเครือข่าย
+
+### โปรเจกต์สรุป
+
+ติดตั้งระบบ ML สำหรับใช้งานจริง โดยมีการติดตั้งหลายภูมิภาค การปรับขนาดอัตโนมัติ การเฝ้าติดตาม และเป้าหมายด้านค่าใช้จ่ายกับความพร้อมใช้งานตามโจทย์โปรเจกต์
+
+## ลำดับการเรียน
+
+```text
+โมดูล 01 (เรียนแล้ว) ──► โมดูล 02 (ปัจจุบัน) ──► โมดูล 03
+      พื้นฐาน                 คลาวด์คอมพิวติง          Kubernetes
 ```
 
-## Time Commitment
+## เวลาที่ใช้
 
-- **Lessons**: 50 hours (6-7 hours per lesson)
-- **Exercises**: 8-10 hours
-- **Quizzes**: 2-3 hours
-- **Capstone Project**: 15-20 hours
-- **Total**: ~75-85 hours
+- **บทเรียน:** 50 ชั่วโมง (บทเรียนละประมาณ 6–7 ชั่วโมง)
+- **แบบฝึกหัด:** 8–10 ชั่วโมง
+- **แบบทดสอบ:** 2–3 ชั่วโมง
+- **โปรเจกต์สรุป:** 15–20 ชั่วโมง
+- **รวม:** ประมาณ 75–85 ชั่วโมง
 
-**Recommended pace:**
-- Part-time (10h/week): 7-8 weeks
-- Full-time (40h/week): 2 weeks
+**จังหวะการเรียนที่แนะนำ:** นอกเวลา 10 ชั่วโมงต่อสัปดาห์ใช้ประมาณ 7–8 สัปดาห์ หรือเต็มเวลา 40 ชั่วโมงต่อสัปดาห์ใช้ประมาณ 2 สัปดาห์
 
-## Cloud Credits and Free Tiers
+## เครดิตและสิทธิใช้งานฟรี
 
-### AWS Free Tier
-- **750 hours/month** of t2.micro EC2 (12 months)
-- **5 GB** of S3 storage
-- **15 GB** of bandwidth out
-- Many other services with free tier
+AWS, GCP และ Azure มีหน้าข้อมูลสิทธิใช้งานฟรีตามลิงก์ด้านบน ขอบเขตบริการ เครดิต ระยะเวลา และเงื่อนไขอาจเปลี่ยนแปลงได้ ควรตรวจสอบก่อนสร้างทรัพยากรและตั้งค่าการแจ้งเตือนค่าใช้จ่ายทันที
 
-### GCP Free Tier
-- **$300 credit** for 90 days
-- **e2-micro instance** free (always free tier)
-- **30 GB** of storage
-- **1 GB** of egress to North America
+## เกณฑ์วัดความพร้อม
 
-### Azure Free Tier
-- **$200 credit** for 30 days
-- **750 hours/month** of B1S VM (12 months)
-- **5 GB** of Blob storage
-- Many other services
+- [ ] ออกแบบระบบ ML สำหรับแพลตฟอร์มคลาวด์ที่เลือกได้
+- [ ] ติดตั้งและดูแลงาน ML บน AWS, GCP และ Azure ได้
+- [ ] ปรับค่าใช้จ่ายของโครงสร้างพื้นฐาน ML ได้
+- [ ] ตั้งค่าเครือข่ายของระบบ ML อย่างปลอดภัยได้
+- [ ] เลือกพื้นที่จัดเก็บที่เหมาะสมได้
+- [ ] ใช้บริการ ML แบบจัดการให้ได้
+- [ ] วางกลยุทธ์หลายคลาวด์ได้
+- [ ] เฝ้าติดตามและแก้ปัญหาระบบบนคลาวด์ได้
 
-**Important:** Set up billing alerts to avoid unexpected charges!
+## แหล่งข้อมูล
 
-## Success Criteria
+### เอกสาร
 
-You've mastered this module when you can:
+- [เอกสาร AWS](https://docs.aws.amazon.com/)
+- [เอกสาร GCP](https://cloud.google.com/docs)
+- [เอกสาร Azure](https://learn.microsoft.com/azure/)
 
-- [ ] Architect ML systems for specific cloud platforms
-- [ ] Deploy and manage ML workloads on AWS, GCP, and Azure
-- [ ] Optimize cloud costs for ML infrastructure
-- [ ] Configure secure networking for ML systems
-- [ ] Choose appropriate storage solutions
-- [ ] Use managed ML services effectively
-- [ ] Implement multi-cloud strategies
-- [ ] Monitor and troubleshoot cloud deployments
+### หนังสือ
 
-## Resources
+- *Architecting for the Cloud: AWS Best Practices*
+- *Google Cloud Platform in Action*
+- *Azure for Architects*
 
-### Documentation
-- [AWS Documentation](https://docs.aws.amazon.com/)
-- [GCP Documentation](https://cloud.google.com/docs)
-- [Azure Documentation](https://docs.microsoft.com/azure/)
+### แหล่งเรียนรู้ออนไลน์
 
-### Books
-- "Architecting for the Cloud: AWS Best Practices"
-- "Google Cloud Platform in Action"
-- "Azure for Architects"
-
-### Online Resources
 - AWS Training and Certification
 - Google Cloud Skills Boost
 - Microsoft Learn
 - A Cloud Guru
 - Linux Academy
 
-### Community
+### ชุมชน
+
 - AWS Community Builders
 - GCP Community
 - Azure Tech Community
 - Reddit: r/aws, r/googlecloud, r/azure
 
-## Next Steps
+## ขั้นตอนถัดไป
 
-After completing this module:
-1. Complete Module 02 quiz with ≥80% score
-2. Finish capstone project
-3. Proceed to Module 03: Kubernetes Deep Dive
-4. Or explore Module 04: Monitoring and Observability
+1. ทำแบบทดสอบโมดูล 02 ให้ได้อย่างน้อย 80%
+2. ทำโปรเจกต์สรุปให้เสร็จ
+3. เรียนโมดูล 03 เรื่อง Kubernetes ต่อ
 
----
+**พร้อมเริ่มหรือยัง?** ไปที่ [บทเรียน 01: สถาปัตยกรรมคลาวด์สำหรับ ML](./01-cloud-architecture.md)
 
-**Ready to start?** Begin with [Lesson 01: Cloud Architecture for ML](./01-cloud-architecture.md)
-
-**Need help?** Review [Module 101: Foundations](../mod-101-foundations/) if cloud concepts are unclear.
-
-**Cost concerns?** All lessons can be completed within free tier limits!
+**ต้องการทบทวนพื้นฐาน?** ดู [โมดูล 101: พื้นฐาน](../mod-101-foundations/)

@@ -1,93 +1,93 @@
 # Pull Request
 
-## Description
+## รายละเอียด
 
-<!-- Provide a clear and concise description of your changes -->
+<!-- อธิบายสิ่งที่เปลี่ยนแปลงอย่างชัดเจนและกระชับ -->
 
-## Type of Change
+## ประเภทการเปลี่ยนแปลง
 
-<!-- Mark the relevant option with an [x] -->
+<!-- ทำเครื่องหมาย [x] ในข้อที่เกี่ยวข้อง -->
 
-- [ ] Bug fix (non-breaking change which fixes an issue)
-- [ ] New feature (non-breaking change which adds functionality)
-- [ ] Content improvement (improves existing lessons or projects)
-- [ ] Documentation update
-- [ ] Code quality improvement (refactoring, formatting)
-- [ ] Breaking change (fix or feature that would cause existing functionality to not work as expected)
+- [ ] แก้ข้อผิดพลาดโดยไม่กระทบการทำงานเดิม
+- [ ] เพิ่มความสามารถใหม่โดยไม่กระทบการทำงานเดิม
+- [ ] ปรับปรุงเนื้อหาบทเรียนหรือโปรเจกต์
+- [ ] ปรับปรุงเอกสาร
+- [ ] ปรับปรุงคุณภาพโค้ด เช่น refactor หรือจัดรูปแบบ
+- [ ] เปลี่ยนแปลงที่อาจกระทบการทำงานเดิม
 
-## Related Issue
+## Issue ที่เกี่ยวข้อง
 
-<!-- Link to the related issue. If no issue exists, please create one first -->
+<!-- ใส่ลิงก์ issue ที่เกี่ยวข้อง หากยังไม่มี โปรดสร้าง issue ก่อน -->
 
-Closes #(issue number)
+Closes #(หมายเลข issue)
 
-## Changes Made
+## สิ่งที่เปลี่ยนแปลง
 
-<!-- List the specific changes you made -->
+<!-- ระบุสิ่งที่แก้ไขเป็นข้อ ๆ -->
 
 -
 -
 -
 
-## Testing Performed
+## การทดสอบ
 
-<!-- Describe how you tested your changes -->
+<!-- อธิบายวิธีทดสอบการเปลี่ยนแปลง -->
 
-- [ ] Tested code examples run without errors
-- [ ] Verified markdown renders correctly
-- [ ] Checked all links work
-- [ ] Ran automated tests (if applicable)
-- [ ] Tested on multiple platforms/browsers (if applicable)
+- [ ] ตัวอย่างโค้ดทำงานโดยไม่มีข้อผิดพลาด
+- [ ] Markdown แสดงผลถูกต้อง
+- [ ] ลิงก์ทั้งหมดใช้งานได้
+- [ ] รันการทดสอบอัตโนมัติแล้ว (ถ้ามี)
+- [ ] ทดสอบบนหลายแพลตฟอร์มหรือเบราว์เซอร์แล้ว (ถ้าเกี่ยวข้อง)
 
-**Test Details:**
-<!-- Provide specific details about your testing -->
+**รายละเอียดการทดสอบ:**
+<!-- ระบุผลและขั้นตอนการทดสอบ -->
 
-## Screenshots
+## ภาพหน้าจอ
 
-<!-- If applicable, add screenshots to demonstrate your changes -->
+<!-- แนบภาพหน้าจอประกอบหากเกี่ยวข้อง -->
 
-## Checklist
+## รายการตรวจสอบ
 
-<!-- Mark completed items with an [x] -->
+<!-- ทำเครื่องหมาย [x] ในข้อที่ทำเสร็จแล้ว -->
 
-- [ ] My code follows the style guidelines of this project
-- [ ] I have performed a self-review of my own code/content
-- [ ] I have commented my code where necessary
-- [ ] I have made corresponding changes to the documentation
-- [ ] My changes generate no new warnings or errors
-- [ ] I have added tests that prove my fix is effective or that my feature works
-- [ ] New and existing tests pass locally with my changes
-- [ ] Any dependent changes have been merged and published
+- [ ] โค้ดเป็นไปตามแนวทางของโปรเจกต์
+- [ ] ตรวจทานโค้ดหรือเนื้อหาของตนเองแล้ว
+- [ ] เพิ่มคำอธิบายโค้ดในจุดที่จำเป็นแล้ว
+- [ ] ปรับเอกสารที่เกี่ยวข้องแล้ว
+- [ ] การแก้ไขไม่ทำให้เกิดคำเตือนหรือข้อผิดพลาดใหม่
+- [ ] เพิ่มการทดสอบที่ยืนยันการแก้ไขหรือความสามารถใหม่แล้ว
+- [ ] การทดสอบใหม่และเดิมผ่านในเครื่องแล้ว
+- [ ] การเปลี่ยนแปลงที่ต้องพึ่งพาถูกรวมและเผยแพร่แล้ว
 
-## For Content Changes
+## สำหรับการแก้ไขเนื้อหา
 
-<!-- If this PR includes changes to lessons, projects, or documentation -->
+<!-- หาก PR นี้แก้บทเรียน โปรเจกต์ หรือเอกสาร -->
 
-- [ ] Content is technically accurate
-- [ ] Examples are complete and tested
-- [ ] Explanations are clear for the target audience
-- [ ] Code follows best practices
-- [ ] TODOs are comprehensive and educational
-- [ ] Exercises align with learning objectives
-- [ ] Self-check questions are included (if applicable)
+- [ ] เนื้อหาถูกต้องทางเทคนิค
+- [ ] ตัวอย่างครบถ้วนและทดสอบแล้ว
+- [ ] คำอธิบายชัดเจนสำหรับกลุ่มผู้อ่านเป้าหมาย
+- [ ] โค้ดเป็นไปตามแนวปฏิบัติที่ดี
+- [ ] `TODO` ครอบคลุมและช่วยให้เรียนรู้
+- [ ] แบบฝึกหัดสอดคล้องกับเป้าหมายการเรียนรู้
+- [ ] มีคำถามตรวจความเข้าใจ (ถ้าเกี่ยวข้อง)
 
-## Impact
+## ผู้ที่ได้รับประโยชน์
 
-<!-- Who will benefit from this change? -->
+<!-- การเปลี่ยนแปลงนี้ช่วยใคร? -->
 
-- [ ] Complete beginners
-- [ ] Intermediate learners
-- [ ] All learners
-- [ ] Maintainers/contributors
+- [ ] ผู้เริ่มต้น
+- [ ] ผู้เรียนระดับกลาง
+- [ ] ผู้เรียนทุกระดับ
+- [ ] ผู้ดูแลหรือผู้มีส่วนร่วม
 
-## Additional Context
+## ข้อมูลเพิ่มเติม
 
-<!-- Add any other context about the PR here -->
+<!-- เพิ่มข้อมูลอื่น ๆ เกี่ยวกับ PR ที่นี่ -->
 
-## Reviewer Notes
+## หมายเหตุสำหรับผู้รีวิว
 
-<!-- Any specific areas you'd like reviewers to focus on? -->
+<!-- ระบุจุดที่ต้องการให้ผู้รีวิวช่วยตรวจเป็นพิเศษ -->
 
 ---
 
-**By submitting this pull request, I confirm that my contribution is made under the terms of the MIT license.**
+**การส่ง pull request นี้หมายถึงฉันยืนยันว่าผลงานที่ส่งอยู่ภายใต้เงื่อนไขของสัญญาอนุญาต MIT**

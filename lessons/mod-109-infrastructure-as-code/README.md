@@ -1,207 +1,189 @@
-# Module 09: Infrastructure as Code (IaC)
+# โมดูล 09: Infrastructure as Code (IaC)
 
-## Module Overview
+## ภาพรวมโมดูล
 
-Infrastructure as Code (IaC) is a fundamental practice in modern DevOps and AI infrastructure management. This module teaches you how to define, deploy, and manage infrastructure using code, enabling version control, automation, reproducibility, and collaboration for AI/ML workloads.
+Infrastructure as Code (IaC) เป็นแนวปฏิบัติสำคัญของ DevOps และการดูแลโครงสร้างพื้นฐาน AI โมดูลนี้สอนวิธีกำหนด ติดตั้ง และจัดการโครงสร้างพื้นฐานด้วยโค้ด เพื่อให้ติดตามเวอร์ชัน ทำงานอัตโนมัติ สร้างระบบซ้ำได้ และทำงานร่วมกันสำหรับงาน AI/ML
 
-## Why This Matters for AI Infrastructure
+## ความสำคัญต่อโครงสร้างพื้นฐาน AI
 
-Managing AI infrastructure manually is error-prone, slow, and doesn't scale. IaC enables you to:
+การดูแลโครงสร้างพื้นฐาน AI ด้วยมือเกิดข้อผิดพลาดได้ง่าย ใช้เวลามาก และขยายระบบได้ยาก IaC ช่วยให้:
 
-- **Reproducibility**: Deploy identical environments for dev, staging, and production
-- **Version Control**: Track infrastructure changes in Git alongside application code
-- **Automation**: Integrate infrastructure provisioning into CI/CD pipelines
-- **Collaboration**: Enable teams to review and approve infrastructure changes
-- **Disaster Recovery**: Rebuild entire infrastructure from code in minutes
-- **Cost Management**: Easily spin up/down expensive GPU clusters
-- **Multi-Cloud**: Deploy AI workloads across AWS, GCP, Azure with common patterns
+- **สร้างซ้ำได้:** ติดตั้งสภาพแวดล้อม development, staging และ production ที่เหมือนกัน
+- **ติดตามเวอร์ชัน:** เก็บประวัติการเปลี่ยนแปลงโครงสร้างพื้นฐานใน Git คู่กับโค้ดแอปพลิเคชัน
+- **ทำงานอัตโนมัติ:** เชื่อมการเตรียมทรัพยากรเข้ากับไปป์ไลน์ CI/CD
+- **ทำงานร่วมกัน:** ให้ทีมรีวิวและอนุมัติการเปลี่ยนแปลงโครงสร้างพื้นฐาน
+- **กู้คืนระบบ:** สร้างโครงสร้างพื้นฐานขึ้นใหม่จากโค้ด
+- **ควบคุมค่าใช้จ่าย:** เปิดและปิดคลัสเตอร์ GPU ที่มีค่าใช้จ่ายสูงได้สะดวก
+- **ใช้หลายคลาวด์:** ติดตั้งงาน AI บน AWS, GCP และ Azure ด้วยรูปแบบร่วมกัน
 
-## Learning Objectives
+## ผลลัพธ์การเรียนรู้
 
-By the end of this module, you will be able to:
+เมื่อจบโมดูลนี้ คุณจะสามารถ:
 
-1. **Understand IaC principles** and benefits for AI infrastructure
-2. **Use Terraform** to provision cloud resources for ML workloads
-3. **Manage infrastructure state** safely and collaborate with teams
-4. **Apply Pulumi** for Python-based infrastructure management
-5. **Implement GitOps workflows** for infrastructure changes
-6. **Design modular, reusable infrastructure** components
-7. **Secure sensitive data** in IaC (credentials, API keys)
-8. **Implement CI/CD pipelines** for infrastructure deployment
-9. **Apply best practices** for IaC at scale
+1. อธิบายหลักการและประโยชน์ของ IaC ต่อโครงสร้างพื้นฐาน AI
+2. ใช้ Terraform เตรียมทรัพยากรคลาวด์สำหรับงาน ML
+3. จัดการ state ของโครงสร้างพื้นฐานอย่างปลอดภัยร่วมกับทีม
+4. ใช้ Pulumi จัดการโครงสร้างพื้นฐานด้วย Python
+5. ใช้เวิร์กโฟลว์ GitOps สำหรับการเปลี่ยนแปลงโครงสร้างพื้นฐาน
+6. ออกแบบส่วนประกอบที่เป็นโมดูลและนำกลับมาใช้ซ้ำได้
+7. ป้องกันข้อมูลลับ เช่น credentials และ API keys ใน IaC
+8. สร้างไปป์ไลน์ CI/CD สำหรับติดตั้งโครงสร้างพื้นฐาน
+9. ใช้แนวปฏิบัติที่ดีเมื่อระบบขยายขนาด
 
-## Prerequisites
+## ความรู้พื้นฐานที่ควรมี
 
-- **Module 02**: Cloud Computing Fundamentals (AWS/GCP/Azure basics)
-- **Module 03**: Containerization with Docker
-- **Module 04**: Kubernetes fundamentals
-- Basic understanding of cloud services (VMs, storage, networking)
-- Familiarity with command-line tools
-- Git basics
+- **โมดูล 02:** พื้นฐานคลาวด์คอมพิวติง (AWS/GCP/Azure)
+- **โมดูล 03:** คอนเทนเนอร์และ Docker
+- **โมดูล 04:** พื้นฐาน Kubernetes
+- เข้าใจบริการคลาวด์เบื้องต้น เช่น VM, พื้นที่จัดเก็บ และเครือข่าย
+- คุ้นเคยกับเครื่องมือบรรทัดคำสั่งและ Git
 
-## Module Structure
+## โครงสร้างโมดูล
 
-This module contains **8 comprehensive lessons**:
+โมดูลนี้มี **8 บทเรียน**:
 
-### Lesson 01: Introduction to Infrastructure as Code
-- What is IaC and why it matters
-- IaC vs manual infrastructure management
-- Declarative vs imperative approaches
-- IaC tools landscape (Terraform, Pulumi, CloudFormation, Ansible)
-- Infrastructure for AI/ML: special considerations
+### บทเรียน 01: รู้จัก Infrastructure as Code
 
-### Lesson 02: Terraform Fundamentals
-- Installing and configuring Terraform
-- HCL (HashiCorp Configuration Language) syntax
-- Providers, resources, data sources
-- Variables, outputs, locals
-- Terraform CLI commands (init, plan, apply, destroy)
-- Your first Terraform project
+- IaC คืออะไรและสำคัญอย่างไร
+- เปรียบเทียบ IaC กับการจัดการโครงสร้างพื้นฐานด้วยมือ
+- วิธีแบบ declarative และ imperative
+- ภาพรวมเครื่องมือ Terraform, Pulumi, CloudFormation และ Ansible
+- ข้อพิจารณาเฉพาะของโครงสร้างพื้นฐาน AI/ML
 
-### Lesson 03: Terraform State Management
-- Understanding Terraform state
-- Local vs remote state backends
-- State locking and collaboration
-- S3 + DynamoDB backend setup
-- State inspection and manipulation
-- Workspaces for environment management
+### บทเรียน 02: พื้นฐาน Terraform
 
-### Lesson 04: Building AI Infrastructure with Terraform
-- Provisioning GPU instances (AWS p3, GCP A100)
-- Setting up Kubernetes clusters (EKS, GKE, AKS)
-- Creating storage for datasets (S3, GCS, Azure Blob)
-- Networking and security groups
-- IAM roles and permissions
-- Complete ML platform example
+- ติดตั้งและตั้งค่า Terraform
+- ไวยากรณ์ HCL (HashiCorp Configuration Language)
+- Providers, resources และ data sources
+- Variables, outputs และ locals
+- คำสั่ง Terraform CLI (`init`, `plan`, `apply`, `destroy`)
+- โปรเจกต์ Terraform แรก
 
-### Lesson 05: Pulumi - Infrastructure as Software
-- Introduction to Pulumi
-- Python-based infrastructure code
-- Pulumi vs Terraform comparison
-- Deploying ML infrastructure with Pulumi
-- Using loops, conditionals, and Python libraries
-- Pulumi stacks and configuration
+### บทเรียน 03: การจัดการ Terraform State
 
-### Lesson 06: Advanced IaC Patterns
-- Modules and code reusability
-- Multi-environment strategies (dev/staging/prod)
-- Multi-cloud deployments
-- Dynamic configuration with external data
-- Conditional resources
-- For_each and count patterns
+- ทำความเข้าใจ Terraform state
+- เปรียบเทียบ local และ remote state backends
+- การล็อก state และการทำงานร่วมกัน
+- ตั้งค่า backend ด้วย S3 และ DynamoDB
+- ตรวจและปรับ state
+- ใช้ workspaces จัดการสภาพแวดล้อม
 
-### Lesson 07: GitOps and IaC CI/CD
-- GitOps principles for infrastructure
-- Pull request workflows for infrastructure changes
-- Automated testing for IaC (terraform validate, plan)
-- CI/CD pipelines with GitHub Actions
-- Atlantis for Terraform automation
+### บทเรียน 04: สร้างโครงสร้างพื้นฐาน AI ด้วย Terraform
+
+- เตรียมเครื่อง GPU (AWS p3, GCP A100)
+- ตั้งค่าคลัสเตอร์ Kubernetes (EKS, GKE, AKS)
+- สร้างพื้นที่จัดเก็บชุดข้อมูล (S3, GCS, Azure Blob)
+- เครือข่ายและ security groups
+- บทบาทและสิทธิ์ IAM
+- ตัวอย่างแพลตฟอร์ม ML แบบครบวงจร
+
+### บทเรียน 05: Pulumi — เขียนโครงสร้างพื้นฐานด้วยภาษาโปรแกรม
+
+- รู้จัก Pulumi
+- เขียนโครงสร้างพื้นฐานด้วย Python
+- เปรียบเทียบ Pulumi กับ Terraform
+- ติดตั้งโครงสร้างพื้นฐาน ML ด้วย Pulumi
+- ใช้ลูป เงื่อนไข และไลบรารี Python
+- Pulumi stacks และการตั้งค่า
+
+### บทเรียน 06: รูปแบบ IaC ขั้นสูง
+
+- โมดูลและการนำโค้ดกลับมาใช้ซ้ำ
+- กลยุทธ์หลายสภาพแวดล้อม (development/staging/production)
+- การติดตั้งบนหลายคลาวด์
+- การตั้งค่าแบบไดนามิกจากข้อมูลภายนอก
+- ทรัพยากรตามเงื่อนไข
+- รูปแบบ `for_each` และ `count`
+
+### บทเรียน 07: GitOps และ CI/CD สำหรับ IaC
+
+- หลักการ GitOps สำหรับโครงสร้างพื้นฐาน
+- เวิร์กโฟลว์ pull request สำหรับการเปลี่ยนแปลง
+- ทดสอบ IaC อัตโนมัติ (`terraform validate`, `plan`)
+- ไปป์ไลน์ CI/CD ด้วย GitHub Actions
+- ใช้ Atlantis ทำงาน Terraform อัตโนมัติ
 - Policy as Code (Sentinel, OPA)
 
-### Lesson 08: Security and Best Practices
-- Managing secrets (AWS Secrets Manager, HashiCorp Vault)
-- Preventing credential leaks
-- Infrastructure security scanning (tfsec, Checkov)
-- Cost estimation and optimization
-- Tagging strategies
-- Documentation and team collaboration
-- Disaster recovery procedures
+### บทเรียน 08: ความปลอดภัยและแนวปฏิบัติที่ดี
 
-## Hands-On Exercises
+- จัดการ secrets (AWS Secrets Manager, HashiCorp Vault)
+- ป้องกันข้อมูลรับรองรั่วไหล
+- สแกนความปลอดภัยของโครงสร้างพื้นฐาน (tfsec, Checkov)
+- ประมาณและปรับค่าใช้จ่าย
+- กลยุทธ์การติด tags
+- เอกสารและการทำงานร่วมกันในทีม
+- ขั้นตอนกู้คืนระบบ
 
-This module includes practical exercises in the `exercises/` directory:
+## แบบฝึกหัดภาคปฏิบัติ
 
-1. **Exercise 01**: Deploy a simple EC2 instance with Terraform
-2. **Exercise 02**: Create an S3 bucket with versioning for ML datasets
-3. **Exercise 03**: Provision a GKE cluster for ML workloads
-4. **Exercise 04**: Build reusable Terraform modules
-5. **Exercise 05**: Set up remote state with S3 backend
-6. **Exercise 06**: Deploy ML infrastructure with Pulumi (Python)
-7. **Exercise 07**: Create a GitOps workflow with GitHub Actions
-8. **Exercise 08**: Implement secrets management with AWS Secrets Manager
+แบบฝึกหัดอยู่ในไดเรกทอรี `exercises/`:
 
-**Estimated time per exercise**: 1-2 hours
-**Total hands-on time**: 8-16 hours
+1. **แบบฝึกหัด 01:** ติดตั้ง EC2 instance ด้วย Terraform
+2. **แบบฝึกหัด 02:** สร้าง S3 bucket พร้อม versioning สำหรับชุดข้อมูล ML
+3. **แบบฝึกหัด 03:** เตรียมคลัสเตอร์ GKE สำหรับงาน ML
+4. **แบบฝึกหัด 04:** สร้าง Terraform modules ที่นำกลับมาใช้ซ้ำได้
+5. **แบบฝึกหัด 05:** ตั้งค่า remote state ด้วย S3 backend
+6. **แบบฝึกหัด 06:** ติดตั้งโครงสร้างพื้นฐาน ML ด้วย Pulumi (Python)
+7. **แบบฝึกหัด 07:** สร้างเวิร์กโฟลว์ GitOps ด้วย GitHub Actions
+8. **แบบฝึกหัด 08:** จัดการ secrets ด้วย AWS Secrets Manager
 
-## Assessment
+**เวลาที่ใช้โดยประมาณ:** แบบฝึกหัดละ 1–2 ชั่วโมง รวม 8–16 ชั่วโมง
 
-- **Quiz**: 25 questions covering all lessons
-- **Practical Exam**: Design and deploy a complete ML infrastructure
-  - GPU instance for training
-  - Kubernetes cluster for inference
-  - S3 buckets for data/models
-  - Monitoring and logging setup
-  - All managed via Terraform with remote state
+## การประเมินผล
 
-## Tools and Technologies
+- **แบบทดสอบ:** 25 ข้อ ครอบคลุมทุกบทเรียน
+- **สอบภาคปฏิบัติ:** ออกแบบและติดตั้งโครงสร้างพื้นฐาน ML ที่มีเครื่อง GPU สำหรับเทรน คลัสเตอร์ Kubernetes สำหรับ inference, S3 buckets สำหรับข้อมูลและโมเดล รวมถึงระบบเฝ้าติดตามและบันทึก log ทั้งหมดจัดการด้วย Terraform และ remote state
 
-### Primary Tools
-- **Terraform** (v1.5+) - HashiCorp's IaC tool
-- **Pulumi** (Python SDK) - Modern IaC with real programming languages
-- **AWS CLI** / **gcloud** / **az** - Cloud provider CLIs
+## เครื่องมือและเทคโนโลยี
 
-### Supporting Tools
-- **tfenv** - Terraform version manager
-- **tflint** - Terraform linter
-- **tfsec** - Security scanner for Terraform
-- **Checkov** - Policy-as-code scanner
-- **terraform-docs** - Generate documentation from Terraform modules
-- **Atlantis** - Terraform pull request automation
+### เครื่องมือหลัก
 
-### Cloud Providers
-- AWS (primary examples)
-- Google Cloud Platform
-- Microsoft Azure
+- **Terraform** (v1.5+) — เครื่องมือ IaC ของ HashiCorp
+- **Pulumi** (Python SDK) — เขียน IaC ด้วยภาษาโปรแกรม
+- **AWS CLI**, **gcloud**, **az** — เครื่องมือบรรทัดคำสั่งของผู้ให้บริการคลาวด์
 
-## Estimated Time
+### เครื่องมือเสริม
 
-- **Reading and understanding**: 18-22 hours
-- **Hands-on exercises**: 12-16 hours
-- **Quiz and assessment**: 2-3 hours
-- **Total**: 32-41 hours
+- **tfenv:** จัดการเวอร์ชัน Terraform
+- **tflint:** ตรวจรูปแบบและปัญหาของ Terraform
+- **tfsec:** สแกนความปลอดภัยของ Terraform
+- **Checkov:** สแกนนโยบายในโค้ด
+- **terraform-docs:** สร้างเอกสารจาก Terraform modules
+- **Atlantis:** ทำงาน Terraform อัตโนมัติผ่าน pull request
 
-## Resources
+### ผู้ให้บริการคลาวด์
 
-See `resources.md` for:
-- Official Terraform and Pulumi documentation
-- Best practices guides
-- Terraform Registry modules
-- Video tutorials and courses
-- Community resources
-- Certification information
+ตัวอย่างส่วนใหญ่ใช้ AWS และยังครอบคลุม Google Cloud Platform กับ Microsoft Azure
 
-## Learning Path
+## เวลาที่ใช้โดยประมาณ
 
-**This module builds on:**
-- Module 02: Cloud Computing Fundamentals
-- Module 03: Containerization
-- Module 04: Kubernetes
+- **อ่านและทำความเข้าใจ:** 18–22 ชั่วโมง
+- **แบบฝึกหัดภาคปฏิบัติ:** 12–16 ชั่วโมง
+- **แบบทดสอบและการประเมิน:** 2–3 ชั่วโมง
+- **รวม:** 32–41 ชั่วโมง
 
-**This module prepares you for:**
-- Module 10: LLM Infrastructure (deploying LLM infrastructure with IaC)
-- Project 02: MLOps Pipeline (infrastructure automation)
-- Project 03: LLM Deployment (scalable LLM infrastructure)
+## แหล่งข้อมูล
 
-## Real-World Applications
+ดู `resources.md` สำหรับเอกสารทางการของ Terraform และ Pulumi แนวปฏิบัติที่ดี โมดูลใน Terraform Registry วิดีโอ คอร์ส ชุมชน และข้อมูลการสอบรับรอง
 
-After completing this module, you'll be able to:
+## ลำดับการเรียน
 
-- Provision complete ML training environments on-demand
-- Deploy Kubernetes clusters for model serving
-- Manage multi-environment ML infrastructure (dev/staging/prod)
-- Implement disaster recovery for critical ML systems
-- Collaborate with teams on infrastructure changes
-- Reduce infrastructure costs through automation
-- Meet compliance requirements with auditable infrastructure
+**ต่อยอดจาก:** โมดูล 02 คลาวด์คอมพิวติง, โมดูล 03 คอนเทนเนอร์ และโมดูล 04 Kubernetes
 
-## Getting Started
+**เตรียมสำหรับ:** โมดูล 10 โครงสร้างพื้นฐาน LLM, โปรเจกต์ 02 ไปป์ไลน์ MLOps และโปรเจกต์ 03 การติดตั้ง LLM
 
-Begin with **Lesson 01: Introduction to Infrastructure as Code** to understand the fundamentals, then progress through the lessons sequentially.
+## การนำไปใช้งานจริง
+
+เมื่อจบโมดูล คุณจะเตรียมสภาพแวดล้อมเทรน ML ตามต้องการ ติดตั้งคลัสเตอร์ Kubernetes สำหรับให้บริการโมเดล ดูแลหลายสภาพแวดล้อม วางแผนกู้คืนระบบ ทำงานร่วมกันผ่านการรีวิว และควบคุมค่าใช้จ่ายด้วยระบบอัตโนมัติได้
+
+## เริ่มต้น
+
+เริ่มที่ **บทเรียน 01: รู้จัก Infrastructure as Code** แล้วเรียนต่อไปตามลำดับ
 
 ---
 
-**Module Difficulty**: Intermediate
-**Recommended Background**: Cloud computing basics, command-line experience
-**Output**: Production-ready IaC skills for AI infrastructure
+**ระดับ:** กลาง
+**พื้นฐานที่แนะนำ:** คลาวด์คอมพิวติงและการใช้บรรทัดคำสั่ง
+**ทักษะที่จะได้:** เขียน IaC สำหรับโครงสร้างพื้นฐาน AI ที่ใช้งานจริง
 
-Let's start building infrastructure as code! 🚀
+มาเริ่มสร้างโครงสร้างพื้นฐานด้วยโค้ดกัน 🚀

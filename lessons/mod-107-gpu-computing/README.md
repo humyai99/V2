@@ -1,280 +1,243 @@
-# Module 07: GPU Computing & Distributed Training
+# โมดูล 07: การประมวลผลด้วย GPU และการเทรนแบบกระจาย
 
-## Overview
+## ภาพรวม
 
-This module provides comprehensive coverage of GPU computing and distributed training for AI infrastructure engineers. You'll learn how to leverage GPUs for accelerating machine learning workloads, implement distributed training strategies, and optimize GPU resource utilization for production ML systems.
+โมดูลนี้ครอบคลุมการใช้ GPU และการเทรนแบบกระจายสำหรับวิศวกรโครงสร้างพื้นฐาน AI คุณจะได้เร่งความเร็วงานแมชชีนเลิร์นนิงด้วย GPU ใช้กลยุทธ์เทรนแบบกระจาย และปรับการใช้ทรัพยากร GPU ในระบบ ML ที่ใช้งานจริง
 
-## Module Objectives
+## เป้าหมายของโมดูล
 
-By the end of this module, you will be able to:
+เมื่อจบโมดูลนี้ คุณจะสามารถ:
 
-1. **Understand GPU Architecture**: Explain GPU architecture fundamentals and how they differ from CPUs for ML workloads
-2. **CUDA Programming**: Write basic CUDA code and understand GPU memory management
-3. **Framework Acceleration**: Leverage PyTorch and TensorFlow GPU capabilities effectively
-4. **Distributed Training**: Implement data parallelism and model parallelism strategies
-5. **Multi-GPU Training**: Configure and optimize multi-GPU training on a single node
-6. **Distributed Systems**: Set up distributed training across multiple nodes
-7. **Memory Optimization**: Manage GPU memory efficiently and troubleshoot OOM errors
-8. **Performance Tuning**: Profile and optimize GPU utilization for ML workloads
+1. **เข้าใจสถาปัตยกรรม GPU:** อธิบายพื้นฐานของ GPU และความต่างจาก CPU ในงาน ML
+2. **เขียน CUDA:** เขียนโค้ด CUDA เบื้องต้นและจัดการหน่วยความจำ GPU
+3. **เร่งความเร็วด้วยเฟรมเวิร์ก:** ใช้ความสามารถ GPU ของ PyTorch และ TensorFlow
+4. **เทรนแบบกระจาย:** ใช้ data parallelism และ model parallelism
+5. **เทรนด้วย GPU หลายตัว:** ตั้งค่าและปรับงานเทรนบนเครื่องเดียว
+6. **ใช้หลายเครื่อง:** ตั้งค่างานเทรนแบบกระจายข้ามโหนด
+7. **ปรับหน่วยความจำ:** ใช้หน่วยความจำ GPU ให้มีประสิทธิภาพและแก้ปัญหา OOM
+8. **ปรับประสิทธิภาพ:** วัดและปรับการใช้ GPU สำหรับงาน ML
 
-## Prerequisites
+## ความรู้พื้นฐานที่ควรมี
 
-- **Required**:
-  - Python programming (intermediate level)
-  - PyTorch or TensorFlow basics
-  - Linux command line proficiency
-  - Understanding of neural networks and training processes
-  - Docker fundamentals (Module 03)
+**จำเป็น:**
 
-- **Recommended**:
-  - C/C++ basics (helpful for CUDA)
-  - Basic understanding of computer architecture
-  - Experience training deep learning models
+- เขียน Python ได้ระดับกลาง
+- รู้พื้นฐาน PyTorch หรือ TensorFlow
+- ใช้คำสั่ง Linux ได้
+- เข้าใจโครงข่ายประสาทเทียมและกระบวนการเทรน
+- รู้พื้นฐาน Docker (โมดูล 03)
 
-## Module Structure
+**แนะนำ:** พื้นฐาน C/C++ สำหรับ CUDA, สถาปัตยกรรมคอมพิวเตอร์ และประสบการณ์เทรนโมเดล deep learning
 
-### Lessons
+## โครงสร้างโมดูล
 
-1. **Introduction to GPU Computing for AI** (~60 minutes)
-   - GPU vs CPU architecture
-   - CUDA cores and tensor cores
-   - GPU memory hierarchy
-   - When to use GPUs for ML
+### บทเรียน
 
-2. **CUDA Programming Fundamentals** (~90 minutes)
-   - CUDA programming model
-   - Kernels and thread organization
-   - Memory management (host/device)
-   - Basic CUDA operations
+1. **รู้จักการประมวลผลด้วย GPU สำหรับ AI** (ประมาณ 60 นาที)
+   - เปรียบเทียบสถาปัตยกรรม GPU และ CPU
+   - CUDA cores และ tensor cores
+   - ลำดับชั้นหน่วยความจำ GPU
+   - เลือกใช้ GPU กับงาน ML อย่างไร
 
-3. **PyTorch GPU Acceleration** (~75 minutes)
-   - Moving tensors to GPU
-   - GPU memory management in PyTorch
-   - Mixed precision training
-   - Profiling PyTorch GPU usage
+2. **พื้นฐานการเขียน CUDA** (ประมาณ 90 นาที)
+   - รูปแบบการเขียนโปรแกรม CUDA
+   - Kernels และการจัดกลุ่ม threads
+   - จัดการหน่วยความจำ host/device
+   - การทำงาน CUDA เบื้องต้น
 
-4. **Distributed Training Fundamentals** (~90 minutes)
-   - Data parallelism vs model parallelism
-   - Communication primitives (AllReduce, etc.)
-   - Gradient synchronization
-   - Distributed training frameworks
+3. **เร่งความเร็ว PyTorch ด้วย GPU** (ประมาณ 75 นาที)
+   - ย้าย tensors ไปยัง GPU
+   - จัดการหน่วยความจำ GPU ใน PyTorch
+   - เทรนแบบ mixed precision
+   - วัดการใช้ GPU ของ PyTorch
 
-5. **Multi-GPU Training Strategies** (~90 minutes)
-   - DataParallel vs DistributedDataParallel
-   - Single-node multi-GPU setup
-   - Efficient data loading
-   - Performance optimization
+4. **พื้นฐานการเทรนแบบกระจาย** (ประมาณ 90 นาที)
+   - Data parallelism เทียบกับ model parallelism
+   - วิธีสื่อสารระหว่างโหนด เช่น AllReduce
+   - ซิงก์ gradients
+   - เฟรมเวิร์กสำหรับการเทรนแบบกระจาย
 
-6. **Model and Pipeline Parallelism** (~90 minutes)
-   - When to use model parallelism
-   - Pipeline parallelism strategies
+5. **กลยุทธ์เทรนด้วย GPU หลายตัว** (ประมาณ 90 นาที)
+   - DataParallel เทียบกับ DistributedDataParallel
+   - ตั้งค่าหลาย GPU บนเครื่องเดียว
+   - โหลดข้อมูลอย่างมีประสิทธิภาพ
+   - ปรับประสิทธิภาพ
+
+6. **Model และ pipeline parallelism** (ประมาณ 90 นาที)
+   - เมื่อใดควรใช้ model parallelism
+   - กลยุทธ์ pipeline parallelism
    - Tensor parallelism
-   - Hybrid parallelism approaches
+   - การใช้หลายวิธีร่วมกัน
 
-7. **GPU Memory Management & Optimization** (~75 minutes)
-   - Understanding GPU memory
-   - Memory profiling tools
+7. **การจัดการและปรับหน่วยความจำ GPU** (ประมาณ 75 นาที)
+   - ทำความเข้าใจหน่วยความจำ GPU
+   - เครื่องมือวัดการใช้หน่วยความจำ
    - Gradient checkpointing
-   - Troubleshooting OOM errors
+   - แก้ข้อผิดพลาด OOM
 
-8. **Advanced GPU Optimization** (~75 minutes)
-   - Performance profiling (nsys, nvprof)
-   - Kernel fusion and optimization
-   - Batch size tuning
-   - Production best practices
+8. **การปรับ GPU ขั้นสูง** (ประมาณ 75 นาที)
+   - วัดประสิทธิภาพด้วย nsys และ nvprof
+   - รวมและปรับ kernels
+   - ปรับ batch size
+   - แนวปฏิบัติสำหรับระบบที่ใช้งานจริง
 
-### Hands-on Labs
+### แล็บภาคปฏิบัติ
 
-- **Lab 1**: CUDA Basics - Write custom CUDA kernels
-- **Lab 2**: PyTorch GPU Training - Convert CPU model to GPU
-- **Lab 3**: Multi-GPU Training - Implement DDP training
-- **Lab 4**: Memory Optimization - Profile and fix OOM errors
-- **Lab 5**: Distributed Training - Multi-node training cluster
+- **แล็บ 1:** พื้นฐาน CUDA — เขียน CUDA kernels เอง
+- **แล็บ 2:** เทรน PyTorch บน GPU — ย้ายโมเดลจาก CPU ไป GPU
+- **แล็บ 3:** เทรนด้วยหลาย GPU — ใช้ DDP
+- **แล็บ 4:** ปรับหน่วยความจำ — วัดและแก้ปัญหา OOM
+- **แล็บ 5:** เทรนแบบกระจาย — ใช้คลัสเตอร์หลายโหนด
 
-### Assessments
+### การประเมิน
 
-- **Quiz**: 25 questions covering all lessons
-- **Practical Exercise**: Optimize a slow GPU training pipeline
-- **Capstone**: Implement distributed training for a large model
+- **แบบทดสอบ:** 25 ข้อครอบคลุมทุกบทเรียน
+- **แบบฝึกหัดภาคปฏิบัติ:** ปรับไปป์ไลน์เทรน GPU ที่ทำงานช้า
+- **โปรเจกต์สรุป:** เทรนโมเดลขนาดใหญ่แบบกระจาย
 
-## Learning Path
+## ลำดับการเรียน
 
-```
-Introduction to GPU Computing
-         ↓
-CUDA Programming Fundamentals
-         ↓
-PyTorch GPU Acceleration
-         ↓
-Distributed Training Fundamentals
-         ↓
-    ╔═══════════════╗
-    ║  Multi-GPU    ║
-    ║   Training    ║
-    ╚═══════════════╝
-         ↓
-    ╔═══════════════════════╗
-    ║  Model & Pipeline     ║
-    ║     Parallelism       ║
-    ╚═══════════════════════╝
-         ↓
-    ╔═══════════════════════╗
-    ║  Memory Management    ║
-    ║   & Optimization      ║
-    ╚═══════════════════════╝
-         ↓
-   Advanced GPU Optimization
+```text
+รู้จัก GPU สำหรับ AI
+       ↓
+พื้นฐาน CUDA
+       ↓
+เร่งความเร็ว PyTorch ด้วย GPU
+       ↓
+พื้นฐานการเทรนแบบกระจาย
+       ↓
+เทรนด้วย GPU หลายตัว
+       ↓
+Model และ pipeline parallelism
+       ↓
+จัดการและปรับหน่วยความจำ
+       ↓
+ปรับ GPU ขั้นสูง
 ```
 
-## Required Tools & Setup
+## เครื่องมือและการตั้งค่า
 
-### Hardware Requirements
-- NVIDIA GPU (RTX 3060 or better recommended)
-- At least 8GB GPU memory
-- For distributed training labs: 2+ GPUs or cloud instances
+### ฮาร์ดแวร์
 
-### Software Requirements
-```bash
-# CUDA Toolkit
-CUDA 11.8 or 12.1+
+- แนะนำ GPU ของ NVIDIA ระดับ RTX 3060 หรือสูงกว่า
+- แนะนำหน่วยความจำ GPU อย่างน้อย 8 GB
+- แล็บเทรนแบบกระจายต้องมี GPU อย่างน้อย 2 ตัว หรือใช้เครื่องบนคลาวด์
 
-# cuDNN
-cuDNN 8.x
+### ซอฟต์แวร์
 
-# Python packages
-torch>=2.0.0 (with CUDA support)
-torchvision>=0.15.0
-nvidia-ml-py3>=7.352.0
-py3nvml>=0.2.7
-
-# Profiling tools
-nvidia-smi
-nvtop
-torch-tb-profiler
+```text
+CUDA Toolkit: CUDA 11.8 หรือ 12.1+
+cuDNN: cuDNN 8.x
+Python packages: torch>=2.0.0 (รองรับ CUDA), torchvision>=0.15.0,
+                 nvidia-ml-py3>=7.352.0, py3nvml>=0.2.7
+เครื่องมือวัด: nvidia-smi, nvtop, torch-tb-profiler
 ```
 
-### Installation
+ตรวจเวอร์ชันที่รองรับร่วมกันของไดรเวอร์ CUDA และ PyTorch ก่อนติดตั้ง
+
+### การติดตั้ง
 
 ```bash
-# Check GPU availability
+# ตรวจว่ามี GPU พร้อมใช้งาน
 nvidia-smi
 
-# Install PyTorch with CUDA support
+# ติดตั้ง PyTorch ที่รองรับ CUDA 11.8
 pip install torch torchvision torchaudio --index-url https://download.pytorch.org/whl/cu118
 
-# Install profiling tools
+# ติดตั้งเครื่องมือวัดประสิทธิภาพ
 pip install nvidia-ml-py3 py3nvml torch-tb-profiler
 
-# Install monitoring tools
+# ติดตั้งเครื่องมือเฝ้าติดตาม
 sudo apt-get install nvtop
 ```
 
-## Key Concepts Covered
+## แนวคิดสำคัญ
 
-### GPU Computing Fundamentals
-- **CUDA Cores**: Parallel processing units in NVIDIA GPUs
-- **Tensor Cores**: Specialized units for matrix operations
-- **Warp**: Group of 32 threads executing together
-- **Memory Hierarchy**: Global, shared, local, constant memory
-- **Kernel**: Function executed on GPU
-- **Thread Organization**: Grids, blocks, threads
+### พื้นฐานการประมวลผลด้วย GPU
 
-### Distributed Training
-- **Data Parallelism**: Split data across devices, replicate model
-- **Model Parallelism**: Split model across devices
-- **Pipeline Parallelism**: Layer-wise model splitting
-- **Tensor Parallelism**: Split individual layers across devices
-- **AllReduce**: Synchronize gradients across workers
-- **Ring AllReduce**: Efficient gradient synchronization pattern
-- **Gradient Accumulation**: Simulate larger batch sizes
+- **CUDA Cores:** หน่วยประมวลผลแบบขนานใน GPU ของ NVIDIA
+- **Tensor Cores:** หน่วยเฉพาะทางสำหรับการคำนวณเมทริกซ์
+- **Warp:** กลุ่ม 32 threads ที่ทำงานร่วมกัน
+- **ลำดับชั้นหน่วยความจำ:** Global, shared, local และ constant memory
+- **Kernel:** ฟังก์ชันที่รันบน GPU
+- **การจัดกลุ่ม threads:** Grids, blocks และ threads
 
-### Optimization Techniques
-- **Mixed Precision Training**: FP16/BF16 for speed, FP32 for stability
-- **Gradient Checkpointing**: Trade compute for memory
-- **Activation Checkpointing**: Store fewer activations during forward pass
-- **Gradient Accumulation**: Effective batch size > physical batch size
-- **ZeRO Optimizer**: Reduce memory footprint of optimizer states
+### การเทรนแบบกระจาย
 
-## Real-World Applications
+- **Data parallelism:** แบ่งข้อมูลระหว่างอุปกรณ์และทำสำเนาโมเดล
+- **Model parallelism:** แบ่งโมเดลระหว่างอุปกรณ์
+- **Pipeline parallelism:** แบ่งโมเดลตามชั้น
+- **Tensor parallelism:** แบ่งการคำนวณภายในชั้น
+- **AllReduce:** ซิงก์ gradients ระหว่าง workers
+- **Ring AllReduce:** รูปแบบซิงก์ gradients ที่ลดค่าใช้จ่ายการสื่อสาร
+- **Gradient accumulation:** จำลอง batch size ที่ใหญ่ขึ้น
 
-This module prepares you for:
+### วิธีปรับประสิทธิภาพ
 
-1. **Training Large Models**: Scale training to models with billions of parameters
-2. **Production ML Pipelines**: Optimize inference and training pipelines
-3. **Multi-GPU Clusters**: Manage and optimize GPU clusters
-4. **Cost Optimization**: Reduce cloud GPU costs through optimization
-5. **Performance Tuning**: Diagnose and fix GPU bottlenecks
+- **Mixed precision training:** ใช้ FP16/BF16 เพื่อความเร็วและ FP32 ในจุดที่ต้องการความเสถียร
+- **Gradient checkpointing:** แลกเวลาคำนวณกับหน่วยความจำ
+- **Activation checkpointing:** เก็บ activations ระหว่าง forward pass ให้น้อยลง
+- **Gradient accumulation:** ทำให้ effective batch size ใหญ่กว่า batch ที่ใส่ในหน่วยความจำครั้งเดียว
+- **ZeRO Optimizer:** ลดหน่วยความจำที่ใช้เก็บ optimizer states
 
-## Industry Context
+## การนำไปใช้งานจริง
 
-### Why This Matters
+ทักษะจากโมดูลนี้ใช้กับการเทรนโมเดลขนาดใหญ่ การปรับไปป์ไลน์เทรนและ inference การดูแลคลัสเตอร์หลาย GPU การลดค่าใช้จ่าย GPU บนคลาวด์ และการวิเคราะห์คอขวดด้านประสิทธิภาพ
 
-GPU computing is critical for modern AI infrastructure:
+## บริบทการใช้งาน
 
-- **Model Scale**: Training GPT-class models requires multi-GPU/multi-node setups
-- **Cost**: GPU compute is expensive; optimization directly impacts bottom line
-- **Speed**: Faster training means faster iteration and time-to-market
-- **Efficiency**: Better GPU utilization = more experiments per dollar
+GPU มีบทบาทสำคัญเมื่อโมเดลใหญ่ขึ้นหรือใช้เวลาคำนวณมาก การใช้ทรัพยากรให้คุ้มช่วยให้ทดลองได้มากขึ้นภายใต้งบประมาณเดิม ตัวอย่างงานคือการเทรน LLM, computer vision, ระบบแนะนำ, งานวิจัย และการ fine-tune โมเดล
 
-### Common Use Cases
+## เวลาที่ใช้
 
-1. **LLM Training**: Training large language models (GPT, LLaMA, etc.)
-2. **Computer Vision**: Large-scale image/video model training
-3. **Recommendation Systems**: Training deep learning recommendation models
-4. **Research**: Academic research requiring GPU acceleration
-5. **Fine-tuning**: Efficiently fine-tune pre-trained models
+- **บทเรียน:** ประมาณ 10–12 ชั่วโมง
+- **แล็บภาคปฏิบัติ:** ประมาณ 15–20 ชั่วโมง
+- **แบบทดสอบและการประเมิน:** ประมาณ 3–4 ชั่วโมง
+- **รวม:** ประมาณ 30–35 ชั่วโมง
 
-## Time Commitment
+## เกณฑ์วัดความพร้อม
 
-- **Lessons**: ~10-12 hours
-- **Hands-on Labs**: ~15-20 hours
-- **Quiz & Assessments**: ~3-4 hours
-- **Total**: ~30-35 hours
+- [ ] อธิบายสถาปัตยกรรม GPU และเลือกใช้ GPU หรือ CPU ได้
+- [ ] เขียน CUDA kernel เบื้องต้นและเข้าใจหน่วยความจำ GPU
+- [ ] เทรนโมเดล PyTorch บน GPU ได้อย่างมีประสิทธิภาพ
+- [ ] ใช้ data parallelism ผ่าน DistributedDataParallel
+- [ ] ตั้งค่าการเทรนหลาย GPU บนเครื่องเดียว
+- [ ] ใช้ model parallelism สำหรับโมเดลขนาดใหญ่
+- [ ] วัดการใช้ GPU และระบุคอขวดได้
+- [ ] ตรวจและแก้ข้อผิดพลาด GPU OOM
+- [ ] ปรับการใช้หน่วยความจำ GPU ด้วยหลายวิธี
+- [ ] รันงานเทรนแบบกระจายข้ามหลายโหนด
 
-## Success Criteria
+## แหล่งข้อมูลเพิ่มเติม
 
-You will have successfully completed this module when you can:
+### เอกสาร
 
-- [ ] Explain GPU architecture and when to use GPUs vs CPUs
-- [ ] Write basic CUDA kernels and understand GPU memory
-- [ ] Train PyTorch models efficiently on GPUs
-- [ ] Implement data parallelism with DistributedDataParallel
-- [ ] Set up multi-GPU training on a single node
-- [ ] Implement model parallelism for large models
-- [ ] Profile GPU usage and identify bottlenecks
-- [ ] Troubleshoot and fix GPU OOM errors
-- [ ] Optimize GPU memory usage with various techniques
-- [ ] Configure and run distributed training across multiple nodes
-
-## Additional Resources
-
-### Documentation
 - [NVIDIA CUDA Programming Guide](https://docs.nvidia.com/cuda/cuda-c-programming-guide/)
 - [PyTorch Distributed Training](https://pytorch.org/tutorials/beginner/dist_overview.html)
 - [NVIDIA Deep Learning Performance Guide](https://docs.nvidia.com/deeplearning/performance/)
 
-### Tools
-- **nvidia-smi**: GPU monitoring and management
-- **nvtop**: Interactive GPU monitoring (like htop for GPUs)
-- **torch.profiler**: PyTorch performance profiling
-- **nsys**: NVIDIA System Profiler
-- **Weights & Biases**: Experiment tracking with GPU metrics
+### เครื่องมือ
 
-### Community
-- [PyTorch Forums - Distributed Training](https://discuss.pytorch.org/c/distributed)
+- **nvidia-smi:** เฝ้าติดตามและจัดการ GPU
+- **nvtop:** เฝ้าติดตาม GPU แบบโต้ตอบ
+- **torch.profiler:** วัดประสิทธิภาพ PyTorch
+- **nsys:** วิเคราะห์ประสิทธิภาพระบบของ NVIDIA
+- **Weights & Biases:** ติดตามการทดลองพร้อมตัวชี้วัด GPU
+
+### ชุมชน
+
+- [PyTorch Forums — Distributed Training](https://discuss.pytorch.org/c/distributed)
 - [NVIDIA Developer Forums](https://forums.developer.nvidia.com/)
 - [r/MachineLearning](https://reddit.com/r/MachineLearning)
 
-## Next Steps
+## ขั้นตอนถัดไป
 
-After completing this module, you'll be ready for:
-
-- **Module 08**: Monitoring & Observability - Track GPU metrics in production
-- **Module 09**: Infrastructure as Code - Automate GPU cluster provisioning
-- **Module 10**: LLM Infrastructure - Apply GPU knowledge to LLM serving
-- **Project 02**: Build an MLOps pipeline with distributed training
-- **Project 03**: Deploy LLMs with optimized GPU utilization
+- **โมดูล 08:** เฝ้าติดตามและตรวจสอบระบบ GPU ที่ใช้งานจริง
+- **โมดูล 09:** ใช้ Infrastructure as Code เตรียมคลัสเตอร์ GPU อัตโนมัติ
+- **โมดูล 10:** นำความรู้ GPU ไปให้บริการ LLM
+- **โปรเจกต์ 02:** สร้างไปป์ไลน์ MLOps ที่ใช้การเทรนแบบกระจาย
+- **โปรเจกต์ 03:** ติดตั้ง LLM พร้อมปรับการใช้ GPU
 
 ---
 
-**Ready to accelerate your ML infrastructure skills? Let's dive into GPU computing!**
+**พร้อมเร่งทักษะด้านโครงสร้างพื้นฐาน ML แล้วหรือยัง?** เริ่มเรียนการประมวลผลด้วย GPU กัน

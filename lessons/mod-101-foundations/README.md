@@ -1,237 +1,255 @@
-# Module 01: Foundations of ML Infrastructure
+# โมดูล 01: พื้นฐานโครงสร้างพื้นฐาน ML
 
-**Duration:** 40 hours
-**Difficulty:** Beginner
-**Prerequisites:** Basic Python programming, command-line familiarity
+**ระยะเวลา:** 40 ชั่วโมง
 
-## Module Overview
+**ระดับ:** เริ่มต้น
 
-Welcome to the first module of your AI Infrastructure Engineering journey! This module establishes the foundational concepts, tools, and practices you'll need throughout your career in ML infrastructure.
+**ความรู้พื้นฐาน:** เขียน Python เบื้องต้นและใช้บรรทัดคำสั่งได้
 
-You'll learn what ML infrastructure is, why it matters, and how to set up a professional development environment. By the end of this module, you'll deploy your first ML model using a basic serving framework.
+## ภาพรวมโมดูล
 
-## Learning Outcomes
+ยินดีต้อนรับสู่โมดูลแรกของเส้นทาง AI Infrastructure Engineering โมดูลนี้วางพื้นฐานแนวคิด เครื่องมือ และวิธีทำงานที่ต้องใช้ในงานโครงสร้างพื้นฐาน ML
 
-By the end of this module, you will be able to:
+คุณจะได้เรียนว่าโครงสร้างพื้นฐาน ML คืออะไร เหตุใดจึงสำคัญ และจะตั้งค่าสภาพแวดล้อมพัฒนาอย่างไร เมื่อจบโมดูล คุณจะติดตั้งโมเดล ML ตัวแรกด้วยเฟรมเวิร์กให้บริการโมเดลขั้นพื้นฐาน
 
-1. **Understand the ML Lifecycle** - Explain the stages of ML development from training to production
-2. **Set Up Development Environment** - Configure Python, Docker, Git, and cloud tools for ML infrastructure work
-3. **Deploy First ML Model** - Use TorchServe or TensorFlow Serving to deploy a pre-trained model
-4. **Understand the Role of Infrastructure** - Articulate how infrastructure enables ML systems
-5. **Navigate ML Frameworks** - Work with PyTorch and TensorFlow at a basic level
-6. **Apply MLOps Fundamentals** - Understand key MLOps concepts and their importance
+## ผลลัพธ์การเรียนรู้
 
-## Topics Covered
+เมื่อจบโมดูลนี้ คุณจะสามารถ:
 
-### 1. Introduction to ML Infrastructure and MLOps
-- What is ML infrastructure?
-- The difference between ML engineering and ML infrastructure engineering
-- MLOps: Definition, importance, and maturity levels
-- Industry trends and career opportunities
+1. **เข้าใจวงจรชีวิต ML:** อธิบายขั้นตอนตั้งแต่การเทรนจนถึงใช้งานจริง
+2. **ตั้งค่าสภาพแวดล้อมพัฒนา:** เตรียม Python, Docker, Git และเครื่องมือคลาวด์
+3. **ติดตั้งโมเดล ML ตัวแรก:** ให้บริการโมเดลที่เทรนแล้วด้วย TorchServe หรือ TensorFlow Serving
+4. **เข้าใจบทบาทของโครงสร้างพื้นฐาน:** อธิบายว่าโครงสร้างพื้นฐานช่วยให้ระบบ ML ทำงานได้อย่างไร
+5. **ใช้เฟรมเวิร์ก ML:** ทำงานกับ PyTorch และ TensorFlow ระดับพื้นฐาน
+6. **ใช้แนวคิด MLOps:** เข้าใจหลักการสำคัญและเหตุผลที่ต้องใช้
 
-### 2. The ML Lifecycle
-- Training phase: data, model development, experimentation
-- Serving phase: deployment, inference, monitoring
-- Feedback loop: performance tracking, retraining
-- The role of infrastructure at each stage
+## หัวข้อที่ครอบคลุม
 
-### 3. ML Frameworks Overview
-- PyTorch: dynamic computation graphs, research-friendly
-- TensorFlow: static graphs, production-optimized
-- Hugging Face Transformers: pre-trained models and ecosystems
-- When to use which framework
+### 1. รู้จักโครงสร้างพื้นฐาน ML และ MLOps
 
-### 4. Development Environment Setup
-- Python 3.9+ with virtual environments
-- Git for version control
-- Docker basics and installation
-- Cloud platform setup (AWS/GCP/Azure)
-- VS Code or PyCharm configuration for ML work
+- โครงสร้างพื้นฐาน ML คืออะไร
+- งานวิศวกรรม ML ต่างจากงานวิศวกรรมโครงสร้างพื้นฐาน ML อย่างไร
+- ความหมาย ความสำคัญ และระดับความพร้อมของ MLOps
+- แนวโน้มอุตสาหกรรมและโอกาสทางอาชีพ
 
-### 5. Cloud Platforms Introduction
-- Infrastructure as a Service (IaaS) vs Platform as a Service (PaaS)
-- Major cloud providers: AWS, GCP, Azure
-- Core services for ML: compute, storage, networking
-- Free tiers and cost management basics
+### 2. วงจรชีวิต ML
 
-### 6. Model Serving Fundamentals
-- What is model serving?
-- Serving frameworks: TorchServe, TensorFlow Serving, FastAPI
-- REST APIs for model inference
-- Synchronous vs asynchronous serving
+- ช่วงเทรน: ข้อมูล การพัฒนาโมเดล และการทดลอง
+- ช่วงให้บริการ: การติดตั้ง inference และการเฝ้าติดตาม
+- วงจรรับผลตอบกลับ: วัดประสิทธิภาพและเทรนใหม่
+- บทบาทของโครงสร้างพื้นฐานในแต่ละช่วง
 
-## Lesson Plan
+### 3. ภาพรวมเฟรมเวิร์ก ML
 
-### Lesson 01: Introduction to ML Infrastructure (3 hours)
-Introduction to the field, career paths, and key concepts
+- PyTorch: กราฟคำนวณแบบไดนามิกและงานวิจัย
+- TensorFlow: เครื่องมือและรูปแบบสำหรับงานที่ใช้งานจริง
+- Hugging Face Transformers: โมเดลที่เทรนแล้วและระบบนิเวศ
+- เลือกใช้เฟรมเวิร์กให้เหมาะกับงาน
 
-**Reading:** `01-introduction.md`
-**Exercise:** None (orientation lesson)
+### 4. ตั้งค่าสภาพแวดล้อมพัฒนา
 
-### Lesson 02: Environment Setup (5 hours)
-Hands-on setup of all development tools and verification
+- Python 3.9+ และ virtual environments
+- Git สำหรับติดตามเวอร์ชัน
+- พื้นฐานและการติดตั้ง Docker
+- ตั้งค่าแพลตฟอร์มคลาวด์ (AWS/GCP/Azure)
+- ตั้งค่า VS Code หรือ PyCharm สำหรับงาน ML
 
-**Reading:** `02-environment-setup.md`
-**Exercise:** `exercises/exercise-01-environment.md`
+### 5. รู้จักแพลตฟอร์มคลาวด์
 
-### Lesson 03: ML Infrastructure Basics (4 hours)
-Deep dive into ML lifecycle and infrastructure requirements
+- Infrastructure as a Service (IaaS) เทียบกับ Platform as a Service (PaaS)
+- ผู้ให้บริการหลัก: AWS, GCP และ Azure
+- บริการพื้นฐานสำหรับ ML: ประมวลผล พื้นที่จัดเก็บ และเครือข่าย
+- สิทธิใช้งานฟรีและพื้นฐานการควบคุมค่าใช้จ่าย
 
-**Reading:** `03-ml-infrastructure-basics.md`
-**Exercise:** `exercises/exercise-02-ml-lifecycle.md`
+### 6. พื้นฐานการให้บริการโมเดล
 
-### Lesson 04: ML Frameworks Fundamentals (6 hours)
-Working with PyTorch and TensorFlow for infrastructure engineers
+- Model serving คืออะไร
+- เฟรมเวิร์ก TorchServe, TensorFlow Serving และ FastAPI
+- REST API สำหรับ inference
+- การให้บริการแบบ synchronous และ asynchronous
 
-**Reading:** `04-ml-frameworks.md`
-**Exercise:** `exercises/exercise-03-frameworks.md`
+## แผนการเรียน
 
-### Lesson 05: Cloud Computing Intro (5 hours)
-Cloud platforms, services, and first deployments
+### บทเรียน 01: รู้จักโครงสร้างพื้นฐาน ML (3 ชั่วโมง)
 
-**Reading:** `05-cloud-intro.md`
-**Exercise:** `exercises/exercise-04-cloud.md`
+ภาพรวมสาขา เส้นทางอาชีพ และแนวคิดสำคัญ
 
-### Lesson 06: Model Serving Basics (8 hours)
-Deploy first ML model with TorchServe or TensorFlow Serving
+**อ่าน:** `01-introduction.md`
+**แบบฝึกหัด:** ไม่มี (บทเรียนปฐมนิเทศ)
 
-**Reading:** `06-model-serving.md`
-**Exercise:** `exercises/exercise-05-serving.md`
+### บทเรียน 02: ตั้งค่าสภาพแวดล้อม (5 ชั่วโมง)
 
-### Lesson 07: Containerization Intro (6 hours)
-Docker basics and containerizing ML applications
+ติดตั้งเครื่องมือพัฒนาทั้งหมดและตรวจว่าใช้งานได้
 
-**Reading:** `07-docker-basics.md`
-**Exercise:** `exercises/exercise-06-docker.md`
+**อ่าน:** `02-environment-setup.md`
+**แบบฝึกหัด:** `exercises/exercise-01-environment.md`
 
-### Lesson 08: API Development for ML (5 hours)
-Building REST APIs for model inference with FastAPI
+### บทเรียน 03: พื้นฐานโครงสร้างพื้นฐาน ML (4 ชั่วโมง)
 
-**Reading:** `08-api-development.md`
-**Exercise:** `exercises/exercise-07-api.md`
+เจาะลึกวงจรชีวิต ML และข้อกำหนดด้านโครงสร้างพื้นฐาน
 
-## Hands-On Activities
+**อ่าน:** `03-ml-infrastructure-basics.md`
+**แบบฝึกหัด:** `exercises/exercise-02-ml-lifecycle.md`
 
-### Activity 1: Set Up Complete Development Environment
-Install and configure all required tools: Python, Git, Docker, cloud CLI, VS Code
+### บทเรียน 04: พื้นฐานเฟรมเวิร์ก ML (6 ชั่วโมง)
 
-**Time:** 3-4 hours
-**Deliverable:** Screenshot of working environment with all tools
+ทำงานกับ PyTorch และ TensorFlow ในมุมของวิศวกรโครงสร้างพื้นฐาน
 
-### Activity 2: Deploy Pre-Trained Image Classification Model
-Deploy a ResNet model using TorchServe or TensorFlow Serving
+**อ่าน:** `04-ml-frameworks.md`
+**แบบฝึกหัด:** `exercises/exercise-03-frameworks.md`
 
-**Time:** 4-5 hours
-**Deliverable:** Working model service accepting image uploads
+### บทเรียน 05: รู้จักคลาวด์คอมพิวติง (5 ชั่วโมง)
 
-### Activity 3: Create Simple REST API for Model Inference
-Build FastAPI application that wraps model inference
+แพลตฟอร์ม บริการ และการติดตั้งระบบครั้งแรกบนคลาวด์
 
-**Time:** 3-4 hours
-**Deliverable:** API with `/predict` endpoint and documentation
+**อ่าน:** `05-cloud-intro.md`
+**แบบฝึกหัด:** `exercises/exercise-04-cloud.md`
 
-### Activity 4: Containerize ML Service with Docker
-Package API and model into Docker container
+### บทเรียน 06: พื้นฐาน Model Serving (8 ชั่วโมง)
 
-**Time:** 2-3 hours
-**Deliverable:** Docker image running model serving
+ติดตั้งโมเดล ML ตัวแรกด้วย TorchServe หรือ TensorFlow Serving
 
-## Assessments
+**อ่าน:** `06-model-serving.md`
+**แบบฝึกหัด:** `exercises/exercise-05-serving.md`
 
-### Quiz: ML Infrastructure Concepts and Terminology
-**Location:** `quizzes/module-01-quiz.md`
-**Questions:** 20 multiple choice and short answer
-**Passing Score:** 70% (14/20 correct)
-**Topics:** MLOps, ML lifecycle, cloud basics, serving concepts
+### บทเรียน 07: รู้จักคอนเทนเนอร์ (6 ชั่วโมง)
 
-### Practical: Deploy and Test Simple ML Model
-**Objective:** Deploy a pre-trained model and demonstrate inference
+พื้นฐาน Docker และการบรรจุแอปพลิเคชัน ML ในคอนเทนเนอร์
 
-**Requirements:**
-1. Model deployed and accessible via HTTP
-2. Successfully processes image input
-3. Returns predictions with confidence scores
-4. Response time < 500ms for small images
-5. Includes basic error handling
+**อ่าน:** `07-docker-basics.md`
+**แบบฝึกหัด:** `exercises/exercise-06-docker.md`
 
-**Submission:** GitHub repository with code, README, and demo video/screenshots
+### บทเรียน 08: พัฒนา API สำหรับ ML (5 ชั่วโมง)
 
-## Additional Resources
+สร้าง REST API สำหรับ inference ด้วย FastAPI
 
-### Recommended Reading
-- **"Machine Learning Engineering" by Andriy Burkov** - Chapters 1-2 (ML in production)
-- **Google's "Rules of Machine Learning"** - [Best practices](https://developers.google.com/machine-learning/guides/rules-of-ml)
-- **MLOps Maturity Model** - Microsoft's framework
+**อ่าน:** `08-api-development.md`
+**แบบฝึกหัด:** `exercises/exercise-07-api.md`
 
-### Video Tutorials
-- **"Full Stack Deep Learning"** - Course introduction and ML infrastructure overview
-- **Andrew Ng's MLOps Specialization** - First course (intro to MLOps)
+## กิจกรรมภาคปฏิบัติ
 
-### Documentation
-- [PyTorch Documentation](https://pytorch.org/docs/stable/index.html)
-- [TensorFlow Documentation](https://www.tensorflow.org/guide)
-- [TorchServe Documentation](https://pytorch.org/serve/)
-- [FastAPI Documentation](https://fastapi.tiangolo.com/)
-- [Docker Documentation](https://docs.docker.com/)
+### กิจกรรม 1: ตั้งค่าสภาพแวดล้อมพัฒนา
 
-### Interactive Tutorials
+ติดตั้งและตั้งค่า Python, Git, Docker, cloud CLI และ VS Code
+
+**เวลา:** 3–4 ชั่วโมง
+**สิ่งที่ส่ง:** ภาพหน้าจอสภาพแวดล้อมที่เครื่องมือทั้งหมดทำงานได้
+
+### กิจกรรม 2: ให้บริการโมเดลจำแนกภาพที่เทรนแล้ว
+
+ติดตั้งโมเดล ResNet ด้วย TorchServe หรือ TensorFlow Serving
+
+**เวลา:** 4–5 ชั่วโมง
+**สิ่งที่ส่ง:** บริการโมเดลที่รับการอัปโหลดภาพได้
+
+### กิจกรรม 3: สร้าง REST API สำหรับ inference
+
+สร้างแอป FastAPI ที่เรียกโมเดลเพื่อทำนายผล
+
+**เวลา:** 3–4 ชั่วโมง
+**สิ่งที่ส่ง:** API ที่มี endpoint `/predict` และเอกสารประกอบ
+
+### กิจกรรม 4: บรรจุบริการ ML ในคอนเทนเนอร์ Docker
+
+รวม API และโมเดลไว้ใน Docker container
+
+**เวลา:** 2–3 ชั่วโมง
+**สิ่งที่ส่ง:** Docker image ที่รันบริการโมเดลได้
+
+## การประเมินผล
+
+### แบบทดสอบ: แนวคิดและคำศัพท์โครงสร้างพื้นฐาน ML
+
+**ตำแหน่ง:** `quizzes/module-01-quiz.md`
+**จำนวน:** 20 ข้อ แบบปรนัยและคำตอบสั้น
+**เกณฑ์ผ่าน:** 70% (ถูก 14 จาก 20 ข้อ)
+**หัวข้อ:** MLOps, วงจรชีวิต ML, พื้นฐานคลาวด์ และ model serving
+
+### ภาคปฏิบัติ: ติดตั้งและทดสอบโมเดล ML
+
+**เป้าหมาย:** ติดตั้งโมเดลที่เทรนแล้วและแสดงการทำ inference
+
+**ข้อกำหนด:**
+
+1. เข้าถึงโมเดลผ่าน HTTP ได้
+2. ประมวลผลภาพที่ส่งเข้ามาได้
+3. ส่งผลทำนายพร้อมคะแนนความมั่นใจ
+4. ใช้เวลาตอบสนองต่ำกว่า 500 ms สำหรับภาพขนาดเล็ก
+5. จัดการข้อผิดพลาดเบื้องต้น
+
+**สิ่งที่ส่ง:** GitHub repository พร้อมโค้ด README และวิดีโอหรือภาพสาธิต
+
+## แหล่งข้อมูลเพิ่มเติม
+
+### หนังสือและบทความ
+
+- *Machine Learning Engineering* โดย Andriy Burkov — บทที่ 1–2
+- [Rules of Machine Learning ของ Google](https://developers.google.com/machine-learning/guides/rules-of-ml)
+- MLOps Maturity Model ของ Microsoft
+
+### วิดีโอ
+
+- *Full Stack Deep Learning* — บทนำและภาพรวมโครงสร้างพื้นฐาน ML
+- *MLOps Specialization* ของ Andrew Ng — คอร์สแรก
+
+### เอกสาร
+
+- [PyTorch](https://pytorch.org/docs/stable/index.html)
+- [TensorFlow](https://www.tensorflow.org/guide)
+- [TorchServe](https://pytorch.org/serve/)
+- [FastAPI](https://fastapi.tiangolo.com/)
+- [Docker](https://docs.docker.com/)
+
+### บทเรียนแบบโต้ตอบ
+
 - [Katacoda Docker Scenarios](https://www.katacoda.com/courses/docker)
 - [Google Cloud Skills Boost](https://www.cloudskillsboost.google/paths)
 
-See `resources.md` in this folder for a comprehensive resource list.
+ดูรายการเพิ่มเติมใน `resources.md` ของโมดูลนี้
 
-## Common Questions
+## คำถามที่พบบ่อย
 
-**Q: Do I need a GPU for this module?**
-A: No, a CPU is sufficient for this module. We'll work with small models and pre-trained weights. GPU will be important in later modules.
+**ต้องมี GPU หรือไม่?** ไม่จำเป็น โมดูลนี้ใช้โมเดลขนาดเล็กและ weights ที่เทรนแล้ว CPU ก็เพียงพอ GPU จะสำคัญในโมดูลหลัง
 
-**Q: Which cloud platform should I choose?**
-A: Any of AWS, GCP, or Azure will work. If unsure, start with GCP (generous free tier) or AWS (most widely used in industry). You can try multiple platforms.
+**ควรเลือกคลาวด์รายใด?** AWS, GCP หรือ Azure ก็ใช้ได้ เลือกจากบริการและเงื่อนไขที่เหมาะกับคุณ แล้วค่อยลองรายอื่นภายหลัง
 
-**Q: How long should each lesson take?**
-A: The time estimates are guidelines. Expect 3-8 hours per lesson depending on your background. Take your time and understand concepts deeply.
+**แต่ละบทเรียนใช้เวลานานเท่าไร?** เวลาที่ระบุเป็นแนวทาง โดยทั่วไปบทเรียนละ 3–8 ชั่วโมงขึ้นอยู่กับพื้นฐานของคุณ
 
-**Q: What if I get stuck on an exercise?**
-A: Check the solutions folder, review the lesson materials, search official documentation, and post questions in GitHub Discussions. Learning to debug and find solutions is part of the skill development.
+**ถ้าติดแบบฝึกหัดควรทำอย่างไร?** ทบทวนบทเรียน ค้นเอกสารทางการ ดูเฉลยที่มีให้ และถามใน GitHub Discussions
 
-**Q: Can I skip the environment setup if I already have Python/Docker installed?**
-A: Review the setup lesson anyway to ensure your environment matches the curriculum requirements. Missing dependencies will cause issues in later modules.
+**มี Python/Docker แล้วข้ามบทเรียนตั้งค่าได้ไหม?** ควรอ่านเพื่อตรวจว่าเวอร์ชันและ dependencies ตรงกับที่หลักสูตรใช้
 
-## Tips for Success
+## เคล็ดลับในการเรียน
 
-1. **Hands-on practice is essential** - Don't just read, type the code and run examples
-2. **Document your learning** - Keep notes on commands, errors, and solutions
-3. **Build your portfolio** - Save all exercise code in a personal GitHub repository
-4. **Join the community** - Connect with other learners for support and knowledge sharing
-5. **Take breaks** - ML infrastructure concepts can be dense. Step away and return with fresh eyes.
-6. **Ask questions** - No question is too basic. Understanding fundamentals is crucial.
+1. **ลงมือทำ:** พิมพ์และรันตัวอย่างด้วยตนเอง
+2. **จดสิ่งที่เรียน:** บันทึกคำสั่ง ข้อผิดพลาด และวิธีแก้
+3. **สร้างแฟ้มผลงาน:** เก็บโค้ดแบบฝึกหัดใน GitHub repository ส่วนตัว
+4. **เข้าร่วมชุมชน:** แลกเปลี่ยนความรู้และขอความช่วยเหลือ
+5. **พักเป็นช่วง:** กลับมาทบทวนแนวคิดที่ซับซ้อนเมื่อพร้อม
+6. **ถามเมื่อสงสัย:** ความเข้าใจพื้นฐานสำคัญต่อบทเรียนถัดไป
 
-## Module Prerequisites Check
+## ตรวจความพร้อมก่อนเริ่ม
 
-Before starting, ensure you have:
+- [ ] คอมพิวเตอร์มี RAM อย่างน้อย 8 GB และพื้นที่ว่างอย่างน้อย 20 GB
+- [ ] ใช้ Linux, macOS หรือ Windows พร้อม WSL2
+- [ ] มีสิทธิ์ admin/sudo เพื่อติดตั้งซอฟต์แวร์
+- [ ] เชื่อมต่ออินเทอร์เน็ตเพื่อดาวน์โหลดและใช้คลาวด์
+- [ ] มีบัญชี GitHub สำหรับเก็บโค้ด
+- [ ] มีโปรแกรมแก้ไขข้อความ เช่น VS Code
+- [ ] รู้ Python เบื้องต้น (ฟังก์ชัน คลาส และ imports)
+- [ ] ใช้คำสั่งพื้นฐาน เช่น `cd`, `ls`, `mkdir`, `cat` ได้
 
-- [ ] Computer with 8GB+ RAM and 20GB+ free disk space
-- [ ] Linux, macOS, or Windows with WSL2
-- [ ] Admin/sudo privileges to install software
-- [ ] Internet connection for downloads and cloud services
-- [ ] GitHub account for code repositories
-- [ ] Text editor (VS Code recommended)
-- [ ] Basic Python knowledge (functions, classes, imports)
-- [ ] Command-line comfort (cd, ls, mkdir, cat)
+หากยังไม่พร้อมในข้อใด ให้จัดการก่อนเริ่มบทเรียน 01
 
-If any prerequisites are missing, address them before starting Lesson 01.
+## ขั้นตอนถัดไป
 
-## Next Steps
-
-Once you complete this module:
-
-1. **Take the module quiz** - Validate your understanding
-2. **Complete the practical assessment** - Deploy a working model
-3. **Review your work** - Ensure code quality and documentation
-4. **Move to Module 02** - Cloud Computing for ML (deeper cloud platform skills)
+1. ทำแบบทดสอบโมดูลเพื่อประเมินความเข้าใจ
+2. ทำงานภาคปฏิบัติโดยติดตั้งโมเดลที่ใช้งานได้
+3. ตรวจคุณภาพโค้ดและเอกสารของตนเอง
+4. เรียนโมดูล 02 เรื่องคลาวด์คอมพิวติงสำหรับ ML ต่อ
 
 ---
 
-**Ready to begin?** Start with `01-introduction.md` and begin your ML infrastructure journey!
+**พร้อมเริ่มหรือยัง?** เปิด `01-introduction.md` แล้วเริ่มเส้นทางโครงสร้างพื้นฐาน ML
 
-**Questions or feedback?** Open an issue in the GitHub repository.
+หากมีคำถามหรือข้อเสนอแนะ ให้เปิด issue ใน GitHub repository
